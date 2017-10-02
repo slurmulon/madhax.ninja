@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Oxygen|Saira|Allura')
+
+// @see https://coolors.co/023c40-c3979f-34e4ea-78ffd6-e1faf9
+
+// bg-color = lighten(black, 10%) //lighten(black, 20%) //darken(#427A82, 20%) //#407F7F //#489174 //#364754
+// bg-color = darken(#427A82, 20%) // teal
+bg-color = #292F42
+// bg-color = #fff
+brand-color = #FF5D73 //#C3979F //#FF5D73 (darker)
+side-bg-color = darken(#87BC5E, 20%)
+// content-color = darken(#fff, 40%)
+content-color = darken(#fff, 10%)
+subhead-color = #34E4EA //#34E4EA (darker)
+link-color = #78FFD6
+// glow-color = #c95c5c
+hl-color = #d3bbe3
+glow-color = darken(rgb(176, 202, 219), 10%)
+// glow-color = lighten(#9dd68d, 10%)
+glow-hl-color = lighten(glow-color, 35%)//lighten(rgb(61, 146, 201), 0%)
+alt-glow-color = darken(rgb(176, 202, 219), 10%)
+
+@font-face {
+  font-family Lazer84
+  src url(./fonts/Lazer84.ttf)
+}
+
+*
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+html, body
+  height 100%
+  background bg-color
+
+a
+  text-decoration none
+  color glow-color
+
+a:hover,
+a:focus
+  text-decoration underline
+
+h3
+  font-weight 100
+
+.pure-img-responsive
+  max-width 100%
+  height auto
+
+#layout
+  padding 0
+
+.header
+  text-align center
+  top auto
+  margin 3em auto
+
+.sidebar
+  // background side-bg-color //rgb(61, 79, 93)
+  // background url(images/footer_lodyas/footer_lodyas.png)
+  // background url(images/stardust/stardust.png)
+  // background url(images/confectionary/confectionary.png)
+  // background url(images/moulin/moulin.png)
+  // background darken(bg-color, 10%)
+  background bg-color
+  color #fff
+
+.brand-title,
+.brand-tagline
+  margin 0
+
+.brand-title
+  color brand-color
+  // color lighten(#fff, 20%)
+  font-family 'Lazer84'
+  text-transform lowercase
+  // text-transform uppercase
+  font-size 4em
+  text-shadow: 2px 2px 1px #fff //#000
+
+.brand-tagline
+  margin-top 1em
+  font-weight 400
+  // font-family 'Allura'
+  font-family 'Courier New'
+  color subhead-color
+  // color rgb(176, 202, 219)
+
+.nav
+  margin-top 2em
+
+.nav-list
+  margin 0
+  padding 0
+  list-style none
+
+.nav-item
+  // display inline-block
+  display block
+  *display inline
+  zoom 1
+  width 100%
+  transition all 0.2s ease
+
+
+.nav-item a
+  background transparent
+  // border 2px solid link-color //glow-color
+  // border-bottom 2px dotted darken(glow-color, 10%) //pink //link-color
+  // border-bottom 2px dashed darken(glow-color, 10%) //pink //link-color
+  border-bottom 2px dotted hl-color //pink //link-color
+  color lighten(#fff, 20%)
+  margin-top 1em
+  padding 1em
+  letter-spacing 0.05em
+  text-transform uppercase
+  text-align left
+  font-size 85%
+  width 100%
+  // transition all 0.2s ease
+
+  &:hover,
+  &:focus
+    background none
+    // border 2px solid glow-hl-color
+    border-bottom 2px solid glow-hl-color
+    text-decoration none
+
+.content-subhead
+  text-transform uppercase
+  color hl-color //#78FFD6 (green) //glow-color //darken(#aaa, 20%)
+  // color subhead-color
+  // border-bottom 2px dashed glow-color //#eee
+  border-bottom 1px solid glow-color //#eee
+  padding 0.4em 0
+  font-size 125% // 80%
+  font-weight 500
+  font-family 'Courier New'
+  letter-spacing 0.1em
+
+.content
+  background #111
+  // background bg-color
+  // background darken(bg-color, 35%)
+  // background #292F42
+  // background url(images/bg-8-bit.png)
+  padding 2em 1em 0
+
+.post
+  padding-bottom 2em
+
+.post-title
+  // font-family 'Inconsolata', monospace
+  // font-family 'Oxygen', sans-serif
+  font-size 2em
+  color #aaa //darken(glow-color, 25%)
+  margin-bottom 0.2em
+
+.post-avatar
+  border-radius 50px
+  float right
+  margin-left 1em
+
+.post-description
+  // font-family 'Oxygen', sans-serif
+  font-family 'Saira', sans-serif
+  color content-color
+  line-height 1.8em
+
+.post-meta
+  color #999
+  font-size 90%
+  margin 0
+
+.post-category
+  margin 0 0.1em
+  padding 0.3em 1em
+  color #fff
+  background #999
+  font-size 80%
+
+.post-images
+  margin 1em 0
+
+.post-image-meta
+  margin-top -3.5em
+  margin-left 1em
+  color #fff
+  text-shadow 0 1px 1px #333
+
+.services
+  display flex
+  flex-flow row wrap
+  justify-content space-around
+  align-items stretch
+
+  .service
+    padding 5px
+    width 200px
+    height 150px
+    margin-top 10px
+    border 2px solid #555555
+    color content-color
+    font-weight bold
+    // font-size 3em
+    text-align center
+    
+    &:hover
+      color alt-glow-color
+      border 2px solid alt-glow-color
+
+.point
+  // border-left 2px solid alt-glow-color
+  padding 1em
+  margin-top 1em
+  display inline-flex
+  display row no-wrap
+
+  .number
+    font-family 'Courier New'
+    font-size 1.25em
+    padding 0 2em
+    color darken(content-color, 50%)
+
+.footer
+  text-align center
+  padding 1em 0
+
+.footer a
+  color #ccc
+  font-size 80%
+
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus
+  background none
+
+@media (min-width 48em)
+  .content
+    padding 2em 3em 0
+    margin-left 25%
+
+  .header
+    // margin 80% 2em 0
+    // text-align right
+
+  .sidebar
+    position fixed
+    top 0
+    bottom 0

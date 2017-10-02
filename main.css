@@ -1,0 +1,90 @@
+@font-face {
+  font-family: Lazer84;
+  src: url("./fonts/Lazer84.ttf");
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: url("img/skyscraper/skyscraper/skyscraper.png");
+  font-family: 'Geo', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #8cceff;
+  padding: 0;
+  margin: 0;
+  font-family: 'Geo', sans-serif;
+  text-transform: uppercase;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  padding: 1em;
+  text-transform: uppercase;
+}
+nav .logo {
+  position: relative;
+  float: left;
+}
+nav .logo h1 {
+  font-family: 'Lazer84';
+  text-shadow: 2px 2px 1px #000;
+  letter-spacing: 5px;
+  color: #96ffd8;
+  margin: 0;
+}
+nav .logo span {
+  color: #000;
+}
+nav .links {
+  float: right;
+  display: inline;
+}
+nav .links a {
+  margin-left: 1em;
+  font-size: 150%;
+  font-weight: bold;
+  text-decoration: none;
+  color: #8cceff;
+  transition: all 0.2s ease-in;
+}
+nav .links a:hover {
+  color: #ea8b92;
+  text-shadow: 1px 1px 1px #000;
+}
+main .status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+}
+main .status .head {
+  margin-bottom: 0.5em;
+}
+main .status .title {
+  font-weight: bold;
+}
+main .status .entry {
+  display: block;
+  font-size: 80%;
+}
+.content {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
