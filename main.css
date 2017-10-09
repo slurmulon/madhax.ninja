@@ -42,7 +42,6 @@ h6 {
 }
 nav {
   display: flex;
-  flex: 1 0;
   padding: 1em;
   text-transform: uppercase;
 }
@@ -78,27 +77,46 @@ nav .links a:hover {
 }
 main {
   display: flex;
-  flex: 1 100%;
+  flex: 1;
   align-items: center;
   justify-content: center;
 }
-main .status {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+main .content {
+  display: flex;
+  flex: 1 100%;
+  justify-content: center;
+  width: 100%;
+}
+main .content .title {
+  color: #fff;
+  font-size: 150%;
+}
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+footer section {
   padding: 1em;
 }
-main .status .head {
+footer section .head {
   margin-bottom: 0.5em;
 }
-main .status .title {
+footer section .title {
   font-weight: bold;
 }
-main .status .entry {
+footer section .entry {
   display: block;
   font-size: 80%;
 }
-.content {
-  width: 100%;
-  flex: 1 100%;
+footer section .card {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 80%;
+}
+footer section .card img {
+  max-height: 40px;
+}
+footer .tools {
+  overflow-x: auto;
 }
