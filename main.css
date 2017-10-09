@@ -84,6 +84,7 @@ main {
 main .content {
   display: flex;
   flex: 1 100%;
+  align-items: center;
   justify-content: center;
   width: 100%;
 }
