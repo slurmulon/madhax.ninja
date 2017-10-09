@@ -9,12 +9,20 @@
 }
 html,
 body {
+  height: 100%;
   padding: 0;
   margin: 0;
 }
+html {
+  background: #746dc8;
+}
 body {
-  background: url("img/skyscraper/skyscraper/skyscraper.png");
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: url("img/vertical-waves/vertical-waves.png");
   font-family: 'Geo', sans-serif;
+  flex-flow: column nowrap;
 }
 h1,
 h2,
@@ -33,6 +41,8 @@ h6 {
   justify-content: space-between;
 }
 nav {
+  display: flex;
+  flex: 1 0;
   padding: 1em;
   text-transform: uppercase;
 }
@@ -66,6 +76,12 @@ nav .links a:hover {
   color: #ea8b92;
   text-shadow: 1px 1px 1px #000;
 }
+main {
+  display: flex;
+  flex: 1 100%;
+  align-items: center;
+  justify-content: center;
+}
 main .status {
   position: absolute;
   bottom: 0;
@@ -83,8 +99,6 @@ main .status .entry {
   font-size: 80%;
 }
 .content {
-  position: absolute;
-  text-align: center;
-  top: 50%;
   width: 100%;
+  flex: 1 100%;
 }
