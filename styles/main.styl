@@ -27,7 +27,7 @@ body {
   display flex
   align-content center
   justify-content center
-  // flex-flow column nowrap
+  flex-flow column nowrap
   // background url(../img/vintage-leaves/vintage-leaves.png)
   // background url(../img/skyscraper/skyscraper/skyscraper.png)
   background url(../img/vertical-waves/vertical-waves.png)
@@ -42,7 +42,7 @@ body {
   // background #8c86d1 // cool purple (light)
   // font-family 'Varela Round', sans-serif
   font-family 'Geo', sans-serif
-  flex-flow column nowrap
+  overflow-x hidden // MADHAX: shouldn't be necessary, weird
 }
 
 h1, h2, h3, h4, h5, h6
@@ -51,6 +51,7 @@ h1, h2, h3, h4, h5, h6
   margin 0
   font-family 'Geo', sans-serif
   text-transform uppercase
+  text-shadow 1px 1px 2px #000
 
 .header
   display flex
@@ -68,6 +69,7 @@ nav
   .logo
     position relative
     float left
+    font-size 125% // experimental!
 
     h1
       font-family 'Lazer84'
@@ -127,9 +129,9 @@ main
     // top 50%
     // width 100%
 
-    .title
+    .shout
       color white
-      font-size 175%
+      font-size 225% //175%
       text-align center
 
 footer
@@ -146,6 +148,8 @@ footer
 
     .title
       font-weight bold
+      // text-shadow 1px 1px 1px tertiary-color
+
 
     .entry
       display block
