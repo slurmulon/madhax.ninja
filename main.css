@@ -72,7 +72,7 @@ nav .links a {
   transition: all 0.2s ease-in;
 }
 nav .links a:hover {
-  color: #ea8b92;
+  color: #96ffd8;
   text-shadow: 1px 1px 1px #000;
 }
 main {
@@ -90,7 +90,7 @@ main .content {
 }
 main .content .title {
   color: #fff;
-  font-size: 150%;
+  font-size: 175%;
 }
 footer {
   display: flex;
