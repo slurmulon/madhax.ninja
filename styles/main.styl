@@ -1,4 +1,5 @@
 // @see colors: https://coolors.co/fc4b47-ea8b92-8cceff-96ffd8-bfffbc
+@require './effects'
 
 primary-color = #EA8B92
 secondary-color = #8CCEFF
@@ -6,7 +7,7 @@ tertiary-color = #96FFD8
 
 @font-face {
   font-family Lazer84
-  src url(./fonts/Lazer84.ttf)
+  src url(../fonts/Lazer84.ttf)
 }
 
 *
@@ -27,10 +28,10 @@ body {
   align-content center
   justify-content center
   // flex-flow column nowrap
-  // background url(img/vintage-leaves/vintage-leaves.png)
-  // background url(img/skyscraper/skyscraper/skyscraper.png)
-  background url(img/vertical-waves/vertical-waves.png)
-  // background url(img/memphis-colorful/memphis-colorful.png)
+  // background url(../img/vintage-leaves/vintage-leaves.png)
+  // background url(../img/skyscraper/skyscraper/skyscraper.png)
+  background url(../img/vertical-waves/vertical-waves.png)
+  // background url(../img/memphis-colorful/memphis-colorful.png)
   // background salmon
   // background darksalmon
   // background firebrick
@@ -92,6 +93,7 @@ nav
       font-size 150%
       font-weight bold
       text-decoration none
+      text-shadow 1px 1px 2px black
       color secondary-color
       transition all 0.2s ease-in
 
@@ -128,6 +130,7 @@ main
     .title
       color white
       font-size 175%
+      text-align center
 
 footer
   display flex
@@ -147,6 +150,7 @@ footer
     .entry
       display block
       font-size 80%
+      // color white
 
     .card
       display inline-block
