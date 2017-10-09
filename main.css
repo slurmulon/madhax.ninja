@@ -116,7 +116,11 @@ footer section .card {
   font-size: 80%;
 }
 footer section .card img {
+  transition: all 0.2s ease-in-out;
   max-height: 40px;
+}
+footer section .card img:hover {
+  transform: scale(1.1);
 }
 footer .tools {
   overflow-x: auto;
