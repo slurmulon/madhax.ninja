@@ -43,6 +43,7 @@ body {
   // font-family 'Varela Round', sans-serif
   font-family 'Geo', sans-serif
   overflow-x hidden // MADHAX: shouldn't be necessary, weird
+  padding 1em
 }
 
 h1, h2, h3, h4, h5, h6
@@ -56,9 +57,6 @@ h1, h2, h3, h4, h5, h6
 .header
   display flex
   justify-content space-between
-
-nav
-  display flex
   // flex 1 0
   // display flex
   // justify-content space-between
@@ -84,11 +82,12 @@ nav
       color #000
       // font-family 'Geo', sans-serif
 
-  .links
-    float right
-    display inline
-    // word-wrap nowrap
-    // font-family 'Geo', sans-serif
+  .menu
+    // TODO: consider using this. only makes sense if we have a different color for the nav
+    // display flex
+    // flex-flow row wrap
+    // align-items center
+    // justify-items center
 
     a
       margin-left 1em
@@ -168,5 +167,15 @@ footer
         &:hover
           transform scale(1.1)
 
+  .status
+    color tertiary-color
+    // color #fff4c0
+
+    .title
+        color white
+
   .tools
     overflow-x auto
+
+// nav, footer
+//   background url(../img/skyscraper/skyscraper/skyscraper.png)
