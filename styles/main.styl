@@ -1,9 +1,15 @@
 // @see colors: https://coolors.co/fc4b47-ea8b92-8cceff-96ffd8-bfffbc
 @require './effects'
 
-primary-color = #EA8B92
+// primary-color = #EA8B92
+// secondary-color = #8CCEFF
+// tertiary-color = #96FFD8
+// // #d1c180
+
+// tertiary-color = #d1c180 // pink // #EA8B92
+tertiary-color = pink
 secondary-color = #8CCEFF
-tertiary-color = #96FFD8
+primary-color = #96FFD8
 
 @font-face {
   font-family Lazer84
@@ -22,6 +28,7 @@ html, body
 
 html
   background darken(#8c86d1, 10%)
+  text-shadow 1px 1px 1px #000
 
 body {
   display flex
@@ -73,13 +80,16 @@ h1, h2, h3, h4, h5, h6
       font-family 'Lazer84'
       text-shadow 2px 2px 1px #000
       letter-spacing 5px
-      // color primary-color
-      color tertiary-color
+      color primary-color
+      // color tertiary-color
       //padding 1em // TODO: apply this to surrounding navigation bar instead
-      margin 0
+      margin 0 0 0.25em
 
     span
-      color #000
+      color tertiary-color
+      text-shadow 1px 1px 1px #000
+      font-weight bold
+      // color #000
       // font-family 'Geo', sans-serif
 
   .menu
@@ -99,7 +109,7 @@ h1, h2, h3, h4, h5, h6
       transition all 0.2s ease-in
 
       &:hover
-        color tertiary-color //primary-color //tertiary-color
+        color primary-color //tertiary-color
         text-shadow 1px 1px 1px #000
         // border-bottom 2px solid tertiary-color
 
@@ -153,7 +163,7 @@ footer
     .entry
       display block
       font-size 80%
-      // color white
+      color white
 
     .card
       display inline-block
@@ -168,11 +178,17 @@ footer
           transform scale(1.1)
 
   .status
-    color tertiary-color
+    color primary-color //tertiary-color
     // color #fff4c0
 
     .title
-        color white
+      color tertiary-color
+      // color #d1c180
+      // color #D5BFBD
+      // color white
+
+    .entry:not(:last-of-type)
+      padding-bottom 0.5em
 
   .tools
     overflow-x auto
