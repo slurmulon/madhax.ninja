@@ -1,5 +1,6 @@
 // @see colors: https://coolors.co/fc4b47-ea8b92-8cceff-96ffd8-bfffbc
 @require './effects'
+@require './devices'
 
 // primary-color = #EA8B92
 // secondary-color = #8CCEFF
@@ -74,11 +75,10 @@ h1, h2, h3, h4, h5, h6
   text-transform uppercase
 
   .logo
-    position relative
-    float left
     font-size 125% // experimental!
 
     h1
+      position relative
       font-family 'Lazer84'
       text-shadow 2px 2px 1px #000
       letter-spacing 5px
@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6
       // color tertiary-color
       //padding 1em // TODO: apply this to surrounding navigation bar instead
       margin 0 0 0.25em
+      overflow hidden // for sheen effect
 
     span
       color lighten(tertiary-color, 50%)
@@ -97,10 +98,10 @@ h1, h2, h3, h4, h5, h6
 
   .menu
     // TODO: consider using this. only makes sense if we have a different color for the nav
-    // display flex
-    // flex-flow row wrap
-    // align-items center
-    // justify-items center
+    display flex
+    flex-flow row wrap
+    align-items center
+    justify-items center
 
     a
       margin-left 1em
@@ -122,24 +123,13 @@ main
   flex 1
   align-items center
   justify-content center
-  // display flex
-  // justify-content center
-  // display table
-  // height 100%
-  // height 100%
-  // position relative
 
-    // FIXME: use table/table-cell instead so it centers around the middle instead the top
   .content
     display flex
     flex 1 100%
     align-items center
     justify-content center
     width 100%
-    // position absolute
-    // text-align center
-    // top 50%
-    // width 100%
 
     .shout
       color white
@@ -178,6 +168,7 @@ footer
         max-height 40px
 
         &:hover
+          // animation float 6s ease-in-out infinite
           transform scale(1.1)
 
   .status
@@ -199,6 +190,3 @@ footer
 
     .card
       margin-top 1em // TODO: replace this with flexbox horizontal/vertical centering
-
-// nav, footer
-//   background url(../img/skyscraper/skyscraper/skyscraper.png)
