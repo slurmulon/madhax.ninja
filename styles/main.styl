@@ -1,4 +1,5 @@
 // @see colors: https://coolors.co/fc4b47-ea8b92-8cceff-96ffd8-bfffbc
+@require './colors'
 @require './effects'
 @require './devices'
 
@@ -9,10 +10,11 @@
 
 // tertiary-color = #d1c180 // pink // #EA8B92
 // tertiary-color = #fff //pink
-tertiary-color = #9ea8a4
-secondary-color = #8CCEFF
-primary-color = #96FFD8
-accent-color = #d1c180
+
+// tertiary-color = #9ea8a4
+// secondary-color = #8CCEFF
+// primary-color = #96FFD8
+// accent-color = #d1c180
 
 @font-face {
   font-family Lazer84
@@ -30,7 +32,8 @@ html, body
   margin 0
 
 html
-  background darken(#8c86d1, 10%)
+  // background darken(#8c86d1, 10%)
+  background bg-color
   text-shadow 1px 1px 1px #000
 
 body
@@ -54,6 +57,7 @@ body
   font-family 'Geo', sans-serif
   overflow-x hidden // MADHAX: shouldn't be necessary, weird
   padding 1em
+  @extends .slowbro
 
 h1, h2, h3, h4, h5, h6
   color secondary-color
