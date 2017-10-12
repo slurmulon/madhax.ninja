@@ -24,3 +24,105 @@
     opacity .2
     transition 0s
 
+// @see https://codepen.io/lbebber/pen/ypgql
+
+// random(mini, maxi)
+// 	return floor(math(0, 'random')*(maxi - mini + 1) + mini)
+  // return floor(math(0, 'random') * (max - min + 1) + min)
+
+.glitch
+  color white
+  font-size 100px
+  position relative
+  width 400px
+  margin 0 auto
+
+@keyframes noise-anim
+  steps = 20
+	for step in (1..20)
+		// {percentage(step * (1 / 20))}
+		// 	clip rect(random(1, 100) + px, 9999px, random(1, 100) + px, 0)
+
+.glitch:after
+  content attr(data-text)
+  position absolute
+  left 2px
+  text-shadow -1px 0 red
+  top 0
+  color white
+  background black
+  overflow hidden
+  clip rect(0,900px,0,0)
+  animation noise-anim 2s infinite linear alternate-reverse
+
+@keyframes noise-anim-2
+  $steps 20
+  // @for $i from 0 through $steps
+  //   {#percentage($i*(1/$steps))}
+  //     clip rect(random(100)+px,9999px,random(100)+px,0)
+
+.glitch:before
+  content attr(data-text)
+  position absolute
+  left -2px
+  text-shadow 1px 0 blue
+  top 0
+  color white
+  background black
+  overflow hidden
+  clip rect(0,900px,0,0)
+  animation noise-anim-2 3s infinite linear alternate-reverse
+
+// @see https://codepen.io/fazlurr/pen/qbWMRv
+
+.shine, .chrome
+  // font-size 3em
+  margin 0 auto
+  margin-bottom 1em
+
+.shine
+  background #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat
+  -webkit-background-size 150px
+  color rgba(255, 255, 255, 0.3)
+  -webkit-background-clip text
+  -webkit-animation-name shine
+  -webkit-animation-duration 5s
+  -webkit-animation-iteration-count infinite
+  text-shadow 0 0px 0px rgba(255, 255, 255, 0.5)
+
+.chrome
+  background #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat
+  background-image -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%)
+  -webkit-background-size 200px
+  color rgba(255, 255, 255, 0.3)
+  -webkit-background-clip text
+  -webkit-animation-name shine
+  -webkit-animation-duration $duration
+  -webkit-animation-iteration-count infinite
+  text-shadow 0 0px 0px rgba(255, 255, 255, 0.5)
+
+@-webkit-keyframes shine
+  0%, 10%
+    background-position -1000px
+
+  20%
+    background-position top left
+
+  90%
+    background-position top right
+
+  100%
+    background-position 1000px
+
+@keyframes float
+  0%
+    box-shadow 0 5px 15px 0px rgba(0,0,0,0.6)
+    transform translatey(0px)
+
+  50%
+    box-shadow 0 25px 15px 0px rgba(0,0,0,0.2)
+    transform translatey(-20px)
+
+  100%
+    box-shadow 0 5px 15px 0px rgba(0,0,0,0.6)
+    transform translatey(0px)
