@@ -1,29 +1,3 @@
-.ripple
-  position relative
-  overflow hidden
-  transform translate3d(0, 0, 0)
-
-  &:after
-    content ""
-    display block
-    position absolute
-    width 100%
-    height 100%
-    top 0
-    left 0
-    pointer-events none
-    background-image radial-gradient(circle, #000 10%, transparent 10.01%)
-    background-repeat no-repeat
-    background-position 50%
-    transform scale(10,10)
-    opacity 0
-    transition transform .5s, opacity 1s
-
-  &:active:after
-    transform scale(0,0)
-    opacity .2
-    transition 0s
-
 // @see https://codepen.io/lbebber/pen/ypgql
 
 // random(mini, maxi)
@@ -40,7 +14,7 @@
 @keyframes noise-anim
   steps = 20
 	for step in (1..20)
-		// {percentage(step * (1 / 20))}
+		//percentage(step * (1 / 20))
 		// 	clip rect(random(1, 100) + px, 9999px, random(1, 100) + px, 0)
 
 .glitch:after
@@ -58,7 +32,7 @@
 @keyframes noise-anim-2
   $steps 20
   // @for $i from 0 through $steps
-  //   {#percentage($i*(1/$steps))}
+  //  #percentage($i*(1/$steps))
   //     clip rect(random(100)+px,9999px,random(100)+px,0)
 
 .glitch:before
@@ -73,56 +47,63 @@
   clip rect(0,900px,0,0)
   animation noise-anim-2 3s infinite linear alternate-reverse
 
-// @see https://codepen.io/fazlurr/pen/qbWMRv
-
-.shine, .chrome
-  // font-size 3em
-  margin 0 auto
-  margin-bottom 1em
+// https://codepen.io/daneden/pen/BizAg
 
 .shine
-  background #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat
-  -webkit-background-size 150px
-  color rgba(255, 255, 255, 0.3)
-  -webkit-background-clip text
-  -webkit-animation-name shine
-  -webkit-animation-duration 5s
-  -webkit-animation-iteration-count infinite
-  text-shadow 0 0px 0px rgba(255, 255, 255, 0.5)
+  // position absolute
+  // width 200px
+  // top 50%
+  // left 50%
+  // height 60px
+  // margin-left -100px
+  text-align center
+  text-shadow 0 1px 2px rgba(0,0,0,.1)
+  -webkit-mask-image linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%)
+  -webkit-mask-size 200%
+  // animation shine 4s infinite, hover 2s alternate infinite ease-in-out
+  animation shine 2s infinite ease-in-out
 
-.chrome
-  background #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat
-  background-image -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%)
-  -webkit-background-size 200px
-  color rgba(255, 255, 255, 0.3)
-  -webkit-background-clip text
-  -webkit-animation-name shine
-  -webkit-animation-duration $duration
-  -webkit-animation-iteration-count infinite
-  text-shadow 0 0px 0px rgba(255, 255, 255, 0.5)
+.hover
+  animation hover 2s alternate infinite ease-in-out
+
+.shine-hover
+  @extends .shine
+
+  animation shine 4s infinite ease-in-out, hover 2s alternate infinite ease-in-out
+
+  // &:after
+  //   content ''
+  //   position relative
+  //   display block
+  //   width 10px
+  //   height 10px
+  //   border 2px solid #fff
+  //   border-top none
+  //   border-left none
+  //   left 50%
+  //   margin-left -5px
+  //   transform translateY(30%) rotate(45deg)
+  //   animation hoverSmall 2s 1s alternate infinite ease-in-out
 
 @-webkit-keyframes shine
-  0%, 10%
-    background-position -1000px
+  from
+    -webkit-mask-position 150%
 
-  20%
-    background-position top left
+  to
+    -webkit-mask-position -50%
 
-  90%
-    background-position top right
+@-webkit-keyframes hover
+  from
+    // transform translateY(-50%)
+    transform translateY(0%)
 
-  100%
-    background-position 1000px
+  to
+    // transform translateY(-75%)
+    transform translateY(-25%)
 
-@keyframes float
-  0%
-    box-shadow 0 5px 15px 0px rgba(0,0,0,0.6)
-    transform translatey(0px)
+@-webkit-keyframes hoverSmall
+  from
+    transform translateY(30%) rotate(45deg)
 
-  50%
-    box-shadow 0 25px 15px 0px rgba(0,0,0,0.2)
-    transform translatey(-20px)
-
-  100%
-    box-shadow 0 5px 15px 0px rgba(0,0,0,0.6)
-    transform translatey(0px)
+  to
+    transform translateY(-10%) rotate(45deg)

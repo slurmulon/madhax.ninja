@@ -33,7 +33,7 @@ html
   background darken(#8c86d1, 10%)
   text-shadow 1px 1px 1px #000
 
-body {
+body
   display flex
   align-content center
   justify-content center
@@ -54,7 +54,6 @@ body {
   font-family 'Geo', sans-serif
   overflow-x hidden // MADHAX: shouldn't be necessary, weird
   padding 1em
-}
 
 h1, h2, h3, h4, h5, h6
   color secondary-color
@@ -113,6 +112,7 @@ h1, h2, h3, h4, h5, h6
       transition all 0.2s ease-in
 
       &:hover
+        @extends .shine
         color primary-color //tertiary-color
         text-shadow 1px 1px 1px #000
         // border-bottom 2px solid tertiary-color
@@ -135,6 +135,7 @@ main
       color white
       font-size 225% //175%
       text-align center
+      transition all 0.2s ease-in
 
 footer
   display flex
