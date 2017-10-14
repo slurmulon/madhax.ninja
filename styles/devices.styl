@@ -18,12 +18,17 @@
     a
       margin 0 0.5em
 
+// @media only screen and (max-width: 768px)
+//   main, footer
+//     display none !important
+
 /* Smartphones (landscape) ----------- */
 // @media only screen and (min-width : 321px) {
 // /* Styles */
 // }
 
 /* Smartphones (portrait) ----------- */
-// @media only screen and (max-width : 320px) {
-// /* Styles */
-// }
+@media only screen and (max-width: 768px)
+  // TODO: instead turn these into menus that open up
+  main, footer
+    display none !important
