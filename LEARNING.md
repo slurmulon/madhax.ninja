@@ -6,6 +6,10 @@
 # Fancy
 
 - https://codepen.io/klesht/pen/vEOjrz (CSS background slideshow)
+- https://codemyui.com/button-text-border-glitch-effect-css/
+- https://codepen.io/fazlurr/pen/qbWMRv (Text shine effect)
+- https://codepen.io/MarioDesigns/pen/woJgeo (Floating effect)
+- https://codepen.io/daneden/pen/BizAg (Awesome shine)
 
 # Icons
 
