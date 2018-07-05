@@ -1,3 +1,5 @@
+import 'vuetify/dist/vuetify.min.css'
+
 // TODO: experiment with this theme (based on pasty green):
 // @see: http://www.paletton.com/#uid=5310u0kfVu66gOCb4CMkppjonkZ
 export default {
