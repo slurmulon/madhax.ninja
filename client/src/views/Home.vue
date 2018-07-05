@@ -61,3 +61,8 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.application
+  padding 1em
+</style>
