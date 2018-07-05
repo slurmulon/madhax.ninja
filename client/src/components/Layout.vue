@@ -16,7 +16,7 @@
 #app, .application--wrap
   display flex
   flex 1
-  flex-flow column nowrap
+  flex-flow column nowrap !important
   justify-content center
 
 .application--wrap
