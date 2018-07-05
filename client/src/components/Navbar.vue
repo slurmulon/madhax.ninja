@@ -7,7 +7,8 @@
     <div class="menu">
       <!-- <a href="https://github.com/slurmulon" target="git">Projects</a> -->
       <!-- <a href="http://blog.evavro.com" target="blog">Blog</a> -->
-      <a href="#">Work</a>
+      <!-- <a href="#">Work</a> -->
+      <router-link to="/work">Work</router-link>
       <a href="#">Reading</a>
       <a href="mailto:evavro@gmail.com">Contact</a>
     </div>

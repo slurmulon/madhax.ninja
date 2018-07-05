@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
-// import HelloWorld from '@/components/HelloWorld'
+import Work from '@/views/Work'
 
 Vue.use(Router)
 
@@ -11,6 +11,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/work',
+      name: 'Work',
+      component: Work
     }
   ]
 })
