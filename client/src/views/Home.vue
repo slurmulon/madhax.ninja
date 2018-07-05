@@ -38,27 +38,27 @@
       </section>
       <section class="tools">
         <h2 class="head">Tools</h2>
-        <!-- <div class="card"> -->
-        <!--   <a href="https://nodejs.org/" target="tool"><img src="./assets/tools/node-js.png"></a> -->
-        <!-- </div> -->
-        <!-- <div class="card"> -->
-        <!--   <a href="https://clojure.org/" target="tool"><img src="./assets/tools/clojure.png"></a> -->
-        <!-- </div> -->
-        <!-- <div class="card"> -->
-        <!--   <a href="https://elixir-lang.org/" target="tool"><img src="./assets/tools/elixir.png"></a> -->
-        <!-- </div> -->
-        <!-- <div class="card"> -->
-        <!--   <a href="https://vuejs.org/" target="tool"><img src="./assets/tools/vuejs.png"></a> -->
-        <!-- </div> -->
-        <!-- <div class="card"> -->
-        <!--   <a href="http://json-schema.org/" target="tool"><img src="./assets/tools/json-schema.png"></a> -->
-        <!-- </div> -->
-        <!-- <div class="card"> -->
-        <!--   <a href="https://webpack.js.org/" target="tool"><img src="./assets/tools/webpack.png"></a> -->
-        <!-- </div> -->
-        <!-- <div class="card"> -->
-        <!--   <a href="https://apiblueprint.org/" target="tool"><img src="./assets/tools/api-blueprint.png"></a> -->
-        <!-- </div> -->
+        <div class="card">
+          <a href="https://nodejs.org/" target="tool"><img src="../assets/img/node-js.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://clojure.org/" target="tool"><img src="../assets/img/clojure.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://elixir-lang.org/" target="tool"><img src="../assets/img/elixir.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://vuejs.org/" target="tool"><img src="../assets/img/vuejs.png"></a>
+        </div>
+        <div class="card">
+          <a href="http://json-schema.org/" target="tool"><img src="../assets/img/json-schema.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://webpack.js.org/" target="tool"><img src="../assets/img/webpack.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://apiblueprint.org/" target="tool"><img src="../assets/img/api-blueprint.png"></a>
+        </div>
       </section>
     <!-- </div> -->
     </footer>
