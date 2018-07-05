@@ -7,7 +7,6 @@
     </section>
 
     <footer slot="footer">
-    <!-- <div slot="footer"> -->
       <section class="status">
         <h2 class="head">Status</h2>
         <div class="entry">
@@ -47,7 +46,6 @@
           <a href="https://apiblueprint.org/" target="tool"><img src="../assets/img/api-blueprint.png"></a>
         </div>
       </section>
-    <!-- </div> -->
     </footer>
   </layout>
 </template>
