@@ -34,7 +34,6 @@
     <footer slot="footer">
       <back></back>
     </footer>
-    <!-- <back slot="footer"></back> -->
   </layout>
 </template>
 

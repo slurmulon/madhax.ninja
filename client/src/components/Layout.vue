@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <!-- <v-content> -->
+    <!--   <v-container fluid fill-height> -->
+    <!--     <v-layout column nowrap> -->
     <slot name="header"></slot>
 
     <main>
@@ -7,6 +10,9 @@
     </main>
 
     <slot name="footer"></slot>
+        <!-- </v-layout> -->
+      <!-- </v-container> -->
+    <!-- </v-content> -->
   </v-app>
 </template>
 

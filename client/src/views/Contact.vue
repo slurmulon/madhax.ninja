@@ -6,11 +6,9 @@
       :D
     </section>
 
-    <back slot="footer"></back>
-
-    <!-- <v-footer slot="footer"> -->
-    <!--   <back></back> -->
-    <!-- </v-footer> -->
+    <v-footer slot="footer">
+      <back></back>
+    </v-footer>
   </layout>
 </template>
 
