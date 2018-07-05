@@ -6,7 +6,10 @@
       :D
     </section>
 
-    <back slot="footer"></back>
+    <footer slot="footer">
+      <back></back>
+    </footer>
+    <!-- <back slot="footer"></back> -->
   </layout>
 </template>
 
