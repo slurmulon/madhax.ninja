@@ -1,7 +1,9 @@
 <template>
   <nav slot="header" class="header">
     <div class="logo">
-      <h1>Erik Vavro</h1>
+      <a @click="$router.push('/')">
+        <h1>Erik Vavro</h1>
+      </a>
       <span>Software (engineer + architect)</span>
     </div>
     <div class="menu">
