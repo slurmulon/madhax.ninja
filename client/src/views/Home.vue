@@ -1,18 +1,6 @@
 <template>
   <layout>
-    <nav slot="header" class="header">
-    <!-- <div slot="header"> -->
-      <div class="logo">
-        <h1>Erik Vavro</h1>
-        <span>Software (engineer + architect)</span>
-      </div>
-      <div class="menu">
-        <a href="https://github.com/slurmulon" target="git">Projects</a>
-        <a href="http://blog.evavro.com" target="blog">Blog</a>
-        <a href="mailto:evavro@gmail.com">Contact</a>
-      </div>
-    <!-- </div> -->
-    </nav>
+    <navbar slot="header"></navbar>
 
     <section class="content">
       <strong class="shout">Progressive Web Applications, RESTful APIs, Hypermedia + More</strong>
@@ -65,10 +53,12 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
 import Layout from '@/components/Layout'
 
 export default {
   components: {
+    Navbar,
     Layout
   }
 }

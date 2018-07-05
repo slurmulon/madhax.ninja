@@ -17,4 +17,5 @@
   display flex
   flex 1
   flex-flow column wrap
+  justify-content center
 </style>
