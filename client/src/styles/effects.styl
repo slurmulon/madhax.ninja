@@ -1,0 +1,112 @@
+@require 'slowbro'
+
+// @see https://codepen.io/lbebber/pen/ypgql
+
+// random(mini, maxi)
+// 	return floor(math(0, 'random')*(maxi - mini + 1) + mini)
+  // return floor(math(0, 'random') * (max - min + 1) + min)
+
+.glitch
+  color white
+  font-size 100px
+  position relative
+  width 400px
+  margin 0 auto
+
+@keyframes noise-anim
+  steps = 20
+	for step in (1..20)
+		//percentage(step * (1 / 20))
+		// 	clip rect(random(1, 100) + px, 9999px, random(1, 100) + px, 0)
+
+.glitch:after
+  content attr(data-text)
+  position absolute
+  left 2px
+  text-shadow -1px 0 red
+  top 0
+  color white
+  background black
+  overflow hidden
+  clip rect(0,900px,0,0)
+  animation noise-anim 2s infinite linear alternate-reverse
+
+@keyframes noise-anim-2
+  $steps 20
+  // @for $i from 0 through $steps
+  //  #percentage($i*(1/$steps))
+  //     clip rect(random(100)+px,9999px,random(100)+px,0)
+
+.glitch:before
+  content attr(data-text)
+  position absolute
+  left -2px
+  text-shadow 1px 0 blue
+  top 0
+  color white
+  background black
+  overflow hidden
+  clip rect(0,900px,0,0)
+  animation noise-anim-2 3s infinite linear alternate-reverse
+
+// https://codepen.io/daneden/pen/BizAg
+
+.shine
+  // position absolute
+  // width 200px
+  // top 50%
+  // left 50%
+  // height 60px
+  // margin-left -100px
+  text-align center
+  text-shadow 0 1px 2px rgba(0,0,0,.1)
+  -webkit-mask-image linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%)
+  -webkit-mask-size 200%
+  // animation shine 4s infinite, hover 2s alternate infinite ease-in-out
+  animation shine 2s infinite ease-in-out
+
+.hover
+  animation hover 2s alternate infinite ease-in-out
+
+.shine-hover
+  @extends .shine
+
+  opacity 0.8
+  animation shine 4s infinite ease-in-out, hover 2s alternate infinite ease-in-out
+
+  // &:after
+  //   content ''
+  //   position relative
+  //   display block
+  //   width 10px
+  //   height 10px
+  //   border 2px solid #fff
+  //   border-top none
+  //   border-left none
+  //   left 50%
+  //   margin-left -5px
+  //   transform translateY(30%) rotate(45deg)
+  //   animation hoverSmall 2s 1s alternate infinite ease-in-out
+
+@-webkit-keyframes shine
+  from
+    -webkit-mask-position 150%
+
+  to
+    -webkit-mask-position -50%
+
+@-webkit-keyframes hover
+  from
+    // transform translateY(-50%)
+    transform translateY(0%)
+
+  to
+    // transform translateY(-75%)
+    transform translateY(-25%)
+
+@-webkit-keyframes hoverSmall
+  from
+    transform translateY(30%) rotate(45deg)
+
+  to
+    transform translateY(-10%) rotate(45deg)

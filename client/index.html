@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Erik Vavro</title>
+    <link href="https://fonts.googleapis.com/css?family=Geo|Varela+Round|Yesteryear" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <nav class="header">
+      <div class="logo">
+        <h1>Erik Vavro</h1>
+        <span>Software (engineer + architect)</span>
+      </div>
+      <div class="menu">
+        <a href="https://github.com/slurmulon" target="git">Projects</a>
+        <a href="http://blog.evavro.com" target="blog">Blog</a>
+        <!-- <a href="#">Blog</a> -->
+        <a href="mailto:evavro@gmail.com">Contact</a>
+      </div>
+    </nav>
+    <main>
+      <section class="content">
+        <strong class="shout">Progressive Web Applications, RESTful APIs, Hypermedia + More</strong>
+      </section>
+    </main>
+    <footer>
+      <section class="status">
+        <h2 class="head">Status</h2>
+        <div class="entry">
+          <span class="title">Employment:</span> Ceres Imaging
+        </div>
+        <div class="entry">
+          <span class="title">Open-Source:</span> Busy
+        </div>
+        <div class="entry">
+          <span class="title">Location:</span> http://127.0.0.1
+        </div>
+        <!-- <div class="entry"> -->
+        <!--   <span class="title">PGP Key:</span> 2C0B 78CC EA05 A274 -->
+        <!-- </div> -->
+      </section>
+      <section class="tools">
+        <h2 class="head">Tools</h2>
+        <div class="card">
+          <a href="https://nodejs.org/" target="tool"><img src="./assets/tools/node-js.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://clojure.org/" target="tool"><img src="./assets/tools/clojure.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://elixir-lang.org/" target="tool"><img src="./assets/tools/elixir.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://vuejs.org/" target="tool"><img src="./assets/tools/vuejs.png"></a>
+        </div>
+        <div class="card">
+          <a href="http://json-schema.org/" target="tool"><img src="./assets/tools/json-schema.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://webpack.js.org/" target="tool"><img src="./assets/tools/webpack.png"></a>
+        </div>
+        <div class="card">
+          <a href="https://apiblueprint.org/" target="tool"><img src="./assets/tools/api-blueprint.png"></a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
+

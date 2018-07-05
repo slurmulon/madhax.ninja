@@ -1,0 +1,204 @@
+// @see colors: https://coolors.co/fc4b47-ea8b92-8cceff-96ffd8-bfffbc
+@require './colors'
+@require './effects'
+@require './devices'
+
+// primary-color = #EA8B92
+// secondary-color = #8CCEFF
+// tertiary-color = #96FFD8
+// // #d1c180
+
+// tertiary-color = #d1c180 // pink // #EA8B92
+// tertiary-color = #fff //pink
+
+// tertiary-color = #9ea8a4
+// secondary-color = #8CCEFF
+// primary-color = #96FFD8
+// accent-color = #d1c180
+
+@font-face {
+  font-family Lazer84
+  src url(../assets/fonts/Lazer84.ttf)
+}
+
+*
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+html, body
+  height 100%
+  padding 0
+  margin 0
+
+html
+  // background darken(#8c86d1, 10%)
+  background bg-color
+  text-shadow 1px 1px 1px #000
+
+body
+  display flex
+  align-content center
+  justify-content center
+  flex-flow column nowrap
+  // background url(../img/vintage-leaves/vintage-leaves.png)
+  // background url(../img/skyscraper/skyscraper/skyscraper.png)
+  background-image linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(../assets/vertical-waves.png)
+  // background url(../img/memphis-colorful/memphis-colorful.png)
+  // background salmon
+  // background darksalmon
+  // background firebrick
+  // background #2d3280 // cool blue
+  // background #2d5080 // cool blue (dark)
+  // background #2d807d // cool green
+  // background #802d4a // cool purple (dark)
+  // background #8c86d1 // cool purple (light)
+  // font-family 'Varela Round', sans-serif
+  font-family 'Geo', sans-serif
+  overflow-x hidden // MADHAX: shouldn't be necessary, weird
+  padding 1em
+  @extends .slowbro
+
+h1, h2, h3, h4, h5, h6
+  color secondary-color
+  padding 0
+  margin 0
+  font-family 'Geo', sans-serif
+  text-transform uppercase
+  text-shadow 1px 1px 2px #000
+
+.header
+  display flex
+  justify-content space-between
+  // flex 1 0
+  // display flex
+  // justify-content space-between
+  padding 1em
+  // vertical-align middle
+  text-transform uppercase
+
+  .logo
+    font-size 125% // experimental!
+
+    h1
+      position relative
+      font-family 'Lazer84'
+      text-shadow 2px 2px 1px #000
+      letter-spacing 5px
+      color primary-color
+      // color tertiary-color
+      //padding 1em // TODO: apply this to surrounding navigation bar instead
+      margin 0 0 0.25em
+      overflow hidden // for sheen effect
+
+    span
+      color lighten(tertiary-color, 50%)
+      // color accent-color
+      text-shadow 1px 1px 1px #000
+      font-weight bold
+      // color #000
+      // font-family 'Geo', sans-serif
+
+  .menu
+    // TODO: consider using this. only makes sense if we have a different color for the nav
+    display flex
+    flex-flow row wrap
+    align-items center
+    justify-items center
+
+    a
+      margin-left 1em
+      font-family 'Yesteryear', cursive
+      font-size 200%
+      font-weight bold
+      text-decoration none
+      text-transform none
+      text-shadow 1px 1px 2px black
+      color secondary-color
+      transition all 0.2s ease-in
+
+      &:hover
+        @extends .shine
+        color primary-color //tertiary-color
+        text-shadow 1px 1px 1px #000
+        // border-bottom 2px solid tertiary-color
+
+main
+  display flex
+  // flex 1 100%
+  flex 1
+  align-items center
+  justify-content center
+
+  .content
+    display flex
+    flex 1 100%
+    align-items center
+    justify-content center
+    width 100%
+
+    .shout
+      color white
+      font-size 225% //175%
+      text-align center
+      transition all 0.2s ease-in
+
+footer
+  display flex
+  flex-flow row nowrap
+  justify-content space-between
+
+  section
+    // flex 1
+    padding 1em
+
+    .head
+      font-family 'Yesteryear', cursive
+      text-transform none
+      font-size 150%
+      margin-bottom .5em
+
+    .title
+      font-weight bold
+      // text-shadow 1px 1px 1px tertiary-color
+
+
+    .entry
+      display block
+      // font-size 80%
+      color white
+
+    .card
+      display inline-block
+      float left // prevents extra margin on the right from forming on small screens
+      margin-right 1em
+      font-size 80%
+
+      img
+        transition all .2s ease-in-out
+        max-height 40px
+
+        &:hover
+          @extends .shine-hover
+          // animation float 6s ease-in-out infinite
+          // transform scale(1.1)
+
+  .status
+    color primary-color //tertiary-color
+    // color #fff4c0
+
+    .title
+      // color primary-color
+      color tertiary-color
+      // color #d1c180
+      // color #D5BFBD
+      // color white
+
+    .entry:not(:last-of-type)
+      padding-bottom 0.5em
+
+  .tools
+    overflow-x auto
+
+    .card
+      margin-top 1.5em // TODO: replace this with flexbox horizontal/vertical centering
