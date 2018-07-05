@@ -3,21 +3,97 @@
     <navbar slot="header"></navbar>
 
     <section class="content">
-      :D
+      <v-card color="white" class="elevation-8 pa-4" style="width: 300px">
+        <v-form ref="form" v-model="valid" lazy-validation dark>
+          <v-text-field
+            v-model="name"
+            :rules="nameRules"
+            :counter="10"
+            label="Name"
+            required
+          ></v-text-field>
+          <v-text-field
+            v-model="email"
+            :rules="emailRules"
+            label="E-mail"
+            required
+          ></v-text-field>
+          <v-select
+            v-model="select"
+            :items="items"
+            :rules="[v => !!v || 'Item is required']"
+            label="Item"
+            required
+          ></v-select>
+          <!-- <v-checkbox -->
+          <!--   v-model="checkbox" -->
+          <!--   :rules="[v => !!v || 'You must agree to continue!']" -->
+          <!--   label="Do you agree?" -->
+          <!--   required -->
+          <!-- ></v-checkbox> -->
+
+          <v-btn
+            :disabled="!valid"
+            @click="submit"
+            color="secondary"
+          >
+            submit
+          </v-btn>
+          <v-btn @click="clear">clear</v-btn>
+        </v-form>
+      </v-card>
     </section>
 
-    <v-footer slot="footer">
+    <footer slot="footer">
       <back></back>
-    </v-footer>
+    </footer>
   </layout>
 </template>
 
 <script>
+import axios from 'axios'
 import Navbar from '@/components/Navbar'
 import Back from '@/components/footers/Back'
 import Layout from '@/components/Layout'
 
 export default {
+  data: () => ({
+    valid: true,
+    name: '',
+    nameRules: [
+      v => !!v || 'Name is required',
+      v => (v && v.length <= 10) || 'Name must be less than 10 characters'
+    ],
+    email: '',
+    emailRules: [
+      v => !!v || 'E-mail is required',
+      v => /.+@.+/.test(v) || 'E-mail must be valid'
+    ],
+    select: null,
+    items: [
+      'General',
+      'Opportuniy',
+      'Resume request'
+    ]
+  }),
+
+  methods: {
+    submit () {
+      if (this.$refs.form.validate()) {
+        // Native form submission is not yet supported
+        axios.post('/api/submit', {
+          name: this.name,
+          email: this.email,
+          select: this.select
+        })
+      }
+    },
+
+    clear () {
+      this.$refs.form.reset()
+    }
+  },
+
   components: {
     Navbar,
     Back,
