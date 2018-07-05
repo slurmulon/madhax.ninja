@@ -6,17 +6,19 @@
       :D
     </section>
 
-    <footer slot="footer"></footer>
+    <back slot="footer"></back>
   </layout>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar'
+import Back from '@/components/footers/Back'
 import Layout from '@/components/Layout'
 
 export default {
   components: {
     Navbar,
+    Back,
     Layout
   }
 }

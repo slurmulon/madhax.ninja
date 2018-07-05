@@ -1,10 +1,10 @@
 <template>
-  <v-container grid-list-xs1 text-xs-center>
-    <v-layout column nowrap>
-      <v-flex xs1>
-        <v-icon>back</v-icon>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-layout column nowrap>
+    <v-flex xs1>
+      <v-btn icon>
+        <v-icon>arrow_back_ios</v-icon>
+      </v-btn>
+    </v-flex>
+  </v-layout>
 </template>
 

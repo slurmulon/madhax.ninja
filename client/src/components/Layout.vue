@@ -16,6 +16,12 @@
 #app, .application--wrap
   display flex
   flex 1
-  flex-flow column wrap
+  flex-flow column nowrap
   justify-content center
+
+.application--wrap
+  padding 1em 0
+
+.application.theme--light
+  background none
 </style>
