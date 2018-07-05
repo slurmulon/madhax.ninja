@@ -5,6 +5,6 @@ import router from '../router'
 import store from '../store'
 import theme from './theme'
 
-// sync(store, router)
+sync(store, router)
 
 Vue.use(Vuetify, { theme })
