@@ -1,14 +1,12 @@
 <template>
   <v-app>
-    <!-- <nav class="header"> -->
-      <slot name="header"></slot>
-    <!-- </nav> -->
+    <slot name="header"></slot>
+
     <main>
       <slot></slot>
     </main>
-    <!-- <footer> -->
-      <slot name="footer"></slot>
-    <!-- </footer> -->
+
+    <slot name="footer"></slot>
   </v-app>
 </template>
 
