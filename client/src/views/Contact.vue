@@ -8,7 +8,7 @@
           <v-text-field
             v-model="name"
             :rules="nameRules"
-            :counter="10"
+            :counter="64"
             label="Name"
             required
           ></v-text-field>
@@ -35,7 +35,7 @@
           <v-btn
             :disabled="!valid"
             @click="submit"
-            color="secondary"
+            color="primary"
           >
             submit
           </v-btn>
@@ -62,7 +62,7 @@ export default {
     name: '',
     nameRules: [
       v => !!v || 'Name is required',
-      v => (v && v.length <= 10) || 'Name must be less than 10 characters'
+      v => (v && v.length <= 64) || 'Name must be less than 64 characters'
     ],
     email: '',
     emailRules: [
