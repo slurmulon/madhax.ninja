@@ -21,8 +21,8 @@
           <v-select
             v-model="select"
             :items="items"
-            :rules="[v => !!v || 'Item is required']"
-            label="Item"
+            :rules="[v => !!v || 'Reason is required']"
+            label="Reason"
             required
           ></v-select>
           <!-- <v-checkbox -->
@@ -103,6 +103,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// @require '../styles/slowbro'
+
 .application
   padding 1em
+
+//.v-card
+//  @extends .slowbro
 </style>
