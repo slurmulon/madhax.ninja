@@ -10,7 +10,8 @@
       <!-- <a href="#">Work</a> -->
       <router-link to="/work">Work</router-link>
       <a href="#">Reading</a>
-      <a href="mailto:evavro@gmail.com">Contact</a>
+      <router-link to="/contact">Contact</router-link>
+      <!-- <a href="mailto:evavro@gmail.com">Contact</a> -->
     </div>
   </nav>
 </template>
