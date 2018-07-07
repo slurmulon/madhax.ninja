@@ -16,7 +16,7 @@
           <span class="label">Open-Source:</span> Busy
         </div>
         <div class="entry">
-          <span class="label">Location:</span> http://127.0.0.1
+          <span class="label">Location:</span> Remote
         </div>
         <!-- <div class="entry"> -->
         <!--   <span class="title">PGP Key:</span> 2C0B 78CC EA05 A274 -->
