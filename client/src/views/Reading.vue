@@ -6,24 +6,18 @@
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
           <!-- <v-card> -->
-            <v-container grid-list-md fluid>
+            <v-container grid-list-xl fluid>
               <v-layout row wrap>
                 <v-flex
                   v-for="book in books"
                   :key="book.title"
                   xs4
                 >
-                  <v-card flat tile>
-                    <!-- <img src="~@/assets/img/book-graph-databases.jpg" style="height: 150px"> -->
+                  <v-card flat tile class="elevation-4">
                     <v-card-media
                       :src="require(`@/assets/img/book-${book.file}`)"
                       height="150px"
                     ></v-card-media>
-                    <!-- <v-card-media -->
-                    <!--   :src="`https://unsplash.it/150/300?image=${Math.floor(Math.random() * 100) + 1}`" -->
-                    <!--   height="150px" -->
-                    <!-- > -->
-                    <!-- </v-card-media> -->
                   </v-card>
                 </v-flex>
               </v-layout>
@@ -43,7 +37,17 @@ export default {
   data: () => ({
     books: [
       { title: 'The Pragmatic Programmer', file: 'pragmatic-programmer.jpg' },
-      { title: 'High-Performance Browser Networking', file: 'browser-networking.jpg' }
+      { title: 'Restful Web APIs', file: 'restful-web-apis.jpg' },
+      { title: 'High-Performance Browser Networking', file: 'browser-networking.jpg' },
+      { title: 'Design Patterns', file: 'design-patterns.jpg' },
+      { title: 'Fundamentals of Database Systems', file: 'fundementals-of-database-systems.jpeg' },
+      { title: '7 Concurrency Models in 7 Weeks', file: 'concurrency-models.jpg' },
+      { title: 'Graph Databases', file: 'graph-databases.jpg' },
+      { title: 'Principles of Object-Oriented JavaScript', file: 'principles-object-oriented-js.jpg' },
+      { title: 'Programming Elixir', file: 'programming-elixir.jpg' },
+      { title: 'Team Geek', file: 'team-geek.jpg' },
+      { title: 'Peopleware', file: 'peopleware.jpg' },
+      { title: 'The Start Up J-Curve', file: 'start-up-j-curve.jpg' }
     ]
   }),
   components: {
