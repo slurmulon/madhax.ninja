@@ -2,8 +2,11 @@
   <layout>
     <navbar slot="header"></navbar>
 
-    <section class="content">
-      <v-card color="white" class="elevation-8 pa-4" style="width: 300px">
+    <!-- <section class="content"> -->
+    <v-content>
+      <v-container fluid>
+      <!-- <v-card color="white" class="elevation-8 pa-4" style="width: 300px"> -->
+      <v-card color="white" class="pa-4" style="width: 300px">
         <v-form ref="form" v-model="valid" lazy-validation dark>
           <v-text-field
             v-model="name"
@@ -42,7 +45,9 @@
           <v-btn @click="clear">clear</v-btn>
         </v-form>
       </v-card>
-    </section>
+      </v-container>
+    </v-content>
+    <!-- </section> -->
 
     <footer slot="footer">
       <back></back>

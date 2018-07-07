@@ -25,8 +25,12 @@
   flex-flow column nowrap !important
   justify-content center
 
-.application--wrap
-  padding 1em 0
+.application.theme--light
+  display block flow
+  padding 0
+
+// .application--wrap
+//   padding 1em 0
 
 .application.theme--light
   background none
