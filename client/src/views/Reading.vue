@@ -45,8 +45,11 @@ export default {
       { title: 'Graph Databases', file: 'graph-databases.jpg' },
       { title: 'Principles of Object-Oriented JavaScript', file: 'principles-object-oriented-js.jpg' },
       { title: 'Programming Elixir', file: 'programming-elixir.jpg' },
+      { title: 'Clojure for the Brave and True', file: 'clojure-brave-and-true.jpg' },
       { title: 'Team Geek', file: 'team-geek.jpg' },
       { title: 'Peopleware', file: 'peopleware.jpg' },
+      { title: 'Joel on Software', file: 'joel-on-software.jpg' },
+      { title: 'The Productive Programmer', file: 'productive-programmer.jpg' },
       { title: 'The Start Up J-Curve', file: 'start-up-j-curve.jpg' }
     ]
   }),

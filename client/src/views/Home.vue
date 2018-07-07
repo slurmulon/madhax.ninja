@@ -78,4 +78,14 @@ export default {
 <style lang="stylus" scoped>
 // .application
 //   padding 1em
+
+main.v-content > .v-content__wrap
+  display flex
+  background pink
+
+  & > .container
+    display flex
+    flex 1
+    align-items center
+    justify-content center
 </style>
