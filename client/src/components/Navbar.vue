@@ -25,10 +25,15 @@
       <!-- <span class="title">Software (engineer + architect)</span> -->
     </v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-sm-and-down">
+    <!-- <v-toolbar-items class="hidden-sm-and-down"> -->
+    <v-toolbar-items>
       <v-btn flat class="shiny" color="primary">Work</v-btn>
-      <v-btn flat class="shiny" color="primary">Reading</v-btn>
-      <v-btn flat class="shiny" color="primary"><router-link to="/contact">Contact</router-link></v-btn>
+      <v-btn flat class="shiny" color="primary">
+        <router-link to="/reading">Reading</router-link>
+      </v-btn>
+      <v-btn flat class="shiny" color="primary">
+        <router-link to="/contact">Contact</router-link>
+      </v-btn>
     </v-toolbar-items>
     <!-- </div> -->
     <!-- <div class="menu"> -->

@@ -3,10 +3,15 @@
     <navbar slot="header"></navbar>
 
     <v-content>
-      <!-- <section class="content"> -->
-      <section>
-        <strong class="shout">Progressive Web Applications, RESTful APIs, Hypermedia + More</strong>
-      </section>
+      <v-container fluid>
+        <!-- <v-layout row wrap> -->
+        <!-- <v-flex xs1> -->
+        <section>
+          <strong class="shout text-xs-center">Progressive Web Applications, RESTful APIs, Hypermedia + More</strong>
+        </section>
+        <!-- </v-flex> -->
+        <!-- </v-layout> -->
+      </v-container>
     </v-content>
 
     <footer slot="footer">

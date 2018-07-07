@@ -27,7 +27,7 @@
 
 .application.theme--light
   //display block flow
-  padding 0
+  padding 0 !important
 
 // .application--wrap
 //   padding 1em 0

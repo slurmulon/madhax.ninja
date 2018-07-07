@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
 import Work from '@/views/Work'
+import Reading from '@/views/Reading'
 import Contact from '@/views/Contact'
 
 Vue.use(Router)
@@ -17,6 +18,11 @@ export default new Router({
       path: '/work',
       name: 'Work',
       component: Work
+    },
+    {
+      path: '/reading',
+      name: 'Reading',
+      component: Reading
     },
     {
       path: '/contact',
