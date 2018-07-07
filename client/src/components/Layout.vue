@@ -1,13 +1,13 @@
 <template>
-  <v-app>
+  <v-app light>
     <!-- <v-content> -->
     <!--   <v-container fluid fill-height> -->
     <!--     <v-layout column nowrap> -->
     <slot name="header"></slot>
 
-    <main>
+    <!-- <main> -->
       <slot></slot>
-    </main>
+    <!-- </main> -->
 
     <slot name="footer"></slot>
         <!-- </v-layout> -->
@@ -19,14 +19,14 @@
 <style lang="stylus">
 @require '../styles/main'
 
-#app, .application--wrap
-  display flex
-  flex 1
-  flex-flow column nowrap !important
-  justify-content center
+//#app, .application--wrap
+//  display flex
+//  flex 1
+//  flex-flow column nowrap !important
+//  justify-content center
 
 .application.theme--light
-  display block flow
+  //display block flow
   padding 0
 
 // .application--wrap

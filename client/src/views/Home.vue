@@ -2,9 +2,12 @@
   <layout pa-2>
     <navbar slot="header"></navbar>
 
-    <section class="content">
-      <strong class="shout">Progressive Web Applications, RESTful APIs, Hypermedia + More</strong>
-    </section>
+    <v-content>
+      <!-- <section class="content"> -->
+      <section>
+        <strong class="shout">Progressive Web Applications, RESTful APIs, Hypermedia + More</strong>
+      </section>
+    </v-content>
 
     <footer slot="footer">
       <section class="status">
