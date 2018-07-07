@@ -25,7 +25,12 @@
       <section class="tools">
         <h2 class="head">Tools</h2>
         <div class="card">
-          <a href="https://nodejs.org/" target="tool"><img src="../assets/img/node-js.png"></a>
+          <v-tooltip bottom>
+            <a href="https://nodejs.org/" target="tool" slot="activator">
+              <img src="../assets/img/node-js.png">
+            </a>
+            <span>JavaScript</span>
+          </v-tooltip>
         </div>
         <div class="card">
           <a href="https://clojure.org/" target="tool"><img src="../assets/img/clojure.png"></a>
