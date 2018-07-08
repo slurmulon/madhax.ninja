@@ -9,18 +9,19 @@
             <v-container grid-list-xl fluid>
               <h1>Summary</h1>
               <v-flex xs12>
-                <v-card class="blocky-flat elevation-4 pa-2">
+                <v-card class="blocky-flat elevation-4 pa-4">
                   <p>Hi there! My name is Erik Vavro.</p>
                   <p>I'm a remote software engineer specializing in progressive web applications.</p>
                   <p>I love learning about all things web and writing beautiful code.</p>
                   <p>I believe in doing the right thing early on and take a people-first approach to development.</p>
                   <span>If you are interested in collaborating or have an opportunity, please feel free to <router-link to="/contact">contact me</router-link>.</span>
+                  <!-- TODO: github, linkedin, blog -->
                 </v-card>
               </v-flex>
 
-              <h1>Skills</h1>
+              <h1 class="mt-4">Skills</h1>
               <v-flex xs12>
-                <v-card class="blocky-flat elevation-4 pa-2">
+                <v-card class="blocky-flat elevation-4 pa-4">
                   <v-layout row wrap>
                     <v-flex
                       v-for="skill in skills"
@@ -34,11 +35,11 @@
                 </v-card>
               </v-flex>
               <!-- <span class="title">Projects</span> -->
-              <h1>Interests</h1>
+              <h1 class="mt-4">Interests</h1>
               <!-- synchronization, streaming, decentralization, fractals -->
               <!-- <span class="philosophy">Philosophy</span> -->
 
-              <h1>Bookshelf</h1>
+              <h1 class="mt-4">Bookshelf</h1>
               <v-layout row wrap>
                 <v-flex
                   v-for="book in books"
@@ -85,9 +86,9 @@ export default {
       { title: 'The Start Up J-Curve', file: 'start-up-j-curve.jpg' }
     ],
     skills: [
-      { title: 'JavaScript', url: 'https://nodejs.org', icon: 'node-js.png' },
-      { title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png' }
-
+      { title: 'JavaScript', url: 'https://nodejs.org', icon: 'node-js.png', level: 100 },
+      { title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png', level: 50 },
+      { title: 'Clojure', url: 'https://clojure.org', icon: 'clojure.png', level: 60 }
     ]
   }),
   components: {
