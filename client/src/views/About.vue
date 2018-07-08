@@ -16,7 +16,7 @@
                   <v-card flat tile class="elevation-4">
                     <v-card-media
                       :src="require(`@/assets/img/book-${book.file}`)"
-                      height="150px"
+                      height="200px"
                     ></v-card-media>
                   </v-card>
                 </v-flex>

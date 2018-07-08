@@ -4,7 +4,7 @@
 
     <!-- <section class="content"> -->
     <v-content>
-      <v-container fluid>
+      <v-container fluid justify-center style="display: flex">
       <!-- <v-card color="white" class="elevation-8 pa-4" style="width: 300px"> -->
       <v-card color="white" class="pa-4" style="width: 300px">
         <v-form ref="form" v-model="valid" lazy-validation dark>
@@ -112,6 +112,10 @@ export default {
 
 .application
   padding 1em
+
+// TODO: figure out why this isn't being applied... arg
+.v-content__wrap
+  display flex
 
 //.v-card
 //  @extends .slowbro

@@ -27,9 +27,11 @@
     <v-spacer></v-spacer>
     <!-- <v-toolbar-items class="hidden-sm-and-down"> -->
     <v-toolbar-items>
-      <v-btn flat class="shiny" color="primary">Work</v-btn>
       <v-btn flat class="shiny" color="primary">
-        <router-link to="/reading">Reading</router-link>
+        <router-link to="/about">About</router-link>
+      </v-btn>
+      <v-btn flat class="shiny" color="primary">
+        <router-link to="/work">Work</router-link>
       </v-btn>
       <v-btn flat class="shiny" color="primary">
         <router-link to="/contact">Contact</router-link>

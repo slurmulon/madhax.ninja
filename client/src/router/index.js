@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
 import Work from '@/views/Work'
-import Reading from '@/views/Reading'
+import About from '@/views/About'
 import Contact from '@/views/Contact'
 
 Vue.use(Router)
@@ -20,9 +20,9 @@ export default new Router({
       component: Work
     },
     {
-      path: '/reading',
-      name: 'Reading',
-      component: Reading
+      path: '/about',
+      name: 'About',
+      component: About
     },
     {
       path: '/contact',
