@@ -30,9 +30,13 @@
       <v-btn flat class="shiny" color="primary">
         <router-link to="/about">About</router-link>
       </v-btn>
+      <!-- <v-btn flat class="shiny" color="primary"> -->
+      <!--   <router-link to="/work">Work</router-link> -->
+      <!-- </v-btn> -->
       <v-btn flat class="shiny" color="primary">
-        <router-link to="/work">Work</router-link>
+        <router-link to="/blog">Blog</router-link>
       </v-btn>
+
       <v-btn flat class="shiny" color="primary">
         <router-link to="/contact">Contact</router-link>
       </v-btn>
