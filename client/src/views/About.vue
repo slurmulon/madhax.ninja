@@ -35,6 +35,7 @@
               </v-flex>
               <!-- <span class="title">Projects</span> -->
               <h1>Interests</h1>
+              <!-- synchronization, streaming, decentralization, fractals -->
               <!-- <span class="philosophy">Philosophy</span> -->
 
               <h1>Bookshelf</h1>
