@@ -31,7 +31,7 @@
                       <v-layout row nowrap>
                         <v-flex xs4 sm6 lg4>
                           <a :href="tool.url" target="tool">
-                            <img :src="require(`@/assets/img/${tool.icon}`)" style="height: 50px">
+                            <img :src="require(`@/assets/img/${tool.icon}`)" style="width: 50px">
                           </a>
                         </v-flex>
                         <v-flex xs8 sm6 lg8>
@@ -45,7 +45,7 @@
               </v-flex>
               <!-- <span class="title">Projects</span> -->
               <h1 class="mt-4">Interests</h1>
-              <!-- synchronization, streaming, decentralization, fractals -->
+              <!-- synchronization, streaming, decentralization, timers, fractals -->
               <!-- <span class="philosophy">Philosophy</span> -->
 
               <h1 class="mt-4">Bookshelf</h1>
@@ -105,6 +105,8 @@ export default {
       { title: 'PostgreSQL', url: 'https://postgresql.org', icon: 'postgresql.png', level: 75 },
       { title: 'JSON Schema', url: 'https://jsonschema.org', icon: 'json-schema-logo.png', level: 90 },
       { title: 'API Blueprint', url: 'https://apiblueprint.org', icon: 'api-blueprint.png', level: 90 },
+      { title: 'NPM', url: 'https://npmjs.com', icon: 'npm.png', level: 90 },
+      { title: 'Webpack', url: 'https://webpack.js.org', icon: 'webpack.png', level: 75 },
       { title: 'Vim', url: 'https://vim.org', icon: 'vim.png', level: 75 },
       { title: 'Git', url: 'https://git-scm.com', icon: 'git.png', level: 90 }
     ]
