@@ -63,6 +63,10 @@ body
   // padding 1em
   @extends .slowbro
 
+  // FIXME: figure out how to hide just the ONE scrollbar without removing height 100%
+  &::-webkit-scrollbar
+    display none
+
 h1, h2, h3, h4, h5, h6
   color secondary-color
   padding 0
