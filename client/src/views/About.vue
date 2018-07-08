@@ -19,17 +19,25 @@
                 </v-card>
               </v-flex>
 
-              <h1 class="mt-4">Skills</h1>
+              <h1 class="mt-4">Tools</h1>
               <v-flex xs12>
                 <v-card class="blocky-flat elevation-4 pa-4">
                   <v-layout row wrap>
                     <v-flex
-                      v-for="skill in skills"
-                      :key="skill.name"
+                      v-for="tool in tools"
+                      :key="tool.name"
                       xs4>
-                      <a :href="skill.url" target="tool">
-                        <img :src="require(`@/assets/img/${skill.icon}`)" style="height: 50px">
-                      </a>
+                      <v-layout row nowrap>
+                        <v-flex xs6>
+                          <a :href="tool.url" target="tool">
+                            <img :src="require(`@/assets/img/${tool.icon}`)" style="height: 50px">
+                          </a>
+                        </v-flex>
+                        <v-flex xs6>
+                          <span>{{ tool.title }}</span>
+                          <v-progress-linear v-model="tool.level"></v-progress-linear>
+                        </v-flex>
+                      </v-layout>
                     </v-flex>
                   </v-layout>
                 </v-card>
@@ -85,10 +93,13 @@ export default {
       { title: 'The Productive Programmer', file: 'productive-programmer.jpg' },
       { title: 'The Start Up J-Curve', file: 'start-up-j-curve.jpg' }
     ],
-    skills: [
+    tools: [
       { title: 'JavaScript', url: 'https://nodejs.org', icon: 'node-js.png', level: 100 },
       { title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png', level: 50 },
-      { title: 'Clojure', url: 'https://clojure.org', icon: 'clojure.png', level: 60 }
+      { title: 'Clojure', url: 'https://clojure.org', icon: 'clojure.png', level: 50 },
+      { title: 'Python', url: 'https://python.org', icon: 'python.png', level: 75 },
+      { title: 'Vue', url: 'https://vuejs.org', icon: 'vuejs.png', level: 75 },
+      { title: 'Django', url: 'https://djangoproject.com', icon: 'django.png', level: 75 }
     ]
   }),
   components: {
