@@ -7,6 +7,37 @@
         <v-flex xs12 sm6 offset-sm3>
           <!-- <v-card> -->
             <v-container grid-list-xl fluid>
+              <h1>Summary</h1>
+              <v-flex xs12>
+                <v-card class="blocky-flat elevation-4 pa-2">
+                  <p>Hi there! My name is Erik Vavro.</p>
+                  <p>I'm a remote software engineer specializing in progressive web applications.</p>
+                  <p>I love learning about all things web and writing beautiful code.</p>
+                  <p>I believe in doing the right thing early on and take a people-first approach to development.</p>
+                  <span>If you are interested in collaborating or have an opportunity, please feel free to <router-link to="/contact">contact me</router-link>.</span>
+                </v-card>
+              </v-flex>
+
+              <h1>Skills</h1>
+              <v-flex xs12>
+                <v-card class="blocky-flat elevation-4 pa-2">
+                  <v-layout row wrap>
+                    <v-flex
+                      v-for="skill in skills"
+                      :key="skill.name"
+                      xs4>
+                      <a :href="skill.url" target="tool">
+                        <img :src="require(`@/assets/img/${skill.icon}`)" style="height: 50px">
+                      </a>
+                    </v-flex>
+                  </v-layout>
+                </v-card>
+              </v-flex>
+              <!-- <span class="title">Projects</span> -->
+              <h1>Interests</h1>
+              <!-- <span class="philosophy">Philosophy</span> -->
+
+              <h1>Bookshelf</h1>
               <v-layout row wrap>
                 <v-flex
                   v-for="book in books"
@@ -51,6 +82,11 @@ export default {
       { title: 'Joel on Software', file: 'joel-on-software.jpg' },
       { title: 'The Productive Programmer', file: 'productive-programmer.jpg' },
       { title: 'The Start Up J-Curve', file: 'start-up-j-curve.jpg' }
+    ],
+    skills: [
+      { title: 'JavaScript', url: 'https://nodejs.org', icon: 'node-js.png' },
+      { title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png' }
+
     ]
   }),
   components: {

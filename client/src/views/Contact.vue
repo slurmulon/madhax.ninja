@@ -6,7 +6,7 @@
     <v-content>
       <v-container fluid justify-center style="display: flex">
       <!-- <v-card color="white" class="elevation-8 pa-4" style="width: 300px"> -->
-      <v-card color="white" class="pa-4" style="width: 300px">
+      <v-card color="white" class="blocky-flat pa-4 mb-4" style="width: 300px">
         <v-form ref="form" v-model="valid" lazy-validation dark>
           <v-text-field
             v-model="name"

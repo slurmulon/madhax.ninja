@@ -4,7 +4,7 @@
 // @see colors: https://coolors.co/fc4b47-ea8b92-8cceff-96ffd8-bfffbc
 @require './colors'
 @require './effects'
-@require './devices'
+// @require './devices'
 
 // primary-color = #EA8B92
 // secondary-color = #8CCEFF
@@ -67,8 +67,9 @@ h1, h2, h3, h4, h5, h6
   color secondary-color
   padding 0
   margin 0
-  font-family 'Geo', sans-serif
-  text-transform uppercase
+  // font-family 'Geo', sans-serif !important
+  font-family 'Yesteryear', cursive
+  // text-transform uppercase
   text-shadow 1px 1px 2px #000
 
 a
@@ -79,6 +80,15 @@ a
   text-shadow 2px 2px 1px #000
   letter-spacing 5px
   color primary-color
+
+.blocky
+  font-family 'Geo', sans-serif
+  text-shadow 1px 1px 2px black
+  color white
+
+.blocky-flat
+  font-family 'Geo', sans-serif
+  // font-family 'Open Sans', sans-serif
 
 .shiny
   // margin-left 1em
@@ -99,9 +109,8 @@ a
     text-shadow 1px 1px 1px #000
     // border-bottom 2px solid tertiary-color
 
-
-.application
-  font-family 'Geo', sans-serif
+// .application
+//   font-family 'Geo', sans-serif !important
 
 .header
   background none //white

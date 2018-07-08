@@ -7,7 +7,7 @@
         <!-- <v-layout row wrap> -->
         <!-- <v-flex xs1> -->
         <section>
-          <strong class="shout text-xs-center">Progressive Web Applications, RESTful APIs, Hypermedia + More</strong>
+          <strong class="blocky-flat shout text-xs-center">Progressive Web Applications, RESTful APIs, Hypermedia + More</strong>
         </section>
         <!-- </v-flex> -->
         <!-- </v-layout> -->
@@ -17,13 +17,13 @@
     <footer slot="footer">
       <section class="status">
         <h2 class="head">Status</h2>
-        <div class="entry">
+        <div class="entry blocky-flat">
           <span class="label">Employment:</span> Ceres Imaging
         </div>
-        <div class="entry">
+        <div class="entry blocky-flat">
           <span class="label">Open-Source:</span> Busy
         </div>
-        <div class="entry">
+        <div class="entry blocky-flat">
           <span class="label">Location:</span> Remote
         </div>
         <!-- <div class="entry"> -->
