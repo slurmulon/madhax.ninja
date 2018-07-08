@@ -11,8 +11,8 @@
               <v-flex xs12>
                 <v-card class="blocky-flat elevation-4 pa-4">
                   <p>Hi there! My name is Erik Vavro.</p>
-                  <p>I'm a remote software engineer specializing in progressive web applications.</p>
-                  <p>I love learning about all things web and writing beautiful code.</p>
+                  <p>I am a remote software engineer specializing in progressive web applications.</p>
+                  <p>I am passionate about learning about all things web and writing beautiful, scalable code.</p>
                   <p>I believe in doing the right thing early on and take a people-first approach to development.</p>
                   <span>If you are interested in collaborating or have an opportunity, please feel free to <router-link to="/contact">contact me</router-link>.</span>
                   <!-- TODO: github, linkedin, blog -->
@@ -26,14 +26,15 @@
                     <v-flex
                       v-for="tool in tools"
                       :key="tool.name"
-                      xs4>
+                      xs6
+                      md4>
                       <v-layout row nowrap>
-                        <v-flex xs6>
+                        <v-flex xs4 sm6 lg4>
                           <a :href="tool.url" target="tool">
                             <img :src="require(`@/assets/img/${tool.icon}`)" style="height: 50px">
                           </a>
                         </v-flex>
-                        <v-flex xs6>
+                        <v-flex xs8 sm6 lg8>
                           <span>{{ tool.title }}</span>
                           <v-progress-linear v-model="tool.level"></v-progress-linear>
                         </v-flex>
@@ -99,7 +100,13 @@ export default {
       { title: 'Clojure', url: 'https://clojure.org', icon: 'clojure.png', level: 50 },
       { title: 'Python', url: 'https://python.org', icon: 'python.png', level: 75 },
       { title: 'Vue', url: 'https://vuejs.org', icon: 'vuejs.png', level: 75 },
-      { title: 'Django', url: 'https://djangoproject.com', icon: 'django.png', level: 75 }
+      { title: 'Phoenix', url: 'https://phoenixframework.org', icon: 'phoenix.png', level: 50 },
+      { title: 'Django', url: 'https://djangoproject.com', icon: 'django.png', level: 75 },
+      { title: 'PostgreSQL', url: 'https://postgresql.org', icon: 'postgresql.png', level: 75 },
+      { title: 'JSON Schema', url: 'https://jsonschema.org', icon: 'json-schema-logo.png', level: 90 },
+      { title: 'API Blueprint', url: 'https://apiblueprint.org', icon: 'api-blueprint.png', level: 90 },
+      { title: 'Vim', url: 'https://vim.org', icon: 'vim.png', level: 75 },
+      { title: 'Git', url: 'https://git-scm.com', icon: 'git.png', level: 90 }
     ]
   }),
   components: {
