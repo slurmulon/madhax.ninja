@@ -109,6 +109,15 @@ a
     text-shadow 1px 1px 1px #000
     // border-bottom 2px solid tertiary-color
 
+.shiny-icon
+  transition all .2s ease-in-out
+  // max-height 40px
+
+  &:hover
+    @extends .shine-hover
+    // animation float 6s ease-in-out infinite
+    // transform scale(1.1)
+
 // .application
 //   font-family 'Geo', sans-serif !important
 
@@ -234,6 +243,7 @@ footer
       margin-right 1em
       font-size 80%
 
+      // NOTE: this has been broken out as `shiny-icon`
       img
         transition all .2s ease-in-out
         max-height 40px
