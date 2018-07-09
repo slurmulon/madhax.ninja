@@ -52,10 +52,26 @@
                   </v-layout>
                 </v-card>
               </v-flex>
+
               <!-- <span class="title">Projects</span> -->
               <h1 class="mt-4">Approach</h1>
+
               <h1 class="mt-4">Interests</h1>
-              <!-- hypermedia, synchronization, streaming, decentralization, timers, fractals, self-improvement, music -->
+              <v-flex xs12>
+                <v-card class="blocky-flat elevation-4 pa-4" style="font-size: 1.25em">
+                  <v-layout row wrap>
+                    <v-flex
+                      v-for="interest in interests"
+                      :key="interest"
+                      xs6
+                      md4
+                    >
+                      {{ interest }}
+                    </v-flex>
+                  </v-layout>
+                </v-card>
+              </v-flex>
+
               <!-- <span class="philosophy">Philosophy</span> -->
 
               <h1 class="mt-4">Bookshelf</h1>
@@ -126,6 +142,10 @@ export default {
       { title: 'Vim', url: 'https://vim.org', icon: 'vim.png', level: 75 },
       { title: 'Git', url: 'https://git-scm.com', icon: 'git.png', level: 90 },
       { title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
+    ],
+    interests: [
+      'Hypermedia', 'Streaming', 'Synchronization', 'Decentralization', 'Timers', 'Music',
+      'Fractals', 'Privacy', 'Documentation', 'Self-improvement', 'Health', 'Ergonomics'
     ]
   }),
   components: {
