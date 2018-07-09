@@ -15,7 +15,7 @@
                       <p>Hi there! My name is Erik Vavro.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
-                      <p>I believe in doing the right things from the get-go and taking a people-first approach to development.</p>
+                      <p>I believe in striving for quality right from get-go and taking a people-first approach to development.</p>
                       <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="black--text underline">reach out</router-link>.</span>
                     </v-flex>
                     <!-- <v-flex xs12 class="text-xs-right"> -->
@@ -158,8 +158,8 @@ export default {
       { title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
     ],
     interests: [
-      'Hypermedia', 'Streaming', 'Decentralization', 'Timers', 'Audio',
-      'Music', 'Privacy', 'Self-improvement', 'Health', 'Ergonomics'
+      'Hypermedia', 'Streaming', 'Decentralization', 'Timers', 'Audio', 'Music',
+      'Archiving', 'Fractals', 'Privacy', 'Self-improvement', 'Health', 'Ergonomics'
     ]
   }),
   components: {
