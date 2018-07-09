@@ -54,20 +54,20 @@
               </v-flex>
 
               <!-- <span class="title">Projects</span> -->
-              <h1 class="mt-4">Approach</h1>
-              <v-flex xs12>
-                <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
-                  <v-layout column wrap>
-                    <v-flex xs12 style="font-size: 1.25em">
-                      - Requirements
-                      - Project seed
-                      - Tests with every change
-                      - Documentation
-                      - Hotkeys &gt; Mouse
-                    </v-flex>
-                  </v-layout>
-                </v-card>
-              </v-flex>
+              <!-- <h1 class="mt-4">Approach</h1> -->
+              <!-- <v-flex xs12> -->
+              <!--   <v-card class="blocky-flat subtle-bg elevation-4 pa-4"> -->
+              <!--     <v-layout column wrap> -->
+              <!--       <v-flex xs12 style="font-size: 1.25em"> -->
+              <!--         - Requirements -->
+              <!--         - Project seed -->
+              <!--         - Tests with every change -->
+              <!--         - Documentation -->
+              <!--         - Hotkeys &gt; Mouse -->
+              <!--       </v-flex> -->
+              <!--     </v-layout> -->
+              <!--   </v-card> -->
+              <!-- </v-flex> -->
 
               <h1 class="mt-4">Interests</h1>
               <v-flex xs12>
@@ -137,7 +137,7 @@ export default {
       { title: 'Notes on the Synthesis of Form', file: 'notes-on-form.jpg' }
     ],
     tools: [
-      { title: 'JavaScript', url: 'https://nodejs.org', icon: 'node-js.png', level: 100 },
+      { title: 'JavaScript', url: 'https://nodejs.org', icon: 'js.png', level: 100 },
       { title: 'HTML5', url: 'https://www.w3.org/TR/html52/', icon: 'html5.png', level: 80 },
       { title: 'CSS3', url: 'http://css-tricks.com', icon: 'css3.png', level: 75 },
       { title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png', level: 50 },
@@ -147,7 +147,7 @@ export default {
       { title: 'Phoenix', url: 'http://phoenixframework.org', icon: 'phoenix.png', level: 50 },
       { title: 'Django', url: 'https://djangoproject.com', icon: 'django.png', level: 75 },
       { title: 'PostgreSQL', url: 'https://postgresql.org', icon: 'postgresql.png', level: 75 },
-      { title: 'JSON Schema', url: 'http://json-schema.org', icon: 'json-schema-logo.png', level: 90 },
+      { title: 'JSON Schema', url: 'http://json-schema.org', icon: 'json-schema.png', level: 90 },
       { title: 'API Blueprint', url: 'https://apiblueprint.org', icon: 'api-blueprint.png', level: 90 },
       { title: 'NPM', url: 'https://npmjs.com', icon: 'npm.png', level: 90 },
       { title: 'Webpack', url: 'https://webpack.js.org', icon: 'webpack.png', level: 75 },
@@ -157,7 +157,7 @@ export default {
       { title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
     ],
     interests: [
-      'Hypermedia', 'Streaming', 'Synchronization', 'Decentralization', 'Timers', 'Music',
+      'Hypermedia', 'Streaming', 'Synchronization', 'Decentralization', 'Timers', 'Audio',
       'Fractals', 'Privacy', 'Documentation', 'Self-improvement', 'Health', 'Ergonomics'
     ]
   }),
