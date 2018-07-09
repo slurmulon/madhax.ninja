@@ -9,13 +9,13 @@
             <v-container grid-list-xl fluid>
               <h1>Summary</h1>
               <v-flex xs12>
-                <v-card class="blocky-flat elevation-4 pa-4">
+                <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
                   <v-layout column wrap>
                     <v-flex xs12 style="font-size: 1.25em">
                       <p>Hi there! My name is Erik Vavro.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web and writing high-quality code that's built to last.</p>
-                      <p>I believe in doing the right things early on and taking a people-first approach to development.</p>
+                      <p>I believe in doing the right things from the get-go and taking a people-first approach to development.</p>
                       <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact">contact me</router-link>.</span>
                     </v-flex>
                     <!-- <v-flex xs12 class="text-xs-right"> -->
@@ -30,7 +30,7 @@
 
               <h1 class="mt-4">Tools</h1>
               <v-flex xs12>
-                <v-card class="blocky-flat elevation-4 pa-4">
+                <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
                   <v-layout row wrap>
                     <v-flex
                       v-for="tool in tools"
@@ -45,7 +45,7 @@
                         </v-flex>
                         <v-flex xs8 sm6 lg8>
                           <span>{{ tool.title }}</span>
-                          <v-progress-linear v-model="tool.level"></v-progress-linear>
+                          <v-progress-linear v-model="tool.level" color="light-blue darken-3"></v-progress-linear>
                         </v-flex>
                       </v-layout>
                     </v-flex>
@@ -55,10 +55,23 @@
 
               <!-- <span class="title">Projects</span> -->
               <h1 class="mt-4">Approach</h1>
+              <v-flex xs12>
+                <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
+                  <v-layout column wrap>
+                    <v-flex xs12 style="font-size: 1.25em">
+                      - Requirements
+                      - Project seed
+                      - Tests with every change
+                      - Documentation
+                      - Hotkeys &gt; Mouse
+                    </v-flex>
+                  </v-layout>
+                </v-card>
+              </v-flex>
 
               <h1 class="mt-4">Interests</h1>
               <v-flex xs12>
-                <v-card class="blocky-flat elevation-4 pa-4" style="font-size: 1.25em">
+                <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em">
                   <v-layout row wrap>
                     <v-flex
                       v-for="interest in interests"
@@ -131,15 +144,15 @@ export default {
       { title: 'Clojure', url: 'https://clojure.org', icon: 'clojure.png', level: 50 },
       { title: 'Python', url: 'https://python.org', icon: 'python.png', level: 75 },
       { title: 'Vue', url: 'https://vuejs.org', icon: 'vuejs.png', level: 75 },
-      { title: 'Phoenix', url: 'https://phoenixframework.org', icon: 'phoenix.png', level: 50 },
+      { title: 'Phoenix', url: 'http://phoenixframework.org', icon: 'phoenix.png', level: 50 },
       { title: 'Django', url: 'https://djangoproject.com', icon: 'django.png', level: 75 },
       { title: 'PostgreSQL', url: 'https://postgresql.org', icon: 'postgresql.png', level: 75 },
-      { title: 'JSON Schema', url: 'https://jsonschema.org', icon: 'json-schema-logo.png', level: 90 },
+      { title: 'JSON Schema', url: 'http://json-schema.org', icon: 'json-schema-logo.png', level: 90 },
       { title: 'API Blueprint', url: 'https://apiblueprint.org', icon: 'api-blueprint.png', level: 90 },
       { title: 'NPM', url: 'https://npmjs.com', icon: 'npm.png', level: 90 },
       { title: 'Webpack', url: 'https://webpack.js.org', icon: 'webpack.png', level: 75 },
       { title: 'D3', url: 'https://d3js.org', icon: 'd3.png', level: 60 },
-      { title: 'Vim', url: 'https://vim.org', icon: 'vim.png', level: 75 },
+      { title: 'Vim', url: 'https://www.vim.org', icon: 'vim.png', level: 75 },
       { title: 'Git', url: 'https://git-scm.com', icon: 'git.png', level: 90 },
       { title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
     ],

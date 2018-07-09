@@ -28,6 +28,10 @@
             label="Reason"
             required
           ></v-select>
+          <v-textarea
+            name="message"
+            label="Message"
+          ></v-textarea>
           <!-- <v-checkbox -->
           <!--   v-model="checkbox" -->
           <!--   :rules="[v => !!v || 'You must agree to continue!']" -->
