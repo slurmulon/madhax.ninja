@@ -1,7 +1,5 @@
 <template>
   <layout>
-    <navbar slot="header"></navbar>
-
     <v-content>
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
@@ -92,7 +90,8 @@
                 <v-flex
                   v-for="book in books"
                   :key="book.title"
-                  xs4
+                  xs6
+                  md4
                 >
                   <v-card flat tile class="elevation-4">
                     <v-card-media
@@ -111,7 +110,6 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
 import Layout from '@/components/Layout'
 
 export default {
@@ -137,7 +135,7 @@ export default {
       { title: 'Notes on the Synthesis of Form', file: 'notes-on-form.jpg' }
     ],
     tools: [
-      { title: 'JavaScript', url: 'https://nodejs.org', icon: 'js.png', level: 100 },
+      { title: 'JavaScript', url: 'https://nodejs.org', icon: 'js.png', level: 95 },
       { title: 'HTML5', url: 'https://www.w3.org/TR/html52/', icon: 'html5.png', level: 80 },
       { title: 'CSS3', url: 'http://css-tricks.com', icon: 'css3.png', level: 75 },
       { title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png', level: 50 },
@@ -162,7 +160,6 @@ export default {
     ]
   }),
   components: {
-    Navbar,
     Layout
   }
 }

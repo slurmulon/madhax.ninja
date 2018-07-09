@@ -1,6 +1,6 @@
 <template>
   <layout pa-2>
-    <navbar slot="header"></navbar>
+    <!-- <navbar slot="header"></navbar> -->
 
     <v-content>
       <v-container fluid>
