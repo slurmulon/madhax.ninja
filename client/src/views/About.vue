@@ -17,6 +17,7 @@
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
                       <p>I believe in striving for quality right from get-go and taking a people-first approach to development.</p>
                       <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="black--text underline">reach out</router-link>.</span>
+                      <span>Also be sure to see my <router-link to="/work" class="black--text underline">past and current work</router-link></span>
                     </v-flex>
                     <!-- <v-flex xs12 class="text-xs-right"> -->
                     <!--   <v-btn icon light> -->
@@ -158,8 +159,8 @@ export default {
       { title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
     ],
     interests: [
-      'Hypermedia', 'Streaming', 'Decentralization', 'Timers', 'Audio', 'Music',
-      'Archiving', 'Fractals', 'Privacy', 'Self-improvement', 'Health', 'Ergonomics'
+      'Hypermedia', 'Streaming', 'Decentralization', 'Semantics', 'Timers', 'Audio', 'Music',
+      'Fractals', 'Privacy', 'Self-improvement', 'Health', 'Ergonomics'
     ]
   }),
   components: {

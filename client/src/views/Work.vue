@@ -1,6 +1,12 @@
 <template>
   <layout>
-    <section class="content">
+    <navbar slot="header"></navbar>
+
+    <!-- <section class="content"> -->
+    <v-content class="mt-4">
+      <v-layout>
+        <v-flex xs12 sm6 offset-sm3>
+      <!-- TODO: employmemt, projects, approach, philosophy -->
       <v-card>
         <v-card-media
           src="https://s3.amazonaws.com/vuetify-docs/images/cards/sunshine.jpg"
@@ -27,7 +33,10 @@
           </v-card-text>
         </v-slide-y-transition>
       </v-card>
-    </section>
+    <!-- </section> -->
+      </v-flex>
+      </v-layout>
+    </v-content>
 
     <footer slot="footer">
       <back></back>
@@ -36,11 +45,13 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
 import Back from '@/components/footers/Back'
 import Layout from '@/components/Layout'
 
 export default {
   components: {
+    Navbar,
     Back,
     Layout
   }

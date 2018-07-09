@@ -10,17 +10,17 @@
     <v-spacer></v-spacer>
     <!-- <v-toolbar-items class="hidden-sm-and-down"> -->
     <v-toolbar-items>
-      <v-btn flat class="shiny" color="primary">
-        <router-link to="/about">About</router-link>
+      <v-btn flat to="/about" class="shiny" color="primary">
+        About
       </v-btn>
-      <v-btn flat class="shiny" color="primary">
-        <router-link to="/work">Work</router-link>
+      <v-btn flat to="/work" class="shiny" color="primary">
+        Work
       </v-btn>
       <!-- <v-btn flat class="shiny" color="primary"> -->
       <!--   <router-link to="/blog">Blog</router-link> -->
       <!-- </v-btn> -->
-      <v-btn flat class="shiny" color="primary">
-        <router-link to="/contact">Contact</router-link>
+      <v-btn flat to="/contact" class="shiny" color="primary">
+        Contact
       </v-btn>
     </v-toolbar-items>
     <!-- </div> -->
