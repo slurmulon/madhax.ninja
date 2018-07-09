@@ -158,8 +158,8 @@ export default {
       { title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
     ],
     interests: [
-      'Hypermedia', 'Streaming', 'Synchronization', 'Decentralization', 'Timers', 'Audio',
-      'Fractals', 'Privacy', 'Documentation', 'Self-improvement', 'Health', 'Ergonomics'
+      'Hypermedia', 'Streaming', 'Decentralization', 'Timers', 'Audio',
+      'Music', 'Privacy', 'Self-improvement', 'Health', 'Ergonomics'
     ]
   }),
   components: {
