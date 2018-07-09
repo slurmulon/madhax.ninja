@@ -1,5 +1,7 @@
 <template>
   <layout>
+    <navbar slot="header"></navbar>
+
     <v-content>
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
@@ -110,6 +112,7 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
 import Layout from '@/components/Layout'
 
 export default {
@@ -160,6 +163,7 @@ export default {
     ]
   }),
   components: {
+    Navbar,
     Layout
   }
 }

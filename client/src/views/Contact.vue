@@ -1,5 +1,8 @@
 <template>
   <layout>
+    <navbar slot="header"></navbar>
+
+    <!-- <section class="content"> -->
     <v-content>
       <v-container fluid justify-center style="display: flex">
       <!-- <v-card color="white" class="elevation-8 pa-4" style="width: 300px"> -->
@@ -48,6 +51,7 @@
       </v-card>
       </v-container>
     </v-content>
+    <!-- </section> -->
 
     <footer slot="footer">
       <back></back>
@@ -57,6 +61,7 @@
 
 <script>
 import axios from 'axios'
+import Navbar from '@/components/Navbar'
 import Back from '@/components/footers/Back'
 import Layout from '@/components/Layout'
 
@@ -99,6 +104,7 @@ export default {
   },
 
   components: {
+    Navbar,
     Back,
     Layout
   }

@@ -3,8 +3,7 @@
     <!-- <v-content> -->
     <!--   <v-container fluid fill-height> -->
     <!--     <v-layout column nowrap> -->
-    <!-- <slot name="header"></slot> -->
-    <navbar></navbar>
+    <slot name="header"></slot>
 
     <!-- <main> -->
       <slot></slot>
@@ -16,16 +15,6 @@
     <!-- </v-content> -->
   </v-app>
 </template>
-
-<script>
-import Navbar from './Navbar'
-
-export default {
-  components: {
-    Navbar
-  }
-}
-</script>
 
 <style lang="stylus">
 @require '../styles/main'
