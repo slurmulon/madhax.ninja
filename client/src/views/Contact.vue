@@ -90,7 +90,7 @@ export default {
     submit () {
       if (this.$refs.form.validate()) {
         // Native form submission is not yet supported
-        axios.post('/api/submit', {
+        axios.post('/api/contact', {
           name: this.name,
           email: this.email,
           select: this.select
@@ -113,6 +113,10 @@ export default {
 
 <style lang="stylus" scoped>
 // @require '../styles/slowbro'
+
+a
+  color black
+  text-decoration underline
 
 .application
   padding 1em
