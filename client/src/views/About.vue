@@ -11,11 +11,11 @@
               <v-flex xs12>
                 <v-card class="blocky-flat elevation-4 pa-4">
                   <v-layout column wrap>
-                    <v-flex xs12 style="font-size: 1.5em">
+                    <v-flex xs12 style="font-size: 1.25em">
                       <p>Hi there! My name is Erik Vavro.</p>
-                      <p>I am a remote software engineer specializing in progressive web applications with over 15 years combined coding experience.</p>
+                      <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web and writing high-quality code that's built to last.</p>
-                      <p>I believe in doing the right things early on and take a people-first approach to development.</p>
+                      <p>I believe in doing the right things early on and taking a people-first approach to development.</p>
                       <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact">contact me</router-link>.</span>
                     </v-flex>
                     <!-- <v-flex xs12 class="text-xs-right"> -->
