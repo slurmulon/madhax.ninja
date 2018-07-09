@@ -5,6 +5,7 @@
     <v-content>
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
+        <!-- <v-flex xs12 sm6 offset-sm3 offset-xs0> -->
           <!-- <v-card> -->
             <v-container grid-list-xl fluid>
               <h1>Summary</h1>
@@ -15,9 +16,9 @@
                       <p>Hi there! My name is Erik Vavro.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
-                      <p>I believe in striving for quality right from get-go and taking a people-first approach to development.</p>
+                      <p>I believe in striving for quality right from the get-go and taking a people-first approach to development.</p>
                       <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="black--text underline">reach out</router-link>.</span>
-                      <span>Also be sure to see my <router-link to="/work" class="black--text underline">past and current work</router-link></span>
+                      <span>Also be sure to see my <router-link to="/work" class="black--text underline">past and current work</router-link>.</span>
                     </v-flex>
                     <!-- <v-flex xs12 class="text-xs-right"> -->
                     <!--   <v-btn icon light> -->
