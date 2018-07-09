@@ -10,7 +10,7 @@
         </v-flex>
         <v-flex xs12 sm6 offset-sm3 v-for="job in jobs" :key="job.company" class="mb-4">
           <!-- TODO: employmemt, projects, approach, process, philosophy -->
-          <v-card>
+          <v-card class="elevation-4">
             <!-- <v-card-media -->
             <!--   src="https://s3.amazonaws.com/vuetify-docs/images/cards/sunshine.jpg" -->
             <!--   height="200px" -->
@@ -73,7 +73,7 @@ export default {
   data: () => ({
     jobs: [
       { company: 'Ceres Imaging', logo: 'ceres.png', banner: 'job-ceres.png', title: 'Senior Software Engineer', time: 'Feb. 2017 - Present', desc: 'Blah blah blah' },
-      { company: 'Sihten', logo: 'sighten.png', banner: 'job-sighten.png', title: 'Platform Architect', time: 'Oct. 2015 - Mar. 2016' },
+      { company: 'Sihten', logo: 'sighten.png', banner: 'job-sighten.jpg', title: 'Platform Architect', time: 'Oct. 2015 - Mar. 2016' },
       { company: 'Sungevity', logo: 'sungevity.png', banner: 'job-sungevity.jpg', title: 'Senior Software Engineer', time: 'Summer 2013 - Summer 2015', desc: 'Aww yeah' }
     ]
   }),
