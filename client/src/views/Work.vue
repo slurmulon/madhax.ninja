@@ -78,7 +78,8 @@ export default {
           { name: 'Django' },
           { name: 'Webpack' },
           { name: 'Cordova' },
-          { name: 'Nginx' }
+          { name: 'Nginx' },
+          { name: 'API Blueprint' }
         ]
       },
       {
@@ -95,7 +96,8 @@ export default {
           { name: 'Django' },
           { name: 'JSON Hyper-Schema' },
           { name: 'Webpack' },
-          { name: 'Nginx' }
+          { name: 'Nginx' },
+          { name: 'API Blueprint' }
         ]
       },
       {
@@ -105,7 +107,7 @@ export default {
         banner: 'job-sungevity.jpg',
         title: 'Senior Software Engineer',
         time: 'Summer 2013 - Summer 2015',
-        desc: 'Designed and implemented an AngularJS single page application (known as the iQuote) that allows potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it has gone live. The iQuote was fully internationalized and supported nearly limitless partner-specific customizations. Also made significant contributions to the the RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.',
+        desc: 'Designed and implemented an AngularJS single page application (known as the iQuote) that allows potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it has gone live. The iQuote was fully internationalized and supported nearly unlimited partner-specific customizations. Also made significant contributions to the the RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.',
         tools: [
           { name: 'AngularJS' },
           { name: 'D3' },
