@@ -87,7 +87,7 @@ export default {
         banner: 'job-sighten.jpg',
         title: 'Platform Architect',
         time: 'Oct. 2015 - Feb. 2017',
-        desc: 'Architected and implented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations. Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization. Also made significant contributions to the RESTful API and its design.',
+        desc: 'Architected and implented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations. Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization. Also made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.',
         tools: [
           { name: 'Angular' },
           { name: 'Semantic UI' },
