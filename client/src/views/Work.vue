@@ -69,7 +69,7 @@ export default {
         banner: 'job-ceres.png',
         title: 'Senior Software Engineer',
         time: 'Feb. 2017 - Present',
-        desc: 'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops',
+        desc: 'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops. Contributed greatly to the design and implementation of a RESTful platform API that helped to unify a highly diverse engineering team and its services. Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging',
         tools: [
           { name: 'VueJS' },
           { name: 'Vuetify' },
@@ -87,6 +87,7 @@ export default {
         banner: 'job-sighten.jpg',
         title: 'Platform Architect',
         time: 'Oct. 2015 - Feb. 2017',
+        desc: 'Architected and implented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations. Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization. Also made significant contributions to the RESTful API and its design.',
         tools: [
           { name: 'Angular' },
           { name: 'Semantic UI' },
@@ -102,12 +103,13 @@ export default {
         banner: 'job-sungevity.jpg',
         title: 'Senior Software Engineer',
         time: 'Summer 2013 - Summer 2015',
-        desc: 'Aww yeah',
+        desc: 'Designed and implemented an AngularJS single page application (known as the iQuote) that allows potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it has gone live. The iQuote was fully internationalized and supported nearly limitless partner-specific customizations. Also made significant contributions to the the RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.',
         tools: [
           { name: 'AngularJS' },
           { name: 'D3' },
           { name: 'Scala' },
           { name: 'Play!' },
+          { name: 'Akka' },
           { name: 'Siren' },
           { name: 'Nginx' },
           { name: 'Vagrant' }
