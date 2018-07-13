@@ -10,7 +10,7 @@
           </v-flex>
           <v-flex xs12 sm6 offset-sm3 v-for="job in jobs" :key="job.company" class="mb-4">
             <!-- TODO: employmemt, projects, approach, process, philosophy -->
-            <v-card class="elevation-4">
+            <v-card class="subtle-bg elevation-4">
               <v-card-media
                 :src="require(`@/assets/img/${job.banner}`)"
                 height="200px"

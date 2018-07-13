@@ -87,7 +87,20 @@
                 </v-card>
               </v-flex>
 
-              <!-- <span class="philosophy">Philosophy</span> -->
+              <h1 class="mt-4">Philosophy</h1>
+              <v-flex xs12>
+                <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em">
+                  <v-layout column wrap>
+                    <v-flex
+                      v-for="philosophy in philosophies"
+                      :key="philosophy"
+                      xs12
+                    >
+                      <i class="font-weight-thin">&quot;{{ philosophy.quote }}&quot;</i> &mdash; <span class="grey--text">{{ philosophy.credit }}</span>
+                    </v-flex>
+                  </v-layout>
+                </v-card>
+              </v-flex>
 
               <h1 class="mt-4">Bookshelf</h1>
               <v-layout row wrap>
@@ -162,6 +175,13 @@ export default {
     interests: [
       'Hypermedia', 'Streaming', 'Decentralization', 'Semantics', 'Timers', 'Audio', 'Music',
       'Fractals', 'Privacy', 'Self-improvement', 'Health', 'Ergonomics'
+    ],
+    philosophies: [
+      { quote: 'Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away', credit: 'Antoine de Saint-Exupéry' },
+      { quote: 'You don\'t have to write it now, just don\'t prevent it from being written later', credit: 'Andy Hull' },
+      { quote: 'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.', credit: 'Brian W. Kernighan' },
+      { quote: 'Quality software takes the least amount of time to develop. If you have code that is simple as possible, tests that are complete and a design that fits just right, additions and changes happen in the fastest possible way because the impact is lowest.', credit: 'Cunningham &amp; Cunningham' },
+      { quote: 'Humility, respect, trust', credit: 'Team Geek' }
     ]
   }),
   components: {
