@@ -58,6 +58,7 @@ import Back from '@/components/footers/Back'
 import Layout from '@/components/Layout'
 
 // TODO: create a centralized bank / store of tools that's shared between About.vue and Work.vue
+// TODO: add relevant links to each job (such as news articles, demos, etc.)
 
 export default {
   data: () => ({
@@ -69,7 +70,7 @@ export default {
         banner: 'job-ceres.png',
         title: 'Senior Software Engineer',
         time: 'Feb. 2017 - Present',
-        desc: 'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops. Contributed greatly to the design and implementation of a RESTful platform API that helped to unify a highly diverse engineering team and its services. Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging',
+        desc: 'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops. Contributed greatly to the design and implementation of a RESTful platform API that helped to unify a highly diverse engineering team and its services. Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging.',
         tools: [
           { name: 'VueJS' },
           { name: 'Vuetify' },
@@ -99,6 +100,7 @@ export default {
       },
       {
         company: 'Sungevity',
+        url: 'https://oursungevity.com',
         logo: 'sungevity.png',
         banner: 'job-sungevity.jpg',
         title: 'Senior Software Engineer',
