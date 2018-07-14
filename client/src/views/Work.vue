@@ -135,12 +135,53 @@ export default {
     ],
 
     projects: [
-      { title: 'bach', logo: 'bach.gif', active: true },
-      { title: 'blot', active: false },
-      { title: 'flap', active: false },
-      { title: 'virtual-web-dev', active: true },
-      { title: 'tasty-commits', actie: true },
-      { title: 'fractule', active: false }
+      {
+        title: 'bach',
+        logo: 'bach.gif',
+        active: true,
+        tools: ['clojure'],
+        desc: 'A semantic musical notation with a focus on readability and productivity'
+      },
+      {
+        title: 'hyper-mesh',
+        active: true,
+        tools: ['js', 'json-schema'],
+        desc: 'Automagical JSON Hyper-Schema interactions'
+      },
+      {
+        title: 'blot',
+        active: true,
+        tools: ['js', 'api-blueprint'],
+        desc: 'A DRY and dynamic build tool for API Blueprint'
+      },
+      {
+        title: 'flap',
+        active: false,
+        tools: ['js'],
+        desc: 'Functional guard clauses in JS'
+      },
+      {
+        title: 'grapple',
+        active: true,
+        tools: ['elixir'],
+        dsec: 'Pragmatic and flexible Webhook API for Elixir'
+      },
+      {
+        title: 'virtual-web-dev',
+        active: true,
+        desc: 'Low-friction development process for modern web applications'
+      },
+      {
+        title: 'tasty-commits',
+        active: true,
+        desc: 'Commit message convention for easily digestable history streams'
+      },
+      {
+        title: 'fractule',
+        active: false,
+        desc: 'Abstract fractal generator based on Playing with Chaos',
+        tools: ['js']
+      }
     ]
   }),
   components: {
