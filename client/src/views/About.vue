@@ -5,6 +5,9 @@
     <v-content>
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
+        <!-- <v-flex xs12 sm8 md6 offset-md3 offset-sm2> -->
+        <!-- <v-flex xs12 md6 offset-md3> -->
+        <!-- <v-flex xs8 md6 offset-xs2 offset-md3> -->
         <!-- <v-flex xs12 sm6 offset-sm3 offset-xs0> -->
           <!-- <v-card> -->
             <v-container grid-list-xl fluid>
@@ -16,7 +19,7 @@
                       <p>Hi there! My name is Erik Vavro.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
-                      <p>I believe in striving for quality right from the get-go and taking a people-first approach to development.</p>
+                      <p>I strongly believe in lifelong learning, striving for quality right from the get-go and taking a people-first approach to development.</p>
                       <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="black--text underline">reach out</router-link>.</span>
                       <span>Also be sure to see my <router-link to="/work" class="black--text underline">past and current work</router-link>.</span>
                     </v-flex>
@@ -96,7 +99,7 @@
                       :key="philosophy"
                       xs12
                     >
-                      <i class="font-weight-thin">&quot;{{ philosophy.quote }}&quot;</i> &mdash; <span class="grey--text">{{ philosophy.credit }}</span>
+                      <i class="font-weight-thin">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text">&mdash; {{ philosophy.credit }}</span>
                     </v-flex>
                   </v-layout>
                 </v-card>
@@ -178,9 +181,9 @@ export default {
     ],
     philosophies: [
       { quote: 'Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away', credit: 'Antoine de Saint-Exupéry' },
-      { quote: 'You don\'t have to write it now, just don\'t prevent it from being written later', credit: 'Andy Hull' },
+      { quote: 'You don\'t have to write it now, just don\'t prevent it from happening later', credit: 'Andy Hull' },
       { quote: 'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.', credit: 'Brian W. Kernighan' },
-      { quote: 'Quality software takes the least amount of time to develop. If you have code that is simple as possible, tests that are complete and a design that fits just right, additions and changes happen in the fastest possible way because the impact is lowest.', credit: 'Cunningham &amp; Cunningham' },
+      { quote: 'Quality software takes the least amount of time to develop. If you have code that is simple as possible, tests that are complete and a design that fits just right, additions and changes happen in the fastest possible way because the impact is lowest.', credit: 'Cunningham & Cunningham' },
       { quote: 'Humility, respect, trust', credit: 'Team Geek' }
     ]
   }),

@@ -5,10 +5,10 @@
     <v-content>
       <v-container grid-list-xl fluid>
         <v-layout row wrap>
-          <v-flex xs1 offset-sm3>
+          <v-flex xs12 offset-md3> <!-- sm3 -->
             <h1>Employment</h1>
           </v-flex>
-          <v-flex xs12 sm6 offset-sm3 v-for="job in jobs" :key="job.company" class="mb-4">
+          <v-flex xs12 md6 offset-md3 v-for="job in jobs" :key="job.company" class="mb-4"> <!-- sm3 -->
             <!-- TODO: employmemt, projects, approach, process, philosophy -->
             <v-card class="subtle-bg elevation-4">
               <v-card-media
@@ -30,7 +30,8 @@
                         <div class="blue-grey--text">{{ job.title }} <span class="grey--text">{{ job.time }}</span></div>
                       </v-flex>
                       <v-flex xs1 pt-2>
-                        {{ job.desc }}
+                        <!-- {{ job.desc }} -->
+                        <p v-for="detail in job.details" :key="detail">{{ detail }}</p>
                       </v-flex>
                     </v-layout>
                   <!-- </v-flex> -->
@@ -39,16 +40,16 @@
             </v-card>
           </v-flex>
 
-          <v-flex xs1 offset-sm3>
+          <v-flex xs12 offset-md3> <!-- sm3 -->
             <h1 class="mt-4">Projects</h1>
           </v-flex>
         </v-layout>
       </v-container>
     </v-content>
 
-    <footer slot="footer">
-      <back></back>
-    </footer>
+    <!-- <footer slot="footer"> -->
+    <!--   <back></back> -->
+    <!-- </footer> -->
   </layout>
 </template>
 
@@ -70,7 +71,11 @@ export default {
         banner: 'job-ceres.png',
         title: 'Senior Software Engineer',
         time: 'Feb. 2017 - Present',
-        desc: 'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops. Contributed greatly to the design and implementation of a RESTful platform API that helped to unify a highly diverse engineering team and its services. Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging.',
+        details: [
+          'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops.',
+          'Contributed greatly to the design and implementation of a RESTful platform API that unified a highly diverse engineering team and its services.',
+          'Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging.'
+        ],
         tools: [
           { name: 'VueJS' },
           { name: 'Vuetify' },
@@ -89,7 +94,11 @@ export default {
         banner: 'job-sighten.jpg',
         title: 'Platform Architect',
         time: 'Oct. 2015 - Feb. 2017',
-        desc: 'Architected and implented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations. Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization. Also made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.',
+        details: [
+          'Architected and implented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations.',
+          'Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization.',
+          'Made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.'
+        ],
         tools: [
           { name: 'Angular' },
           { name: 'Semantic UI' },
@@ -107,7 +116,11 @@ export default {
         banner: 'job-sungevity.jpg',
         title: 'Senior Software Engineer',
         time: 'Summer 2013 - Summer 2015',
-        desc: 'Designed and implemented an AngularJS single page application (known as the iQuote) that allows potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it has gone live. The iQuote was fully internationalized and supported nearly unlimited partner-specific customizations. Also made significant contributions to the the RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.',
+        details: [
+          'Designed and implemented an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it has gone live.',
+          'The application was fully internationalized and could be customized for partners to nearly any degree.',
+          'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
+        ],
         tools: [
           { name: 'AngularJS' },
           { name: 'D3' },
