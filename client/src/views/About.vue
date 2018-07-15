@@ -11,8 +11,9 @@
         <!-- <v-flex xs12 sm6 offset-sm3 offset-xs0> -->
           <!-- <v-card> -->
             <v-container grid-list-xl fluid>
-              <!-- <h1 class="light-blue--text text--lighten-4">Profile</h1> -->
-              <h1 class="primary--text">Profile</h1>
+              <h1 class="light-blue--text text--lighten-4">Profile</h1>
+              <!-- <h1 class="grey--text text--lighten-2">Profile</h1> -->
+              <!-- <h1 class="primary--text">Profile</h1> -->
               <v-flex xs12>
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
                   <v-layout column wrap>
@@ -34,8 +35,9 @@
                 </v-card>
               </v-flex>
 
-              <!-- <h1 class="light-blue--text text--lighten-4 mt-4">Tools</h1> -->
-              <h1 class="primary--text mt-4">Tools</h1>
+              <h1 class="light-blue--text text--lighten-4 mt-4">Tools</h1>
+              <!-- <h1 class="grey--text text--lighten-2">Tools</h1> -->
+              <!-- <h1 class="primary--text mt-4">Tools</h1> -->
               <v-flex xs12>
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
                   <v-layout row wrap>
@@ -76,8 +78,9 @@
               <!--   </v-card> -->
               <!-- </v-flex> -->
 
-              <!-- <h1 class="light-blue--text text--lighten-4 mt-4">Interests</h1> -->
-              <h1 class="primary--text mt-4">Interests</h1>
+              <h1 class="light-blue--text text--lighten-4 mt-4">Interests</h1>
+              <!-- <h1 class="grey--text text--lighten-2">Interests</h1> -->
+              <!-- <h1 class="primary--text mt-4">Interests</h1> -->
               <v-flex xs12>
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em">
                   <v-layout row wrap>
@@ -93,8 +96,9 @@
                 </v-card>
               </v-flex>
 
-              <!-- <h1 class="light-blue--text text--lighten-4 mt-4">Philosophy</h1> -->
-              <h1 class="primary--text mt-4">Philosophy</h1>
+              <h1 class="light-blue--text text--lighten-4 mt-4">Philosophy</h1>
+              <!-- <h1 class="grey--text text--lighten-2">Philosophy</h1> -->
+              <!-- <h1 class="primary--text mt-4">Philosophy</h1> -->
               <v-flex xs12>
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em">
                   <v-layout column wrap>
@@ -109,8 +113,9 @@
                 </v-card>
               </v-flex>
 
-              <!-- <h1 class="light-blue--text text--lighten-4 mt-4">Bookshelf</h1> -->
-              <h1 class="primary--text mt-4">Bookshelf</h1>
+              <h1 class="light-blue--text text--lighten-4 mt-4">Bookshelf</h1>
+              <!-- <h1 class="grey--text text--lighten-2">Bookshelf</h1> -->
+              <!-- <h1 class="primary--text mt-4">Bookshelf</h1> -->
               <v-layout row wrap>
                 <v-flex
                   v-for="book in books"
