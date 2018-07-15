@@ -10,29 +10,19 @@
     <v-spacer></v-spacer>
     <!-- <v-toolbar-items class="hidden-sm-and-down"> -->
     <v-toolbar-items>
-      <v-btn flat to="/about" class="shiny" color="primary">
+      <v-btn flat to="/about" class="shiny" color="light-blue lighten-4">
         About
       </v-btn>
-      <v-btn flat to="/work" class="shiny" color="primary">
+      <v-btn flat to="/work" class="shiny" color="light-blue lighten-4">
         Work
       </v-btn>
-      <!-- <v-btn flat class="shiny" color="primary"> -->
-      <!--   <router-link to="/blog">Blog</router-link> -->
-      <!-- </v-btn> -->
-      <v-btn flat to="/contact" class="shiny" color="primary">
-        Contact
+      <v-btn flat to="blog" class="shiny" color="light-blue lighten-4">
+        Blog
       </v-btn>
+      <!-- <v-btn flat to="/contact" class="shiny" color="light-blue lighten-4"> -->
+      <!--   Contact -->
+      <!-- </v-btn> -->
     </v-toolbar-items>
-    <!-- </div> -->
-    <!-- <div class="menu"> -->
-    <!--   <1!-- <a href="https://github.com/slurmulon" target="git">Projects</a> --1> -->
-    <!--   <1!-- <a href="http://blog.evavro.com" target="blog">Blog</a> --1> -->
-    <!--   <1!-- <a href="#">Work</a> --1> -->
-    <!--   <router-link to="/work">Work</router-link> -->
-    <!--   <a href="#">Reading</a> -->
-    <!--   <router-link to="/contact">Contact</router-link> -->
-    <!--   <1!-- <a href="mailto:evavro@gmail.com">Contact</a> --1> -->
-    <!-- </div> -->
   </v-toolbar>
 
 </template>

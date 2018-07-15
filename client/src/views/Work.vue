@@ -6,7 +6,8 @@
       <v-container grid-list-xl fluid>
         <v-layout row wrap>
           <v-flex xs12 offset-md3> <!-- sm3 -->
-            <h1>Employment</h1>
+            <!-- <h1 class="light-blue--text text--lighten-4">Employment</h1> -->
+            <h1 class="primary--text">Employment</h1>
           </v-flex>
           <v-flex xs12 md6 offset-md3 v-for="job in jobs" :key="job.company" class="mb-4"> <!-- sm3 -->
             <!-- TODO: employmemt, projects, approach, process, philosophy -->
@@ -41,7 +42,8 @@
           </v-flex>
 
           <v-flex xs12 offset-md3> <!-- sm3 -->
-            <h1 class="mt-4">Projects</h1>
+            <!-- <h1 class="light-blue--text text--lighten-4 mt-4">Projects</h1> -->
+            <h1 class="primary--text">Projects</h1>
           </v-flex>
         </v-layout>
       </v-container>
@@ -139,7 +141,7 @@ export default {
         title: 'bach',
         logo: 'bach.gif',
         active: true,
-        tools: ['clojure'],
+        tools: ['clojure', 'ebnf'],
         desc: 'A semantic musical notation with a focus on readability and productivity'
       },
       {

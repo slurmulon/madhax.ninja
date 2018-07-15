@@ -5,6 +5,7 @@
     <!-- <section class="content"> -->
     <v-content>
       <v-container fluid justify-center style="display: flex">
+        <!-- <h1>Contact</h1> -->
       <!-- <v-card color="white" class="elevation-8 pa-4" style="width: 300px"> -->
       <v-card color="white" class="subtle-bg pa-4 mb-4 elevation-4" style="width: 350px">
         <v-form ref="form" v-model="valid" lazy-validation dark>
