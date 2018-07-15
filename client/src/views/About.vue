@@ -21,7 +21,7 @@
                       <p>Hi there! My name is Erik Vavro.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
-                      <p>I strongly believe in life-long learning, striving for quality right from the get-go and taking a people-first approach to development.</p>
+                      <p>I believe in life-long learning, striving for quality right from the get-go and taking a people-first approach to development.</p>
                       <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="black--text underline">reach out</router-link>.</span>
                       <span>Also be sure to see my <router-link to="/work" class="black--text underline">past and current work</router-link>.</span>
                     </v-flex>
@@ -56,7 +56,8 @@
                         </v-flex>
                         <v-flex xs8 sm6 lg8>
                           <span>{{ tool.title }}</span>
-                          <v-progress-linear v-model="tool.level" color="light-blue darken-3"></v-progress-linear>
+                          <!-- <v-progress-linear v-model="tool.level" color="light-blue darken-3"></v-progress-linear> -->
+                          <v-progress-linear v-model="tool.level" color="grey"></v-progress-linear>
                         </v-flex>
                       </v-layout>
                     </v-flex>
@@ -193,8 +194,8 @@ export default {
       { title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
     ],
     interests: [
-      'Hypermedia', 'Streaming', 'Decentralization', 'Semantics', 'Timers', 'Audio', 'Music',
-      'Fractals', 'Privacy', 'Self-improvement', 'Health', 'Ergonomics'
+      'Hypermedia', 'Streaming', 'Decentralization', 'Semantics', 'Timers', 'Synchronization', 'Music',
+      'Fractals', 'Permanence', 'Self-improvement', 'Health', 'Ergonomics'
     ],
     philosophies: [
       { quote: 'Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away', credit: 'Antoine de Saint-Exupéry' },
