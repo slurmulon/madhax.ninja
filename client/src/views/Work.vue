@@ -80,16 +80,8 @@ export default {
           'Contributed greatly to the design and implementation of a RESTful platform API that unified a highly diverse engineering team and its services.',
           'Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging.'
         ],
-        tools: [
-          { name: 'VueJS' },
-          { name: 'Vuetify' },
-          { name: 'Leaflet' },
-          { name: 'Django' },
-          { name: 'Webpack' },
-          { name: 'Cordova' },
-          { name: 'Nginx' },
-          { name: 'API Blueprint' }
-        ]
+        // tools: ['vue', 'vuetify', 'leaflet', 'django', 'webpack', 'cordova', 'nginx', 'api-blueprint'],
+        tools: ['vue', 'django', 'webpack', 'nginx', 'api-blueprint']
       },
       {
         company: 'Sighten',
@@ -103,15 +95,7 @@ export default {
           'Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization.',
           'Made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.'
         ],
-        tools: [
-          { name: 'Angular' },
-          { name: 'Semantic UI' },
-          { name: 'Django' },
-          { name: 'JSON Hyper-Schema' },
-          { name: 'Webpack' },
-          { name: 'Nginx' },
-          { name: 'API Blueprint' }
-        ]
+        tools: ['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'nginx', 'api-blueprint']
       },
       {
         company: 'Sungevity',
@@ -125,16 +109,7 @@ export default {
           'The application was fully internationalized and could be customized for partners to nearly any degree.',
           'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
         ],
-        tools: [
-          { name: 'AngularJS' },
-          { name: 'D3' },
-          { name: 'Scala' },
-          { name: 'Play!' },
-          { name: 'Akka' },
-          { name: 'Siren' },
-          { name: 'Nginx' },
-          { name: 'Vagrant' }
-        ]
+        tools: ['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'nginx', 'vagrant']
       }
     ],
 

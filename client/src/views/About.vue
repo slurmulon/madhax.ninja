@@ -206,7 +206,7 @@ export default {
   }),
   computed: {
     ...mapState('tools', {
-      tools: 'all'
+      tools: 'all' // TODO: filter out `leaflet`, `angular`, `semantic-ui`, `scala`, `akka`, `siren`, etc.
     })
   },
   components: {
