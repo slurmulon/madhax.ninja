@@ -43,7 +43,7 @@
                   <v-layout row wrap>
                     <v-flex
                       v-for="tool in tools"
-                      :key="tool.name"
+                      :key="tool.id"
                       xs6
                       md4>
                       <v-layout row nowrap>
@@ -51,6 +51,8 @@
                           <a :href="tool.url" target="tool">
                             <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 50px">
                           </a>
+                          <!-- <tool-icon :id="tool.id"></tool-icon> -->
+                          <!-- <tool-icon id="123" width="50px" shiny></tool-icon> -->
                         </v-flex>
                         <v-flex xs8 sm6 lg8>
                           <span>{{ tool.title }}</span>
@@ -103,8 +105,8 @@
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em">
                   <v-layout column wrap>
                     <v-flex
-                      v-for="philosophy in philosophies"
-                      :key="philosophy"
+                      v-for="(philosophy, index) in philosophies"
+                      :key="index"
                       xs12
                     >
                       <i class="font-weight-thin">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text">&mdash; {{ philosophy.credit }}</span>
@@ -140,10 +142,15 @@
 </template>
 
 <script>
+// import ToolIcon from '@/components/ToolIcon'
 import Navbar from '@/components/Navbar'
 import Layout from '@/components/Layout'
+import { mapState } from 'vuex'
 
 export default {
+  mounted () {
+    console.log('TOOLS', this.tools)
+  },
   data: () => ({
     books: [
       { title: 'The Pragmatic Programmer', file: 'pragmatic-programmer.jpg' },
@@ -165,7 +172,7 @@ export default {
       { title: 'Soft Skills', file: 'soft-skills.jpg' },
       { title: 'Notes on the Synthesis of Form', file: 'notes-on-form.jpg' }
     ],
-    tools: [
+    tools_old: [
       { title: 'JavaScript', url: 'https://nodejs.org', icon: 'js.png', level: 95 },
       { title: 'HTML5', url: 'https://www.w3.org/TR/html52/', icon: 'html5.png', level: 80 },
       { title: 'CSS3', url: 'http://css-tricks.com', icon: 'css3.png', level: 75 },
@@ -197,7 +204,13 @@ export default {
       { quote: 'Humility, respect, trust', credit: 'Team Geek' }
     ]
   }),
+  computed: {
+    ...mapState('tools', {
+      tools: 'all'
+    })
+  },
   components: {
+    // ToolIcon,
     Navbar,
     Layout
   }
