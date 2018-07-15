@@ -5,7 +5,7 @@
     <v-content>
       <v-container grid-list-xl fluid>
         <v-layout row wrap>
-          <v-flex xs12 offset-md3> <!-- sm3 -->
+          <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
             <h1 class="light-blue--text text--lighten-4">Employment</h1>
             <!-- <h1 class="grey--text text--lighten-2">Employment</h1> -->
             <!-- <h1 class="primary--text">Employment</h1> -->
@@ -42,7 +42,7 @@
             </v-card>
           </v-flex>
 
-          <v-flex xs12 offset-md3> <!-- sm3 -->
+          <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
             <h1 class="light-blue--text text--lighten-4 mt-4">Projects</h1>
             <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
             <!-- <h1 class="primary--text">Projects</h1> -->
@@ -121,7 +121,7 @@ export default {
         title: 'Senior Software Engineer',
         time: 'Summer 2013 - Summer 2015',
         details: [
-          'Designed and implemented an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it has gone live.',
+          'Designed and implemented an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it went live.',
           'The application was fully internationalized and could be customized for partners to nearly any degree.',
           'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
         ],
