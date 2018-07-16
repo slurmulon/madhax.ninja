@@ -35,6 +35,7 @@
                   <v-textarea
                     name="message"
                     label="Message"
+                    rows="7"
                   ></v-textarea>
 
                   <v-layout row nowrap>
