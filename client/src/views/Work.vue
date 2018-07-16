@@ -57,8 +57,8 @@
             </v-card>
           </v-flex>
 
-          <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
-            <h1 class="light-blue--text text--lighten-4 mt-4">Projects</h1>
+          <v-flex xs12 md6 offset-md3 pt-0 pb-0> <!-- sm3 -->
+            <h1 class="light-blue--text text--lighten-4">Projects</h1>
             <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
             <!-- <h1 class="primary--text">Projects</h1> -->
           </v-flex>

@@ -57,8 +57,8 @@
                         </v-flex>
                         <v-flex xs8 sm6 lg8>
                           <span>{{ tool.title }}</span>
-                          <!-- <v-progress-linear v-model="tool.level" color="light-blue darken-3"></v-progress-linear> -->
-                          <v-progress-linear v-model="tool.level" color="grey"></v-progress-linear>
+                          <v-progress-linear v-model="tool.level" color="light-blue darken-1"></v-progress-linear>
+                          <!-- <v-progress-linear v-model="tool.level" color="grey"></v-progress-linear> -->
                           <!-- <v-progress-linear v-model="tool.level" color="teal lighten-2"></v-progress-linear> -->
                         </v-flex>
                       </v-layout>
@@ -158,9 +158,6 @@ import Layout from '@/components/Layout'
 import { mapState } from 'vuex'
 
 export default {
-  mounted () {
-    console.log('TOOLS', this.tools)
-  },
   data: () => ({
     books: [
       { title: 'The Pragmatic Programmer', file: 'pragmatic-programmer.jpg' },
@@ -181,26 +178,6 @@ export default {
       { title: 'The Start Up J-Curve', file: 'start-up-j-curve.jpg' },
       { title: 'Soft Skills', file: 'soft-skills.jpg' },
       { title: 'Notes on the Synthesis of Form', file: 'notes-on-form.jpg' }
-    ],
-    tools_old: [
-      { title: 'JavaScript', url: 'https://nodejs.org', icon: 'js.png', level: 95 },
-      { title: 'HTML5', url: 'https://www.w3.org/TR/html52/', icon: 'html5.png', level: 80 },
-      { title: 'CSS3', url: 'http://css-tricks.com', icon: 'css3.png', level: 75 },
-      { title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png', level: 50 },
-      { title: 'Clojure', url: 'https://clojure.org', icon: 'clojure.png', level: 50 },
-      { title: 'Python', url: 'https://python.org', icon: 'python.png', level: 75 },
-      { title: 'Vue', url: 'https://vuejs.org', icon: 'vuejs.png', level: 75 },
-      { title: 'Phoenix', url: 'http://phoenixframework.org', icon: 'phoenix.png', level: 50 },
-      { title: 'Django', url: 'https://djangoproject.com', icon: 'django.png', level: 75 },
-      { title: 'PostgreSQL', url: 'https://postgresql.org', icon: 'postgresql.png', level: 75 },
-      { title: 'JSON Schema', url: 'http://json-schema.org', icon: 'json-schema.png', level: 90 },
-      { title: 'API Blueprint', url: 'https://apiblueprint.org', icon: 'api-blueprint.png', level: 90 },
-      { title: 'NPM', url: 'https://npmjs.com', icon: 'npm.png', level: 90 },
-      { title: 'Webpack', url: 'https://webpack.js.org', icon: 'webpack.png', level: 75 },
-      { title: 'D3', url: 'https://d3js.org', icon: 'd3.png', level: 60 },
-      { title: 'Vim', url: 'https://www.vim.org', icon: 'vim.png', level: 75 },
-      { title: 'Git', url: 'https://git-scm.com', icon: 'git.png', level: 90 },
-      { title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
     ],
     interests: [
       'Hypermedia', 'Streaming', 'Decentralization', 'Semantics', 'Timers', 'Synchronization', 'Music',
