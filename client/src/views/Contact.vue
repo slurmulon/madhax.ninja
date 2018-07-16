@@ -6,74 +6,64 @@
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
           <v-container grid-list-xl fluid>
-          <!-- <v-container fluid justify-center style="display: flex"> -->
-            <!-- <h1>Contact</h1> -->
             <h1 class="light-blue--text text--lighten-4">Contact</h1>
 
-          <!-- <v-card color="white" class="elevation-8 pa-4" style="width: 300px"> -->
-          <v-flex xs12>
-          <v-card color="white" class="subtle-bg pa-4 mb-4 elevation-4">
-            <!-- <h1 class="light-blue--text text--lighten-4">Contact</h1> -->
-            <v-form ref="form" v-model="valid" lazy-validation dark>
-              <v-text-field
-                v-model="name"
-                :rules="nameRules"
-                :counter="64"
-                label="Name"
-                required
-              ></v-text-field>
-              <v-text-field
-                v-model="email"
-                :rules="emailRules"
-                label="E-mail"
-                required
-              ></v-text-field>
-              <v-select
-                v-model="reason"
-                :items="items"
-                :rules="[v => !!v || 'Reason is required']"
-                label="Reason"
-                required
-              ></v-select>
-              <v-textarea
-                name="message"
-                label="Message"
-              ></v-textarea>
-              <!-- <v-checkbox -->
-              <!--   v-model="checkbox" -->
-              <!--   :rules="[v => !!v || 'You must agree to continue!']" -->
-              <!--   label="Do you agree?" -->
-              <!--   required -->
-              <!-- ></v-checkbox> -->
+            <v-flex xs12>
+              <v-card color="white" class="subtle-bg pa-4 mb-4 elevation-4">
+                <!-- <h1 class="light-blue--text text--lighten-4">Contact</h1> -->
+                <v-form ref="form" v-model="valid" lazy-validation dark>
+                  <v-text-field
+                    v-model="name"
+                    :rules="nameRules"
+                    :counter="64"
+                    label="Name"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    v-model="email"
+                    :rules="emailRules"
+                    label="E-mail"
+                    required
+                  ></v-text-field>
+                  <v-select
+                    v-model="reason"
+                    :items="items"
+                    :rules="[v => !!v || 'Reason is required']"
+                    label="Reason"
+                    required
+                  ></v-select>
+                  <v-textarea
+                    name="message"
+                    label="Message"
+                  ></v-textarea>
 
-              <v-layout row nowrap>
-                <v-flex xs12>
-                  <v-btn
-                    @click="clear"
-                    block
-                  >
-                    <v-icon>clear</v-icon>
-                  </v-btn>
-                </v-flex>
-                <v-flex xs12>
-                  <v-btn
-                    :disabled="!valid"
-                    @click="submit"
-                    color="secondary"
-                    light
-                    block
-                  >
-                    <v-icon>send</v-icon>
-                  </v-btn>
-                </v-flex>
-              </v-layout>
-            </v-form>
-          </v-card>
-          </v-flex>
+                  <v-layout row nowrap>
+                    <v-flex xs12>
+                      <v-btn
+                        @click="clear"
+                        block
+                      >
+                        <v-icon>clear</v-icon>
+                      </v-btn>
+                    </v-flex>
+                    <v-flex xs12>
+                      <v-btn
+                        :disabled="!valid"
+                        @click="submit"
+                        color="secondary"
+                        light
+                        block
+                      >
+                        <v-icon>send</v-icon>
+                      </v-btn>
+                    </v-flex>
+                  </v-layout>
+                </v-form>
+              </v-card>
+            </v-flex>
           </v-container>
         </v-flex>
       </v-layout>
-        <!-- </v-container> -->
     </v-content>
 
     <footer slot="footer">
