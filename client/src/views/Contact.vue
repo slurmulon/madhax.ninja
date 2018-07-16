@@ -46,19 +46,27 @@
               <!--   required -->
               <!-- ></v-checkbox> -->
 
-              <v-btn
-                :disabled="!valid"
-                @click="submit"
-                color="secondary"
-                light
-                block
-              >
-                submit
-              </v-btn>
-              <v-btn
-                @click="clear"
-                block
-              >clear</v-btn>
+              <v-layout row nowrap>
+                <v-flex xs12>
+                  <v-btn
+                    @click="clear"
+                    block
+                  >
+                    <v-icon>clear</v-icon>
+                  </v-btn>
+                </v-flex>
+                <v-flex xs12>
+                  <v-btn
+                    :disabled="!valid"
+                    @click="submit"
+                    color="secondary"
+                    light
+                    block
+                  >
+                    <v-icon>send</v-icon>
+                  </v-btn>
+                </v-flex>
+              </v-layout>
             </v-form>
           </v-card>
           </v-flex>
