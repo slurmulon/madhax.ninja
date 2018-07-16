@@ -207,7 +207,7 @@ export default {
   }),
   computed: {
     ...mapState('tools', {
-      tools: state => state.all.filter(tool => !(['npm', 'angular', 'leaflet', 'semantic-ui', 'scala', 'akka', 'siren'].includes(tool.id)))
+      tools: state => state.all.filter(tool => !(['npm', 'angular', 'leaflet', 'semantic-ui', 'scala', 'akka', 'siren', 'vagrant', 'play'].includes(tool.id)))
     })
   },
   components: {
