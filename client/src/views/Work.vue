@@ -45,7 +45,7 @@
                           >
                             <!-- {{ tool.icon }} -->
                             <a :href="tool.url" target="tool">
-                              <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 50px">
+                              <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
                             </a>
                           </v-flex>
                         </v-layout>
