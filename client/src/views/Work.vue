@@ -138,7 +138,7 @@ export default {
             'Made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.'
           ],
           // tools: ['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'nginx', 'api-blueprint']
-          tools: this.toolsById(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'api-blueprint'])
+          tools: this.toolsById(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'postgres'])
         },
         {
           company: 'Sungevity',
