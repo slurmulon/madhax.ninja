@@ -112,11 +112,12 @@ export default {
           details: [
             'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops.',
             'Contributed greatly to the design and implementation of a RESTful platform API that unified a highly diverse engineering team and its services.',
+            'Integrated an API Blueprint-based mock server that enabled orthogonal yet transparent development of the client and API.',
             'Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging.'
           ],
           // tools: ['vue', 'vuetify', 'leaflet', 'django', 'webpack', 'cordova', 'nginx', 'api-blueprint']
           // tools: this.tools.filter(tool => ['vue', 'django', 'webpack', 'nginx', 'api-blueprint'].includes(tool.id))
-          tools: this.toolsById(['vue', 'vuetify', 'django', 'webpack', 'api-blueprint'])
+          tools: this.toolsById(['vue', 'vuetify', 'django', 'postgres', 'webpack', 'api-blueprint'])
         },
         {
           company: 'Sighten',
@@ -141,9 +142,9 @@ export default {
           title: 'Senior Software Engineer',
           time: 'Summer 2013 - Summer 2015',
           details: [
-            'Designed and implemented an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it went live.',
-            'The application was fully internationalized and could be customized for partners to nearly any degree.',
-            'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
+            'Lead the development of an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it went live. The application was fully internationalized and could be customized for partners to nearly any degree.',
+            'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.',
+            'Contributed towards a mock development environment that supported dynamic and conditional stubbing, enabling orthogonal development of APIs and their clients.'
           ],
           // tools: ['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'nginx', 'vagrant']
           tools: this.toolsById(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'vagrant'])

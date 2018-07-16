@@ -17,7 +17,8 @@
               <v-flex xs12>
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
                   <v-layout column wrap>
-                    <v-flex xs12 style="font-size: 1.25em">
+                    <!-- <v-flex xs12 style="font-size: 1.25em"> -->
+                    <v-flex xs12>
                       <p>Hi there! My name is Erik Vavro.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
@@ -85,7 +86,8 @@
               <!-- <h1 class="grey--text text--lighten-2">Interests</h1> -->
               <!-- <h1 class="primary--text mt-4">Interests</h1> -->
               <v-flex xs12>
-                <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em">
+                <!-- <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em"> -->
+                <v-card class="subtle-bg elevation-4 pa-4">
                   <v-layout row wrap>
                     <v-flex
                       v-for="interest in interests"
@@ -103,7 +105,8 @@
               <!-- <h1 class="grey--text text--lighten-2">Philosophy</h1> -->
               <!-- <h1 class="primary--text mt-4">Philosophy</h1> -->
               <v-flex xs12>
-                <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em">
+                <!-- <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em"> -->
+                <v-card class="ssubtle-bg elevation-4 pa-4">
                   <v-layout column wrap>
                     <v-flex
                       v-for="(philosophy, index) in philosophies"
@@ -198,11 +201,11 @@ export default {
       'Fractals', 'Permanence', 'Self-improvement', 'Health', 'Ergonomics'
     ],
     philosophies: [
-      { quote: 'Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away', credit: 'Antoine de Saint-Exupéry' },
-      { quote: 'You don\'t have to write it now, just don\'t prevent it from happening later', credit: 'Andy Hull' },
+      { quote: 'Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away.', credit: 'Antoine de Saint-Exupéry' },
+      { quote: 'You don\'t have to write it now, just don\'t prevent it from happening later.', credit: 'Andy Hull' },
       { quote: 'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.', credit: 'Brian W. Kernighan' },
       { quote: 'Quality software takes the least amount of time to develop. If you have code that is simple as possible, tests that are complete and a design that fits just right, additions and changes happen in the fastest possible way because the impact is lowest.', credit: 'Cunningham & Cunningham' },
-      { quote: 'Humility, respect, trust', credit: 'Team Geek' }
+      { quote: 'Humility, respect, trust.', credit: 'Team Geek' }
     ]
   }),
   computed: {
