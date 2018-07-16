@@ -19,7 +19,7 @@
                   <v-layout column wrap>
                     <!-- <v-flex xs12 style="font-size: 1.25em"> -->
                     <v-flex xs12>
-                      <p>Hi there! My name is Erik Vavro.</p>
+                      <p>Hi there! Thanks for giving me a visit.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
                       <p>I believe in life-long learning, striving for quality right from the get-go and taking a people-first approach to development.</p>
@@ -142,11 +142,16 @@
         </v-flex>
       </v-layout>
     </v-content>
+
+    <footer slot="footer">
+      <contact-button></contact-button>
+    </footer>
   </layout>
 </template>
 
 <script>
 // import ToolIcon from '@/components/ToolIcon'
+import ContactButton from '@/components/ContactButton'
 import Navbar from '@/components/Navbar'
 import Layout from '@/components/Layout'
 import { mapState } from 'vuex'
@@ -201,11 +206,11 @@ export default {
       'Fractals', 'Permanence', 'Self-improvement', 'Health', 'Ergonomics'
     ],
     philosophies: [
+      { quote: 'Humility, respect, trust.', credit: 'Team Geek' },
       { quote: 'Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away.', credit: 'Antoine de Saint-Exupéry' },
-      { quote: 'You don\'t have to write it now, just don\'t prevent it from happening later.', credit: 'Andy Hull' },
-      { quote: 'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.', credit: 'Brian W. Kernighan' },
       { quote: 'Quality software takes the least amount of time to develop. If you have code that is simple as possible, tests that are complete and a design that fits just right, additions and changes happen in the fastest possible way because the impact is lowest.', credit: 'Cunningham & Cunningham' },
-      { quote: 'Humility, respect, trust.', credit: 'Team Geek' }
+      { quote: 'You don\'t have to write it now, just don\'t prevent it from happening later.', credit: 'Andy Hull' },
+      { quote: 'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.', credit: 'Brian W. Kernighan' }
     ]
   }),
   computed: {
@@ -215,6 +220,7 @@ export default {
   },
   components: {
     // ToolIcon,
+    ContactButton,
     Navbar,
     Layout
   }

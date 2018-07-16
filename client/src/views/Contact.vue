@@ -2,7 +2,6 @@
   <layout>
     <navbar slot="header"></navbar>
 
-    <!-- <section class="content"> -->
     <v-content>
       <v-container fluid justify-center style="display: flex">
         <!-- <h1>Contact</h1> -->
@@ -44,15 +43,18 @@
             :disabled="!valid"
             @click="submit"
             color="primary"
+            block
           >
             submit
           </v-btn>
-          <v-btn @click="clear">clear</v-btn>
+          <v-btn
+            @click="clear"
+            block
+          >clear</v-btn>
         </v-form>
       </v-card>
       </v-container>
     </v-content>
-    <!-- </section> -->
 
     <footer slot="footer">
       <back></back>

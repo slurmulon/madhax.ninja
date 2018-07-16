@@ -69,12 +69,18 @@
     <!-- <footer slot="footer"> -->
     <!--   <back></back> -->
     <!-- </footer> -->
+
+    <footer slot="footer">
+      <contact></contact>
+    </footer>
   </layout>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar'
 import Back from '@/components/footers/Back'
+// import Contact from '@/components/footers/Contact'
+import Contact from '@/components/ContactButton'
 import Layout from '@/components/Layout'
 import { mapState } from 'vuex'
 
@@ -216,6 +222,7 @@ export default {
   components: {
     Navbar,
     Back,
+    Contact,
     Layout
   }
 }
