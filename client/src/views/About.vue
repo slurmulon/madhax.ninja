@@ -19,7 +19,7 @@
                   <v-layout column wrap>
                     <!-- <v-flex xs12 style="font-size: 1.25em"> -->
                     <v-flex xs12>
-                      <p>Hi there! Thanks for giving me a visit.</p>
+                      <p>Hi there! Thanks for giving my site a visit.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
                       <p>I believe in life-long learning, striving for quality right from the get-go and taking a people-first approach to development.</p>
@@ -203,7 +203,7 @@ export default {
     ],
     interests: [
       'Hypermedia', 'Streaming', 'Decentralization', 'Semantics', 'Timers', 'Synchronization', 'Music',
-      'Fractals', 'Permanence', 'Self-improvement', 'Health', 'Ergonomics'
+      'Fractals', 'Humor', 'Self-improvement', 'Health', 'Ergonomics'
     ],
     philosophies: [
       { quote: 'Humility, respect, trust.', credit: 'Team Geek' },
