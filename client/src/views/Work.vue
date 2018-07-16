@@ -41,7 +41,10 @@
                             v-for="tool in job.tools"
                             :key="tool.id"
                           >
-                            <!-- <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 50px"> -->
+                            <!-- {{ tool.icon }} -->
+                            <a href="tool.url" target="tool">
+                              <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 50px">
+                            </a>
                           </v-flex>
                         </v-layout>
                       </v-flex>
@@ -78,17 +81,14 @@ import { mapState } from 'vuex'
 
 // DOCUMENT: `data` is called before `created` and `mounted`, therefore `methods` and `getters` are not available in this context
 // DOCUMENT: one Vue gotcha is that you always need to provide high-level object keys for data that will be used, even if that data is `null` or `[]` or `{}` initially and is populated asynchronously or in some other defered way. this has to do with how Vue's property data synchronization system works
+//   - one way around this is to instead change your `data` properties into `computed` properties
+//   - write a blog article about this
 
 export default {
-  data () {
-    console.log('data this', this, this.tools, this.tools === undefined)
-    // return
-
-    return {
-      jobs: [],
-      projects: []
-    }
-  },
+  data: () =>  ({
+    jobs: [],
+    projects: []
+  }),
 
   computed: {
     ...mapState('tools', {
@@ -98,8 +98,6 @@ export default {
   },
 
   mounted () {
-    console.log('mounted yo', this, this.tools, this.tools === undefined)
-
     Object.assign(this, {
       jobs: [
         {
@@ -130,7 +128,8 @@ export default {
             'Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization.',
             'Made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.'
           ],
-          tools: ['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'nginx', 'api-blueprint']
+          // tools: ['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'nginx', 'api-blueprint']
+          tools: this.toolsById(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'nginx', 'api-blueprint'])
         },
         {
           company: 'Sungevity',
@@ -144,7 +143,8 @@ export default {
             'The application was fully internationalized and could be customized for partners to nearly any degree.',
             'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
           ],
-          tools: ['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'nginx', 'vagrant']
+          // tools: ['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'nginx', 'vagrant']
+          tools: this.toolsById(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'nginx', 'vagrant'])
         }
       ],
 

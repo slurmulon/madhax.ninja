@@ -207,7 +207,7 @@ export default {
   }),
   computed: {
     ...mapState('tools', {
-      tools: 'all' // TODO: filter out `leaflet`, `angular`, `semantic-ui`, `scala`, `akka`, `siren`, etc.
+      tools: state => state.all.filter(tool => !(['npm', 'angular', 'leaflet', 'semantic-ui', 'scala', 'akka', 'siren'].includes(tool.id)))
     })
   },
   components: {
