@@ -58,7 +58,8 @@
                         <v-flex xs8 sm6 lg8>
                           <span>{{ tool.title }}</span>
                           <!-- <v-progress-linear v-model="tool.level" color="light-blue darken-3"></v-progress-linear> -->
-                          <v-progress-linear v-model="tool.level" color="grey"></v-progress-linear>
+                          <!-- <v-progress-linear v-model="tool.level" color="grey"></v-progress-linear> -->
+                          <v-progress-linear v-model="tool.level" color="teal lighten-2"></v-progress-linear>
                         </v-flex>
                       </v-layout>
                     </v-flex>
