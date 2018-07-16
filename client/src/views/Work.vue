@@ -36,10 +36,12 @@
                         <p v-for="detail in job.details" :key="detail">{{ detail }}</p>
                       </v-flex>
                       <v-flex xs1 pt-2>
-                        <v-layout column wrap d-inline-flex>
+                        <v-layout row wrap justify-end>
                           <v-flex
+                            xs2
                             v-for="tool in job.tools"
                             :key="tool.id"
+                            class="text-xs-center"
                           >
                             <!-- {{ tool.icon }} -->
                             <a :href="tool.url" target="tool">
@@ -114,7 +116,7 @@ export default {
           ],
           // tools: ['vue', 'vuetify', 'leaflet', 'django', 'webpack', 'cordova', 'nginx', 'api-blueprint']
           // tools: this.tools.filter(tool => ['vue', 'django', 'webpack', 'nginx', 'api-blueprint'].includes(tool.id))
-          tools: this.toolsById(['vue', 'django', 'webpack', 'nginx', 'api-blueprint'])
+          tools: this.toolsById(['vue', 'vuetify', 'django', 'webpack', 'api-blueprint'])
         },
         {
           company: 'Sighten',
@@ -129,7 +131,7 @@ export default {
             'Made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.'
           ],
           // tools: ['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'nginx', 'api-blueprint']
-          tools: this.toolsById(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'nginx', 'api-blueprint'])
+          tools: this.toolsById(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'api-blueprint'])
         },
         {
           company: 'Sungevity',
@@ -144,7 +146,7 @@ export default {
             'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
           ],
           // tools: ['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'nginx', 'vagrant']
-          tools: this.toolsById(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'nginx', 'vagrant'])
+          tools: this.toolsById(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'vagrant'])
         }
       ],
 
