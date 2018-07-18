@@ -24,7 +24,7 @@
                         <img :src="require(`@/assets/img/${job.logo}`)" style="width: 150px">
                       </a>
                     </v-flex>
-                    <v-flex xs1 class="text-xs-center">
+                    <v-flex xs1 class="text-xs-center pt-0">
                       <!-- <div class="headline blocky-flat">{{ job.company }}</div> -->
                       <div class="blue-grey--text subheading">{{ job.title }}<br/><span class="grey--text body-2 font-weight-thin">{{ job.time }}</span></div>
                     </v-flex>
