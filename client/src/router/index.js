@@ -15,17 +15,10 @@ export default new Router({
     {
       path: '/',
       redirect: '/about',
-      // name: 'Home',
-      // // component: Home
-      // components: {
-      //   default: Home,
-      //   header: Navbar
-      // }
     },
     {
       path: '/work',
       name: 'Work',
-      // component: Work
       components: {
         default: Work,
         header: Navbar,
@@ -35,7 +28,6 @@ export default new Router({
     {
       path: '/about',
       name: 'About',
-      // component: About
       components: {
         default: About,
         header: Navbar,
@@ -45,7 +37,6 @@ export default new Router({
     {
       path: '/contact',
       name: 'Contact',
-      // component: Contact
       components: {
         default: Contact,
         header: Navbar,
