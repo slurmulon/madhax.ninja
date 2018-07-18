@@ -1,10 +1,13 @@
 <template>
   <layout>
-    <navbar slot="header"></navbar>
+    <!-- <navbar slot="header"></navbar> -->
+    <router-view name="header"></router-view>
 
     <transition name="page">
       <router-view></router-view>
     </transition>
+
+    <router-view name="footer"></router-view>
   </layout>
 </template>
 

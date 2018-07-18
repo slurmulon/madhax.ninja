@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
   <!-- <layout pa-2> -->
   <!--   <navbar slot="header"></navbar> -->
 
@@ -15,7 +15,7 @@
       </v-container>
     </v-content>
 
-    <footer slot="footer">
+    <footer>
       <section class="status">
         <h2 class="head">Status</h2>
         <div class="entry blocky-flat">
@@ -80,6 +80,10 @@ export default {
 <style lang="stylus" scoped>
 // .application
 //   padding 1em
+.home
+  display flex
+  flex-flow column wrap
+  flex 1
 
 main.v-content > .v-content__wrap
   display flex

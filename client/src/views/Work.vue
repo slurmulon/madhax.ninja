@@ -1,81 +1,70 @@
 <template>
-  <div>
-    <v-content>
-      <v-container grid-list-xl fluid>
-        <v-layout row wrap>
-          <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
-            <h1 class="light-blue--text text--lighten-4">Career</h1>
-            <!-- <h1 class="grey--text text--lighten-2">Employment</h1> -->
-            <!-- <h1 class="primary--text">Employment</h1> -->
-          </v-flex>
-          <v-flex xs12 md6 offset-md3 v-for="job in jobs" :key="job.company" class="mb-4"> <!-- sm3 -->
-            <!-- TODO: employmemt, projects, approach, process, philosophy -->
-            <v-card class="subtle-bg elevation-4">
-              <v-card-media
-                :src="require(`@/assets/img/${job.banner}`)"
-                height="200px"
-              ></v-card-media>
+  <v-content>
+    <v-container grid-list-xl fluid>
+      <v-layout row wrap>
+        <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
+          <h1 class="light-blue--text text--lighten-4">Career</h1>
+          <!-- <h1 class="grey--text text--lighten-2">Employment</h1> -->
+          <!-- <h1 class="primary--text">Employment</h1> -->
+        </v-flex>
+        <v-flex xs12 md6 offset-md3 v-for="job in jobs" :key="job.company" class="mb-4"> <!-- sm3 -->
+          <!-- TODO: employmemt, projects, approach, process, philosophy -->
+          <v-card class="subtle-bg elevation-4">
+            <v-card-media
+              :src="require(`@/assets/img/${job.banner}`)"
+              height="200px"
+            ></v-card-media>
 
-              <v-card-title primary-title>
-                <!-- <v-layout row wrap> -->
-                <!--   <v-flex xs1 sm8> -->
-                    <v-layout column nowrap>
-                      <v-flex class="text-xs-center pb-3">
-                        <a :href="job.url">
-                          <img :src="require(`@/assets/img/${job.logo}`)" style="width: 150px">
-                        </a>
-                      </v-flex>
-                      <v-flex xs1>
-                        <!-- <div class="headline blocky-flat">{{ job.company }}</div> -->
-                        <div class="blue-grey--text">{{ job.title }} <span class="grey--text">{{ job.time }}</span></div>
-                      </v-flex>
-                      <v-flex xs1 pt-2>
-                        <!-- {{ job.desc }} -->
-                        <p v-for="detail in job.details" :key="detail">{{ detail }}</p>
-                      </v-flex>
-                      <v-flex xs1 pt-2>
-                        <v-layout row wrap justify-end>
-                          <v-flex
-                            xs2
-                            v-for="tool in job.tools"
-                            :key="tool.id"
-                            class="text-xs-center"
-                          >
-                            <!-- {{ tool.icon }} -->
-                            <a :href="tool.url" target="tool">
-                              <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
-                            </a>
-                          </v-flex>
-                        </v-layout>
-                      </v-flex>
-                    </v-layout>
-                  <!-- </v-flex> -->
-                <!-- </v-layout> -->
-              </v-card-title>
-            </v-card>
-          </v-flex>
+            <v-card-title primary-title>
+              <!-- <v-layout row wrap> -->
+              <!--   <v-flex xs1 sm8> -->
+                  <v-layout column nowrap>
+                    <v-flex class="text-xs-center pb-3">
+                      <a :href="job.url">
+                        <img :src="require(`@/assets/img/${job.logo}`)" style="width: 150px">
+                      </a>
+                    </v-flex>
+                    <v-flex xs1>
+                      <!-- <div class="headline blocky-flat">{{ job.company }}</div> -->
+                      <div class="blue-grey--text">{{ job.title }} <span class="grey--text">{{ job.time }}</span></div>
+                    </v-flex>
+                    <v-flex xs1 pt-2>
+                      <!-- {{ job.desc }} -->
+                      <p v-for="detail in job.details" :key="detail">{{ detail }}</p>
+                    </v-flex>
+                    <v-flex xs1 pt-2>
+                      <v-layout row wrap justify-end>
+                        <v-flex
+                          xs2
+                          v-for="tool in job.tools"
+                          :key="tool.id"
+                          class="text-xs-center"
+                        >
+                          <!-- {{ tool.icon }} -->
+                          <a :href="tool.url" target="tool">
+                            <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
+                          </a>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                <!-- </v-flex> -->
+              <!-- </v-layout> -->
+            </v-card-title>
+          </v-card>
+        </v-flex>
 
-          <v-flex xs12 md6 offset-md3 pt-0 pb-0> <!-- sm3 -->
-            <h1 class="light-blue--text text--lighten-4">Projects</h1>
-            <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
-            <!-- <h1 class="primary--text">Projects</h1> -->
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
-
-    <footer>
-      <contact></contact>
-    </footer>
-  </div>
+        <v-flex xs12 md6 offset-md3 pt-0 pb-0> <!-- sm3 -->
+          <h1 class="light-blue--text text--lighten-4">Projects</h1>
+          <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
+          <!-- <h1 class="primary--text">Projects</h1> -->
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-content>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
-import Back from '@/components/footers/Back'
-// import Contact from '@/components/footers/Contact'
-import Contact from '@/components/ContactButton'
-import Layout from '@/components/Layout'
 import { mapState } from 'vuex'
 
 // TODO: create a centralized bank / store of tools that's shared between About.vue and Work.vue
@@ -211,13 +200,6 @@ export default {
 
       return res
     }
-  },
-
-  components: {
-    Navbar,
-    Back,
-    Contact,
-    Layout
   }
 }
 </script>

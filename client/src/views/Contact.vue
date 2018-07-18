@@ -64,18 +64,11 @@
         </v-flex>
       </v-layout>
     </v-content>
-
-    <footer>
-      <back></back>
-    </footer>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Navbar from '@/components/Navbar'
-import Back from '@/components/footers/Back'
-import Layout from '@/components/Layout'
 
 export default {
   data: () => ({
@@ -113,12 +106,6 @@ export default {
     clear () {
       this.$refs.form.reset()
     }
-  },
-
-  components: {
-    Navbar,
-    Back,
-    Layout
   }
 }
 </script>

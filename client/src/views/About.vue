@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <v-content>
       <v-layout>
@@ -143,18 +142,11 @@
         </v-flex>
       </v-layout>
     </v-content>
-
-    <footer>
-      <contact></contact>
-    </footer>
   </div>
 </template>
 
 <script>
 // import ToolIcon from '@/components/ToolIcon'
-import Contact from '@/components/ContactButton'
-import Navbar from '@/components/Navbar'
-import Layout from '@/components/Layout'
 import { mapState } from 'vuex'
 
 export default {
@@ -195,12 +187,6 @@ export default {
     ...mapState('tools', {
       tools: state => state.all.filter(tool => !(['npm', 'angular', 'leaflet', 'semantic-ui', 'scala', 'akka', 'siren', 'vagrant', 'play'].includes(tool.id)))
     })
-  },
-  components: {
-    // ToolIcon,
-    Contact,
-    Navbar,
-    Layout
   }
 }
 </script>
