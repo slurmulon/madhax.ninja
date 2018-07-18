@@ -9,37 +9,6 @@
 
 // ---
 
-.page-enter-active
-  transition opacity 0.25s ease-out
-  transform translateX(200px)
-
-.page-leave-active
-  transition opacity 0.25s ease-in
-  transform translateX(200px)
-
-.page-enter, .page-leave-active
-  opacity 0
-  // transform translateX(0)
-
-
-// ---
-
-.enter { transform: translateX(10%); opacity: 0.25; }
-.enter-to { transform: translateX(0); opacity: 1; }
-.slide-enter-active { position: absolute }
-
-.leave { transform: translateX(0); opacity: 0.25; }
-.leave-to { transform: translateX(-10%); opacity: 1; }
-
-.slide-enter-active,
-.slide-leave-active { transition: all 750ms ease-in-out }
-
-// ---
-
-
-
-// ---
-
 .slither-enter-active, .slither-leave-active
   // transition transform 3s ease-out
   // transition transform 0.5s ease-out
@@ -56,3 +25,37 @@
   // transform translateX(0)
   transform translateY(0)
   opacity 1
+
+// ---
+
+.page-enter-active {
+  animation: coming 0.5s;
+  animation-delay: .25s;
+  opacity: 0;
+}
+.page-leave-active {
+  animation: going 0.5s;
+}
+
+@keyframes going {
+  from {
+    // transform: translateX(0);
+    transform: translateY(0);
+  }
+  to {
+    // transform: translateX(-50px);
+    transform: translateY(25px);
+    opacity: 0;
+  }
+}
+@keyframes coming {
+  from {
+    // transform: translateX(-50px);
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

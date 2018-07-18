@@ -2,7 +2,7 @@
   <layout>
     <navbar slot="header"></navbar>
 
-    <transition name="fade">
+    <transition name="page">
       <router-view></router-view>
     </transition>
   </layout>
