@@ -106,7 +106,7 @@
               <!-- <h1 class="primary--text mt-4">Philosophy</h1> -->
               <v-flex xs12>
                 <!-- <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em"> -->
-                <v-card class="ssubtle-bg elevation-4 pa-4">
+                <v-card class="subtle-bg elevation-4 pa-4">
                   <v-layout column wrap>
                     <v-flex
                       v-for="(philosophy, index) in philosophies"
