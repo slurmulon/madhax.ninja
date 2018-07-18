@@ -9,7 +9,7 @@
       <slot></slot>
     <!-- </main> -->
 
-    <slot name="footer"></slot>
+    <!-- <slot name="footer"></slot> -->
         <!-- </v-layout> -->
       <!-- </v-container> -->
     <!-- </v-content> -->

@@ -1,7 +1,26 @@
 <template>
-  <router-view></router-view>
+  <layout>
+    <navbar slot="header"></navbar>
+
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
+  </layout>
 </template>
+
+<script>
+import Navbar from './Navbar'
+import Layout from './Layout'
+
+export default {
+  components: {
+    Navbar,
+    Layout
+  }
+}
+</script>
 
 <style lang="stylus">
 @require '../styles/main'
+@require '../styles/transitions'
 </style>

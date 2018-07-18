@@ -1,12 +1,10 @@
 <template>
-  <layout>
-    <navbar slot="header"></navbar>
-
+  <div>
     <v-content>
       <v-container grid-list-xl fluid>
         <v-layout row wrap>
           <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
-            <h1 class="light-blue--text text--lighten-4">Employment</h1>
+            <h1 class="light-blue--text text--lighten-4">Career</h1>
             <!-- <h1 class="grey--text text--lighten-2">Employment</h1> -->
             <!-- <h1 class="primary--text">Employment</h1> -->
           </v-flex>
@@ -66,14 +64,10 @@
       </v-container>
     </v-content>
 
-    <!-- <footer slot="footer"> -->
-    <!--   <back></back> -->
-    <!-- </footer> -->
-
-    <footer slot="footer">
+    <footer>
       <contact></contact>
     </footer>
-  </layout>
+  </div>
 </template>
 
 <script>

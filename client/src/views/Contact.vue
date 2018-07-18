@@ -1,7 +1,5 @@
 <template>
-  <layout>
-    <navbar slot="header"></navbar>
-
+  <div>
     <v-content>
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
@@ -67,10 +65,10 @@
       </v-layout>
     </v-content>
 
-    <footer slot="footer">
+    <footer>
       <back></back>
     </footer>
-  </layout>
+  </div>
 </template>
 
 <script>

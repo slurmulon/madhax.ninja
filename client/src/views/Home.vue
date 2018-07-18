@@ -1,6 +1,7 @@
 <template>
-  <layout pa-2>
-    <navbar slot="header"></navbar>
+  <div>
+  <!-- <layout pa-2> -->
+  <!--   <navbar slot="header"></navbar> -->
 
     <v-content>
       <v-container fluid>
@@ -60,7 +61,8 @@
         </div>
       </section>
     </footer>
-  </layout>
+  </div>
+  <!-- </layout> -->
 </template>
 
 <script>

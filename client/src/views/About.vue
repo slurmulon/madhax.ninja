@@ -1,7 +1,6 @@
 <template>
-  <layout>
-    <navbar slot="header"></navbar>
 
+  <div>
     <v-content>
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
@@ -22,7 +21,7 @@
                       <p>Hi there! Thanks for giving my site a visit.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
-                      <p>I believe in life-long learning, focusing on quality right from the beginning and taking a people-first approach to development.</p>
+                      <p>I believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
                       <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="black--text underline">reach out</router-link>.</span>
                       <span>Also be sure to see my <router-link to="/work" class="black--text underline">past and current work</router-link>.</span>
                     </v-flex>
@@ -50,7 +49,7 @@
                       <v-layout row nowrap>
                         <v-flex xs4 sm6 lg4>
                           <a :href="tool.url" target="tool">
-                            <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 50px">
+                            <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
                           </a>
                           <!-- <tool-icon :id="tool.id"></tool-icon> -->
                           <!-- <tool-icon id="123" width="50px" shiny></tool-icon> -->
@@ -145,15 +144,15 @@
       </v-layout>
     </v-content>
 
-    <footer slot="footer">
-      <contact-button></contact-button>
+    <footer>
+      <contact></contact>
     </footer>
-  </layout>
+  </div>
 </template>
 
 <script>
 // import ToolIcon from '@/components/ToolIcon'
-import ContactButton from '@/components/ContactButton'
+import Contact from '@/components/ContactButton'
 import Navbar from '@/components/Navbar'
 import Layout from '@/components/Layout'
 import { mapState } from 'vuex'
@@ -199,7 +198,7 @@ export default {
   },
   components: {
     // ToolIcon,
-    ContactButton,
+    Contact,
     Navbar,
     Layout
   }
