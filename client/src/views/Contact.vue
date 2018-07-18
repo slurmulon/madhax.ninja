@@ -15,12 +15,14 @@
                     :rules="nameRules"
                     :counter="64"
                     label="Name"
+                    color="blue-grey"
                     required
                   ></v-text-field>
                   <v-text-field
                     v-model="email"
                     :rules="emailRules"
                     label="E-mail"
+                    color="blue-grey"
                     required
                   ></v-text-field>
                   <v-select
@@ -28,11 +30,13 @@
                     :items="items"
                     :rules="[v => !!v || 'Reason is required']"
                     label="Reason"
+                    color="blue-grey"
                     required
                   ></v-select>
                   <v-textarea
                     name="message"
                     label="Message"
+                    color="blue-grey"
                     rows="7"
                   ></v-textarea>
 
