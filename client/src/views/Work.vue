@@ -16,40 +16,36 @@
             ></v-card-media>
 
             <v-card-title primary-title>
-              <!-- <v-layout row wrap> -->
-              <!--   <v-flex xs1 sm8> -->
-                  <v-layout column nowrap>
-                    <v-flex class="text-xs-center pb-3">
-                      <a :href="job.url">
-                        <img :src="require(`@/assets/img/${job.logo}`)" style="width: 150px">
+              <v-layout column nowrap>
+                <v-flex class="text-xs-center pb-3">
+                  <a :href="job.url">
+                    <img :src="require(`@/assets/img/${job.logo}`)" style="width: 150px">
+                  </a>
+                </v-flex>
+                <v-flex xs1 class="text-xs-center pt-0">
+                  <!-- <div class="headline blocky-flat">{{ job.company }}</div> -->
+                  <div class="blue-grey--text subheading">{{ job.title }}<br/><span class="grey--text body-2 font-weight-thin">{{ job.time }}</span></div>
+                </v-flex>
+                <v-flex xs1 pt-2 pl-4 pr-4>
+                  <!-- {{ job.desc }} -->
+                  <p v-for="detail in job.details" :key="detail" class="font-weight-thin">{{ detail }}</p>
+                </v-flex>
+                <v-flex xs1 pt-2>
+                  <v-layout row wrap justify-end>
+                    <v-flex
+                      xs2
+                      v-for="tool in job.tools"
+                      :key="tool.id"
+                      class="text-xs-center"
+                    >
+                      <!-- {{ tool.icon }} -->
+                      <a :href="tool.url" target="tool">
+                        <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
                       </a>
                     </v-flex>
-                    <v-flex xs1 class="text-xs-center pt-0">
-                      <!-- <div class="headline blocky-flat">{{ job.company }}</div> -->
-                      <div class="blue-grey--text subheading">{{ job.title }}<br/><span class="grey--text body-2 font-weight-thin">{{ job.time }}</span></div>
-                    </v-flex>
-                    <v-flex xs1 pt-2 pl-4 pr-4>
-                      <!-- {{ job.desc }} -->
-                      <p v-for="detail in job.details" :key="detail" class="font-weight-thin">{{ detail }}</p>
-                    </v-flex>
-                    <v-flex xs1 pt-2>
-                      <v-layout row wrap justify-end>
-                        <v-flex
-                          xs2
-                          v-for="tool in job.tools"
-                          :key="tool.id"
-                          class="text-xs-center"
-                        >
-                          <!-- {{ tool.icon }} -->
-                          <a :href="tool.url" target="tool">
-                            <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
-                          </a>
-                        </v-flex>
-                      </v-layout>
-                    </v-flex>
                   </v-layout>
-                <!-- </v-flex> -->
-              <!-- </v-layout> -->
+                </v-flex>
+              </v-layout>
             </v-card-title>
           </v-card>
         </v-flex>
@@ -104,8 +100,6 @@ export default {
             'Integrated an API Blueprint-based mock server that enabled orthogonal yet transparent development of the client and API.',
             'Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging.'
           ],
-          // tools: ['vue', 'vuetify', 'leaflet', 'django', 'webpack', 'cordova', 'nginx', 'api-blueprint']
-          // tools: this.tools.filter(tool => ['vue', 'django', 'webpack', 'nginx', 'api-blueprint'].includes(tool.id))
           tools: this.toolsById(['vue', 'vuetify', 'django', 'postgres', 'webpack', 'api-blueprint'])
         },
         {
@@ -120,7 +114,6 @@ export default {
             'Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization.',
             'Made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.'
           ],
-          // tools: ['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'nginx', 'api-blueprint']
           tools: this.toolsById(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'postgres'])
         },
         {
@@ -135,7 +128,6 @@ export default {
             'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.',
             'Contributed towards a mock development environment that supported dynamic and conditional stubbing, decoupling the development of APIs and their clients.'
           ],
-          // tools: ['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'nginx', 'vagrant']
           tools: this.toolsById(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'vagrant'])
         }
       ],
