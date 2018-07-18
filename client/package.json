@@ -14,11 +14,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.1",
     "axios": "^0.18.0",
     "stylus": "^0.54.5",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.1.1",
+    "vuetify": "^1.1.5",
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
