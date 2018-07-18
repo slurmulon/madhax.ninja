@@ -15,14 +15,15 @@
               <v-flex xs12>
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
                   <v-layout column wrap>
-                    <v-flex xs12 class="text-xs-right pt-0 pb-0">
-                      <v-btn icon light>
-                        <v-icon light>fas fa-code-branch</v-icon>
-                      </v-btn>
-                      <v-btn icon light>
-                        <v-icon light>fas fa-linkedin-in</v-icon>
-                      </v-btn>
-                    </v-flex>
+                    <!-- @see https://github.com/FortAwesome/vue-fontawesome -->
+                    <!-- <v-flex xs12 class="text-xs-right pt-0 pb-0"> -->
+                    <!--   <v-btn icon light> -->
+                    <!--     <v-icon light>fas fa-code-branch</v-icon> -->
+                    <!--   </v-btn> -->
+                    <!--   <v-btn icon light> -->
+                    <!--     <v-icon light>fas fa-linkedin-in</v-icon> -->
+                    <!--   </v-btn> -->
+                    <!-- </v-flex> -->
                     <v-flex xs12 class="font-weight-thin">
                       <p>Hi there! Thanks for giving my site a visit.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
