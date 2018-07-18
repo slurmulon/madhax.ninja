@@ -24,13 +24,13 @@
                         <img :src="require(`@/assets/img/${job.logo}`)" style="width: 150px">
                       </a>
                     </v-flex>
-                    <v-flex xs1>
+                    <v-flex xs1 class="text-xs-center">
                       <!-- <div class="headline blocky-flat">{{ job.company }}</div> -->
-                      <div class="blue-grey--text">{{ job.title }} <span class="grey--text">{{ job.time }}</span></div>
+                      <div class="blue-grey--text subheading">{{ job.title }}<br/><span class="grey--text body-2 font-weight-thin">{{ job.time }}</span></div>
                     </v-flex>
-                    <v-flex xs1 pt-2>
+                    <v-flex xs1 pt-2 pl-4 pr-4>
                       <!-- {{ job.desc }} -->
-                      <p v-for="detail in job.details" :key="detail">{{ detail }}</p>
+                      <p v-for="detail in job.details" :key="detail" class="font-weight-thin">{{ detail }}</p>
                     </v-flex>
                     <v-flex xs1 pt-2>
                       <v-layout row wrap justify-end>

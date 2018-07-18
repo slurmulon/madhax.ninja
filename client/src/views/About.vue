@@ -16,7 +16,7 @@
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
                   <v-layout column wrap>
                     <!-- <v-flex xs12 style="font-size: 1.25em"> -->
-                    <v-flex xs12>
+                    <v-flex xs12 class="font-weight-thin">
                       <p>Hi there! Thanks for giving my site a visit.</p>
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
@@ -54,7 +54,7 @@
                           <!-- <tool-icon id="123" width="50px" shiny></tool-icon> -->
                         </v-flex>
                         <v-flex xs8 sm6 lg8>
-                          <span>{{ tool.title }}</span>
+                          <span class="font-weight-thin">{{ tool.title }}</span>
                           <!-- <v-progress-linear v-model="tool.level" color="light-blue darken-1"></v-progress-linear> -->
                           <v-progress-linear v-model="tool.level" color="blue-grey"></v-progress-linear>
                           <!-- <v-progress-linear v-model="tool.level" color="grey"></v-progress-linear> -->
@@ -95,7 +95,7 @@
                       xs6
                       md4
                     >
-                      {{ interest }}
+                      <span class="font-weight-thin">{{ interest }}</span>
                     </v-flex>
                   </v-layout>
                 </v-card>
