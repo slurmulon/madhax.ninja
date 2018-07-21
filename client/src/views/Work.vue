@@ -58,13 +58,13 @@
         <v-flex xs12 md6 offset-md3 pb-0 v-for="project in projects" :key="project.title"> <!-- sm3 -->
           <v-card class="subtle-bg elevation-4">
             <v-card-title primary-title>
-              <v-layout row nowrap align-items-center>
+              <v-layout row nowrap align-center>
                 <v-flex xs3 class="text-xs-center">
-                  <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 100px">
+                  <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 50px">
                 </v-flex>
                 <v-flex xs9>
                   <v-layout column wrap>
-                    <v-flex xs1>
+                    <v-flex xs1 pt-0 pb-0>
                       <span class="subheading">{{ project.title }}</span>
                     </v-flex>
                     <v-flex xs1>
