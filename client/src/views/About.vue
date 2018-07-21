@@ -39,10 +39,10 @@
                       <!-- </v-btn> -->
                     </v-flex>
                     <v-flex xs12 class="font-weight-thin">
-                      <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
-                      <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
+                      <p>I'm a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
+                      <p>I'm passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
                       <p>I believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
-                      <span>If you are interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="black--text underline">reach out</router-link>.</span>
+                      <span>If you're interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="black--text underline">reach out</router-link>.</span>
                       <span>Also be sure to see my <router-link to="/work" class="black--text underline">past and current work</router-link>.</span>
                     </v-flex>
                   </v-layout>
