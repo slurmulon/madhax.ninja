@@ -4,6 +4,7 @@ import { sync } from 'vuex-router-sync'
 import router from '../router'
 import store from '../store'
 import theme from './theme'
+// import 'font-awesome/css/font-awesome.min.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 sync(store, router)

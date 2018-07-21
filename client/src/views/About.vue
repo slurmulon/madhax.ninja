@@ -16,14 +16,14 @@
                 <v-card class="blocky-flat subtle-bg elevation-4 pa-4">
                   <v-layout column wrap>
                     <!-- @see https://github.com/FortAwesome/vue-fontawesome -->
-                    <!-- <v-flex xs12 class="text-xs-right pt-0 pb-0"> -->
-                    <!--   <v-btn icon light> -->
-                    <!--     <v-icon light>fas fa-code-branch</v-icon> -->
-                    <!--   </v-btn> -->
-                    <!--   <v-btn icon light> -->
-                    <!--     <v-icon light>fas fa-linkedin-in</v-icon> -->
-                    <!--   </v-btn> -->
-                    <!-- </v-flex> -->
+                    <v-flex xs12 class="text-xs-right pt-0 pb-0">
+                      <v-btn icon light href="https://github.com/slurmulon">
+                        <v-icon light color="blue-grey">fab fa-github</v-icon>
+                      </v-btn>
+                      <v-btn icon light href="https://linkedin.com/in/evavro" class="shiny-icon">
+                        <v-icon light color="blue-grey">fab fa-linkedin-in</v-icon>
+                      </v-btn>
+                    </v-flex>
                     <v-flex xs12 class="font-weight-thin">
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I am passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
