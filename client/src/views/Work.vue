@@ -168,7 +168,7 @@ export default {
           title: 'bach',
           logo: 'bach.gif',
           active: true,
-          desc: 'A semantic musical notation focused on readability and productivity',
+          desc: 'Semantic musical notation focused on readability and productivity',
           url: 'https://github.com/slurmulon/bach',
           tools: this.toolsById(['clojure']) // ebnf
         },
