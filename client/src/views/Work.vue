@@ -55,7 +55,10 @@
           <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
           <!-- <h1 class="primary--text">Projects</h1> -->
         </v-flex>
-        <v-flex xs12 md6 offset-md3 pb-0 v-for="project in projects" :key="project.title"> <!-- sm3 -->
+        <v-flex xs12 md6 offset-md3 pb-0>
+          <v-layout row wrap>
+            <v-flex xs12 xl6 v-for="project in projects" :key="project.title">
+        <!-- <v-flex xs12 md6 offset-md3 pb-0 v-for="project in projects" :key="project.title"> <1!-- sm3 --1> -->
           <v-card class="subtle-bg elevation-4" :href="project.url">
             <v-card-title primary-title>
               <v-layout row nowrap align-center pa-2>
@@ -85,6 +88,9 @@
               </v-layout>
             </v-card-title>
           </v-card>
+
+          </v-flex>
+          </v-layout>
         </v-flex>
       </v-layout>
     </v-container>
