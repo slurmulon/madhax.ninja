@@ -70,15 +70,15 @@
                     <v-flex xs1>
                       <span class="caption">{{ project.desc }}</span>
                     </v-flex>
-                    <!-- <v-flex xs1> -->
-                    <!--   <v-layout row nowrap> -->
-                    <!--     <v-flex v-for="tool in project.tools" :key="tool.id"> -->
-                    <!--       <a v-if="tool" :href="tool.url" target="tool"> -->
-                    <!--         <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px"> -->
-                    <!--       </a> -->
-                    <!--     </v-flex> -->
-                    <!--   </v-layout> -->
-                    <!-- </v-flex> -->
+                    <v-flex xs1>
+                      <v-layout row nowrap justify-end>
+                        <v-flex xs3 v-for="tool in project.tools" :key="tool.id" class="text-xs-right">
+                          <a v-if="tool" :href="tool.url" target="tool">
+                            <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
+                          </a>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
                   </v-layout>
                 </v-flex>
               </v-layout>
@@ -193,7 +193,7 @@ export default {
         {
           title: 'grapple',
           active: true,
-          dsec: 'Pragmatic and flexible Webhook API for Elixir',
+          desc: 'Pragmatic and flexible Webhook API for Elixir',
           tools: this.toolsById(['elixir'])
         },
         {
@@ -205,13 +205,13 @@ export default {
           title: 'tasty-commits',
           active: true,
           desc: 'Commit message convention for easily digestable history streams'
-        },
-        {
-          title: 'fractule',
-          active: false,
-          desc: 'Abstract fractal generator based on Playing with Chaos',
-          tools: ['js']
         }
+        // {
+        //  title: 'fractule',
+        //  active: false,
+        //  desc: 'Abstract fractal generator based on Playing with Chaos',
+        //  tools: ['js']
+        // }
       ]
     })
   },

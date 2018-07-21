@@ -9,7 +9,21 @@
         <!-- <v-flex xs12 sm6 offset-sm3 offset-xs0> -->
           <!-- <v-card> -->
             <v-container grid-list-xl fluid>
-              <h1 class="light-blue--text text--lighten-4">Profile</h1>
+              <v-flex xs12>
+                <v-layout row nowrap>
+                  <v-flex xs6>
+                    <h1 class="light-blue--text text--lighten-4">Profile</h1>
+                  </v-flex>
+                  <v-flex xs6 class="text-xs-right">
+                    <v-btn icon light href="https://github.com/slurmulon">
+                      <v-icon light color="black">fab fa-github</v-icon>
+                    </v-btn>
+                    <v-btn icon light href="https://linkedin.com/in/evavro">
+                      <v-icon light color="black">fab fa-linkedin-in</v-icon>
+                    </v-btn>
+                  </v-flex>
+                </v-layout>
+              </v-flex>
               <!-- <h1 class="grey--text text--lighten-2">Profile</h1> -->
               <!-- <h1 class="primary--text">Profile</h1> -->
               <v-flex xs12>
@@ -17,12 +31,12 @@
                   <v-layout column wrap>
                     <!-- @see https://github.com/FortAwesome/vue-fontawesome -->
                     <v-flex xs12 class="text-xs-right pt-0 pb-0">
-                      <v-btn icon light href="https://github.com/slurmulon">
-                        <v-icon light color="blue-grey">fab fa-github</v-icon>
-                      </v-btn>
-                      <v-btn icon light href="https://linkedin.com/in/evavro" class="shiny-icon">
-                        <v-icon light color="blue-grey">fab fa-linkedin-in</v-icon>
-                      </v-btn>
+                      <!-- <v-btn icon light href="https://github.com/slurmulon"> -->
+                      <!--   <v-icon light color="blue-grey">fab fa-github</v-icon> -->
+                      <!-- </v-btn> -->
+                      <!-- <v-btn icon light href="https://linkedin.com/in/evavro" class="shiny-icon"> -->
+                      <!--   <v-icon light color="blue-grey">fab fa-linkedin-in</v-icon> -->
+                      <!-- </v-btn> -->
                     </v-flex>
                     <v-flex xs12 class="font-weight-thin">
                       <p>I am a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
