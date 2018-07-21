@@ -55,6 +55,36 @@
           <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
           <!-- <h1 class="primary--text">Projects</h1> -->
         </v-flex>
+        <v-flex xs12 md6 offset-md3 pb-0 v-for="project in projects" :key="project.title"> <!-- sm3 -->
+          <v-card class="subtle-bg elevation-4">
+            <v-card-title primary-title>
+              <v-layout row nowrap align-items-center>
+                <v-flex xs3 class="text-xs-center">
+                  <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 100px">
+                </v-flex>
+                <v-flex xs9>
+                  <v-layout column wrap>
+                    <v-flex xs1>
+                      <span class="subheading">{{ project.title }}</span>
+                    </v-flex>
+                    <v-flex xs1>
+                      <span class="caption">{{ project.desc }}</span>
+                    </v-flex>
+                    <!-- <v-flex xs1> -->
+                    <!--   <v-layout row nowrap> -->
+                    <!--     <v-flex v-for="tool in project.tools" :key="tool.id"> -->
+                    <!--       <a v-if="tool" :href="tool.url" target="tool"> -->
+                    <!--         <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px"> -->
+                    <!--       </a> -->
+                    <!--     </v-flex> -->
+                    <!--   </v-layout> -->
+                    <!-- </v-flex> -->
+                  </v-layout>
+                </v-flex>
+              </v-layout>
+            </v-card-title>
+          </v-card>
+        </v-flex>
       </v-layout>
     </v-container>
   <!-- </v-content> -->
@@ -137,32 +167,34 @@ export default {
           title: 'bach',
           logo: 'bach.gif',
           active: true,
-          tools: ['clojure', 'ebnf'],
-          desc: 'A semantic musical notation with a focus on readability and productivity'
+          desc: 'A semantic musical notation with a focus on readability and productivity',
+          tools: this.toolsById(['clojure']) // ebnf
         },
         {
           title: 'hyper-mesh',
           active: true,
           tools: ['js', 'json-schema'],
-          desc: 'Automagical JSON Hyper-Schema interactions'
+          desc: 'Automagical JSON Hyper-Schema interactions',
+          tools: this.toolsById(['js', 'json-schema'])
         },
         {
           title: 'blot',
           active: true,
-          tools: ['js', 'api-blueprint'],
-          desc: 'A DRY and dynamic build tool for API Blueprint'
+          desc: 'A DRY and dynamic build tool for API Blueprint',
+          tools: this.toolsById(['js', 'api-blueprint'])
         },
         {
           title: 'flap',
           active: false,
           tools: ['js'],
-          desc: 'Functional guard clauses in JS'
+          desc: 'Functional guard clauses in JS',
+          tools: this.toolsById(['js'])
         },
         {
           title: 'grapple',
           active: true,
-          tools: ['elixir'],
-          dsec: 'Pragmatic and flexible Webhook API for Elixir'
+          dsec: 'Pragmatic and flexible Webhook API for Elixir',
+          tools: this.toolsById(['elixir'])
         },
         {
           title: 'virtual-web-dev',
