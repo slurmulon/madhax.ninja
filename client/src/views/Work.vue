@@ -63,7 +63,7 @@
             <v-card-title primary-title>
               <v-layout row nowrap align-center pa-2>
                 <v-flex xs3 class="text-xs-center">
-                  <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 75px">
+                  <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 65px">
                   <span v-if="project.emoji" class="display-3">{{ project.emoji }}</span>
                 </v-flex>
                 <v-flex xs9>
@@ -217,14 +217,16 @@ export default {
           emoji: '⚡',
           active: true,
           desc: 'Low-friction development process for modern web applications',
-          url: 'https://github.com/slurmulon/virtual-web-dev'
+          url: 'https://github.com/slurmulon/virtual-web-dev',
+          tools: this.toolsById(['api-blueprint'])
         },
         {
           title: 'tasty-commits',
           emoji: '🍭',
           active: true,
           desc: 'Commit message convention for easily digestable history streams',
-          url: 'https://github.com/slurmulon/tasty-commits'
+          url: 'https://github.com/slurmulon/tasty-commits',
+          tools: this.toolsById(['git'])
         }
         // {
         //  title: 'fractule',
