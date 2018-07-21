@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <!-- <v-content> -->
     <v-container grid-list-xl fluid>
       <v-layout row wrap>
         <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
@@ -57,7 +57,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </v-content>
+  <!-- </v-content> -->
 </template>
 
 <script>
