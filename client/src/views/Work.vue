@@ -1,7 +1,7 @@
 <template>
   <!-- <v-content> -->
     <v-container grid-list-xl fluid>
-      <v-layout row wrap>
+      <v-layout row wrap id="work-container">
         <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
           <h1 class="light-blue--text text--lighten-4">Career</h1>
           <!-- <h1 class="grey--text text--lighten-2">Employment</h1> -->
@@ -98,6 +98,7 @@
 </template>
 
 <script>
+import AOS from 'aos'
 import { mapState } from 'vuex'
 
 // TODO: create a centralized bank / store of tools that's shared between About.vue and Work.vue
@@ -191,7 +192,7 @@ export default {
           title: 'blot',
           emoji: '☔',
           active: true,
-          desc: 'A DRY and dynamic build tool for API Blueprint supporting transclusion, scripting and data generation (I plan on re-writing this)',
+          desc: 'A DRY and dynamic build tool for API Blueprint supporting transclusion, scripting and data generation',
           url: 'https://github.com/slurmulon/blot',
           tools: this.toolsById(['js', 'api-blueprint'])
         },
