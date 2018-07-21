@@ -56,11 +56,12 @@
           <!-- <h1 class="primary--text">Projects</h1> -->
         </v-flex>
         <v-flex xs12 md6 offset-md3 pb-0 v-for="project in projects" :key="project.title"> <!-- sm3 -->
-          <v-card class="subtle-bg elevation-4">
+          <v-card class="subtle-bg elevation-4" :href="project.url">
             <v-card-title primary-title>
-              <v-layout row nowrap align-center>
+              <v-layout row nowrap align-center pa-2>
                 <v-flex xs3 class="text-xs-center">
-                  <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 50px">
+                  <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 75px">
+                  <span v-if="project.emoji" class="display-3">{{ project.emoji }}</span>
                 </v-flex>
                 <v-flex xs9>
                   <v-layout column wrap>
@@ -73,7 +74,7 @@
                     <v-flex xs1>
                       <v-layout row nowrap justify-end>
                         <v-flex xs3 v-for="tool in project.tools" :key="tool.id" class="text-xs-right">
-                          <a v-if="tool" :href="tool.url" target="tool">
+                          <a v-if="tool.icon" :href="tool.url" target="tool">
                             <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
                           </a>
                         </v-flex>
@@ -167,44 +168,57 @@ export default {
           title: 'bach',
           logo: 'bach.gif',
           active: true,
-          desc: 'A semantic musical notation with a focus on readability and productivity',
+          desc: 'A semantic musical notation focused on readability and productivity',
+          url: 'https://github.com/slurmulon/bach',
           tools: this.toolsById(['clojure']) // ebnf
         },
         {
           title: 'hyper-mesh',
+          emoji: '🌐',
           active: true,
           tools: ['js', 'json-schema'],
-          desc: 'Automagical JSON Hyper-Schema interactions',
+          desc: 'Semantic JSON Hyper-Schema interactions via Axios',
+          url: 'https://github.com/slurmulon/hyper-mesh',
           tools: this.toolsById(['js', 'json-schema'])
         },
         {
           title: 'blot',
+          emoji: '☔',
           active: true,
-          desc: 'A DRY and dynamic build tool for API Blueprint',
+          desc: 'A DRY and dynamic build tool for API Blueprint supporting transclusion, scripting and data generation (I plan on re-writing this)',
+          url: 'https://github.com/slurmulon/blot',
           tools: this.toolsById(['js', 'api-blueprint'])
         },
         {
           title: 'flap',
+          emoji: '🗿',
           active: false,
           tools: ['js'],
           desc: 'Functional guard clauses in JS',
+          url: 'https://github.com/slurmulon/flap',
           tools: this.toolsById(['js'])
         },
         {
           title: 'grapple',
+          emoji: '🍏',
           active: true,
           desc: 'Pragmatic and flexible Webhook API for Elixir',
+          url: 'https://github.com/camirmas/grapple',
           tools: this.toolsById(['elixir'])
         },
         {
           title: 'virtual-web-dev',
+          emoji: '⚡',
           active: true,
-          desc: 'Low-friction development process for modern web applications'
+          desc: 'Low-friction development process for modern web applications',
+          url: 'https://github.com/slurmulon/virtual-web-dev'
         },
         {
           title: 'tasty-commits',
+          emoji: '🍭',
           active: true,
-          desc: 'Commit message convention for easily digestable history streams'
+          desc: 'Commit message convention for easily digestable history streams',
+          url: 'https://github.com/slurmulon/tasty-commits'
         }
         // {
         //  title: 'fractule',

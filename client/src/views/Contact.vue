@@ -91,6 +91,7 @@ export default {
     items: [
       'General',
       'Opportunity',
+      'Collaboration',
       'Resume request'
     ]
   }),
