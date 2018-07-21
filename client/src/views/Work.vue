@@ -55,7 +55,7 @@
           <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
           <!-- <h1 class="primary--text">Projects</h1> -->
         </v-flex>
-        <v-flex xs12 md6 offset-md3 pb-0>
+        <v-flex xs12 md6 offset-md3>
           <v-layout row wrap>
             <v-flex xs12 xl6 v-for="project in projects" :key="project.title">
         <!-- <v-flex xs12 md6 offset-md3 pb-0 v-for="project in projects" :key="project.title"> <1!-- sm3 --1> -->
@@ -69,7 +69,7 @@
                 <v-flex xs9>
                   <v-layout column wrap>
                     <v-flex xs1 pt-0 pb-0>
-                      <span class="subheading">{{ project.title }}</span>
+                      <span class="headline">{{ project.title }}</span>
                     </v-flex>
                     <v-flex xs1>
                       <span class="caption">{{ project.desc }}</span>
