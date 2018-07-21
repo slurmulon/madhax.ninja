@@ -218,7 +218,7 @@ export default {
           active: true,
           desc: 'Low-friction development process for modern web applications',
           url: 'https://github.com/slurmulon/virtual-web-dev',
-          tools: this.toolsById(['api-blueprint'])
+          tools: this.toolsById(['api-blueprint', 'vagrant'])
         },
         {
           title: 'tasty-commits',
