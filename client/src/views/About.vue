@@ -39,7 +39,7 @@
                       <!--   <v-icon light color="blue-grey">fab fa-linkedin-in</v-icon> -->
                       <!-- </v-btn> -->
                     </v-flex>
-                    <v-flex xs12 class="font-weight-light">
+                    <v-flex xs12 class="font-weight-regular">
                       <p>I'm a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I'm passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
                       <p>I believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
@@ -114,7 +114,7 @@
                       xs6
                       md4
                     >
-                      <span class="font-weight-light">{{ interest }}</span>
+                      <span class="font-weight-regular">{{ interest }}</span>
                     </v-flex>
                   </v-layout>
                 </v-card>
@@ -133,8 +133,8 @@
                       :key="index"
                       xs12
                     >
-                      <!-- <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text">&mdash; {{ philosophy.credit }}</span> -->
-                      <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="white--text">&mdash; {{ philosophy.credit }}</span>
+                      <!-- <i class="font-weight-regular">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text">&mdash; {{ philosophy.credit }}</span> -->
+                      <i class="font-weight-regular">&quot;{{ philosophy.quote }}&quot;</i> <span class="white--text font-weight-thin">&mdash; {{ philosophy.credit }}</span>
                     </v-flex>
                   </v-layout>
                 </v-card>
