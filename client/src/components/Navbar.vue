@@ -40,7 +40,7 @@ export default {
 <style lang="stylus" scoped>
 .header
   //background white //salmon
-  background rgba(255,255,255, 0.3)
+  background rgba(255,255,255, 0.2) // 0.3
 
   .v-toolbar__title
     margin-top -8px
