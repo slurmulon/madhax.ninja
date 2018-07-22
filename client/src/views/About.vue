@@ -64,7 +64,7 @@
                       xs6
                       md4>
                       <v-layout row nowrap>
-                        <v-flex xs4 sm6 lg4>
+                        <v-flex xs4 sm6 lg4 class="text-xs-center">
                           <a :href="tool.url" target="tool" class="tool">
                             <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
                           </a>
