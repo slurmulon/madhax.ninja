@@ -7,7 +7,7 @@
             <h1 class="light-blue--text text--lighten-4">Contact</h1>
 
             <v-flex xs12>
-              <v-card color="white" class="subtle-bg pa-4 mb-4 elevation-4">
+              <!-- <v-card color="secondary" class="subtle-bg pa-4 mb-4 elevation-4"> -->
                 <!-- <h1 class="light-blue--text text--lighten-4">Contact</h1> -->
                 <v-form ref="form" v-model="valid" lazy-validation dark>
                   <v-text-field
@@ -15,14 +15,14 @@
                     :rules="nameRules"
                     :counter="64"
                     label="Name"
-                    color="blue-grey"
+                    color="secondary"
                     required
                   ></v-text-field>
                   <v-text-field
                     v-model="email"
                     :rules="emailRules"
                     label="E-mail"
-                    color="blue-grey"
+                    color="secondary"
                     required
                   ></v-text-field>
                   <v-select
@@ -30,14 +30,15 @@
                     :items="reasons"
                     :rules="[v => !!v || 'Reason is required']"
                     label="Reason"
-                    color="blue-grey"
+                    color="secondary"
                     required
+                    light
                   ></v-select>
                   <v-textarea
                     v-model="message"
                     name="message"
                     label="Message"
-                    color="blue-grey"
+                    color="secondary"
                     rows="7"
                   ></v-textarea>
 
@@ -63,7 +64,7 @@
                     </v-flex>
                   </v-layout>
                 </v-form>
-              </v-card>
+              <!-- </v-card> -->
             </v-flex>
           </v-container>
         </v-flex>
