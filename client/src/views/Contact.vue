@@ -27,13 +27,14 @@
                   ></v-text-field>
                   <v-select
                     v-model="reason"
-                    :items="items"
+                    :items="reasons"
                     :rules="[v => !!v || 'Reason is required']"
                     label="Reason"
                     color="blue-grey"
                     required
                   ></v-select>
                   <v-textarea
+                    v-model="message"
                     name="message"
                     label="Message"
                     color="blue-grey"
@@ -53,7 +54,7 @@
                       <v-btn
                         :disabled="!valid"
                         @click="submit"
-                        color="secondary"
+                        color="light-blue lighten-4"
                         light
                         block
                       >
@@ -77,24 +78,66 @@ import axios from 'axios'
 export default {
   data: () => ({
     valid: true,
-    name: '',
+    // name: '',
     nameRules: [
       v => !!v || 'Name is required',
       v => (v && v.length <= 64) || 'Name must be less than 64 characters'
     ],
-    email: '',
+    // email: '',
     emailRules: [
       v => !!v || 'E-mail is required',
       v => /.+@.+/.test(v) || 'E-mail must be valid'
     ],
-    reason: 'General',
-    items: [
+    // reason: 'General',
+    reasons: [
       'General',
       'Opportunity',
       'Collaboration',
-      'Resume request'
+      'Resume'
     ]
   }),
+
+  computed: {
+    name: {
+      get () {
+        return this.$store.state.contact.name
+      },
+
+      set (name) {
+        this.$store.commit('contact/update', { name })
+      }
+    },
+
+    email: {
+      get () {
+        return this.$store.state.contact.email
+      },
+
+      set (email) {
+        this.$store.commit('contact/update', { email })
+      }
+    },
+
+    reason: {
+      get () {
+        return this.$store.state.contact.reason
+      },
+
+      set (reason) {
+        this.$store.commit('contact/update', { reason })
+      }
+    },
+
+    message: {
+      get () {
+        return this.$store.state.contact.message
+      },
+
+      set (reason) {
+        this.$store.commit('contact/update', { message })
+      }
+    }
+  },
 
   methods: {
     submit () {
