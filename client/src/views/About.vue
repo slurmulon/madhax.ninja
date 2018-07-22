@@ -134,7 +134,7 @@
                       xs12
                     >
                       <!-- <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text">&mdash; {{ philosophy.credit }}</span> -->
-                      <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="white--text font-weight-thin">&mdash; {{ philosophy.credit }}</span>
+                      <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text text-darken-2 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
                     </v-flex>
                   </v-layout>
                 </v-card>
