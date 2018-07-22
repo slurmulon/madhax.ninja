@@ -16,6 +16,7 @@
                     :counter="64"
                     label="Name"
                     color="secondary"
+                    dark
                     required
                   ></v-text-field>
                   <v-text-field
@@ -23,6 +24,7 @@
                     :rules="emailRules"
                     label="E-mail"
                     color="secondary"
+                    dark
                     required
                   ></v-text-field>
                   <v-select
@@ -31,14 +33,15 @@
                     :rules="[v => !!v || 'Reason is required']"
                     label="Reason"
                     color="secondary"
+                    dark
                     required
-                    light
                   ></v-select>
                   <v-textarea
                     v-model="message"
                     name="message"
                     label="Message"
                     color="secondary"
+                    dark
                     rows="7"
                   ></v-textarea>
 
