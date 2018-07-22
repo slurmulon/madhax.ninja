@@ -55,13 +55,14 @@
           <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
           <!-- <h1 class="primary--text">Projects</h1> -->
         </v-flex>
-        <v-flex xs12 md6 offset-md3>
+        <v-flex xs12 md6 offset-md3 pt-4>
           <v-layout row wrap>
             <v-flex xs12 xl6 v-for="project in projects" :key="project.title">
         <!-- <v-flex xs12 md6 offset-md3 pb-0 v-for="project in projects" :key="project.title"> <1!-- sm3 --1> -->
-          <v-card class="subtle-bg elevation-4" :href="project.url">
-            <v-card-title primary-title>
-              <v-layout row nowrap align-center pa-2>
+          <!-- <v-card class="subtle-bg elevation-4" :href="project.url"> -->
+          <!--   <v-card-title primary-title> -->
+              <!-- <v-layout row nowrap align-center pa-2 style="color: white"> -->
+              <v-layout row nowrap align-start pa-2>
                 <v-flex xs3 class="text-xs-center">
                   <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 65px">
                   <span v-if="project.emoji" class="display-3">{{ project.emoji }}</span>
@@ -69,15 +70,15 @@
                 <v-flex xs9>
                   <v-layout column wrap>
                     <v-flex xs1 pt-0 pb-0>
-                      <span class="headline">{{ project.title }}</span>
+                      <span class="headline white--text">{{ project.title }}</span>
                     </v-flex>
                     <v-flex xs1>
-                      <span class="caption">{{ project.desc }}</span>
+                      <span class="caption white--text">{{ project.desc }}</span>
                     </v-flex>
                     <v-flex xs1>
                       <v-layout row nowrap justify-end>
                         <v-flex xs3 v-for="tool in project.tools" :key="tool.id" class="text-xs-right">
-                          <a v-if="tool.icon" :href="tool.url" target="tool">
+                          <a v-if="tool.icon" :href="tool.url" target="tool" class="cell-shade">
                             <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
                           </a>
                         </v-flex>
@@ -86,8 +87,8 @@
                   </v-layout>
                 </v-flex>
               </v-layout>
-            </v-card-title>
-          </v-card>
+            <!-- </v-card-title> -->
+          <!-- </v-card> -->
 
           </v-flex>
           </v-layout>

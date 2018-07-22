@@ -65,7 +65,7 @@
                       md4>
                       <v-layout row nowrap>
                         <v-flex xs4 sm6 lg4 class="text-xs-center">
-                          <a :href="tool.url" target="tool" class="tool">
+                          <a :href="tool.url" target="tool" class="cell-shade">
                             <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
                           </a>
                           <!-- <tool-icon :id="tool.id"></tool-icon> -->
@@ -213,13 +213,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// TODO: remove the need for this (easy)
 .v-card
   background none !important
   box-shadow none !important
   color white
-
-.tool
-  // -webkit-filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white)
-  // filter drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white)
-  filter drop-shadow(1px 1px 0 black) // drop-shadow(-2px -2px 0 white)
 </style>
