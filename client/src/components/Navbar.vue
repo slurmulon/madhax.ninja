@@ -1,6 +1,6 @@
 <template>
   <v-toolbar class="header">
-    <!-- <div class="logo"> -->
+    <!-- <v-icon>fas fa-code-branch</v-icon> -->
     <v-toolbar-title>
       <a @click="$router.push('/')" class="logo display-1">
         Erik Vavro
@@ -19,9 +19,6 @@
       <v-btn flat to="blog" class="shiny" color="light-blue lighten-4">
         Blog
       </v-btn>
-      <!-- <v-btn flat to="/contact" class="shiny" color="light-blue lighten-4"> -->
-      <!--   Contact -->
-      <!-- </v-btn> -->
     </v-toolbar-items>
   </v-toolbar>
 

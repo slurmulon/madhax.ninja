@@ -57,7 +57,7 @@
         </v-flex>
         <v-flex xs12 md6 offset-md3 pt-4>
           <v-layout row wrap>
-            <v-flex xs12 xl6 v-for="project in projects" :key="project.title">
+            <v-flex xs12 xl6 v-for="project in projects" :key="project.title" v-if="project.active">
         <!-- <v-flex xs12 md6 offset-md3 pb-0 v-for="project in projects" :key="project.title"> <1!-- sm3 --1> -->
           <!-- <v-card class="subtle-bg elevation-4" :href="project.url"> -->
           <!--   <v-card-title primary-title> -->

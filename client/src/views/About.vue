@@ -194,7 +194,7 @@ export default {
     ],
     interests: [
       'Hypermedia', 'Streaming', 'Decentralization', 'Semantics', 'Timers', 'Synchronization', 'Music',
-      'Fractals', 'Humor', 'Self-improvement', 'Health', 'Ergonomics'
+      'Fractals', 'Imagery', 'Self-improvement', 'Health', 'Ergonomics'
     ],
     philosophies: [
       { quote: 'Humility, respect, trust.', credit: 'Team Geek' },

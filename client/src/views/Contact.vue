@@ -13,7 +13,7 @@
                   <v-text-field
                     v-model="name"
                     :rules="nameRules"
-                    :counter="64"
+                    :counter="128"
                     label="Name"
                     color="secondary"
                     dark
@@ -85,7 +85,7 @@ export default {
     // name: '',
     nameRules: [
       v => !!v || 'Name is required',
-      v => (v && v.length <= 64) || 'Name must be less than 64 characters'
+      v => (v && v.length <= 128) || 'Name must be less than 128 characters'
     ],
     // email: '',
     emailRules: [
