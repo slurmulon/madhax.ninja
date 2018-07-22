@@ -39,7 +39,7 @@
                       <!--   <v-icon light color="blue-grey">fab fa-linkedin-in</v-icon> -->
                       <!-- </v-btn> -->
                     </v-flex>
-                    <v-flex xs12 class="font-weight-regular">
+                    <v-flex xs12 class="font-weight-light">
                       <p>I'm a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                       <p>I'm passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
                       <p>I believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
@@ -65,14 +65,14 @@
                       md4>
                       <v-layout row nowrap>
                         <v-flex xs4 sm6 lg4>
-                          <a :href="tool.url" target="tool">
+                          <a :href="tool.url" target="tool" class="tool">
                             <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
                           </a>
                           <!-- <tool-icon :id="tool.id"></tool-icon> -->
                           <!-- <tool-icon id="123" width="50px" shiny></tool-icon> -->
                         </v-flex>
                         <v-flex xs8 sm6 lg8>
-                          <span class="font-weight-regular">{{ tool.title }}</span>
+                          <span class="font-weight-light">{{ tool.title }}</span>
                           <!-- <v-progress-linear v-model="tool.level" color="light-blue darken-1"></v-progress-linear> -->
                           <v-progress-linear v-model="tool.level" color="cyan lighten-4"></v-progress-linear>
                           <!-- <v-progress-linear v-model="tool.level" color="grey"></v-progress-linear> -->
@@ -114,7 +114,7 @@
                       xs6
                       md4
                     >
-                      <span class="font-weight-regular">{{ interest }}</span>
+                      <span class="font-weight-light">{{ interest }}</span>
                     </v-flex>
                   </v-layout>
                 </v-card>
@@ -133,8 +133,8 @@
                       :key="index"
                       xs12
                     >
-                      <!-- <i class="font-weight-regular">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text">&mdash; {{ philosophy.credit }}</span> -->
-                      <i class="font-weight-regular">&quot;{{ philosophy.quote }}&quot;</i> <span class="white--text font-weight-thin">&mdash; {{ philosophy.credit }}</span>
+                      <!-- <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text">&mdash; {{ philosophy.credit }}</span> -->
+                      <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="white--text font-weight-thin">&mdash; {{ philosophy.credit }}</span>
                     </v-flex>
                   </v-layout>
                 </v-card>
@@ -217,4 +217,9 @@ export default {
   background none !important
   box-shadow none !important
   color white
+
+.tool
+  // -webkit-filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white)
+  // filter drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white)
+  filter drop-shadow(1px 1px 0 black) // drop-shadow(-2px -2px 0 white)
 </style>
