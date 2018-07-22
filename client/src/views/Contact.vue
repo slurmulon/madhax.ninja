@@ -134,7 +134,7 @@ export default {
         return this.$store.state.contact.message
       },
 
-      set (reason) {
+      set (message) {
         this.$store.commit('contact/update', { message })
       }
     }
