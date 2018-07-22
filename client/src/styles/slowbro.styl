@@ -1,26 +1,30 @@
 @require './colors'
 
+// best:
+//  - bg-color -> #66706B -> #8B635C
+//  - #4F517D -> #66706B -> #8B635C
 @-webkit-keyframes slowbro
-  // from
-  0%
-    background-color #364958
+  from
+  // 0%
+    // background-color #364958
     // background-color #736B92 // best / subtle purple
-    // background-color #4F517D // dark + bold purple
+    background-color #4F517D // dark + bold purple
     // background-color #443847 // alt subtle purple
     // background-color #9575CD
     // background-color bg-color
+    // background-color darken(bg-color, 20%)
     // background-color #512DA8
     // background-color #4A148C
     // background-position 0 0
 
   50%
-  //   // background-color orange
-  //   // background-color firebrick
-  //   // background-color darksalmon
-  //   background-color #E57373
-  //   // background-color #E4F98D
-  //   // background-color limegreen
-  //   // background-position 25% 50%
+    //   // background-color orange
+    //   // background-color firebrick
+    //   // background-color darksalmon
+    //   background-color #E57373
+    //   // background-color #E4F98D
+    //   // background-color limegreen
+    //   // background-position 25% 50%
     // background-color #A1887F
     // background-color #E57373
     // background-color #3B6064
@@ -28,15 +32,16 @@
     // background-color #183642 // dark blue
     // background-color #548687 // teal
     // background-color #436C6D // dark teal
-    // background-color #66706B // very subtle/low-sat teal ***
+    background-color #66706B // very subtle/low-sat teal ***
     // background-color #344749 // dark med-sat teal
     // background-color #844F59 // dark ruby red
-    background-color #394053 // navy blue
+    // background-color #394053 // navy blue
 
+  // to
   100%
     // background-color #9E6C53 // orangish-brown
-    // background-color #8B635C // burgandy
-    background-color #60594D // brown ***
+    background-color #8B635C // burgandy
+    // background-color #60594D // brown ***
     // background-color #7E846B // alt army green
     // background-color #A5AE9E // light grey green
     // background-color #646F58 // army green
@@ -47,5 +52,5 @@
 
 .slowbro
   // animation slowbro 10s infinite ease-in-out alternate-reverse
-  animation slowbro 60s infinite ease-in-out alternate-reverse
+  animation slowbro 10s infinite ease-in-out alternate-reverse
   // animation slowbro 5s infinite linear normal
