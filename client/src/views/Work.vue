@@ -63,9 +63,9 @@
           <!--   <v-card-title primary-title> -->
               <!-- <v-layout row nowrap align-center pa-2 style="color: white"> -->
               <v-layout row nowrap align-start pa-2>
-                <v-flex xs3 class="text-xs-center">
+                <v-flex xs3 class="text-xs-center" pa-0>
                   <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 65px">
-                  <span v-if="project.emoji" class="display-3">{{ project.emoji }}</span>
+                  <span v-if="project.emoji" class="display-3 secondary--text cell-shade">{{ project.emoji }}</span>
                 </v-flex>
                 <v-flex xs9>
                   <v-layout column wrap>
