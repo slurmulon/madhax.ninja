@@ -45,8 +45,8 @@
                     rows="7"
                   ></v-textarea>
 
-                  <v-layout row nowrap>
-                    <v-flex xs12>
+                  <v-layout row nowrap justify-end>
+                    <v-flex xs4 md3>
                       <v-btn
                         @click="clear"
                         block
@@ -54,7 +54,7 @@
                         <v-icon>clear</v-icon>
                       </v-btn>
                     </v-flex>
-                    <v-flex xs12>
+                    <v-flex xs4 md3>
                       <v-btn
                         :disabled="!valid"
                         @click="submit"
