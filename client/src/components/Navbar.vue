@@ -37,7 +37,18 @@ export default {
 <style lang="stylus" scoped>
 .header
   //background white //salmon
-  background rgba(255,255,255, 0.2) // 0.3
+  background-color rgba(255,255,255, 0.2) // 0.3
+
+  &::after
+    content ""
+    opacity 0.25
+    top 0
+    left 0
+    bottom 0
+    right 0
+    position absolute
+    z-index -1
+    background url(../assets/img/texture.svg) repeat
 
   .v-toolbar__title
     margin-top -8px

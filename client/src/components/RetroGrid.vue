@@ -25,7 +25,7 @@
   background-position 0 0, 0 0
 
   transform perspective(300px) rotateX(80deg)
-  animation through-space 2s linear
+  animation through-space 10s linear
   animation-iteration-count infinite
 
 @keyframes through-space
