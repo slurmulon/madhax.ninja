@@ -6,7 +6,7 @@
           <v-container grid-list-xl fluid>
             <h1 class="light-blue--text text--lighten-4">Contact</h1>
 
-            <v-flex xs12>
+            <v-flex xs12 pt-2>
               <!-- <v-card color="secondary" class="subtle-bg pa-4 mb-4 elevation-4"> -->
                 <!-- <h1 class="light-blue--text text--lighten-4">Contact</h1> -->
                 <v-form ref="form" v-model="valid" lazy-validation dark>
@@ -49,9 +49,12 @@
                     <v-flex xs4 md3>
                       <v-btn
                         @click="clear"
+                        color="white"
                         block
+                        outline
                       >
-                        <v-icon>clear</v-icon>
+                        <!-- <v-icon>clear</v-icon> -->
+                        <v-icon>fao fa-trash</v-icon>
                       </v-btn>
                     </v-flex>
                     <v-flex xs4 md3>
@@ -61,6 +64,7 @@
                         color="light-blue lighten-4"
                         light
                         block
+                        outline
                       >
                         <v-icon>send</v-icon>
                       </v-btn>

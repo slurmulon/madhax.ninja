@@ -9,7 +9,7 @@
         <!-- <v-flex xs12 sm6 offset-sm3 offset-xs0> -->
           <!-- <v-card> -->
             <v-container grid-list-xl fluid>
-              <v-flex xs12>
+              <v-flex xs12 pt-2>
                 <v-layout row nowrap>
                   <v-flex xs6>
                     <h1 class="light-blue--text text--lighten-4">Profile</h1>
@@ -28,7 +28,7 @@
               <!-- <h1 class="primary--text">Profile</h1> -->
               <v-flex xs12>
                 <!-- <v-card class="blocky-flat subtle-bg elevation-4 pa-4"> -->
-                <v-card class="pt-4 pb-4">
+                <v-card class="pb-4">
                   <v-layout column wrap>
                     <!-- @see https://github.com/FortAwesome/vue-fontawesome -->
                     <v-flex xs12 class="text-xs-right pt-0 pb-0">
@@ -113,6 +113,7 @@
                       :key="interest"
                       xs6
                       md4
+                      class="text-xs-center"
                     >
                       <span class="font-weight-light">{{ interest }}</span>
                     </v-flex>
