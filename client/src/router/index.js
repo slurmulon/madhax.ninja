@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
+import Home2 from '@/views/Home2'
 import Work from '@/views/Work'
 import About from '@/views/About'
 import Contact from '@/views/Contact'
@@ -14,7 +15,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/about',
+      // redirect: '/about',
+      components: {
+        default: Home2,
+        header: Navbar
+      }
     },
     {
       path: '/work',

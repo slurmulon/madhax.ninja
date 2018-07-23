@@ -2,6 +2,7 @@
   <div class="home">
   <!-- <layout pa-2> -->
   <!--   <navbar slot="header"></navbar> -->
+    <retro-grid></retro-grid>
 
     <v-content>
       <v-container fluid>
@@ -68,11 +69,13 @@
 <script>
 import Navbar from '@/components/Navbar'
 import Layout from '@/components/Layout'
+import RetroGrid from '@/components/RetroGrid'
 
 export default {
   components: {
     Navbar,
-    Layout
+    Layout,
+    RetroGrid
   }
 }
 </script>
