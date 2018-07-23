@@ -39,7 +39,6 @@ html
   background bg-color
   // background-repeat repeat
   // background-image linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(../assets/img/vertical-waves.png)
-  // @extends .slowbro
   // text-shadow 1px 1px 1px #000
 
 body
@@ -59,8 +58,17 @@ body
   // font-family 'Geo', sans-serif !important
   // NOTE: removing next line fixes AOS issues
   // padding 1em
-  @extends .slowbro
-
+  // @extends .slowbro
+  // @extends .bg-burning-orange // too bright
+  // @extends .bg-wiretap // *** hot, intense
+  // @extends .bg-bighead-reverse
+  // @extends .bg-celestial // *** cool, intense
+  // @extends .bg-dawn // *** cool (pumpkins / fall)
+  // @extends .bg-dusk-reversed // *** a little bright towards the end
+  // @extends .bg-grapefruit
+  @extends .bg-grapefruit-reversed // *** warm + cool (subtler than wiretap)
+  // @extends .bg-starfall // eh, purple is weird, tan is too light
+  
   // FIXME: figure out how to hide just the ONE scrollbar without removing height 100%
   &::-webkit-scrollbar
     display none
