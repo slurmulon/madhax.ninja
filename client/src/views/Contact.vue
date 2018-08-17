@@ -70,6 +70,16 @@
                 </v-layout>
               </v-form>
             </v-flex>
+
+            <!-- <v-flex xs12 pt-2 v-if="sent" class="text-xs-center"> -->
+            <!--   <v-icon dark class="cell-shade" style="font-size: 100px">check_circle_outline</v-icon> -->
+            <!--   <span class="white--text pt-2" style="display: block">Thanks for reaching out!</span> -->
+            <!-- </v-flex> -->
+
+            <v-dialog v-model="sent" width="200" @input="v => v || (sent = false)">
+              <v-icon dark class="cell-shade" style="font-size: 100px">check_circle_outline</v-icon>
+              <span class="white--text pt-2" style="display: block">Thanks for reaching out!</span>
+            </v-dialog>
           </v-container>
         </v-flex>
       </v-layout>
@@ -84,17 +94,15 @@ import axios from 'axios'
 export default {
   data: () => ({
     valid: true,
-    // name: '',
+    sent: false, // FIXME: change to false
     nameRules: [
       v => !!v || 'Name is required',
       v => (v && v.length <= 128) || 'Name must be less than 128 characters'
     ],
-    // email: '',
     emailRules: [
       v => !!v || 'E-mail is required',
       v => /.+@.+/.test(v) || 'E-mail must be valid'
     ],
-    // reason: 'General',
     reasons: [
       'General',
       'Opportunity',
@@ -148,17 +156,33 @@ export default {
   methods: {
     submit () {
       if (this.$refs.form.validate()) {
-        axios.post(`${process.env.API_BASE_URL}/contact`, {
-          name: this.name,
-          from: this.email,
-          message: this.message
-        })
+        //axios.post(`${process.env.API_BASE_URL}/contact`, {
+        //  name: this.name,
+        //  from: this.email,
+        //  message: this.message
+        //})
+        this.sent = true
+        this.clear()
+
+        //setTimeout(() => this.sent = false, 5000)
       }
     },
 
     clear () {
       this.$refs.form.reset()
     }
+  },
+
+  beforeDestroy () {
+    this.clear()
   }
 }
 </script>
+
+<style lang="stylus">
+@require '../styles/transitions'
+
+div.v-dialog__content > div
+  text-align center !important
+  box-shadow none !important
+</style>
