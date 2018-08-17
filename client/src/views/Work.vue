@@ -140,7 +140,7 @@ export default {
           title: 'Platform Architect',
           time: 'Oct. 2015 - Feb. 2017',
           details: [
-            'Architected and implented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations.',
+            'Architected and implemented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations.',
             'Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization.',
             'Made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.'
           ],
