@@ -30,7 +30,6 @@ app.post('/contact', (req, res, next) => {
     if (err) {
       next(err)
     } else {
-      console.log('info', info)
       res.status(204).send()
     }
   })
