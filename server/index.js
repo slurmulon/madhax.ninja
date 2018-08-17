@@ -1,14 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const sanitize = require('sanitize-html')
+const cors = require('cors')
 const nodemailer = require('nodemailer')
 
 const app = express()
 
 app.use(bodyParser.json())
+app.use(cors())
 
 app.post('/contact', (req, res, next) => {
-  const { from, subject, message } = req
+  const { from, email, reason, message } = req.body
 
   const transporter = nodemailer.createTransport({
     host: 'smtp.madhax.io',
@@ -20,9 +22,9 @@ app.post('/contact', (req, res, next) => {
   })
 
   const opts = {
-    to: 'me@madhax.io',
-    from,
-    subject,
+    to: 'evavro@gmail.com',
+    from: email,
+    subject: `Contact form [${reason}]`,
     html: sanitize(message)
   }
 
