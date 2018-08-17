@@ -76,6 +76,11 @@
               <v-icon dark class="cell-shade" style="font-size: 100px">check_circle_outline</v-icon>
               <span class="white--text pt-2" style="display: block">Thanks for reaching out!</span>
             </v-dialog>
+
+            <v-dialog v-model="error" width="200" @input="v => v || (error = false)">
+              <v-icon dark class="cell-shade" style="font-size: 100px">error_outline</v-icon>
+              <span class="white--text pt-2" style="display: block">Oops! Something went wrong</span>
+            </v-dialog>
           </v-container>
         </v-flex>
       </v-layout>
@@ -158,17 +163,22 @@ export default {
 
         this.loading = true
 
-        await axios.post(url, {
-          name: this.name,
-          email: this.email,
-          reason: this.reason,
-          message: this.message
-        })
+        try {
+          await axios.post(url, {
+            name: this.name,
+            email: this.email,
+            reason: this.reason,
+            message: this.message
+          })
+        } catch (e) {
+          this.error = true
+        } finally {
+          this.loading = false
+          this.sent = false
 
-        this.loading = false
-        this.sent = true
-
-        this.clear()
+          if (!this.error)
+            this.clear()
+        }
       }
     },
 
