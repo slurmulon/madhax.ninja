@@ -39,7 +39,8 @@
                   >
                     <!-- {{ tool.icon }} -->
                     <a :href="tool.url" target="tool">
-                      <img :src="`static/img/${tool.icon}`" class="shiny-icon" style="width: 40px">
+                      <!-- <img :src="`static/img/${tool.icon}`" class="shiny-icon" style="width: 40px"> -->
+                      <img :src="`static/img/${tool.icon}`" style="width: 40px">
                     </a>
                   </v-flex>
                 </v-layout>
@@ -76,7 +77,8 @@
                     <v-layout row nowrap justify-end>
                       <v-flex xs3 v-for="tool in project.tools" :key="tool.id" class="text-xs-right">
                         <a v-if="tool.icon" :href="tool.url" target="tool" class="cell-shade">
-                          <img :src="`static/img/${tool.icon}`" class="shiny-icon" style="width: 40px">
+                          <!-- <img :src="`static/img/${tool.icon}`" class="shiny-icon" style="width: 40px"> -->
+                          <img :src="`static/img/${tool.icon}`" style="width: 40px">
                         </a>
                       </v-flex>
                     </v-layout>

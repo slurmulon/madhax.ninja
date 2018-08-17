@@ -66,7 +66,8 @@
                       <v-layout row nowrap>
                         <v-flex xs4 sm6 lg4 class="text-xs-center">
                           <a :href="tool.url" target="tool" class="cell-shade">
-                            <img :src="`/static/img/${tool.icon}`" class="shiny-icon" style="width: 40px">
+                            <!-- <img :src="`/static/img/${tool.icon}`" class="shiny-icon" style="width: 40px"> -->
+                            <img :src="`/static/img/${tool.icon}`" style="width: 40px">
                           </a>
                           <!-- <tool-icon :id="tool.id"></tool-icon> -->
                           <!-- <tool-icon id="123" width="50px" shiny></tool-icon> -->
