@@ -148,11 +148,10 @@ export default {
   methods: {
     submit () {
       if (this.$refs.form.validate()) {
-        // Native form submission is not yet supported
-        axios.post('/api/contact', {
+        axios.post(`${process.env.API_BASE_URL}/contact`, {
           name: this.name,
-          email: this.email,
-          select: this.select
+          from: this.email,
+          message: this.message
         })
       }
     },
