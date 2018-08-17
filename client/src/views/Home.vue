@@ -37,28 +37,28 @@
         <div class="card">
           <v-tooltip bottom>
             <a href="https://nodejs.org/" target="tool" slot="activator">
-              <img src="../assets/img/node-js.png">
+              <img src="/static/img/node-js.png">
             </a>
             <span>JavaScript</span>
           </v-tooltip>
         </div>
         <div class="card">
-          <a href="https://clojure.org/" target="tool"><img src="../assets/img/clojure.png"></a>
+          <a href="https://clojure.org/" target="tool"><img src="/static/img/clojure.png"></a>
         </div>
         <div class="card">
-          <a href="https://elixir-lang.org/" target="tool"><img src="../assets/img/elixir.png"></a>
+          <a href="https://elixir-lang.org/" target="tool"><img src="/static/img/elixir.png"></a>
         </div>
         <div class="card">
-          <a href="https://vuejs.org/" target="tool"><img src="../assets/img/vuejs.png"></a>
+          <a href="https://vuejs.org/" target="tool"><img src="/static/img/vuejs.png"></a>
         </div>
         <div class="card">
-          <a href="http://json-schema.org/" target="tool"><img src="../assets/img/json-schema.png"></a>
+          <a href="http://json-schema.org/" target="tool"><img src="/static/img/json-schema.png"></a>
         </div>
         <div class="card">
-          <a href="https://webpack.js.org/" target="tool"><img src="../assets/img/webpack.png"></a>
+          <a href="https://webpack.js.org/" target="tool"><img src="/static/img/webpack.png"></a>
         </div>
         <div class="card">
-          <a href="https://apiblueprint.org/" target="tool"><img src="../assets/img/api-blueprint.png"></a>
+          <a href="https://apiblueprint.org/" target="tool"><img src="/static/img/api-blueprint.png"></a>
         </div>
       </section>
     </footer>

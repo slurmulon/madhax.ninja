@@ -1,5 +1,5 @@
 <template>
-  <v-app light> <!-- dark looks crazy! -->
+  <v-app> <!-- dark looks crazy! -->
     <!-- <v-content> -->
     <!--   <v-container fluid fill-height> -->
     <!--     <v-layout column nowrap> -->

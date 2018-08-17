@@ -66,7 +66,7 @@
                       <v-layout row nowrap>
                         <v-flex xs4 sm6 lg4 class="text-xs-center">
                           <a :href="tool.url" target="tool" class="cell-shade">
-                            <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
+                            <img :src="`/static/img/${tool.icon}`" class="shiny-icon" style="width: 40px">
                           </a>
                           <!-- <tool-icon :id="tool.id"></tool-icon> -->
                           <!-- <tool-icon id="123" width="50px" shiny></tool-icon> -->
@@ -153,7 +153,7 @@
                 >
                   <v-card flat tile class="elevation-4">
                     <v-card-media
-                      :src="require(`@/assets/img/book-${book.file}`)"
+                      :src="`/static/img/book-${book.file}`"
                       height="200px"
                     ></v-card-media>
                   </v-card>

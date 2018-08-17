@@ -1,6 +1,5 @@
 <template>
   <v-toolbar class="header">
-    <!-- <v-icon>fas fa-code-branch</v-icon> -->
     <v-toolbar-title>
       <a @click="$router.push('/')" class="logo display-1">
         Erik Vavro
@@ -16,7 +15,8 @@
       <v-btn flat to="/work" class="shiny" color="light-blue lighten-4">
         Work
       </v-btn>
-      <v-btn flat to="blog" class="shiny" color="light-blue lighten-4">
+      <!-- <v-btn flat to="blog" class="shiny" color="light-blue lighten-4"> -->
+      <v-btn flat href="http://blog.evavro.com" class="shiny" color="light-blue lighten-4">
         Blog
       </v-btn>
     </v-toolbar-items>
@@ -37,7 +37,7 @@ export default {
 <style lang="stylus" scoped>
 .header
   //background white //salmon
-  background-color rgba(255,255,255, 0.2) // 0.3
+  background-color rgba(255,255,255, 0.2) !important // 0.3
 
   &::after
     content ""
@@ -48,7 +48,7 @@ export default {
     right 0
     position absolute
     z-index -1
-    background url(../assets/img/texture.svg) repeat
+    background url('/static/img/texture.svg') repeat
 
   .v-toolbar__title
     margin-top -8px

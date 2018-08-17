@@ -10,7 +10,7 @@
         <!-- TODO: employmemt, projects, approach, process, philosophy -->
         <v-card class="subtle-bg elevation-4">
           <v-card-media
-            :src="require(`@/assets/img/${job.banner}`)"
+            :src="`static/img/${job.banner}`"
             height="200px"
           ></v-card-media>
 
@@ -18,7 +18,7 @@
             <v-layout column nowrap>
               <v-flex class="text-xs-center pb-3">
                 <a :href="job.url">
-                  <img :src="require(`@/assets/img/${job.logo}`)" style="width: 150px">
+                  <img :src="`static/img/${job.logo}`" style="width: 150px">
                 </a>
               </v-flex>
               <v-flex xs1 class="text-xs-center pt-0">
@@ -39,7 +39,7 @@
                   >
                     <!-- {{ tool.icon }} -->
                     <a :href="tool.url" target="tool">
-                      <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
+                      <img :src="`static/img/${tool.icon}`" class="shiny-icon" style="width: 40px">
                     </a>
                   </v-flex>
                 </v-layout>
@@ -60,7 +60,7 @@
             <v-layout row nowrap align-start pa-2>
               <v-flex xs3 class="text-xs-center" pa-0>
                 <a :href="project.url" target="project">
-                  <img v-if="project.logo" :src="require(`@/assets/img/${project.logo}`)" style="max-width: 65px">
+                  <img v-if="project.logo" :src="`static/img/${project.logo}`" style="max-width: 65px">
                   <span v-if="project.emoji" class="display-3 secondary--text cell-shade">{{ project.emoji }}</span>
                 </a>
               </v-flex>
@@ -76,7 +76,7 @@
                     <v-layout row nowrap justify-end>
                       <v-flex xs3 v-for="tool in project.tools" :key="tool.id" class="text-xs-right">
                         <a v-if="tool.icon" :href="tool.url" target="tool" class="cell-shade">
-                          <img :src="require(`@/assets/img/${tool.icon}`)" class="shiny-icon" style="width: 40px">
+                          <img :src="`static/img/${tool.icon}`" class="shiny-icon" style="width: 40px">
                         </a>
                       </v-flex>
                     </v-layout>
