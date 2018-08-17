@@ -2,7 +2,7 @@
   "name": "evavro-com-server",
   "version": "1.0.0",
   "description": "Backend service for evavro.com",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +11,11 @@
     "url": "https://github.com/evavro.com"
   },
   "author": "Erik Vavro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.8",
+    "sanitize-html": "^1.18.4"
+  }
 }
