@@ -2,7 +2,7 @@
   <div>
     <v-content>
       <v-layout>
-        <v-flex xs12 sm6 offset-sm3>
+        <v-flex xs12 sm6 offset-sm3 pt-2>
           <v-container grid-list-xl fluid>
             <h1 class="light-blue--text text--lighten-4">Contact</h1>
 
@@ -53,8 +53,8 @@
                         block
                         outline
                       >
-                        <!-- <v-icon>clear</v-icon> -->
-                        <v-icon>fao fa-trash</v-icon>
+                        <v-icon>clear</v-icon>
+                        <!-- <v-icon>fao fa-trash</v-icon> -->
                       </v-btn>
                     </v-flex>
                     <v-flex xs4 md3>
@@ -83,6 +83,7 @@
 <script>
 import axios from 'axios'
 
+// TODO: integrate Service Worker for when messages are sent offline
 export default {
   data: () => ({
     valid: true,

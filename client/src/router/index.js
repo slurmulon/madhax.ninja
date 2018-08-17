@@ -15,11 +15,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      // redirect: '/about',
-      components: {
-        default: Home2,
-        header: Navbar
-      }
+      redirect: '/about',
+      // components: {
+      //   default: Home2,
+      //   header: Navbar
+      // }
     },
     {
       path: '/work',
