@@ -124,7 +124,7 @@ export default {
           time: 'Feb. 2017 - Present',
           details: [
             'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops.',
-            'Contributed greatly to the design and implementation of a RESTful platform API that unified a highly diverse engineering team and its services.',
+            'Contributed to the design and implementation of a RESTful platform API that unified a highly diverse engineering team and its services.',
             'Integrated an API Blueprint-based mock server that enabled orthogonal yet transparent development of the client and API.',
             'Created a partner application for Climate Corp that allowed shared customers to view their imagery in both FieldView and Ceres Imaging.'
           ],
