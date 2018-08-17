@@ -10,8 +10,6 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.post('/contact', (req, res, next) => {
-  res.status(500).send()
-
   const { from, email, reason, message } = req.body
 
   const transporter = nodemailer.createTransport({
