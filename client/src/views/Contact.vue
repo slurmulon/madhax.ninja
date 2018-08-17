@@ -7,71 +7,68 @@
             <h1 class="light-blue--text text--lighten-4">Contact</h1>
 
             <v-flex xs12 pt-2>
-              <!-- <v-card color="secondary" class="subtle-bg pa-4 mb-4 elevation-4"> -->
-                <!-- <h1 class="light-blue--text text--lighten-4">Contact</h1> -->
-                <v-form ref="form" v-model="valid" lazy-validation dark>
-                  <v-text-field
-                    v-model="name"
-                    :rules="nameRules"
-                    :counter="128"
-                    label="Name"
-                    color="secondary"
-                    dark
-                    required
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="email"
-                    :rules="emailRules"
-                    label="E-mail"
-                    color="secondary"
-                    dark
-                    required
-                  ></v-text-field>
-                  <v-select
-                    v-model="reason"
-                    :items="reasons"
-                    :rules="[v => !!v || 'Reason is required']"
-                    label="Reason"
-                    color="secondary"
-                    dark
-                    required
-                  ></v-select>
-                  <v-textarea
-                    v-model="message"
-                    name="message"
-                    label="Message"
-                    color="secondary"
-                    dark
-                    rows="7"
-                  ></v-textarea>
+              <v-form ref="form" v-model="valid" lazy-validation dark>
+                <v-text-field
+                  v-model="name"
+                  :rules="nameRules"
+                  :counter="128"
+                  label="Name"
+                  color="secondary"
+                  dark
+                  required
+                ></v-text-field>
+                <v-text-field
+                  v-model="email"
+                  :rules="emailRules"
+                  label="E-mail"
+                  color="secondary"
+                  dark
+                  required
+                ></v-text-field>
+                <v-select
+                  v-model="reason"
+                  :items="reasons"
+                  :rules="[v => !!v || 'Reason is required']"
+                  label="Reason"
+                  color="secondary"
+                  dark
+                  required
+                ></v-select>
+                <v-textarea
+                  v-model="message"
+                  name="message"
+                  label="Message"
+                  color="secondary"
+                  dark
+                  rows="7"
+                ></v-textarea>
 
-                  <v-layout row nowrap justify-end>
-                    <v-flex xs4 md3>
-                      <v-btn
-                        @click="clear"
-                        color="white"
-                        block
-                        outline
-                      >
-                        <v-icon>clear</v-icon>
-                        <!-- <v-icon>fao fa-trash</v-icon> -->
-                      </v-btn>
-                    </v-flex>
-                    <v-flex xs4 md3>
-                      <v-btn
-                        :disabled="!valid"
-                        @click="submit"
-                        color="light-blue lighten-4"
-                        light
-                        block
-                        outline
-                      >
-                        <v-icon>send</v-icon>
-                      </v-btn>
-                    </v-flex>
-                  </v-layout>
-                </v-form>
-              <!-- </v-card> -->
+                <v-layout row nowrap justify-end>
+                  <v-flex xs4 md3>
+                    <v-btn
+                      @click="clear"
+                      color="white"
+                      block
+                      outline
+                    >
+                      <v-icon>clear</v-icon>
+                      <!-- <v-icon>fao fa-trash</v-icon> -->
+                    </v-btn>
+                  </v-flex>
+                  <v-flex xs4 md3>
+                    <v-btn
+                      :disabled="!valid"
+                      @click="submit"
+                      color="light-blue lighten-4"
+                      light
+                      block
+                      outline
+                    >
+                      <v-icon>send</v-icon>
+                    </v-btn>
+                  </v-flex>
+                </v-layout>
+              </v-form>
             </v-flex>
           </v-container>
         </v-flex>
