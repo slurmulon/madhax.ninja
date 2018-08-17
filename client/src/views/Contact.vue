@@ -160,24 +160,21 @@ export default {
     async submit () {
       if (this.$refs.form.validate()) {
         const url = `${process.env.API_BASE_URL}/contact`
+        const { name, email, reason, message } = this
 
         this.loading = true
 
         try {
-          await axios.post(url, {
-            name: this.name,
-            email: this.email,
-            reason: this.reason,
-            message: this.message
-          })
+          await axios.post(url, { name, email, reason, message })
         } catch (e) {
           this.error = true
         } finally {
           this.loading = false
-          this.sent = false
 
-          if (!this.error)
+          if (!this.error) {
+            this.sent = true
             this.clear()
+          }
         }
       }
     },
