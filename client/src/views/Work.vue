@@ -142,7 +142,7 @@ export default {
           details: [
             'Architected and implemented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations.',
             'Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization.',
-            'Made significant contributions to the RESTful API and its design, particularly around the incorporation of hypermedia.'
+            'Contributed to the RESTful API and its design, particularly around the incorporation of hypermedia.'
           ],
           tools: this.toolsById(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'postgres'])
         },
