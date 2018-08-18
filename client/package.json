@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.1.1",
-    "aos": "^2.3.3",
     "axios": "^0.18.0",
     "font-awesome": "^4.7.0",
     "stylus": "^0.54.5",
