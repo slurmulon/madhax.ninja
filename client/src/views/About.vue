@@ -3,165 +3,111 @@
     <v-content>
       <v-layout>
         <v-flex xs12 sm6 offset-sm3>
-        <!-- <v-flex xs12 sm8 md6 offset-md3 offset-sm2> -->
-        <!-- <v-flex xs12 md6 offset-md3> -->
-        <!-- <v-flex xs8 md6 offset-xs2 offset-md3> -->
-        <!-- <v-flex xs12 sm6 offset-sm3 offset-xs0> -->
-          <!-- <v-card> -->
-            <v-container grid-list-xl fluid>
-              <v-flex xs12 pt-2>
-                <v-layout row nowrap>
-                  <v-flex xs6>
-                    <h1 class="light-blue--text text--lighten-4">Profile</h1>
-                  </v-flex>
-                  <v-flex xs6 class="text-xs-right">
-                    <v-btn icon light href="https://github.com/slurmulon">
-                      <v-icon light color="black">fab fa-github</v-icon>
-                    </v-btn>
-                    <v-btn icon light href="https://linkedin.com/in/evavro">
-                      <v-icon light color="black">fab fa-linkedin-in</v-icon>
-                    </v-btn>
-                  </v-flex>
-                </v-layout>
-              </v-flex>
-              <!-- <h1 class="grey--text text--lighten-2">Profile</h1> -->
-              <!-- <h1 class="primary--text">Profile</h1> -->
-              <v-flex xs12>
-                <!-- <v-card class="blocky-flat subtle-bg elevation-4 pa-4"> -->
-                <v-card class="pb-4">
-                  <v-layout column wrap>
-                    <!-- @see https://github.com/FortAwesome/vue-fontawesome -->
-                    <v-flex xs12 class="text-xs-right pt-0 pb-0">
-                      <!-- <v-btn icon light href="https://github.com/slurmulon"> -->
-                      <!--   <v-icon light color="blue-grey">fab fa-github</v-icon> -->
-                      <!-- </v-btn> -->
-                      <!-- <v-btn icon light href="https://linkedin.com/in/evavro" class="shiny-icon"> -->
-                      <!--   <v-icon light color="blue-grey">fab fa-linkedin-in</v-icon> -->
-                      <!-- </v-btn> -->
-                    </v-flex>
-                    <v-flex xs12 class="font-weight-light">
-                      <p>I'm a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
-                      <p>I'm passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
-                      <p>I believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
-                      <span>If you're interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="white--text underline">reach out</router-link>.</span>
-                      <span>Also be sure to see my <router-link to="/work" class="white--text underline">past and current work</router-link>.</span>
-                    </v-flex>
-                  </v-layout>
-                  <!-- TODO: github, linkedin, blog -->
-                </v-card>
-              </v-flex>
-
-              <h1 class="light-blue--text text--lighten-4 mt-4">Tools</h1>
-              <!-- <h1 class="grey--text text--lighten-2">Tools</h1> -->
-              <!-- <h1 class="primary--text mt-4">Tools</h1> -->
-              <v-flex xs12>
-                <!-- <v-card class="blocky-flat subtle-bg elevation-4 pa-4"> -->
-                <v-card class="pt-4 pb-4">
-                  <v-layout row wrap>
-                    <v-flex
-                      v-for="tool in tools"
-                      :key="tool.id"
-                      xs6
-                      md4>
-                      <v-layout row nowrap>
-                        <v-flex xs4 sm6 lg4 class="text-xs-center">
-                          <a :href="tool.url" target="tool" class="cell-shade">
-                            <!-- <img :src="`/static/img/${tool.icon}`" class="shiny-icon" style="width: 40px"> -->
-                            <img :src="`/static/img/${tool.icon}`" style="width: 40px">
-                          </a>
-                          <!-- <tool-icon :id="tool.id"></tool-icon> -->
-                          <!-- <tool-icon id="123" width="50px" shiny></tool-icon> -->
-                        </v-flex>
-                        <v-flex xs8 sm6 lg8>
-                          <span class="font-weight-light">{{ tool.title }}</span>
-                          <!-- <v-progress-linear v-model="tool.level" color="light-blue darken-1"></v-progress-linear> -->
-                          <v-progress-linear v-model="tool.level" color="cyan lighten-4"></v-progress-linear>
-                          <!-- <v-progress-linear v-model="tool.level" color="grey"></v-progress-linear> -->
-                          <!-- <v-progress-linear v-model="tool.level" color="teal lighten-2"></v-progress-linear> -->
-                        </v-flex>
-                      </v-layout>
-                    </v-flex>
-                  </v-layout>
-                </v-card>
-              </v-flex>
-
-              <!-- <span class="title">Projects</span> -->
-              <!-- <h1 class="mt-4">Approach</h1> -->
-              <!-- <v-flex xs12> -->
-              <!--   <v-card class="blocky-flat subtle-bg elevation-4 pa-4"> -->
-              <!--     <v-layout column wrap> -->
-              <!--       <v-flex xs12 style="font-size: 1.25em"> -->
-              <!--         - Requirements -->
-              <!--         - Project seed -->
-              <!--         - Tests with every change -->
-              <!--         - Documentation -->
-              <!--         - Hotkeys &gt; Mouse -->
-              <!--       </v-flex> -->
-              <!--     </v-layout> -->
-              <!--   </v-card> -->
-              <!-- </v-flex> -->
-
-              <h1 class="light-blue--text text--lighten-4 mt-4">Interests</h1>
-              <!-- <h1 class="grey--text text--lighten-2">Interests</h1> -->
-              <!-- <h1 class="primary--text mt-4">Interests</h1> -->
-              <v-flex xs12>
-                <!-- <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em"> -->
-                <!-- <v-card class="subtle-bg elevation-4 pa-4"> -->
-                <v-card class="pt-4 pb-4">
-                  <v-layout row wrap>
-                    <v-flex
-                      v-for="interest in interests"
-                      :key="interest"
-                      xs6
-                      md4
-                      class="text-xs-center"
-                    >
-                      <span class="font-weight-light">{{ interest }}</span>
-                    </v-flex>
-                  </v-layout>
-                </v-card>
-              </v-flex>
-
-              <h1 class="light-blue--text text--lighten-4 mt-4">Philosophy</h1>
-              <!-- <h1 class="grey--text text--lighten-2">Philosophy</h1> -->
-              <!-- <h1 class="primary--text mt-4">Philosophy</h1> -->
-              <v-flex xs12>
-                <!-- <v-card class="blocky-flat subtle-bg elevation-4 pa-4" style="font-size: 1.25em"> -->
-                <!-- <v-card class="subtle-bg elevation-4 pa-4"> -->
-                <v-card class="pt-4 pb-4">
-                  <v-layout column wrap>
-                    <v-flex
-                      v-for="(philosophy, index) in philosophies"
-                      :key="index"
-                      xs12
-                    >
-                      <!-- <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text">&mdash; {{ philosophy.credit }}</span> -->
-                      <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text text-darken-2 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
-                    </v-flex>
-                  </v-layout>
-                </v-card>
-              </v-flex>
-
-              <h1 class="light-blue--text text--lighten-4 mt-4">Bookshelf</h1>
-              <!-- <h1 class="grey--text text--lighten-2">Bookshelf</h1> -->
-              <!-- <h1 class="primary--text mt-4">Bookshelf</h1> -->
-              <v-layout row wrap>
-                <v-flex
-                  v-for="book in books"
-                  :key="book.title"
-                  xs6
-                  md4
-                >
-                  <v-card flat tile class="elevation-4">
-                    <v-card-media
-                      :src="`/static/img/book-${book.file}`"
-                      height="200px"
-                    ></v-card-media>
-                  </v-card>
+          <v-container grid-list-xl fluid>
+            <v-flex xs12 pt-2>
+              <v-layout row nowrap>
+                <v-flex xs6>
+                  <h1 class="light-blue--text text--lighten-4">Profile</h1>
+                </v-flex>
+                <v-flex xs6 class="text-xs-right">
+                  <v-btn icon light href="https://github.com/slurmulon">
+                    <v-icon light color="black">fab fa-github</v-icon>
+                  </v-btn>
+                  <v-btn icon light href="https://linkedin.com/in/evavro">
+                    <v-icon light color="black">fab fa-linkedin-in</v-icon>
+                  </v-btn>
                 </v-flex>
               </v-layout>
-            </v-container>
-          <!-- </v-card> -->
+            </v-flex>
+            <v-flex xs12>
+              <v-card class="pb-4">
+                <v-layout column wrap>
+                  <v-flex xs12 class="font-weight-light">
+                    <p>I'm a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
+                    <p>I'm passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
+                    <p>I believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
+                    <span>If you're interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="white--text underline">reach out</router-link>.</span>
+                    <span>Also be sure to see my <router-link to="/work" class="white--text underline">past and current work</router-link>.</span>
+                  </v-flex>
+                </v-layout>
+              </v-card>
+            </v-flex>
+
+            <h1 class="light-blue--text text--lighten-4 mt-4">Tools</h1>
+            <v-flex xs12>
+              <v-card class="pt-4 pb-4">
+                <v-layout row wrap>
+                  <v-flex
+                    v-for="tool in tools"
+                    :key="tool.id"
+                    xs6
+                    md4>
+                    <v-layout row nowrap>
+                      <v-flex xs4 sm6 lg4 class="text-xs-center">
+                        <a :href="tool.url" target="tool" class="cell-shade">
+                          <!-- <img :src="`/static/img/${tool.icon}`" class="shiny-icon" style="width: 40px"> -->
+                          <img :src="`/static/img/${tool.icon}`" style="width: 40px">
+                        </a>
+                      </v-flex>
+                      <v-flex xs8 sm6 lg8>
+                        <span class="font-weight-light">{{ tool.title }}</span>
+                        <v-progress-linear v-model="tool.level" color="cyan lighten-4"></v-progress-linear>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-card>
+            </v-flex>
+
+            <h1 class="light-blue--text text--lighten-4 mt-4">Interests</h1>
+            <v-flex xs12>
+              <v-card class="pt-4 pb-4">
+                <v-layout row wrap>
+                  <v-flex
+                    v-for="interest in interests"
+                    :key="interest"
+                    xs6
+                    md4
+                    class="text-xs-center"
+                  >
+                    <span class="font-weight-light">{{ interest }}</span>
+                  </v-flex>
+                </v-layout>
+              </v-card>
+            </v-flex>
+
+            <h1 class="light-blue--text text--lighten-4 mt-4">Philosophy</h1>
+            <v-flex xs12>
+              <v-card class="pt-4 pb-4">
+                <v-layout column wrap>
+                  <v-flex
+                    v-for="(philosophy, index) in philosophies"
+                    :key="index"
+                    xs12
+                  >
+                    <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i> <span class="grey--text text-darken-2 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
+                  </v-flex>
+                </v-layout>
+              </v-card>
+            </v-flex>
+
+            <h1 class="light-blue--text text--lighten-4 mt-4">Bookshelf</h1>
+            <v-layout row wrap>
+              <v-flex
+                v-for="book in books"
+                :key="book.title"
+                xs6
+                md4
+              >
+                <v-card flat tile class="elevation-4">
+                  <v-card-media
+                    :src="`/static/img/book-${book.file}`"
+                    height="200px"
+                  ></v-card-media>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </v-flex>
       </v-layout>
     </v-content>
@@ -169,7 +115,6 @@
 </template>
 
 <script>
-// import ToolIcon from '@/components/ToolIcon'
 import { mapState } from 'vuex'
 
 export default {

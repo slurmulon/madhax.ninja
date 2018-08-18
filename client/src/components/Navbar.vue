@@ -36,7 +36,6 @@ export default {
 
 <style lang="stylus" scoped>
 .header
-  //background white //salmon
   background-color rgba(255,255,255, 0.2) !important // 0.3
 
   &::after

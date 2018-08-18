@@ -3,11 +3,9 @@
     <v-layout row wrap id="work-container">
       <v-flex xs12 md6 offset-md3 pb-0> <!-- sm3 -->
         <h1 class="light-blue--text text--lighten-4">Career</h1>
-        <!-- <h1 class="grey--text text--lighten-2">Employment</h1> -->
-        <!-- <h1 class="primary--text">Employment</h1> -->
       </v-flex>
       <v-flex xs12 md6 offset-md3 v-for="job in jobs" :key="job.company" class="mb-4"> <!-- sm3 -->
-        <!-- TODO: employmemt, projects, approach, process, philosophy -->
+        <!-- TODO: approach, process -->
         <v-card class="subtle-bg elevation-4">
           <v-card-media
             :src="`static/img/${job.banner}`"
@@ -22,11 +20,9 @@
                 </a>
               </v-flex>
               <v-flex xs1 class="text-xs-center pt-0">
-                <!-- <div class="headline blocky-flat">{{ job.company }}</div> -->
                 <div class="blue-grey--text subheading">{{ job.title }}<br/><span class="grey--text body-2 font-weight-thin">{{ job.time }}</span></div>
               </v-flex>
               <v-flex xs1 pt-2 pl-4 pr-4>
-                <!-- {{ job.desc }} -->
                 <p v-for="detail in job.details" :key="detail" class="font-weight-thin">{{ detail }}</p>
               </v-flex>
               <v-flex xs1 pt-2>
@@ -37,7 +33,6 @@
                     :key="tool.id"
                     class="text-xs-center"
                   >
-                    <!-- {{ tool.icon }} -->
                     <a :href="tool.url" target="tool">
                       <!-- <img :src="`static/img/${tool.icon}`" class="shiny-icon" style="width: 40px"> -->
                       <img :src="`static/img/${tool.icon}`" style="width: 40px">
@@ -52,8 +47,6 @@
 
       <v-flex xs12 md6 offset-md3 pt-0 pb-0> <!-- sm3 -->
         <h1 class="light-blue--text text--lighten-4">Projects</h1>
-        <!-- <h1 class="grey--text text--lighten-2">Projects</h1> -->
-        <!-- <h1 class="primary--text">Projects</h1> -->
       </v-flex>
       <v-flex xs12 md6 offset-md3 pt-4>
         <v-layout row wrap>
@@ -94,7 +87,6 @@
 </template>
 
 <script>
-import AOS from 'aos'
 import { mapState } from 'vuex'
 
 // DOCUMENT: `data` is called before `created` and `mounted`, therefore `methods` and `getters` are not available in this context

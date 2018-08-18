@@ -1,6 +1,5 @@
 <template>
   <layout>
-    <!-- <navbar slot="header"></navbar> -->
     <router-view name="header"></router-view>
 
     <transition name="page">
