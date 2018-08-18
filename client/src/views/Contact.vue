@@ -12,6 +12,7 @@
                   v-model="name"
                   :rules="nameRules"
                   :counter="128"
+                  :disabled="loading"
                   label="Name"
                   color="secondary"
                   dark
@@ -20,6 +21,7 @@
                 <v-text-field
                   v-model="email"
                   :rules="emailRules"
+                  :disabled="loading"
                   label="E-mail"
                   color="secondary"
                   dark
@@ -29,6 +31,7 @@
                   v-model="reason"
                   :items="reasons"
                   :rules="[v => !!v || 'Reason is required']"
+                  :disabled="loading"
                   label="Reason"
                   color="secondary"
                   dark
@@ -36,6 +39,7 @@
                 ></v-select>
                 <v-textarea
                   v-model="message"
+                  :disabled="loading"
                   name="message"
                   label="Message"
                   color="secondary"
@@ -182,10 +186,6 @@ export default {
     clear () {
       this.$refs.form.reset()
     }
-  },
-
-  beforeDestroy () {
-    this.clear()
   }
 }
 </script>
