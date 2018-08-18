@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-  <!-- <layout pa-2> -->
-  <!--   <navbar slot="header"></navbar> -->
     <retro-grid></retro-grid>
 
     <v-content>
@@ -63,7 +61,6 @@
       </section>
     </footer>
   </div>
-  <!-- </layout> -->
 </template>
 
 <script>
