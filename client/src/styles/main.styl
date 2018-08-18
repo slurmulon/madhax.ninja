@@ -1,0 +1,153 @@
+// @see colors: https://coolors.co/fc4b47-ea8b92-8cceff-96ffd8-bfffbc
+
+@require '~vuetify/src/stylus/main.styl'
+// @require '~vuetify/dist/vuetify.min.css' // 404: why?
+@require './colors'
+@require './effects'
+// @require './devices'
+
+@font-face {
+  font-family Lazer84
+  src url('/static/fonts/Lazer84.ttf')
+}
+
+*
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+html, body
+  height 100%
+  padding 0
+  margin 0
+
+html
+  background bg-color
+
+body
+  overflow-x hidden // MADHAX: shouldn't be necessary, weird
+  font-family 'Oxygen', sans-serif !important
+  // font-family 'Varela Round', sans-serif
+  // @extends .bg-wiretap // *** hot, intense
+  // @extends .bg-bighead-reverse
+  // @extends .bg-celestial // *** cool, intense
+  // @extends .bg-dawn // *** cool (fall, pumpkins)
+  // @extends .bg-dusk-reversed // *** a little bright towards the end
+  // @extends .bg-grapefruit
+  @extends .bg-grapefruit-reversed // *** warm + cool (subtler than wiretap)
+  // @extends .bg-vice-city // *** bright (summer, lemonade)
+  // @extends .bg-anwar // *** (dew / spring)
+  // @extends .bg-memariani // *** (cotton candy + vice city, fun)
+  // @extends .bg-metapolis // **
+  // @extends .bg-kye // *** cool (winter, magical)
+
+  // FIXME: figure out how to hide just the ONE scrollbar without removing height 100%
+  &::-webkit-scrollbar
+    display none
+
+h1, h2, h3, h4, h5, h6
+  color secondary-color // white also looks great
+  padding 0
+  margin 0
+  font-family 'Yesteryear', cursive
+  text-shadow 1px 1px 2px #000
+
+a
+  text-decoration none// !important
+
+a.underline
+  text-decoration underline
+
+.logo
+  font-family 'Lazer84' !important
+  text-shadow 2px 2px 1px #000
+  letter-spacing 2px //5px
+  color primary-color
+
+.blocky
+  text-shadow 1px 1px 2px black
+  color white
+
+.subtle-bg
+  background-color rgba(255,255,255,0.85) !important // 0.6, 0.75
+
+.shiny
+  // margin-left 1em
+  font-family 'Yesteryear', cursive
+  font-size 200%
+  font-weight bold
+  text-decoration none
+  text-transform none
+  color secondary-color
+  transition all 0.2s ease-in
+
+  .v-btn__content
+    text-shadow 1px 1px 2px black !important
+
+  &:hover
+    // @extends .shine // FIXME: only fails in bundle... awesome
+    color primary-color //tertiary-color
+    text-shadow 1px 1px 1px #000
+    // border-bottom 2px solid tertiary-color
+
+.shiny-icon
+  transition all .2s ease-in-out
+  // max-height 40px
+
+  &:hover
+    @extends .shine-hover
+    // animation float 6s ease-in-out infinite
+    // transform scale(1.1)
+
+.cell-shade
+  filter drop-shadow(1px 1px 0 black)
+
+.header
+  background none //white
+
+  &::before
+    filter: blur(5px)
+
+  .logo
+    letter-spacing 2px !important
+
+    a
+      text-decoration none
+
+    h1
+      font-family 'Lazer84'
+      text-shadow 2px 2px 1px #000
+      letter-spacing 5px
+      color primary-color
+      margin 0
+
+    span.title
+      color lighten(tertiary-color, 50%)
+      text-shadow 1px 1px 1px #000
+      font-weight bold
+
+  .menu
+    // NOTE: moved up a level
+    a
+      margin-left 1em
+      font-family 'Yesteryear', cursive
+      font-size 200%
+      font-weight bold
+      text-decoration none
+      text-transform none
+      text-shadow 1px 1px 2px black
+      color secondary-color
+      transition all 0.2s ease-in
+
+      &:hover
+        @extends .shine
+        color primary-color //tertiary-color
+        text-shadow 1px 1px 1px #000
+        // border-bottom 2px solid tertiary-color
+
+main .shout
+  color white
+  font-size 225% //175%
+  text-align center
+  text-shadow 1px 1px 1px #000
+  transition all 0.2s ease-in
