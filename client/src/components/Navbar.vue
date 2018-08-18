@@ -2,7 +2,7 @@
   <v-toolbar class="header">
     <v-toolbar-title>
       <a @click="$router.push('/')" class="logo display-1">
-        Erik Vavro
+        <span>Erik</span><span class="ml-3">V</span><span style="margin-left: -6px">avro</span>
       </a>
       <!-- <span class="title">Software (engineer + architect)</span> -->
     </v-toolbar-title>
