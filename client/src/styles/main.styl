@@ -1,24 +1,10 @@
-@require '~vuetify/src/stylus/main.styl'
-// @import '~vuetify/dist/vuetify.min.css'
-// @import '~vuetify/src/stylus/main'
-
 // @see colors: https://coolors.co/fc4b47-ea8b92-8cceff-96ffd8-bfffbc
+
+@require '~vuetify/src/stylus/main.styl'
+// @require '~vuetify/dist/vuetify.min.css' // 404: why?
 @require './colors'
 @require './effects'
 // @require './devices'
-
-// primary-color = #EA8B92
-// secondary-color = #8CCEFF
-// tertiary-color = #96FFD8
-// // #d1c180
-
-// tertiary-color = #d1c180 // pink // #EA8B92
-// tertiary-color = #fff //pink
-
-// tertiary-color = #9ea8a4
-// secondary-color = #8CCEFF
-// primary-color = #96FFD8
-// accent-color = #d1c180
 
 @font-face {
   font-family Lazer84
@@ -36,31 +22,12 @@ html, body
   margin 0
 
 html
-  // background darken(#8c86d1, 10%)
   background bg-color
-  // background-repeat repeat
-  // background-image linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(~assets/img/vertical-waves.png)
-  // text-shadow 1px 1px 1px #000
 
 body
   overflow-x hidden // MADHAX: shouldn't be necessary, weird
-  // background-repeat repeat
-  // background-image linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(~assets/img/vertical-waves.png)
-  // // background salmon
-  // background darksalmon
-  // background firebrick
-  // background #2d3280 // cool blue
-  // background #2d5080 // cool blue (dark)
-  // background #2d807d // cool green
-  // background #802d4a // cool purple (dark)
-  // background #8c86d1 // cool purple (light)
   font-family 'Oxygen', sans-serif !important
   // font-family 'Varela Round', sans-serif
-  // font-family 'Geo', sans-serif !important
-  // NOTE: removing next line fixes AOS issues
-  // padding 1em
-  // @extends .slowbro
-  // @extends .bg-burning-orange // too bright
   // @extends .bg-wiretap // *** hot, intense
   // @extends .bg-bighead-reverse
   // @extends .bg-celestial // *** cool, intense
@@ -74,7 +41,6 @@ body
   // @extends .bg-metapolis // **
   // @extends .bg-kye // *** cool (winter, magical)
 
-  
   // FIXME: figure out how to hide just the ONE scrollbar without removing height 100%
   &::-webkit-scrollbar
     display none
@@ -83,9 +49,7 @@ h1, h2, h3, h4, h5, h6
   color secondary-color // white also looks great
   padding 0
   margin 0
-  // font-family 'Geo', sans-serif !important
   font-family 'Yesteryear', cursive
-  // text-transform uppercase
   text-shadow 1px 1px 2px #000
 
 a
@@ -101,13 +65,8 @@ a.underline
   color primary-color
 
 .blocky
-  // font-family 'Geo', sans-serif
   text-shadow 1px 1px 2px black
   color white
-
-.blocky-flat
-  // font-family 'Geo', sans-serif !important
-  // font-family 'Open Sans', sans-serif
 
 .subtle-bg
   background-color rgba(255,255,255,0.85) !important // 0.6, 0.75
@@ -143,61 +102,31 @@ a.underline
 .cell-shade
   filter drop-shadow(1px 1px 0 black)
 
-.application
-  // font-family 'Geo', sans-serif !important
-
 .header
   background none //white
-  // display flex
-  // justify-content space-between
-  // flex 1 0
-  // display flex
-  // justify-content space-between
-  // padding 1em
-  // vertical-align middle
-  // text-transform uppercase
-  // background-color rgb(255,255,255,0.5)
-  // clip-path polygon(0 0, 100% 0, 100% 75%, 0 100%)
-  // clip-path polygon(0 0, 100% 0, 100% 96%, 0 100%)
 
   &::before
     filter: blur(5px)
 
   .logo
     letter-spacing 2px !important
-    // font-size 125% // experimental!
 
     a
       text-decoration none
 
     h1
-      // position relative
       font-family 'Lazer84'
       text-shadow 2px 2px 1px #000
       letter-spacing 5px
       color primary-color
-      // color tertiary-color
-      //padding 1em // TODO: apply this to surrounding navigation bar instead
-      // margin 0 0 0.25em !important
       margin 0
-      // overflow hidden // for sheen effect
-      // font-size 200%
 
     span.title
       color lighten(tertiary-color, 50%)
-      // color accent-color
       text-shadow 1px 1px 1px #000
       font-weight bold
-      // color #000
-      // font-family 'Geo', sans-serif
 
   .menu
-    // TODO: consider using this. only makes sense if we have a different color for the nav
-    // display flex
-    // flex-flow row wrap
-    // align-items center
-    // justify-items center
-
     // NOTE: moved up a level
     a
       margin-left 1em
@@ -216,84 +145,9 @@ a.underline
         text-shadow 1px 1px 1px #000
         // border-bottom 2px solid tertiary-color
 
-main
-  // display flex
-  // // flex 1 100%
-  // flex 1
-  // align-items center
-  // justify-content center
-
-  // .content
-  //   display flex
-  //   flex 1 100%
-  //   align-items center
-  //   justify-content center
-  //   width 100%
-
-  .shout
-    color white
-    font-size 225% //175%
-    text-align center
-    text-shadow 1px 1px 1px #000
-    transition all 0.2s ease-in
-
-footer
-  display flex
-  flex-flow row nowrap
-  justify-content space-between
-
-  section
-    // flex 1
-    padding 1em
-
-    .head
-      font-family 'Yesteryear', cursive
-      text-transform none
-      font-size 150%
-      margin-bottom .5em
-
-    .label
-      font-weight bold
-      // text-shadow 1px 1px 1px tertiary-color
-
-    .entry
-      display block
-      // font-size 80%
-      color white
-      text-shadow 1px 1px 1px #000
-
-    .card
-      display inline-block
-      float left // prevents extra margin on the right from forming on small screens
-      margin-right 1em
-      font-size 80%
-
-      // NOTE: this has been broken out as `shiny-icon`
-      img
-        transition all .2s ease-in-out
-        max-height 40px
-
-        &:hover
-          @extends .shine-hover
-          // animation float 6s ease-in-out infinite
-          // transform scale(1.1)
-
-  .status
-    color primary-color //tertiary-color
-    // color #fff4c0
-
-    .label
-      // color primary-color
-      color tertiary-color
-      // color #d1c180
-      // color #D5BFBD
-      // color white
-
-    .entry:not(:last-of-type)
-      padding-bottom 0.5em
-
-  .tools
-    overflow-x auto
-
-    .card
-      margin-top 1.5em // TODO: replace this with flexbox horizontal/vertical centering
+main .shout
+  color white
+  font-size 225% //175%
+  text-align center
+  text-shadow 1px 1px 1px #000
+  transition all 0.2s ease-in
