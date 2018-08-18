@@ -74,8 +74,8 @@
                     <span class="caption white--text">{{ project.desc }}</span>
                   </v-flex>
                   <v-flex xs1>
-                    <v-layout row nowrap justify-end>
-                      <v-flex xs3 v-for="tool in project.tools" :key="tool.id" class="text-xs-right">
+                    <v-layout row nowrap justify-end pr-1>
+                      <v-flex xs3 md2 v-for="tool in project.tools" :key="tool.id" class="text-xs-center">
                         <a v-if="tool.icon" :href="tool.url" target="tool" class="cell-shade">
                           <!-- <img :src="`static/img/${tool.icon}`" class="shiny-icon" style="width: 40px"> -->
                           <img :src="`static/img/${tool.icon}`" style="width: 40px">
