@@ -23,6 +23,7 @@
               <v-card class="pb-4">
                 <v-layout column wrap>
                   <v-flex xs12 class="font-weight-light">
+                    <p>Welcome! My name is Erik Vavro.</p>
                     <p>I'm a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
                     <p>I'm passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
                     <p>I believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
