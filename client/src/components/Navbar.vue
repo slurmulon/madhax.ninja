@@ -2,9 +2,13 @@
   <v-toolbar class="header">
     <v-toolbar-title>
       <a @click="$router.push('/')" class="logo display-1">
-        <span>Erik</span><span class="ml-3">V</span><span style="margin-left: -6px">avro</span>
+        <div class="hidden-xs-only">
+          <span>Erik</span><span class="ml-3">V</span><span style="margin-left: -6px">avro</span>
+        </div>
+        <div class="hidden-sm-and-up pr-2">
+          <span>E</span><span class="ml-2">V</span>
+        </div>
       </a>
-      <!-- <span class="title">Software (engineer + architect)</span> -->
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <!-- <v-toolbar-items class="hidden-sm-and-down"> -->
@@ -21,7 +25,6 @@
       </v-btn>
     </v-toolbar-items>
   </v-toolbar>
-
 </template>
 
 <script>
