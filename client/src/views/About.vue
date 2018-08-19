@@ -25,8 +25,8 @@
                   <v-flex xs12 class="font-weight-light">
                     <p>Welcome! My name is Erik Vavro.</p>
                     <p>I'm a remote software engineer specializing in progressive web applications with over 15 years of coding experience.</p>
-                    <p>I'm passionate about learning all things web, creating beautiful apps and writing high-quality code that's built to last.</p>
-                    <p>I believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
+                    <p>I'm absolutely passionate about learning all things web and creating elegant applications that are built to grow.</p>
+                    <p>I also believe in life-long learning, focusing on quality from the beginning and taking a people-first approach to development.</p>
                     <span>If you're interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="white--text underline">reach out</router-link>.</span>
                     <span>Also be sure to see my <router-link to="/work" class="white--text underline">past and current work</router-link>.</span>
                   </v-flex>
