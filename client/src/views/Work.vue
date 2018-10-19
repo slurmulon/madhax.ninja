@@ -113,7 +113,7 @@ export default {
           company: 'Ceres Imaging',
           url: 'https://ceresimaging.net',
           logo: 'ceres.png',
-          banner: 'job-ceres.png',
+          banner: 'job-ceres.jpg',
           title: 'Senior Software Engineer',
           time: 'Feb. 2017 - Present',
           details: [
