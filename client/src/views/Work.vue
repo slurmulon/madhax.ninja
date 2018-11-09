@@ -114,7 +114,7 @@ export default {
           url: 'https://ceresimaging.net',
           logo: 'ceres.png',
           banner: 'job-ceres.jpg',
-          title: 'Senior Software Engineer',
+          title: 'UI Architect',
           time: 'Feb. 2017 - Present',
           details: [
             'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops.',
