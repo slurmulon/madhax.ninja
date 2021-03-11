@@ -9,7 +9,7 @@
           <span>Erik</span><span class="ml-3">V</span><span style="margin-left: -6px">avro</span>
         </div>
         <div class="hidden-sm-and-up pr-2">
-          <span>E</span><span class="ml-2">V</span>
+          <span>Erik </span><span class="ml-2">V.</span>
         </div>
       </a>
     </v-toolbar-title>
