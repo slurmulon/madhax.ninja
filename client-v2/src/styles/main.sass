@@ -1,0 +1,143 @@
+@use './backgrounds'
+
+@font-face
+  font-family: Lazer84
+  src: url('../public/fonts/Lazer84.ttf')
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing border-box
+
+// html, body
+//   height: 100%
+//   padding: 0
+//   margin: 0
+
+// html
+//   background: darken(#8C86D1, 10%)
+
+body
+  // overflow-x: hidden // MADHAX: shouldn't be necessary, weird
+  font-family: 'Oxygen', sans-serif !important
+  // font-family 'Varela Round', sans-serif
+  // @extend .bg-wiretap // *** hot, intense
+  // @extend .bg-bighead-reverse
+  // @extend .bg-celestial // *** cool, intense
+  // @extend .bg-dawn // *** cool (fall, pumpkins)
+  // @extend .bg-dusk-reversed // *** a little bright towards the end
+  // LAST2
+  @extend .bg-grapefruit
+  // LAST
+  // @extend .bg-grapefruit-reversed // *** warm + cool (subtler than wiretap)
+  // @extend .bg-vice-city // *** bright (summer, lemonade)
+  // @extend .bg-anwar // *** (dew / spring)
+  // @extend .bg-memariani // *** (cotton candy + vice city, fun)
+  // @extend .bg-metapolis // **
+  // @extend .bg-kye // *** cool (winter, magical)
+
+  // FIXME: figure out how to hide just the ONE scrollbar without removing height 100%
+  // &::-webkit-scrollbar
+  //   display none
+
+.theme--light.v-application,
+.theme--dark.v-application
+  background: none !important
+
+h1, h2, h3, h4, h5, h6
+  // color secondary-color // white also looks great
+  padding: 0
+  margin: 0
+  font-family: 'Yesteryear', cursive
+  text-shadow: 1px 1px 2px #000
+
+// a
+//   text-decoration: none// !important
+
+// a.underline
+//   text-decoration: underline
+
+.logo *
+  font-family: 'Lazer84' !important
+  text-shadow: 2px 2px 1px #000
+  letter-spacing: 2px //5px
+//   // color: primary-color
+
+.blocky
+  text-shadow: 1px 1px 2px black
+  color: white
+
+.subtle-bg
+  background-color: rgba(255,255,255,0.85) !important // 0.6, 0.75
+
+.cell-shade
+  filter: drop-shadow(1px 1px 0 black)
+
+.header
+  background: none //white
+
+  &::before
+    filter: blur(5px)
+
+  .logo
+    // letter-spacing: 2px !important
+
+    a
+      text-decoration: none
+
+    h1
+      font-family: 'Lazer84'
+      text-shadow: 2px 2px 1px #000
+      letter-spacing: 5px
+      // color primary-color
+      margin: 0
+
+    span.title
+      // color lighten(tertiary-color, 50%)
+      text-shadow: 1px 1px 1px #000
+      font-weight: bold
+
+  .menu
+    // NOTE: moved up a level
+    a
+      margin-left: 1em
+      font-family: 'Yesteryear', cursive
+      font-size: 200%
+      font-weight: bold
+      text-decoration: none
+      text-transform: none
+      text-shadow: 1px 1px 2px black
+      color: secondary-color
+      transition: all 0.2s ease-in
+
+      &:hover
+        // @extend .shine
+        // color primary-color //tertiary-color
+        text-shadow: 1px 1px 1px #000
+        // border-bottom 2px solid tertiary-color
+
+.shiny
+  // margin-left 1em
+  font-family: 'Yesteryear', cursive
+  font-size: 200%
+  font-weight: bold
+  text-decoration: none
+  text-transform: none
+  // color secondary-color
+  transition: all 0.2s ease-in
+
+  // .v-btn__content
+  //   text-shadow: 1px 1px 2px black !important
+
+  &:hover
+    // @extends .shine // FIXME: only fails in bundle... awesome
+    // color: primary-color //tertiary-color
+    text-shadow: 1px 1px 1px #000
+    // border-bottom 2px solid tertiary-color
+
+// main .shout
+//   color: white
+//   font-size: 225% //175%
+//   text-align: center
+//   text-shadow: 1px 1px 1px #000
+//   transition: all 0.2s ease-in
