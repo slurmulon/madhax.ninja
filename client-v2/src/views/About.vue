@@ -25,7 +25,10 @@
       </v-row>
 
       <v-row>
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="pt-0"
+        >
           <v-card color="transparent">
             <v-card-text>
               <p>Welcome! My name is Erik Vavro.</p>
@@ -92,75 +95,92 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="pb-0"
+        >
           <h1 class="light-blue--text text--lighten-4 mt-4">Interests</h1>
         </v-col>
 
         <v-col cols="12">
           <v-card color="transparent">
             <v-card-text>
-            <v-row wrap>
-              <v-col
-                v-for="interest in interests"
-                :key="interest"
-                cols="6"
-                sm="4"
-                lg="3"
-                xl="2"
-                class="text-center"
-              >
-                <span class="font-weight-light">{{ interest }}</span>
-              </v-col>
-            </v-row>
+              <v-row wrap>
+                <v-col
+                  v-for="interest in interests"
+                  :key="interest"
+                  cols="6"
+                  sm="4"
+                  lg="3"
+                  xl="2"
+                  class="text-center"
+                >
+                  <span class="font-weight-light">{{ interest }}</span>
+                </v-col>
+              </v-row>
             </v-card-text>
           </v-card>
         </v-col>
 
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="pb-0"
+        >
           <h1 class="light-blue--text text--lighten-4 mt-4">Philosophy</h1>
         </v-col>
 
         <v-col cols="12">
           <v-card color="transparent">
             <v-card-text>
-            <v-row
-              wrap
-              justify="column"
-            >
-              <v-col
-                v-for="(philosophy, index) in philosophies"
-                :key="index"
-                cols="12"
+              <v-row
+                wrap
+                justify="column"
               >
-                <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i>&nbsp;
-                <span class="grey--text text--lighten-1 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
-              </v-col>
-            </v-row>
+                <v-col
+                  v-for="(philosophy, index) in philosophies"
+                  :key="index"
+                  cols="12"
+                >
+                  <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i>&nbsp;
+                  <span class="grey--text text--lighten-1 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
+                </v-col>
+              </v-row>
             </v-card-text>
           </v-card>
         </v-col>
 
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="pb-0"
+        >
           <h1 class="light-blue--text text--lighten-4 mt-4">Bookshelf</h1>
         </v-col>
 
-        <v-row wrap>
-          <v-col
-            v-for="book in books"
-            :key="book.title"
-            xs6
-            md4
-          >
-            <v-sheet color="transparent">
-              <v-img
-                class="white--text align-end"
-                height="200px"
-                max-width="200px"
-                :src="require(`../../public/img/book-${book.file}`)"
-              />
-            </v-sheet>
-          </v-col>
-        </v-row>
+        <v-col cols="12">
+          <v-card color="transparent">
+            <v-card-text>
+              <v-row justify="center" wrap>
+                <v-col
+                  v-for="book in books"
+                  :key="book.title"
+                  cols="6"
+                  sm="4"
+                  lg="3"
+                  xl="2"
+                >
+                  <v-sheet color="transparent">
+                    <v-img
+                      class="white--text"
+                      height="200px"
+                      max-width="200px"
+                      :src="require(`../../public/img/book-${book.file}`)"
+                    />
+                  </v-sheet>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-col>
       </v-row>
     </v-col>
   </v-row>
