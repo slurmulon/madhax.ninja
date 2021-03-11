@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 import About from '@/views/About'
+import Work from '@/views/Work'
 import Navbar from '@/components/Navbar'
 
 Vue.use(VueRouter)
@@ -21,15 +22,15 @@ const routes = [
       // footer: ContactButton
     }
   },
-  // {
-  //   path: '/work',
-  //   name: 'Work',
-  //   components: {
-  //     default: Work,
-  //     header: Navbar
-  //     // footer: ContactButton
-  //   }
-  // }
+  {
+    path: '/work',
+    name: 'Work',
+    components: {
+      default: Work,
+      header: Navbar
+      // footer: ContactButton
+    }
+  }
 ]
 
 const router = new VueRouter({
