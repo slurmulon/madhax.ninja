@@ -141,8 +141,8 @@ export default {
       { title: 'Notes on the Synthesis of Form', file: 'notes-on-form.jpg' }
     ],
     interests: [
-      'Hypermedia', 'Streaming', 'Decentralization', 'Semantics', 'Timers', 'Synchronization', 'Music',
-      'Fractals', 'Imagery', 'Self-improvement', 'Health', 'Culture'
+      'Hypermedia', 'Semantics', 'Synchronization', 'Archival', 'Streaming', 'Decentralization',
+      'Timers', 'Music', 'Animation', 'Fractals', 'Self-improvement', 'Education', 'Health'
     ],
     philosophies: [
       { quote: 'Humility, respect, trust.', credit: 'Team Geek' },
