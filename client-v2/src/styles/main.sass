@@ -9,16 +9,22 @@
   -moz-box-sizing: border-box
   box-sizing border-box
 
-// html, body
-//   height: 100%
-//   padding: 0
-//   margin: 0
+html, body
+  height: 100%
+  padding: 0
+  margin: 0
 
-// html
-//   background: darken(#8C86D1, 10%)
+html
+  background: darken(#8C86D1, 10%)
+  overflow: -moz-scrollbars-none
+  -ms-overflow-style: none
+
+  &::-webkit-scrollbar
+    width: 0 !important
+    display: none
 
 body
-  // overflow-x: hidden // MADHAX: shouldn't be necessary, weird
+  overflow-x: hidden // MADHAX: shouldn't be necessary, weird
   font-family: 'Oxygen', sans-serif !important
   // font-family 'Varela Round', sans-serif
   // @extend .bg-wiretap // *** hot, intense
@@ -119,7 +125,7 @@ h1, h2, h3, h4, h5, h6
 .shiny
   // margin-left 1em
   font-family: 'Yesteryear', cursive
-  font-size: 200%
+  font-size: 1.5em !important
   font-weight: bold
   text-decoration: none
   text-transform: none
