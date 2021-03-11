@@ -1,7 +1,11 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12">
+      <v-col
+        cols="12"
+        md="8"
+        offset-md="2"
+      >
         <v-row nowrap>
           <v-col>
             <h1 class="light-blue--text text--lighten-4">Profile</h1>
@@ -14,12 +18,24 @@
               light
               href="https://github.com/slurmulon"
             >
-              <!-- <v-icon light color="black">fab fa-github</v-icon> -->
-              <v-icon light color="black">mdi-github</v-icon>
+              <v-icon
+                light
+                color="black"
+              >
+                mdi-github
+              </v-icon>
             </v-btn>
-            <v-btn icon light href="https://linkedin.com/in/evavro">
-              <!-- <v-icon light color="black">fab fa-linkedin-in</v-icon> -->
-              <v-icon light color="black">mdi-linkedin</v-icon>
+            <v-btn
+              icon
+              light
+              href="https://linkedin.com/in/evavro"
+            >
+              <v-icon
+                light
+                color="black"
+              >
+                mdi-linkedin
+              </v-icon>
             </v-btn>
           </v-col>
         </v-row>
@@ -30,7 +46,7 @@
             class="pt-0"
           >
             <v-card color="transparent">
-              <v-card-text>
+              <v-card-text class="font-weight-light">
                 <p>Welcome! My name is Erik Vavro.</p>
                 <p>I'm a remote software architect specializing in browser technology with over 18 years of coding experience (10+ working remote).</p>
                 <p>I'm absolutely passionate about learning all things web and creating elegant applications that are built to grow.</p>
@@ -59,8 +75,8 @@
                     v-for="tool in tools"
                     :key="tool.id"
                     cols="6"
-                    sm="3"
-                    xl="2"
+                    sm="4"
+                    xl="3"
                   >
                     <v-row align="center" nowrap>
                       <v-col
@@ -173,8 +189,23 @@
                         class="white--text"
                         height="200px"
                         max-width="200px"
+                        aspect-ratio="1"
                         :src="require(`../../public/img/book-${book.file}`)"
-                      />
+                      >
+                        <template #placeholder>
+                          <v-row
+                            class="fill-height ma-0"
+                            align="center"
+                            justify="center"
+                            style="background: rgba(255,255,255,0.1)"
+                          >
+                            <v-progress-circular
+                              indeterminate
+                              color="grey lighten-5"
+                            />
+                          </v-row>
+                        </template>
+                      </v-img>
                     </v-sheet>
                   </v-col>
                 </v-row>
