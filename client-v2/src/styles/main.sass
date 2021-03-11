@@ -42,13 +42,12 @@ body
   // @extend .bg-metapolis // **
   // @extend .bg-kye // *** cool (winter, magical)
 
-  // FIXME: figure out how to hide just the ONE scrollbar without removing height 100%
-  // &::-webkit-scrollbar
-  //   display none
-
 .theme--light.v-application,
 .theme--dark.v-application
   background: none !important
+
+.theme--dark.v-card
+  background-color: rgba(255,255,255,0.06) !important
 
 h1, h2, h3, h4, h5, h6
   // color secondary-color // white also looks great
