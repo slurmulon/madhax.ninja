@@ -6,7 +6,7 @@ export const all = [
   { id: 'elixir', title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png', level: 65, specialty: true },
   { id: 'clojure', title: 'Clojure', url: 'https://clojure.org', icon: 'clojure.png', level: 40, specialty: true },
   { id: 'python', title: 'Python', url: 'https://python.org', icon: 'python.png', level: 75, specialty: true },
-  { id: 'scala', title: 'Scala', url: 'https://scala-lang.org', icon: 'scala.png', level: 55 },
+  { id: 'scala', title: 'Scala', url: 'https://scala-lang.org', icon: 'scala.png', level: 55, width: 75 },
   { id: 'vue', title: 'Vue', url: 'https://vuejs.org', icon: 'vuejs.png', level: 75, specialty: true },
   { id: 'vuetify', title: 'Vuetify', url: 'https://vuetifyjs.com', icon: 'vuetify.png', level: 75, specialty: true },
   { id: 'angular', title: 'Angular (1.X)', url: 'https://angularjs.org', icon: 'angular.png', level: 85 },
@@ -14,9 +14,9 @@ export const all = [
   { id: 'phoenix', title: 'Phoenix', url: 'http://phoenixframework.org', icon: 'phoenix.png', level: 70, specialty: true },
   { id: 'django', title: 'Django', url: 'https://djangoproject.com', icon: 'django.png', level: 60, specialty: true },
   // TODO: Add Ecto
-  { id: 'play', title: 'Play!', url: 'https://playframework.com', icon: 'play.png', level: 65 },
+  { id: 'play', title: 'Play!', url: 'https://playframework.com', icon: 'play.png', level: 65, width: 60 },
   // TODO: Add Express
-  { id: 'akka', title: 'Akka', url: 'https://akka.io/', icon: 'akka.png', level: 50 },
+  { id: 'akka', title: 'Akka', url: 'https://akka.io/', icon: 'akka.png', level: 50, width: 60 },
   { id: 'postgres', title: 'PostgreSQL', url: 'https://postgresql.org', icon: 'postgresql.png', level: 75, specialty: true },
   { id: 'json-schema', title: 'JSON Schema', url: 'http://json-schema.org', icon: 'json-schema.png', level: 90, specialty: true },
   // { id: 'gsap', title: 'GSAP', url: 'https://greensock.com', icon: '', level: 65 },
@@ -33,3 +33,7 @@ export const all = [
 export const specialties = all.filter(tool => tool.specialty)
 
 export const each = tools => all.filter(tool => tools.includes(tool.id))
+
+export const resolve = value => typeof tool === 'string'
+  ? all.find(tool => tool.id === value)
+  : value
