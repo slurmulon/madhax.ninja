@@ -3,7 +3,7 @@ export const books = [
   { title: 'Restful Web APIs', file: 'restful-web-apis.jpg' },
   { title: 'High-Performance Browser Networking', file: 'browser-networking.jpg' },
   { title: 'Design Patterns', file: 'design-patterns.jpg' },
-  { title: 'Fundamentals of Database Systems', file: 'fundementals-of-database-systems.jpeg' },
+  // { title: 'Fundamentals of Database Systems', file: 'fundementals-of-database-systems.jpeg' },
   // TODO: Replace with "Design It!"
   // { title: '7 Concurrency Models in 7 Weeks', file: 'concurrency-models.jpg' },
   { title: 'Thinking in Promises', file: 'thinking-in-promises.jpeg' },
