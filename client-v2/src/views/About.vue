@@ -3,15 +3,23 @@
   <v-row>
     <v-col cols="12">
       <v-row nowrap>
-        <v-col xs6>
+        <v-col>
           <h1 class="light-blue--text text--lighten-4">Profile</h1>
         </v-col>
-        <v-col xs6 class="text-xs-right">
-          <v-btn icon light href="https://github.com/slurmulon">
-            <v-icon light color="black">fab fa-github</v-icon>
+        <v-spacer />
+
+        <v-col class="text-right">
+          <v-btn
+            icon
+            light
+            href="https://github.com/slurmulon"
+          >
+            <!-- <v-icon light color="black">fab fa-github</v-icon> -->
+            <v-icon light color="black">mdi-github</v-icon>
           </v-btn>
           <v-btn icon light href="https://linkedin.com/in/evavro">
-            <v-icon light color="black">fab fa-linkedin-in</v-icon>
+            <!-- <v-icon light color="black">fab fa-linkedin-in</v-icon> -->
+            <v-icon light color="black">mdi-linkedin</v-icon>
           </v-btn>
         </v-col>
       </v-row>
@@ -30,50 +38,56 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="pb-0"
+        >
           <h1 class="light-blue--text text--lighten-4 mt-4">Tools</h1>
         </v-col>
 
         <v-col cols="12">
           <v-card color="transparent">
             <v-card-text>
-            <v-row align="start" wrap>
-              <v-col
-                v-for="tool in tools"
-                :key="tool.id"
-                cols="6"
-                sm="3"
-                xl="2"
+              <v-row
+                wrap
+                align="start"
               >
-                <v-row align="center" nowrap>
-                  <v-col
-                    cols="3"
-                    sm="4"
-                    lg="4"
-                    class="text-xs-center"
-                  >
-                    <a
-                      :href="tool.url"
-                      target="_blank"
-                      class="cell-shade"
+                <v-col
+                  v-for="tool in tools"
+                  :key="tool.id"
+                  cols="6"
+                  sm="3"
+                  xl="2"
+                >
+                  <v-row align="center" nowrap>
+                    <v-col
+                      cols="3"
+                      sm="4"
+                      lg="4"
+                      class="text-center"
                     >
-                      <v-img
-                        :src="require(`../../public/img/${tool.icon}`)"
-                        width="40"
-                      />
-                    </a>
-                  </v-col>
-                  <v-col
-                    cols="8"
-                    sm="8"
-                    lg="8"
-                  >
-                    <span class="font-weight-light">{{ tool.title }}</span>
-                    <v-progress-linear v-model="tool.level" color="cyan lighten-4"></v-progress-linear>
-                  </v-col>
-                </v-row>
-              </v-col>
-            </v-row>
+                      <a
+                        :href="tool.url"
+                        target="_blank"
+                        class="cell-shade"
+                      >
+                        <v-img
+                          :src="require(`../../public/img/${tool.icon}`)"
+                          width="40"
+                        />
+                      </a>
+                    </v-col>
+                    <v-col
+                      cols="8"
+                      sm="8"
+                      lg="8"
+                    >
+                      <span class="font-weight-light">{{ tool.title }}</span>
+                      <v-progress-linear v-model="tool.level" color="cyan lighten-4"></v-progress-linear>
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
             </v-card-text>
           </v-card>
         </v-col>
@@ -83,18 +97,22 @@
         </v-col>
 
         <v-col cols="12">
-          <v-card class="pt-4 pb-4">
-            <v-row row wrap>
+          <v-card color="transparent">
+            <v-card-text>
+            <v-row wrap>
               <v-col
                 v-for="interest in interests"
                 :key="interest"
-                xs6
-                md4
-                class="text-xs-center"
+                cols="6"
+                sm="4"
+                lg="3"
+                xl="2"
+                class="text-center"
               >
                 <span class="font-weight-light">{{ interest }}</span>
               </v-col>
             </v-row>
+            </v-card-text>
           </v-card>
         </v-col>
 
@@ -103,17 +121,22 @@
         </v-col>
 
         <v-col cols="12">
-          <v-card class="pt-4 pb-4">
-            <v-row wrap justify="column">
+          <v-card color="transparent">
+            <v-card-text>
+            <v-row
+              wrap
+              justify="column"
+            >
               <v-col
                 v-for="(philosophy, index) in philosophies"
                 :key="index"
                 cols="12"
               >
                 <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i>&nbsp;
-                <span class="grey--text text-darken-2 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
+                <span class="grey--text text--lighten-1 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
               </v-col>
             </v-row>
+            </v-card-text>
           </v-card>
         </v-col>
 
@@ -146,7 +169,7 @@
 
 <script>
 import { books, interests, philosophies } from '@/use/about'
-import { all as tools } from '@/use/tools'
+import { specialties as tools } from '@/use/tools'
 
 export default {
   data: () => ({
