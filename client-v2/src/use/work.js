@@ -42,8 +42,7 @@ export const jobs = [
     time: 'Summer 2013 - Summer 2015',
     details: [
       'Lead the development of an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it went live. The application was fully internationalized and could be customized for partners to nearly any degree.',
-      'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.',
-      'Contributed towards a mock development environment that supported dynamic and conditional stubbing, decoupling the development of APIs and their clients.'
+      'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
     ],
     tools: tools(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'vagrant'])
   }

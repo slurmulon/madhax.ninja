@@ -20,7 +20,7 @@ export const all = [
   { id: 'postgres', title: 'PostgreSQL', url: 'https://postgresql.org', icon: 'postgresql.png', level: 75, specialty: true },
   { id: 'json-schema', title: 'JSON Schema', url: 'http://json-schema.org', icon: 'json-schema.png', level: 90, specialty: true },
   // { id: 'gsap', title: 'GSAP', url: 'https://greensock.com', icon: '', level: 65 },
-  { id: 'npm', title: 'NPM', url: 'https://npmjs.com', icon: 'npm.png', level: 90, specialty: true },
+  { id: 'npm', title: 'NPM', url: 'https://npmjs.com', icon: 'npm.png', level: 90 },
   { id: 'webpack', title: 'Webpack', url: 'https://webpack.js.org', icon: 'webpack.png', level: 75, specialty: true },
   { id: 'd3', title: 'D3', url: 'https://d3js.org', icon: 'd3.png', level: 60, specialty: true },
   { id: 'mapbox', title: 'Mapbox', url: 'https://mapbox.com', icon: 'mapbox.png', level: 75, specialty: true },
