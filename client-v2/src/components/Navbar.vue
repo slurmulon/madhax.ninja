@@ -14,12 +14,19 @@
       </a>
     </v-toolbar-title>
     <v-spacer />
-    <!-- <v-toolbar-items class="hidden-sm-and-down"> -->
     <v-toolbar-items>
-      <v-btn to="/about" class="shiny" color="light-blue lighten-4">
+      <v-btn
+        text
+        to="/about"
+        class="shiny"
+      >
         About
       </v-btn>
-      <v-btn flat to="/work" class="shiny" color="light-blue lighten-4">
+      <v-btn
+        text
+        to="/work"
+        class="shiny"
+      >
         Work
       </v-btn>
     </v-toolbar-items>
