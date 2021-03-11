@@ -2,12 +2,12 @@ export const books = [
   { title: 'The Pragmatic Programmer', file: 'pragmatic-programmer.jpg' },
   { title: 'Restful Web APIs', file: 'restful-web-apis.jpg' },
   { title: 'High-Performance Browser Networking', file: 'browser-networking.jpg' },
-  { title: 'Design Patterns', file: 'design-patterns.jpg' },
+  { title: 'Design It!', file: 'design-it.jpg' },
+  // { title: 'Design Patterns', file: 'design-patterns.jpg' },
   // { title: 'Fundamentals of Database Systems', file: 'fundementals-of-database-systems.jpeg' },
   // TODO: Replace with "Design It!"
   // { title: '7 Concurrency Models in 7 Weeks', file: 'concurrency-models.jpg' },
   { title: 'Thinking in Promises', file: 'thinking-in-promises.jpeg' },
-  { title: 'Graph Databases', file: 'graph-databases.jpg' },
   { title: 'Principles of Object-Oriented JavaScript', file: 'principles-object-oriented-js.jpg' },
   { title: 'Programming Elixir', file: 'programming-elixir.jpg' },
   { title: 'Clojure for the Brave and True', file: 'clojure-brave-and-true.jpg' },
@@ -21,8 +21,8 @@ export const books = [
 ]
 
 export const interests = [
-  'Hypermedia', 'Semantics', 'Synchronization', 'Archival', 'Decentralization',
-  'Timers', 'Music', 'Animation', 'Visualizations', 'Education', 'Self-improvement', 'Fitness'
+  'Hypermedia', 'Web Semantics', 'Synchronization', 'Archival', 'Decentralization',
+  'Timers', 'Music', 'Animation', 'Visualizations', 'Maps', 'Education', 'Fitness'
 ]
 
 export const philosophies = [
