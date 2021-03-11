@@ -85,16 +85,20 @@
                         lg="4"
                         class="text-center"
                       >
-                        <a
-                          :href="tool.url"
-                          target="_blank"
-                          class="cell-shade"
-                        >
-                          <v-img
-                            :src="require(`../../public/img/${tool.icon}`)"
-                            width="40"
-                          />
-                        </a>
+                        <tool-icon
+                          :value="tool"
+                          aspect-ratio="1"
+                        />
+                        <!-- <a -->
+                        <!--   :href="tool.url" -->
+                        <!--   target="_blank" -->
+                        <!--   class="cell-shade" -->
+                        <!-- > -->
+                        <!--   <v-img -->
+                        <!--     :src="require(`../../public/img/${tool.icon}`)" -->
+                        <!--     width="40" -->
+                        <!--   /> -->
+                        <!-- </a> -->
                       </v-col>
                       <v-col
                         cols="8"
@@ -222,12 +226,18 @@
 import { books, interests, philosophies } from '@/use/about'
 import { specialties as tools } from '@/use/tools'
 
+import ToolIcon from '@/components/ToolIcon'
+
 export default {
   data: () => ({
     tools,
     books,
     interests,
     philosophies
-  })
+  }),
+
+  components: {
+    ToolIcon
+  }
 }
 </script>

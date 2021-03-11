@@ -14,6 +14,7 @@
           <v-col
             v-for="job in jobs"
             :key="job.company"
+            cols="12"
             class="mb-4"
           >
             <!-- TODO: approach, process -->
@@ -24,13 +25,14 @@
               <v-img
                 :src="require(`../../public/img/${job.banner}`)"
                 height="200"
-                gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
               >
+                <!-- gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" -->
                 <template #placeholder>
                   <v-row
                     class="fill-height ma-0"
                     align="center"
                     justify="center"
+                    style="background: rgba(255,255,255,0.1)"
                   >
                     <v-progress-circular
                       indeterminate
@@ -86,15 +88,7 @@
                         :key="tool.id"
                         class="text-xs-center"
                       >
-                        <a
-                          :href="tool.url"
-                          target="_blank"
-                        >
-                          <img
-                            :src="require(`../../public/img/${tool.icon}`)"
-                            width="40"
-                          >
-                        </a>
+                        <tool-icon :value="tool" />
                       </v-col>
                     </v-row>
                   </v-col>
@@ -136,6 +130,7 @@
                     <a
                       :href="project.url"
                       target="project"
+                      class="text-decoration-none"
                     >
                       <v-img
                         v-if="project.logo"
@@ -207,11 +202,17 @@
 import { jobs, projects } from '@/use/work'
 import { all as tools } from '@/use/tools'
 
+import ToolIcon from '@/components/ToolIcon'
+
 export default {
   data: () => ({
     jobs,
     projects,
     tools
-  })
+  }),
+
+  components: {
+    ToolIcon
+  }
 }
 </script>
