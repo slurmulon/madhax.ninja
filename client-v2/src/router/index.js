@@ -17,7 +17,6 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     components: {
       default: About,
       header: Navbar,
@@ -28,7 +27,7 @@ const routes = [
     path: '/work',
     name: 'work',
     components: {
-      default: Work,
+      default: () => import(/* webpackChunkName: "contact" */ '../views/Work.vue'),
       header: Navbar,
       footer: ContactButton
     }
@@ -37,8 +36,6 @@ const routes = [
     path: '/contact',
     name: 'contact',
     components: {
-      // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-      // default: Contact,
       default: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
       header: Navbar,
       footer: BackButton
