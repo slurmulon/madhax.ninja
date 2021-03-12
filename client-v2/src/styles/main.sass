@@ -1,4 +1,5 @@
 @use './backgrounds'
+@use './transitions'
 
 @font-face
   font-family: Lazer84
@@ -81,7 +82,8 @@ h1, h2, h3, h4, h5, h6
   background-color: rgba(255,255,255,0.85) !important // 0.6, 0.75
 
 .cell-shade
-  filter: drop-shadow(1px 1px 0 black)
+  .v-image__image
+    filter: drop-shadow(1px 1px 0 black)
 
 .header
   background: none //white

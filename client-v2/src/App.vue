@@ -2,7 +2,10 @@
   <layout>
     <router-view name="header" />
 
-    <transition name="page">
+    <transition
+      name="page"
+      mode="out-in"
+    >
       <router-view />
     </transition>
 
