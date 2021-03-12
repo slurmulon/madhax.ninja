@@ -79,7 +79,10 @@
   background: linear-gradient(to bottom, #f4791f, #659999)
 
 .bg-kye
+  $bg-from: #8360c3
+  $bg-to: darken(#2ebf91, 10%)
+
   background: #8360c3
-  background: -webkit-linear-gradient(to top, #2ebf91, #8360c3)
-  background: linear-gradient(to top, #2ebf91, #8360c3)
+  background: -webkit-linear-gradient(to top, $bg-to, $bg-from)
+  background: linear-gradient(to top, $bg-to, $bg-from)
 
