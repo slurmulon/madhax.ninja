@@ -1,19 +1,10 @@
 <template>
   <v-toolbar class="header">
     <v-toolbar-title>
-      <a
-        @click="$router.push('/')"
-        class="logo display-1"
-      >
-        <div class="hidden-xs-only">
-          <span>Erik</span><span class="ml-3">V</span><span style="margin-left: -6px">avro</span>
-        </div>
-        <div class="hidden-sm-and-up pr-2">
-          <span>Erik </span><span class="ml-2">V.</span>
-        </div>
-      </a>
+      <logo />
     </v-toolbar-title>
     <v-spacer />
+
     <v-toolbar-items>
       <v-btn
         text
@@ -34,6 +25,14 @@
     </v-toolbar-items>
   </v-toolbar>
 </template>
+
+<script>
+import Logo from '@/components/Logo'
+
+export default {
+  components: { Logo }
+}
+</script>
 
 <style lang="sass" scoped>
 .header

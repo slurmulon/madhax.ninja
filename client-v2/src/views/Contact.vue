@@ -141,7 +141,7 @@ export default {
   },
 
   data: () => ({
-    valid: true,
+    valid: false,
     rules: {
       name: [
         v => !!v || 'Name is required',
