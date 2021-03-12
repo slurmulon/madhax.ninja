@@ -34,7 +34,7 @@
             class="text-center pt-0"
           >
             <div class="font-weight-bold text-subtitle-1">{{ job.title }}<br/>
-            <span class="text-body-2 font-weight-thin">{{ job.time }}</span></div>
+            <span class="white-text text-body-2 font-weight-thin">{{ job.time }}</span></div>
           </v-col>
         </v-row>
       </v-card-title>
