@@ -8,7 +8,7 @@
     bottom
     right
     fixed
-    color="secondary"
+    color="primary"
     class="elevation-4"
   >
     <v-icon

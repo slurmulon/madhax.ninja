@@ -52,7 +52,6 @@
                   />
                   <v-textarea
                     v-model="message"
-                    :disabled="loading"
                     name="message"
                     label="Message"
                     color="secondary"

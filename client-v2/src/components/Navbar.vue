@@ -19,6 +19,7 @@
         text
         to="/about"
         class="shiny"
+        color="light-blue lighten-4"
       >
         About
       </v-btn>
@@ -26,6 +27,7 @@
         text
         to="/work"
         class="shiny"
+        color="light-blue lighten-4"
       >
         Work
       </v-btn>

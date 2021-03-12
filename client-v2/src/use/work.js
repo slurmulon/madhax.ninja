@@ -17,7 +17,7 @@ export const jobs = [
       'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops.',
       'Contributed to the design and implementation of a RESTful platform API that unified a highly diverse engineering team and its services.',
     ],
-    tools: tools(['vue', 'vuetify', 'django', 'postgres', 'webpack', 'api-blueprint'])
+    tools: tools(['vue', 'vuetify', 'django', 'postgres', 'webpack', 'mapbox'])
   },
   {
     company: 'Sighten',

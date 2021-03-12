@@ -7,7 +7,10 @@
         offset-md="2"
       >
         <v-row>
-          <v-col cols="12">
+          <v-col
+            cols="12"
+            class="pb-0"
+          >
             <h1 class="light-blue--text text--lighten-4">Career</h1>
           </v-col>
 
@@ -55,12 +58,16 @@
                       >
                     </a>
                   </v-col>
+                </v-row>
+              </v-card-title>
 
+              <v-card-text>
+                <v-row>
                   <v-col
                     cols="12"
                     class="text-center pt-0"
                   >
-                    <div class="text-subheading">{{ job.title }}<br/>
+                    <div class="text-subtitle-1">{{ job.title }}<br/>
                     <span class="grey--text text--lighten-3 text-body-2 font-weight-thin">{{ job.time }}</span></div>
                   </v-col>
 
@@ -68,17 +75,14 @@
                     <p
                       v-for="detail in job.details"
                       :key="detail"
-                      class="font-weight-thin"
+                      class="font-weight-light"
                       style="word-break: break-word"
                     >
                       {{ detail }}
                     </p>
                   </v-col>
 
-                  <v-col
-                    cols="12"
-                    pt-2
-                  >
+                  <v-col cols="12">
                     <v-row
                       wrap
                       justify="end"
@@ -86,14 +90,14 @@
                       <v-col
                         v-for="tool in job.tools"
                         :key="tool.id"
-                        class="text-xs-center"
+                        class="text-center"
                       >
                         <tool-icon :value="tool" />
                       </v-col>
                     </v-row>
                   </v-col>
                 </v-row>
-              </v-card-title>
+              </v-card-text>
             </v-card>
           </v-col>
 
@@ -155,7 +159,7 @@
                         <span class="headline white--text">{{ project.title }}</span>
                       </v-col>
                       <v-col cols="12">
-                        <span class="caption white--text">{{ project.desc }}</span>
+                        <span class="caption font-weight-light white--text">{{ project.desc }}</span>
                       </v-col>
 
                       <!-- <v-col cols="12"> -->
