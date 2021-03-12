@@ -1,6 +1,7 @@
 <template>
   <page>
     <v-row>
+      <!-- TODO: Create SectionCardTitle to remove this duplication -->
       <v-col
         cols="12"
         class="pb-0"

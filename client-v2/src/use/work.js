@@ -7,15 +7,11 @@ export const jobs = [
     logo: 'ceres.png',
     banner: 'job-ceres.jpg',
     title: 'UI Architect',
-    time: 'Feb. 2017 - Nov. 2021',
+    time: 'Feb. 2017 - Nov. 2020',
     details: [
-      'Company’s first software engineering hire, architecting and leading the development of a VueJS 2.0 PWA that provides farmers with advanced aerial imagery of agriculture fields. This allows farmers to identify problematic areas and obtain deep insight into the health and progress of their crops.',
+      'Company’s first software engineering hire, architecting and leading the development of a VueJS 2.0 PWA that provides farmers with multispectral aerial imagery of agriculture fields. This helps farmers to identify problematic areas and obtain deep insight into the health and progress of their crops.',
       'Led the development and wrote the core components of a full-featured Mapbox GL library for VueJS. Supports next-level drawing features that are especially useful for farming, such as circles, cutouts and recursive grouping.',
       'Introduced and guided several key development processes as the team grew. Improved communication between engineering, product and other stakeholders through the use of Behavior-Driven Development, Architecture Resource Diagrams, telemetry data, issue resolution archives and documentation.'
-    ],
-    details: [
-      'Architected and implemented a VueJS progressive web application for viewing advanced aerial imagery over agriculture fields, allowing farmers to obtain detailed insights into the status and health of their crops.',
-      'Contributed to the design and implementation of a RESTful platform API that unified a highly diverse engineering team and its services.',
     ],
     tools: tools(['vue', 'vuetify', 'django', 'postgres', 'webpack', 'mapbox'])
   },

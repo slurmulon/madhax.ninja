@@ -10,17 +10,7 @@
       v-bind="$attrs"
     >
       <template #placeholder>
-        <v-row
-          class="fill-height ma-0"
-          align="center"
-          justify="center"
-        >
-          <v-progress-circular
-            indeterminate
-            color="grey lighten-5"
-            style="opacity: 0.25"
-          />
-        </v-row>
+        <placeholder />
       </template>
     </v-img>
   </a>
@@ -28,6 +18,8 @@
 
 <script>
 import { resolve } from '@/use/tools'
+
+import Placeholder from '@/components/Placeholder'
 
 export default {
   props: {
@@ -44,6 +36,8 @@ export default {
 
   computed: {
     tool: ({ value }) => resolve(value)
-  }
+  },
+
+  components: { Placeholder }
 }
 </script>

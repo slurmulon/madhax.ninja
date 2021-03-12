@@ -3,12 +3,14 @@
     class="fill-height ma-0"
     align="center"
     justify="center"
-    :style="{ 'background': filled ? 'rgba(255,255,255,0.1)' : null }"
+    :style="{ 'background': filled ? 'rgba(255,255,255,0.2)' : null }"
   >
     <v-progress-circular
       indeterminate
-      color="grey lighten-5"
-      style="opacity: 0.25"
+      width="3"
+      :color="color"
+      :style="{ opacity }"
+      v-bind="$attrs"
     />
   </v-row>
 </template>
@@ -19,7 +21,13 @@ export default {
     color: {
       type: String,
       required: false,
-      default: 'grey lighten-5'
+      default: 'grey lighten-4'
+    },
+
+    opacity: {
+      type: [Number, String],
+      required: false,
+      default: 0.25
     },
 
     filled: Boolean
