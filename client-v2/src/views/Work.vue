@@ -29,7 +29,6 @@
                 :src="require(`../../public/img/${job.banner}`)"
                 height="200"
               >
-                <!-- gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" -->
                 <template #placeholder>
                   <v-row
                     class="fill-height ma-0"
@@ -87,7 +86,6 @@
                     class="pt-0"
                   >
                     <v-row
-                      wrap
                       align="center"
                       justify="center"
                     >
@@ -95,7 +93,6 @@
                         v-for="tool in job.tools"
                         :key="tool.id"
                         class="d-flex shrink px-4 text-center"
-                        style="height: 70px"
                       >
                         <tool-icon :value="tool" />
                       </v-col>

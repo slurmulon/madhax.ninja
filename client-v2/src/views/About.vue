@@ -46,7 +46,7 @@
             class="pt-0"
           >
             <v-card color="transparent">
-              <v-card-text class="font-weight-light">
+              <v-card-text class="white--text font-weight-light">
                 <p>Welcome! My name is Erik Vavro.</p>
                 <p>I'm a software architect specializing in browser technology with over 18 years of coding experience (10+ working remote).</p>
                 <p>I'm absolutely passionate about learning all things web and creating elegant applications that are built to grow.</p>
@@ -66,7 +66,7 @@
 
           <v-col cols="12">
             <v-card color="transparent">
-              <v-card-text>
+              <v-card-text class="white--text">
                 <v-row
                   wrap
                   align="start"
@@ -135,7 +135,7 @@
                     xl="2"
                     class="text-center"
                   >
-                    <span class="font-weight-light">{{ interest }}</span>
+                    <span class="white--text font-weight-light">{{ interest }}</span>
                   </v-col>
                 </v-row>
               </v-card-text>
@@ -152,17 +152,14 @@
           <v-col cols="12">
             <v-card color="transparent">
               <v-card-text>
-                <v-row
-                  wrap
-                  justify="column"
-                >
+                <v-row wrap>
                   <v-col
                     v-for="(philosophy, index) in philosophies"
                     :key="index"
                     cols="12"
                   >
-                    <i class="font-weight-light">&quot;{{ philosophy.quote }}&quot;</i>&nbsp;
-                    <span class="grey--text text--lighten-1 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
+                    <i class="white--text font-weight-light">&quot;{{ philosophy.quote }}&quot;</i>&nbsp;
+                    <span class="grey--text text--lighten-2 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
                   </v-col>
                 </v-row>
               </v-card-text>

@@ -68,7 +68,6 @@
                         @click="clear"
                         text
                         block
-                        outline
                       >
                         <v-icon>mdi-delete</v-icon>
                       </v-btn>
@@ -82,7 +81,6 @@
                         text
                         light
                         block
-                        outline
                       >
                         <v-icon>send</v-icon>
                       </v-btn>
