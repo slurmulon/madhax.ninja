@@ -58,19 +58,19 @@
                       >
                     </a>
                   </v-col>
+
+                  <v-col
+                    cols="12"
+                    class="text-center pt-0"
+                  >
+                    <div class="font-weight-bold text-subtitle-1">{{ job.title }}<br/>
+                    <span class="grey--text text--lighten-3 text-body-2 font-weight-thin">{{ job.time }}</span></div>
+                  </v-col>
                 </v-row>
               </v-card-title>
 
               <v-card-text>
                 <v-row>
-                  <v-col
-                    cols="12"
-                    class="text-center pt-0"
-                  >
-                    <div class="text-subtitle-1">{{ job.title }}<br/>
-                    <span class="grey--text text--lighten-3 text-body-2 font-weight-thin">{{ job.time }}</span></div>
-                  </v-col>
-
                   <v-col cols="12">
                     <p
                       v-for="detail in job.details"
@@ -82,15 +82,20 @@
                     </p>
                   </v-col>
 
-                  <v-col cols="12">
+                  <v-col
+                    cols="12"
+                    class="pt-0"
+                  >
                     <v-row
                       wrap
-                      justify="end"
+                      align="center"
+                      justify="center"
                     >
                       <v-col
                         v-for="tool in job.tools"
                         :key="tool.id"
-                        class="text-center"
+                        class="d-flex shrink px-4 text-center"
+                        style="height: 70px"
                       >
                         <tool-icon :value="tool" />
                       </v-col>

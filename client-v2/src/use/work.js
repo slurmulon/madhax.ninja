@@ -69,7 +69,7 @@ export const projects = [
     title: 'gig',
     emoji: '🔉',
     active: true,
-    desc: 'Bach engine for JS',
+    desc: 'Real-time bach engine for JS',
     url: 'https://github.com/slurmulon/gig',
     tools: tools(['vue', 'vuetify'])
   },
