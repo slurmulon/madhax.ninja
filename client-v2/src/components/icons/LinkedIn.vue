@@ -3,6 +3,7 @@
     icon
     light
     href="https://linkedin.com/in/evavro"
+    target="_blank"
   >
     <v-icon
       light

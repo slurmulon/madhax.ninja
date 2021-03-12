@@ -17,7 +17,7 @@
             >
               <v-text-field
                 v-model="name"
-                :rules="nameRules"
+                :rules="rules.name"
                 :counter="128"
                 :disabled="loading"
                 label="Name"
@@ -27,7 +27,7 @@
               />
               <v-text-field
                 v-model="email"
-                :rules="emailRules"
+                :rules="rules.email"
                 :disabled="loading"
                 label="E-mail"
                 color="secondary"
@@ -46,11 +46,12 @@
               />
               <v-textarea
                 v-model="message"
+                :rules="rules.message"
                 name="message"
                 label="Message"
                 color="secondary"
-                solo-inverted
                 rows="7"
+                solo-inverted
               />
 
               <v-row
@@ -62,6 +63,7 @@
                     @click="clear"
                     text
                     block
+                    color="grey lighten-2"
                   >
                     <v-icon>mdi-delete</v-icon>
                   </v-btn>
@@ -116,17 +118,23 @@ export default {
 
   data: () => ({
     valid: true,
-    sent: false,
-    loading: false,
-    error: false,
-    nameRules: [
-      v => !!v || 'Name is required',
-      v => (v && v.length <= 128) || 'Name must be less than 128 characters'
-    ],
-    emailRules: [
-      v => !!v || 'E-mail is required',
-      v => /.+@.+/.test(v) || 'E-mail must be valid'
-    ],
+    // sent: false,
+    // loading: false,
+    // error: false,
+    rules: {
+      name: [
+        v => !!v || 'Name is required',
+        v => (v && v.length <= 100) || 'Name must be less than 100 characters'
+      ],
+      email: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+/.test(v) || 'E-mail must be valid'
+      ],
+      message: [
+        v => !!v || 'Message is required',
+        v => (v && v.length <= 1000) || 'Message must be less than 1000 characters'
+      ]
+    },
     reasons: [
       'General',
       'Opportunity',
@@ -136,6 +144,10 @@ export default {
   }),
 
   computed: {
+    sent: () => sent.value,
+    loading: () => loading.value,
+    error: () => error.value,
+
     name: {
       get: () => name.value,
       set: (value) => name.value = value
