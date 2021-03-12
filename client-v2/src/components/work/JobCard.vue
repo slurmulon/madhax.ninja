@@ -12,7 +12,7 @@
       <template #placeholder>
         <placeholder
           filled
-          color="grey"
+          color="grey lighten-2"
           opacity="1"
         />
       </template>
