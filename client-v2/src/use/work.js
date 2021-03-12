@@ -23,7 +23,7 @@ export const jobs = [
     title: 'Platform Architect',
     time: 'Oct. 2015 - Feb. 2017',
     details: [
-      'Architected and implemented an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations.',
+      'Architected and developed an AngularJS single page application that enabled solar companies to manage everything from quoting and finances to system design and energy production estimations.',
       'Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization.',
       'Contributed to the RESTful API and its design, particularly around the incorporation of hypermedia.'
     ],
@@ -37,7 +37,8 @@ export const jobs = [
     title: 'Senior Software Engineer',
     time: 'Summer 2013 - Summer 2015',
     details: [
-      'Lead the development of an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it went live. The application was fully internationalized and could be customized for partners to nearly any degree.',
+      'Lead the development of an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it went live.',
+      'The application was fully internationalized and could be easily customized for partner companies to a large degree.',
       'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
     ],
     tools: tools(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'vagrant'])
