@@ -213,7 +213,7 @@ export default {
     error.value = false
     loading.value = false
 
-    next()
+    next(vm => vm.$vuetify.goTo(0))
   }
 }
 </script>
