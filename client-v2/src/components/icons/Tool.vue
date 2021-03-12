@@ -5,7 +5,7 @@
     target="_blank"
   >
     <v-img
-      :src="require(`../../public/img/${tool.icon}`)"
+      :src="require(`../../../public/img/${tool.icon}`)"
       width="40"
       v-bind="$attrs"
     >

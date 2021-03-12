@@ -1,0 +1,13 @@
+<template>
+  <v-btn
+    icon
+    light
+    href="https://linkedin.com/in/evavro"
+  >
+    <v-icon
+      light
+    >
+      mdi-linkedin
+    </v-icon>
+  </v-btn>
+</template>
