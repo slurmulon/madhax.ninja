@@ -35,17 +35,7 @@
             height="200"
           >
             <template #placeholder>
-              <v-row
-                class="fill-height ma-0"
-                align="center"
-                justify="center"
-                style="background: rgba(255,255,255,0.1)"
-              >
-                <v-progress-circular
-                  indeterminate
-                  color="grey lighten-5"
-                />
-              </v-row>
+              <placeholder filled />
             </template>
           </v-img>
 
@@ -193,6 +183,7 @@
 import { jobs, projects } from '@/use/work'
 
 import Page from '@/components/Page'
+import Placeholder from '@/components/Placeholder'
 import IconTool from '@/components/icons/Tool'
 import IconLinkedIn from '@/components/icons/LinkedIn'
 import IconGithub from '@/components/icons/Github'
@@ -205,6 +196,7 @@ export default {
 
   components: {
     Page,
+    Placeholder,
     IconTool,
     IconLinkedIn,
     IconGithub

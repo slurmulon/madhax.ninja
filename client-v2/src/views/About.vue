@@ -74,7 +74,10 @@
                     lg="8"
                   >
                     <span class="font-weight-light">{{ tool.title }}</span>
-                    <v-progress-linear v-model="tool.level" color="cyan lighten-4"></v-progress-linear>
+                    <v-progress-linear
+                      v-model="tool.level"
+                      color="cyan lighten-4"
+                    />
                   </v-col>
                 </v-row>
               </v-col>
@@ -144,7 +147,10 @@
       <v-col cols="12">
         <v-card color="transparent">
           <v-card-text>
-            <v-row justify="center" wrap>
+            <v-row
+              wrap
+              justify="center"
+            >
               <v-col
                 v-for="book in books"
                 :key="book.title"
@@ -162,17 +168,7 @@
                     :src="require(`../../public/img/book-${book.file}`)"
                   >
                     <template #placeholder>
-                      <v-row
-                        class="fill-height ma-0"
-                        align="center"
-                        justify="center"
-                        style="background: rgba(255,255,255,0.1)"
-                      >
-                        <v-progress-circular
-                          indeterminate
-                          color="grey lighten-5"
-                        />
-                      </v-row>
+                      <placeholder filled />
                     </template>
                   </v-img>
                 </v-sheet>
@@ -190,6 +186,7 @@ import { books, interests, philosophies } from '@/use/about'
 import { specialties as tools } from '@/use/tools'
 
 import Page from '@/components/Page'
+import Placeholder from '@/components/Placeholder'
 import IconTool from '@/components/icons/Tool'
 import IconLinkedIn from '@/components/icons/LinkedIn'
 import IconGithub from '@/components/icons/Github'
@@ -204,6 +201,7 @@ export default {
 
   components: {
     Page,
+    Placeholder,
     IconTool,
     IconLinkedIn,
     IconGithub
