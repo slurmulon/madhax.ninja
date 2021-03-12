@@ -63,10 +63,7 @@
                     nowrap
                     justify="end"
                   >
-                    <v-col
-                      cols="4"
-                      md="3"
-                    >
+                    <v-col cols="2">
                       <v-btn
                         @click="clear"
                         text
@@ -76,10 +73,7 @@
                         <v-icon>mdi-delete</v-icon>
                       </v-btn>
                     </v-col>
-                    <v-col
-                      cols="4"
-                      md="3"
-                    >
+                    <v-col cols="2">
                       <v-btn
                         :disabled="!valid"
                         :loading="loading"
