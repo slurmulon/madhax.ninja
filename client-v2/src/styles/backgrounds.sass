@@ -80,10 +80,50 @@
 
 .bg-kye
   $bg-from: #8360c3
-  $bg-to: darken(#2ebf91, 5%)
+  $bg-to: #459397
+  // $bg-to: darken(#2ebf91, 5%)
   // $bg-to: darken(#2ebf91, 10%)
 
   background: #8360c3
   background: -webkit-linear-gradient(to top, $bg-to, $bg-from)
   background: linear-gradient(to top, $bg-to, $bg-from)
 
+.bg-sun
+  background: hsla(30, 78%, 47%, 1)
+  background: linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+  background: -moz-linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+  background: -webkit-linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+  // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D4781A", endColorstr="#AA3678", GradientType=1 )
+
+.bg-sun-radial
+  $bg-from: #5C268D
+  $bg-to: #9B4D31
+  background: $bg-from
+  background: radial-gradient(to bottom right, $bg-from, $bg-to)
+  background: -moz-radial-gradient(top left, $bg-from, $bg-to)
+  background: -webkit-radial-gradient(top left, $bg-from, $bg-to)
+
+  // background: hsla(30, 78%, 47%, 1)
+  // background: linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+  // background: -moz-linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+  // background: -webkit-linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+  // background: linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+  // background: -moz-linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+  // background: -webkit-linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
+
+.bg-verge
+  background: #7b4397
+  background: -webkit-linear-gradient(to right, #7b4397, #dc2430)
+  background: linear-gradient(to right, #7b4397, #dc2430)
+
+.bg-haze
+  background: #5C258D
+  background: -webkit-linear-gradient(315deg, darken(#4389A2, 10%), #5C258D)
+  background: linear-gradient(315deg, darken(#4389A2, 10%), #5C258D)  // background: -webkit-linear-gradient(to right, #4389A2, #5C258D)
+
+.bg-aura
+  background: #5C268D
+  background: -webkit-radial-gradient(top left, #5C268D, #A97928)
+  background: -moz-radial-gradient(top left, #5C268D, #A97928)
+  background: radial-gradient(to bottom right, #5C268D, #A97928)
+  background: linear-gradient(to right, #4389A2, #5C258D)
