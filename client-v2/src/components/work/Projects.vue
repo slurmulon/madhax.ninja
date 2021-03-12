@@ -48,7 +48,13 @@
                     cols="12"
                     class="pb-0"
                   >
-                    <span class="headline white--text">{{ project.title }}</span>
+                    <a
+                      :href="project.url"
+                      target="_blank"
+                      class="headline text-decoration-none white--text"
+                    >
+                      {{ project.title }}
+                    </a>
                   </v-col>
                   <v-col cols="12">
                     <span class="caption font-weight-light white--text">{{ project.desc }}</span>

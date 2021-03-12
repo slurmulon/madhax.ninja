@@ -13,7 +13,7 @@
     >
       <v-sheet color="transparent">
         <v-img
-          class="white--text"
+          class="elevation-2"
           height="200px"
           max-width="200px"
           aspect-ratio="1"

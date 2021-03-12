@@ -34,12 +34,12 @@
             class="text-center pt-0"
           >
             <div class="font-weight-bold text-subtitle-1">{{ job.title }}<br/>
-            <span class="grey--text text--lighten-3 text-body-2 font-weight-thin">{{ job.time }}</span></div>
+            <span class="text-body-2 font-weight-thin">{{ job.time }}</span></div>
           </v-col>
         </v-row>
       </v-card-title>
 
-      <v-card-text class="white--text">
+      <v-card-text>
         <v-row>
           <v-col cols="12">
             <p

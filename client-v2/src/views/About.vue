@@ -21,7 +21,7 @@
         class="pt-0"
       >
         <v-card color="transparent">
-          <v-card-text class="white--text font-weight-light">
+          <v-card-text class="font-weight-light">
             <p>Welcome! My name is Erik Vavro.</p>
             <p>I'm a software architect specializing in browser technology with over 18 years of coding experience (10+ working remote).</p>
             <p>I'm absolutely passionate about learning all things web and creating elegant applications that are built to grow.</p>
