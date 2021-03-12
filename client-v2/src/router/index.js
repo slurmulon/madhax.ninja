@@ -42,6 +42,14 @@ const routes = [
       default: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
       header: Navbar,
       footer: BackButton
+    },
+    scrollBehavior (to, from, savedPosition) {
+      if (to.hash) {
+        return {
+          selector: to.hash,
+          behavior: 'smooth',
+        }
+      }
     }
   }
 ]
