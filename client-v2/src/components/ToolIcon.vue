@@ -38,8 +38,7 @@ export default {
 
     classes: {
       type: [String, Array],
-      required: false,
-      default: () => 'cell-shade'
+      required: false
     }
   },
 

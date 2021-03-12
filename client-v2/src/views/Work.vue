@@ -68,7 +68,7 @@
                 </v-row>
               </v-card-title>
 
-              <v-card-text>
+              <v-card-text class="white--text">
                 <v-row>
                   <v-col cols="12">
                     <p
@@ -145,7 +145,7 @@
                       />
                       <span
                         v-if="project.emoji"
-                        class="display-3 secondary--text cell-shade"
+                        class="display-2 secondary--text cell-shade"
                       >
                         {{ project.emoji }}
                     </span>
