@@ -32,65 +32,29 @@
         </v-card>
       </v-col>
 
-      <v-col
-        cols="12"
-        class="pb-0"
-      >
-        <h1 class="light-blue--text text--lighten-4 mt-4">Tools</h1>
-      </v-col>
+      <section-card title="Tools">
+        <v-card-text class="white--text">
+          <tools />
+        </v-card-text>
+      </section-card>
 
-      <v-col cols="12">
-        <v-card color="transparent">
-          <v-card-text class="white--text">
-            <tools />
-          </v-card-text>
-        </v-card>
-      </v-col>
+      <section-card title="Interests">
+        <v-card-text class="white--text">
+          <interests />
+        </v-card-text>
+      </section-card>
 
-      <v-col
-        cols="12"
-        class="pb-0"
-      >
-        <h1 class="light-blue--text text--lighten-4 mt-4">Interests</h1>
-      </v-col>
+      <section-card title="Philosophy">
+        <v-card-text class="white--text">
+          <philosophy />
+        </v-card-text>
+      </section-card>
 
-      <v-col cols="12">
-        <v-card color="transparent">
-          <v-card-text>
-            <interests />
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <v-col
-        cols="12"
-        class="pb-0"
-      >
-        <h1 class="light-blue--text text--lighten-4 mt-4">Philosophy</h1>
-      </v-col>
-
-      <v-col cols="12">
-        <v-card color="transparent">
-          <v-card-text>
-            <philosophy />
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <v-col
-        cols="12"
-        class="pb-0"
-      >
-        <h1 class="light-blue--text text--lighten-4 mt-4">Bookshelf</h1>
-      </v-col>
-
-      <v-col cols="12">
-        <v-card color="transparent">
-          <v-card-text>
-            <bookshelf />
-          </v-card-text>
-        </v-card>
-      </v-col>
+      <section-card title="Bookshelf">
+        <v-card-text>
+          <bookshelf />
+        </v-card-text>
+      </section-card>
     </v-row>
   </page>
 </template>
@@ -100,21 +64,20 @@ import Tools from '@/components/about/Tools'
 import Interests from '@/components/about/Interests'
 import Philosophy from '@/components/about/Philosophy'
 import Bookshelf from '@/components/about/Bookshelf'
+
 import Page from '@/components/Page'
-import Placeholder from '@/components/Placeholder'
-import IconTool from '@/components/icons/Tool'
+import SectionCard from '@/components/SectionCard'
 import IconLinkedIn from '@/components/icons/LinkedIn'
 import IconGithub from '@/components/icons/Github'
 
 export default {
   components: {
-    Page,
     Tools,
     Interests,
     Philosophy,
     Bookshelf,
-    Placeholder,
-    IconTool,
+    Page,
+    SectionCard,
     IconLinkedIn,
     IconGithub
   }
