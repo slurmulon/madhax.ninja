@@ -3,7 +3,9 @@ import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 import About from '@/views/About'
 import Work from '@/views/Work'
+import Contact from '@/views/Contact'
 import Navbar from '@/components/Navbar'
+import ContactButton from '@/components/ContactButton'
 
 Vue.use(VueRouter)
 
@@ -18,8 +20,8 @@ const routes = [
     // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     components: {
       default: About,
-      header: Navbar
-      // footer: ContactButton
+      header: Navbar,
+      footer: ContactButton
     }
   },
   {
@@ -27,8 +29,19 @@ const routes = [
     name: 'Work',
     components: {
       default: Work,
-      header: Navbar
-      // footer: ContactButton
+      header: Navbar,
+      footer: ContactButton
+    }
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    components: {
+      // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+      // default: Contact,
+      default: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
+      header: Navbar,
+      // footer: BackButton
     }
   }
 ]

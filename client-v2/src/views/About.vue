@@ -48,7 +48,7 @@
             <v-card color="transparent">
               <v-card-text class="font-weight-light">
                 <p>Welcome! My name is Erik Vavro.</p>
-                <p>I'm a remote software architect specializing in browser technology with over 18 years of coding experience (10+ working remote).</p>
+                <p>I'm a software architect specializing in browser technology with over 18 years of coding experience (10+ working remote).</p>
                 <p>I'm absolutely passionate about learning all things web and creating elegant applications that are built to grow.</p>
                 <p>I believe in life-long learning, embracing quality from the beginning and taking a people-first approach to development.</p>
                 <span>If you're interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="white--text underline">reach out</router-link>.</span>&nbsp;
