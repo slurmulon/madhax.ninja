@@ -7,7 +7,7 @@
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
-  box-sizing border-box
+  box-sizing: border-box
 
 html, body
   height: 100%
@@ -33,14 +33,15 @@ body
   // @extend .bg-dawn // *** cool (fall, pumpkins)
   // @extend .bg-dusk-reversed // *** a little bright towards the end
   // LAST2
-  @extend .bg-grapefruit
+  // @extend .bg-grapefruit
   // LAST
   // @extend .bg-grapefruit-reversed // *** warm + cool (subtler than wiretap)
   // @extend .bg-vice-city // *** bright (summer, lemonade)
   // @extend .bg-anwar // *** (dew / spring)
   // @extend .bg-memariani // *** (cotton candy + vice city, fun)
+  // LAST3
   // @extend .bg-metapolis // **
-  // @extend .bg-kye // *** cool (winter, magical)
+  @extend .bg-kye // *** cool (winter, magical)
 
 .theme--light.v-application,
 .theme--dark.v-application
@@ -104,7 +105,7 @@ h1, h2, h3, h4, h5, h6
 
 .shiny
   font-family: 'Yesteryear', cursive
-  font-size: 1.5em !important
+  font-size: 1.75em !important
   font-weight: bold
   text-decoration: none
   text-transform: none
