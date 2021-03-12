@@ -42,46 +42,7 @@
       <v-col cols="12">
         <v-card color="transparent">
           <v-card-text class="white--text">
-            <v-row
-              wrap
-              align="start"
-            >
-              <v-col
-                v-for="tool in tools"
-                :key="tool.id"
-                cols="6"
-                sm="4"
-                xl="3"
-              >
-                <v-row
-                  nowrap
-                  align="center"
-                >
-                  <v-col
-                    cols="3"
-                    sm="4"
-                    lg="4"
-                    class="text-center"
-                  >
-                    <icon-tool
-                      :value="tool"
-                      aspect-ratio="1"
-                    />
-                  </v-col>
-                  <v-col
-                    cols="8"
-                    sm="8"
-                    lg="8"
-                  >
-                    <span class="font-weight-light">{{ tool.title }}</span>
-                    <v-progress-linear
-                      v-model="tool.level"
-                      color="cyan lighten-4"
-                    />
-                  </v-col>
-                </v-row>
-              </v-col>
-            </v-row>
+            <tools />
           </v-card-text>
         </v-card>
       </v-col>
@@ -96,19 +57,7 @@
       <v-col cols="12">
         <v-card color="transparent">
           <v-card-text>
-            <v-row wrap>
-              <v-col
-                v-for="interest in interests"
-                :key="interest"
-                cols="6"
-                sm="4"
-                lg="3"
-                xl="2"
-                class="text-center"
-              >
-                <span class="white--text font-weight-light">{{ interest }}</span>
-              </v-col>
-            </v-row>
+            <interests />
           </v-card-text>
         </v-card>
       </v-col>
@@ -123,16 +72,7 @@
       <v-col cols="12">
         <v-card color="transparent">
           <v-card-text>
-            <v-row wrap>
-              <v-col
-                v-for="(philosophy, index) in philosophies"
-                :key="index"
-                cols="12"
-              >
-                <i class="white--text font-weight-light">&quot;{{ philosophy.quote }}&quot;</i>&nbsp;
-                <span class="grey--text text--lighten-2 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
-              </v-col>
-            </v-row>
+            <philosophy />
           </v-card-text>
         </v-card>
       </v-col>
@@ -147,33 +87,7 @@
       <v-col cols="12">
         <v-card color="transparent">
           <v-card-text>
-            <v-row
-              wrap
-              justify="center"
-            >
-              <v-col
-                v-for="book in books"
-                :key="book.title"
-                cols="6"
-                sm="4"
-                lg="3"
-                xl="2"
-              >
-                <v-sheet color="transparent">
-                  <v-img
-                    class="white--text"
-                    height="200px"
-                    max-width="200px"
-                    aspect-ratio="1"
-                    :src="require(`../../public/img/book-${book.file}`)"
-                  >
-                    <template #placeholder>
-                      <placeholder filled />
-                    </template>
-                  </v-img>
-                </v-sheet>
-              </v-col>
-            </v-row>
+            <bookshelf />
           </v-card-text>
         </v-card>
       </v-col>
@@ -182,9 +96,10 @@
 </template>
 
 <script>
-import { books, interests, philosophies } from '@/use/about'
-import { specialties as tools } from '@/use/tools'
-
+import Tools from '@/components/about/Tools'
+import Interests from '@/components/about/Interests'
+import Philosophy from '@/components/about/Philosophy'
+import Bookshelf from '@/components/about/Bookshelf'
 import Page from '@/components/Page'
 import Placeholder from '@/components/Placeholder'
 import IconTool from '@/components/icons/Tool'
@@ -192,15 +107,12 @@ import IconLinkedIn from '@/components/icons/LinkedIn'
 import IconGithub from '@/components/icons/Github'
 
 export default {
-  data: () => ({
-    tools,
-    books,
-    interests,
-    philosophies
-  }),
-
   components: {
     Page,
+    Tools,
+    Interests,
+    Philosophy,
+    Bookshelf,
     Placeholder,
     IconTool,
     IconLinkedIn,
