@@ -7,14 +7,16 @@
           v-model="valid"
           lazy-validation
           dark
+          @submit.prevent="send"
         >
           <v-text-field
             v-model="name"
             :rules="rules.name"
-            :counter="128"
+            :counter="100"
             :disabled="loading"
             label="Name"
             color="secondary"
+            tabindex="1"
             solo-inverted
             required
           />
@@ -24,6 +26,7 @@
             :disabled="loading"
             label="E-mail"
             color="secondary"
+            tabindex="2"
             solo-inverted
             required
           />
@@ -34,6 +37,7 @@
             :disabled="loading"
             label="Reason"
             color="secondary"
+            tabindex="3"
             solo-inverted
             required
           />
@@ -44,6 +48,7 @@
             label="Message"
             color="secondary"
             rows="7"
+            tabindex="4"
             solo-inverted
           />
 
@@ -66,6 +71,7 @@
                 :disabled="!valid"
                 :loading="loading"
                 @click="submit"
+                type="submit"
                 color="light-blue lighten-4"
                 text
                 light
