@@ -52,34 +52,11 @@ export default {
 </script>
 
 <style lang="sass">
-// .theme--dark.v-card
-// .section-card.v-card.theme--dark
 .section-card.v-card.theme--dark
-  // BEST
   // background-color: rgba(255,255,255,0.15) !important
-  // background-color: rgba(255,255,255,0.1) !important
-  // background-color: rgba(255,255,255,0.08) !important
-  // background-color: rgba(255,255,255,0.075) !important
-  // ALT
-  // background-color: rgba(255,255,255,0.12) !important
-  // background-color: rgba(255,255,255,0.14) !important
-  // background-color: rgba(255,255,255,0.16) !important
-  // BEST 2
   // background-color: rgba(255,255,255,0.18) !important
-  // background-color: rgba(15,15,15,0.1) !important
-  // background-color: rgba(25,25,25,0.1) !important
-  // background-color: rgba(40,40,40,0.1) !important
-  // background-color: rgba(80,80,80,0.1) !important
-  // background-color: rgba(84,84,84,0.1) !important
-  // background-color: rgba(88,88,88,0.1) !important
-  // BEST 3
   // background-color: rgba(100,100,100,0.1) !important
-  // background-color: rgba(120,120,120,0.1) !important
-  // BEST 4
   background-color: rgba(150,150,150,0.1) !important
-  // background-color: rgba(185,185,185,0.15) !important
-  // LAST
+  // background-color: rgba(185,185,185,0.1) !important
   // background-color: rgba(200,200,200,0.1) !important
-
-
 </style>
