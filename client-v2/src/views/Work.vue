@@ -27,35 +27,18 @@
 </template>
 
 <script>
-import { jobs, projects } from '@/use/work'
-
-// import Career from '@/components/work/Career'
 import Jobs from '@/components/work/Jobs'
 import Projects from '@/components/work/Projects'
 
 import Page from '@/components/Page'
-import SectionCard from '@/components/SectionCard'
-import Placeholder from '@/components/Placeholder'
-import IconTool from '@/components/icons/Tool'
 import IconLinkedIn from '@/components/icons/LinkedIn'
-import IconGithub from '@/components/icons/Github'
 
 export default {
-  data: () => ({
-    jobs,
-    projects
-  }),
-
   components: {
-    // Career,
     Jobs,
     Projects,
     Page,
-    SectionCard,
-    Placeholder,
-    IconTool,
-    IconLinkedIn,
-    IconGithub
+    IconLinkedIn
   }
 }
 </script>

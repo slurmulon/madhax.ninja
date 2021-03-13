@@ -95,10 +95,4 @@ export const projects = [
     url: 'https://github.com/slurmulon/tasty-commits',
     tools: tools(['git'])
   }
-  // {
-  //  title: 'fractule',
-  //  active: false,
-  //  desc: 'Abstract fractal generator based on Playing with Chaos',
-  //  tools: ['js']
-  // }
 ]
