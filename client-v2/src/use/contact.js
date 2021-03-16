@@ -11,7 +11,7 @@ export const error = ref(false)
 export const sent = ref(false)
 
 export async function send () {
-  const url = `${process.env.API_BASE_URL}/contact`
+  const url = `${process.env.VUE_APP_API_BASE_URL}/contact`
   const data = {
     name: name.value,
     email: email.value,
@@ -44,5 +44,4 @@ export function clear () {
 
   loading.value = false
   error.value = false
-  sent.value = false
 }
