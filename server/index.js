@@ -1,4 +1,5 @@
 const express = require('express')
+const serverless = require('serverless-http')
 const bodyParser = require('body-parser')
 const sanitize = require('sanitize-html')
 const cors = require('cors')
@@ -22,7 +23,7 @@ app.post('/contact', (req, res, next) => {
   })
 
   const opts = {
-    to: 'evavro@gmail.com',
+    to: 'me@madhax.io',
     from: email,
     subject: `Contact form [${reason}]`,
     html: sanitize(message)
@@ -37,4 +38,5 @@ app.post('/contact', (req, res, next) => {
   })
 })
 
-app.listen(7000, () => console.log('evavro.com API started'))
+// app.listen(7000, () => console.log('evavro.com API started'))
+module.exports.handler = serverless(app)
