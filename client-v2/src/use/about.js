@@ -1,23 +1,24 @@
 export const books = [
-  { title: 'The Pragmatic Programmer', file: 'pragmatic-programmer.jpg' },
-  { title: 'Restful Web APIs', file: 'restful-web-apis.jpg' },
-  { title: 'High-Performance Browser Networking', file: 'browser-networking.jpg' },
-  { title: 'Design It!', file: 'design-it.jpg' },
-  { title: 'Thinking in Promises', file: 'thinking-in-promises.jpeg' },
-  { title: 'Principles of Object-Oriented JavaScript', file: 'principles-object-oriented-js.jpg' },
-  { title: 'Programming Elixir', file: 'programming-elixir.jpg' },
-  { title: 'Clojure for the Brave and True', file: 'clojure-brave-and-true.jpg' },
-  { title: 'Team Geek', file: 'team-geek.jpg' },
-  { title: 'Peopleware', file: 'peopleware.jpg' },
-  { title: 'Joel on Software', file: 'joel-on-software.jpg' },
-  { title: 'The Productive Programmer', file: 'productive-programmer.jpg' },
-  { title: 'The Start Up J-Curve', file: 'start-up-j-curve.jpg' },
-  { title: 'Soft Skills', file: 'soft-skills.jpg' },
+  { title: 'The Pragmatic Programmer', url: 'https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/' },
+  { title: 'Restful Web APIs', url: 'https://www.oreilly.com/library/view/restful-web-apis/9781449359713/' },
+  { title: 'High-Performance Browser Networking', url: 'https://hpbn.co' },
+  { title: 'Design It!', url: 'https://pragprog.com/titles/mkdsa/design-it/' },
+  { title: 'The Joy of UX', url: 'https://www.oreilly.com/library/view/the-joy-of/9780134277790/' },
+  { title: 'Thinking in Promises', url: 'https://www.oreilly.com/library/view/thinking-in-promises/9781491917862/' },
+  { title: 'Principles of Object-Oriented JavaScript', url: 'https://nostarch.com/oojs' },
+  { title: 'Programming Elixir', url: 'https://pragprog.com/titles/elixir16/programming-elixir-1-6/' },
+  { title: 'Clojure for the Brave and True', url: 'https://www.braveclojure.com/' },
+  { title: 'Team Geek', url: 'https://www.oreilly.com/library/view/team-geek/9781449329839/' },
+  { title: 'Peopleware', url: 'https://www.goodreads.com/book/show/67825.Peopleware' },
+  { title: 'Joel on Software', url: 'https://www.joelonsoftware.com/buy-the-books/' },
+  // { title: 'The Productive Programmer', url: 'https://www.oreilly.com/library/view/the-productive-programmer/9780596519780/' },
+  { title: 'The Start Up J-Curve', url: 'http://www.howardlove.com/' },
+  { title: 'Soft Skills', url: 'https://www.goodreads.com/book/show/23232941-soft-skills' },
   { title: 'Notes on the Synthesis of Form', file: 'notes-on-form.jpg' }
 ]
 
 export const interests = [
-  'Hypermedia', 'Web Semantics', 'Synchronization', 'Archival', 'Decentralization',
+  'Hypermedia', 'Web Semantics', 'Synchronization', 'Privacy', 'Decentralization',
   'Timers', 'Music', 'Animation', 'Visualizations', 'Maps', 'Education', 'Fitness'
 ]
 

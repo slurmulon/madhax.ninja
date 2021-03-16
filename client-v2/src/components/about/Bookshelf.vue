@@ -11,19 +11,23 @@
       lg="3"
       xl="2"
     >
-      <v-sheet color="transparent">
-        <v-img
-          class="elevation-2"
-          height="200px"
-          max-width="200px"
-          aspect-ratio="1"
-          :src="require(`../../../public/img/book-${book.file}`)"
+      <a
+        :href="book.url"
+        target="_blank"
+        class="white--text text-decoration-none title-1"
+      >
+        <v-sheet
+          :href="book.url"
+          outlined
+          rounded
+          elevation="2"
+          height="100"
+          color="rgba(50,50,50,0.25)"
+          class="d-flex align-center justify-center text-center pa-3"
         >
-          <template #placeholder>
-            <placeholder filled />
-          </template>
-        </v-img>
-      </v-sheet>
+            {{ book.title }}
+        </v-sheet>
+      </a>
     </v-col>
   </v-row>
 </template>
