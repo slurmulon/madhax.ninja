@@ -88,8 +88,9 @@
         v-model="sent"
         width="300"
         @input="v => v || (sent = false)"
+        background-opacity="0.5"
       >
-        <v-card color="transparent">
+        <v-card color="rgba(15,15,15,0.5)">
           <v-card-text class="text-center py-3">
             <v-icon
               color="success"
@@ -108,8 +109,9 @@
         v-model="error"
         width="300"
         @input="v => v || (error = false)"
+        background-opacity="0.5"
       >
-        <v-card color="transparent">
+        <v-card color="rgba(15,15,15,0.5)">
           <v-card-text class="text-center py-3">
             <v-icon 
               color="error"
