@@ -206,7 +206,9 @@ export default {
   methods: {
     async submit () {
       if (this.$refs.form.validate()) {
-        send()
+        await send()
+
+        this.clear()
       }
     },
 
