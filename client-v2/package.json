@@ -36,7 +36,13 @@
     "sass-loader": "^10.0.0",
     "vue-cli-plugin-vuetify": "~2.2.2",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.7.0"
+    "vuetify-loader": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.8",
+    "sanitize-html": "^1.18.4",
+    "serverless-http": "^2.7.0"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
