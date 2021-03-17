@@ -14,7 +14,7 @@ export const books = [
   // { title: 'The Productive Programmer', url: 'https://www.oreilly.com/library/view/the-productive-programmer/9780596519780/' },
   { title: 'The Start Up J-Curve', url: 'http://www.howardlove.com/' },
   { title: 'Soft Skills', url: 'https://www.goodreads.com/book/show/23232941-soft-skills' },
-  { title: 'Notes on the Synthesis of Form', file: 'notes-on-form.jpg' }
+  { title: 'Notes on the Synthesis of Form', url: 'https://www.hup.harvard.edu/catalog.php?isbn=9780674627512' }
 ]
 
 export const interests = [
