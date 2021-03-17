@@ -5,6 +5,8 @@ const sanitize = require('sanitize-html')
 // const cors = require('cors')
 const nodemailer = require('nodemailer')
 
+console.log('running server function')
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -41,5 +43,5 @@ app.post('/contact', (req, res, next) => {
   })
 })
 
-// app.listen(7000, () => console.log('evavro.com API started'))
-module.exports.handler = serverless(app)
+app.listen(7000, () => console.log('evavro.com API started'))
+// module.exports.handler = serverless(app)
