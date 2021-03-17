@@ -2,7 +2,6 @@ const express = require('express')
 const serverless = require('serverless-http')
 const bodyParser = require('body-parser')
 const sanitize = require('sanitize-html')
-// const cors = require('cors')
 const nodemailer = require('nodemailer')
 
 console.log('running server function')
@@ -10,18 +9,14 @@ console.log('running server function')
 const app = express()
 const router = express.Router()
 
-// app.use(cors())
-
-router.get('/', (req, res) => res.json({ works: true }))
-
-// app.get('/', (req, res) => res.json(require('../package.json')))
+router.get('/', (req, res) => res.json(require('../../package.json')))
 
 router.post('/contact', (req, res, next) => {
   console.log('sending email', req.body)
   const { from, email, reason, message } = req.body
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.madhax.io',
+    host: process.env.NODE_EMAIL_HOST,
     secure: false,
     auth: {
       user: process.env.NODE_EMAIL_USER,
@@ -30,7 +25,7 @@ router.post('/contact', (req, res, next) => {
   })
 
   const opts = {
-    to: 'me@madhax.io',
+    to: process.env.NODE_EMAIL_TO,
     from: email,
     subject: `Contact form [${reason}]`,
     html: sanitize(message)
