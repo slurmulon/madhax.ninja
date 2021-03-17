@@ -2,15 +2,16 @@ const express = require('express')
 const serverless = require('serverless-http')
 const bodyParser = require('body-parser')
 const sanitize = require('sanitize-html')
-const cors = require('cors')
+// const cors = require('cors')
 const nodemailer = require('nodemailer')
 
 const app = express()
 
 app.use(bodyParser.json())
-app.use(cors())
+// app.use(cors())
 
 app.post('/contact', (req, res, next) => {
+  console.log('sending email', req.body)
   const { from, email, reason, message } = req.body
 
   const transporter = nodemailer.createTransport({
