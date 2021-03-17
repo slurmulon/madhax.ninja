@@ -43,5 +43,4 @@ app.post('/contact', (req, res, next) => {
   })
 })
 
-app.listen(7000, () => console.log('evavro.com API started'))
-// module.exports.handler = serverless(app)
+module.exports.handler = serverless(app)
