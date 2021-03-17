@@ -8,15 +8,15 @@ const nodemailer = require('nodemailer')
 console.log('running server function')
 
 const app = express()
+const router = express.Router()
 
-app.use(bodyParser.json())
 // app.use(cors())
 
-app.get('/', (req, res) => res.json({ works: true }))
+router.get('/', (req, res) => res.json({ works: true }))
 
 // app.get('/', (req, res) => res.json(require('../package.json')))
 
-app.post('/contact', (req, res, next) => {
+router.post('/contact', (req, res, next) => {
   console.log('sending email', req.body)
   const { from, email, reason, message } = req.body
 
@@ -45,4 +45,9 @@ app.post('/contact', (req, res, next) => {
   })
 })
 
+app.use(bodyParser.json())
+app.use('/.netlify/functions/api', router)
+
+// @see: https://github.com/neverendingqs/netlify-express/blob/0780127cd575704e2a2a00a1a648ba5a5a66c388/express/server.js
+module.exports = app
 module.exports.handler = serverless(app)
