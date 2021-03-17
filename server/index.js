@@ -10,6 +10,8 @@ const app = express()
 app.use(bodyParser.json())
 // app.use(cors())
 
+app.get('/', (req, res) => res.json(require('../package.json')))
+
 app.post('/contact', (req, res, next) => {
   console.log('sending email', req.body)
   const { from, email, reason, message } = req.body
