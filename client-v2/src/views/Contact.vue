@@ -7,7 +7,7 @@
           v-model="valid"
           lazy-validation
           dark
-          @submit.prevent="send"
+          @submit.prevent="submit"
         >
           <v-text-field
             v-model="name"
