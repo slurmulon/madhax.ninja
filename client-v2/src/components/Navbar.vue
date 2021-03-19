@@ -41,7 +41,7 @@ export default {
 @use '../styles/backgrounds'
 
 .header
-  @extend .bg-sun
+  @extend .bg-sunburst-diag
   // background-color: rgba(255,255,255, 0.2) !important // 0.3
   // background-color: rgba(175,175,175, 0.5) !important // 0.3
 

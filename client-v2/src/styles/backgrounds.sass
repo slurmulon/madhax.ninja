@@ -1,139 +1,52 @@
-.bg-burning-orange
-  background: #FF416C  // fallback for old browsers
-  background: -webkit-linear-gradient(to top, #FF4B2B, #FF416C)
-  background: linear-gradient(to top, #FF4B2B, #FF416C)
+@use "sass:list"
+@use "sass:map"
 
-.bg-wiretap
-  background: #8A2387
-  background: -webkit-linear-gradient(to top, #F27121, #E94057, #8A2387)
-  background: linear-gradient(to top, #F27121, #E94057, #8A2387)
+@mixin bg-linear($name, $bg-from, $bg-to)
+  .bg-#{$name}
+    background: $bg-to
+    background: -webkit-linear-gradient(to top, $bg-from, $bg-to)
+    background: linear-gradient(to top, $bg-from, $bg-to)
 
-.bg-wiretap-reverse
-  background: #8A2387
-  background: -webkit-linear-gradient(to bottom, #F27121, #E94057, #8A2387)
-  background: linear-gradient(to bottom, #F27121, #E94057, #8A2387)
+@mixin bg-diag($name, $bg-from, $bg-to)
+  .bg-#{$name}-diag
+    background: $bg-to
+    background: linear-gradient(315deg, $bg-from, $bg-to)
+    background: -moz-radial-gradient(315deg, $bg-from, $bg-to)
+    background: -webkit-linear-gradient(315deg, $bg-from, $bg-to)
 
-.bg-bighead
-  background: #c94b4b
-  background: -webkit-linear-gradient(to top, #4b134f, #c94b4b)
-  background: linear-gradient(to top, #4b134f, #c94b4b)
+@mixin bg-radial($name, $bg-from, $bg-to)
+  .bg-#{$name}-radial
+    background: $bg-from
+    background: radial-gradient(to bottom right, $bg-from, $bg-to)
+    background: -moz-radial-gradient(top left, $bg-from, $bg-to)
+    background: -webkit-radial-gradient(top left, $bg-from, $bg-to)
 
-.bg-bighead-reverse
-  background: #c94b4b
-  background: -webkit-linear-gradient(to bottom, #4b134f, #c94b4b)
-  background: linear-gradient(to bottom, #4b134f, #c94b4b)
+$theme-aura: ("name": "aura", "from": #5C268D, "to": #A97928)
+$theme-haze: ("name": "haze", "from": darken(#4389A2, 10%), "to": #5C258D)
+$theme-haze-flip: ("name": "haze-flip", "from": #5C258D, "to": darken(#4389A2, 10%))
+$theme-kye: (name: "kye", "from": #8360c3, "to": #459397)
+$theme-sun: ("name": "sun", "from": #9B4D31, "to": #5C268D)
+$theme-sunburst: ("name": "sunburst", "from": hsla(30, 78%, 47%, 1), "to": hsla(326, 52%, 44%, 1))
+$theme-burning-orange: ("name": "burning-orange", "from": #FF416C, "to": #FF4B2B)
+$theme-grapefruit: ("name": "grapefruit", "from": #904e95, "to": #e96443)
+$theme-grapefruit-flip: ("name": "grapefruit", "from": #e96443, "to": #904e95)
+$theme-dawn: ("name": "dawn", "from": #3B4371, "to": #F3904F)
+$theme-metapolis: ("name": "metapolis", "from": #f4791f, "to": #659999)
+$theme-anwar: ("name": "anwar", "from": #cbcaa5, "to": #334d50)
+$theme-bighead: ("name": "bighead", "from": #4b134f, "to": #c94b4b)
 
-.bg-celestial
-  background: #C33764
-  background: -webkit-linear-gradient(to bottom, #1D2671, #C33764)
-  background: linear-gradient(to bottom, #1D2671, #C33764)
+$themes: ($theme-aura, $theme-haze, $theme-haze-flip, $theme-kye, $theme-sun, $theme-sunburst, $theme-burning-orange, $theme-grapefruit, $theme-grapefruit-flip, $theme-dawn, $theme-metapolis, $theme-anwar, $theme-bighead)
 
-.bg-dawn
-  background: #F3904F
-  background: -webkit-linear-gradient(to bottom, #3B4371, #F3904F)
-  background: linear-gradient(to bottom, #3B4371, #F3904F)
+@each $theme in $themes
+  $theme-name: map.get($theme, "name")
+  $theme-from: map.get($theme, "from")
+  $theme-to: map.get($theme, "to")
+  $theme-gradients: (($theme-to, $theme-from), ($theme-from, $theme-to))
 
-.bg-dawn-radial
-  $bg-to: #3B4371
-  $bg-from: #F3904F
-  background: $bg-from
-  background: radial-gradient(to bottom right, $bg-from, $bg-to)
-  background: -moz-radial-gradient(top left, $bg-from, $bg-to)
-  background: -webkit-radial-gradient(top left, $bg-from, $bg-to)
+  @each $gradient in $theme-gradients
+    $gradient-from: list.nth($gradient, 1)
+    $gradient-to: list.nth($gradient, 2)
 
-.bg-dusk
-  background: #2C3E50
-  background: -webkit-linear-gradient(to bottom, #FD746C, #2C3E50)
-  background: linear-gradient(to bottom, #FD746C, #2C3E50)
-
-.bg-dusk-reversed
-  background: #2C3E50
-  background: -webkit-linear-gradient(to top, #FD746C, #2C3E50)
-  background: linear-gradient(to top, #FD746C, #2C3E50)
-
-.bg-grapefruit
-  background: #e96443
-  background: -webkit-linear-gradient(to top, #904e95, #e96443)
-  background: linear-gradient(to top, #904e95, #e96443)
-
-.bg-grapefruit-reversed
-  background: #e96443
-  background: -webkit-linear-gradient(to bottom, #904e95, #e96443)
-  background: linear-gradient(to bottom, #904e95, #e96443)
-
-.bg-grapefruit-radial
-  $bg-to: #e96443
-  $bg-from: #904e95
-  background: $bg-to
-  background: radial-gradient(to bottom right, $bg-from, $bg-to)
-  background: -moz-radial-gradient(top left, $bg-from, $bg-to)
-  background: -webkit-radial-gradient(top left, $bg-from, $bg-to)
-
-
-.bg-starfall
-  background: #F0C27B
-  background: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B)
-  background: linear-gradient(to bottom, #4B1248, #F0C27B)
-
-.bg-vice-city
-  background: #3494E6
-  background: -webkit-linear-gradient(to top, #EC6EAD, #3494E6)
-  background: linear-gradient(to top, #EC6EAD, #3494E6)
-
-.bg-anwar
-  background: #334d50
-  background: -webkit-linear-gradient(to top, #cbcaa5, #334d50)
-  background: linear-gradient(to top, #cbcaa5, #334d50)
-
-.bg-memariani
-  background: #aa4b6b
-  background: -webkit-linear-gradient(to bottom, #3b8d99, #6b6b83, #aa4b6b)
-  background: linear-gradient(to bottom, #3b8d99, #6b6b83, #aa4b6b)
-
-.bg-metapolis
-  background: #659999
-  background: -webkit-linear-gradient(to bottom, #f4791f, #659999)
-  background: linear-gradient(to bottom, #f4791f, #659999)
-
-.bg-kye
-  $bg-from: #8360c3
-  $bg-to: #459397
-  // $bg-to: darken(#2ebf91, 5%)
-  // $bg-to: darken(#2ebf91, 10%)
-  background: #8360c3
-  background: -webkit-linear-gradient(to top, $bg-to, $bg-from)
-  background: linear-gradient(to top, $bg-to, $bg-from)
-
-.bg-sun
-  $bg-from: hsla(30, 78%, 47%, 1)
-  $bg-to: hsla(326, 52%, 44%, 1)
-  background: $bg-from
-  background: linear-gradient(315deg, $bg-from 0%, $bg-to 100%)
-  background: -moz-linear-gradient(315deg, $bg-from 0%, $bg-to 100%)
-  background: -webkit-linear-gradient(315deg, $bg-from 0%, $bg-to 100%)
-
-.bg-sun-radial
-  $bg-to: #5C268D
-  $bg-from: #9B4D31
-  background: $bg-from
-  background: radial-gradient(to bottom right, $bg-from, $bg-to)
-  background: -moz-radial-gradient(top left, $bg-from, $bg-to)
-  background: -webkit-radial-gradient(top left, $bg-from, $bg-to)
-
-.bg-verge
-  background: #7b4397
-  background: linear-gradient(to right, #7b4397, #dc2430)
-  background: -moz-linear-gradient(to right, #7b4397, #dc2430)
-  background: -webkit-linear-gradient(to right, #7b4397, #dc2430)
-
-.bg-haze
-  background: #5C258D
-  background: linear-gradient(315deg, darken(#4389A2, 10%), #5C258D)  // background: -webkit-linear-gradient(to right, #4389A2, #5C258D)
-  background: -moz-radial-gradient(315deg, darken(#4389A2, 10%), #5C258D)
-  background: -webkit-linear-gradient(315deg, darken(#4389A2, 10%), #5C258D)
-
-.bg-aura
-  background: #5C268D
-  background: radial-gradient(to bottom right, #5C268D, #A97928)
-  background: -moz-radial-gradient(top left, #5C268D, #A97928)
-  background: -webkit-radial-gradient(top left, #5C268D, #A97928)
+    @include bg-linear($theme-name, $gradient-from, $gradient-to)
+    @include bg-diag($theme-name, $gradient-from, $gradient-to)
+    @include bg-radial($theme-name, $gradient-from, $gradient-to)
