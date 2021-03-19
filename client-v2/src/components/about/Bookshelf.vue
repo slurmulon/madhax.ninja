@@ -22,7 +22,7 @@
           rounded
           elevation="2"
           height="100"
-          color="rgba(50,50,50,0.25)"
+          color="rgba(100,100,100,0.25)"
           class="d-flex align-center justify-center text-center font-weight-light pa-3"
         >
             {{ book.title }}
