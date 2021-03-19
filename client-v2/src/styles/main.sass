@@ -6,21 +6,23 @@
   src: url('../public/fonts/Lazer84.ttf')
 
 html, body
+  width: 100%
   height: 100%
   padding: 0
   margin: 0
-
-html
-  background: darken(#8C86D1, 10%)
-  overflow: -moz-scrollbars-none
-  -ms-overflow-style: none
 
   &::-webkit-scrollbar
     width: 0 !important
     display: none
 
+html
+  @extend .bg-sun-radial
+  overflow: -moz-scrollbars-none
+  -ms-overflow-style: none
+
 body
-  overflow-x: hidden // MADHAX: shouldn't be necessary, weird
+  overflow-x: hidden
+  z-index: 100
   font-family: 'Oxygen', sans-serif !important
   // font-family: 'Varela Round', sans-serif
   // LAST

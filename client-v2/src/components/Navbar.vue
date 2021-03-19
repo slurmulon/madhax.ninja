@@ -1,5 +1,8 @@
 <template>
-  <v-toolbar class="header">
+  <v-app-bar
+    app
+    class="header"
+  >
     <v-toolbar-title>
       <logo />
     </v-toolbar-title>
@@ -23,7 +26,7 @@
         Work
       </v-btn>
     </v-toolbar-items>
-  </v-toolbar>
+  </v-app-bar>
 </template>
 
 <script>
@@ -35,8 +38,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@use '../styles/backgrounds'
+
 .header
-  background-color: rgba(255,255,255, 0.2) !important // 0.3
+  @extend .bg-sun
+  // background-color: rgba(255,255,255, 0.2) !important // 0.3
+  // background-color: rgba(175,175,175, 0.5) !important // 0.3
 
   &::after
     content: ""
@@ -48,7 +55,4 @@ export default {
     position: absolute
     z-index: -1
     background: url('../../public/img/texture.svg') repeat
-
-  .v-toolbar__title
-    margin-top: -8px
 </style>

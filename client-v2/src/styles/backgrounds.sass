@@ -100,17 +100,17 @@
   $bg-to: #459397
   // $bg-to: darken(#2ebf91, 5%)
   // $bg-to: darken(#2ebf91, 10%)
-
   background: #8360c3
   background: -webkit-linear-gradient(to top, $bg-to, $bg-from)
   background: linear-gradient(to top, $bg-to, $bg-from)
 
 .bg-sun
-  background: hsla(30, 78%, 47%, 1)
-  background: linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
-  background: -moz-linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
-  background: -webkit-linear-gradient(315deg, hsla(30, 78%, 47%, 1) 0%, hsla(326, 52%, 44%, 1) 100%)
-  // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D4781A", endColorstr="#AA3678", GradientType=1 )
+  $bg-from: hsla(30, 78%, 47%, 1)
+  $bg-to: hsla(326, 52%, 44%, 1)
+  background: $bg-from
+  background: linear-gradient(315deg, $bg-from 0%, $bg-to 100%)
+  background: -moz-linear-gradient(315deg, $bg-from 0%, $bg-to 100%)
+  background: -webkit-linear-gradient(315deg, $bg-from 0%, $bg-to 100%)
 
 .bg-sun-radial
   $bg-to: #5C268D
