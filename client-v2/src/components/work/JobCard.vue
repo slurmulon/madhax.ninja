@@ -5,18 +5,44 @@
     class="job-card mb-4"
     v-bind="$attrs"
   >
-    <v-img
-      :src="require(`../../../public/img/${job.banner}`)"
-      height="200"
-    >
-      <template #placeholder>
-        <placeholder
-          filled
-          color="grey lighten-2"
-          opacity="1"
-        />
-      </template>
-    </v-img>
+    <v-hover v-slot="{ hover }">
+      <v-img
+        :src="require(`../../../public/img/${job.banner}`)"
+        height="200"
+      >
+        <template #placeholder>
+          <placeholder
+            filled
+            color="grey darken-2"
+            opacity="1"
+          />
+        </template>
+
+        <template #default>
+          <v-expand-transition>
+            <div
+              v-if="hover"
+              class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal display-3 white--text"
+              style="height: 100%; background: rgba(50,50,50,0.8);"
+            >
+              <v-row
+                align="center"
+                justify="center"
+              >
+                <v-col
+                  v-for="tool in job.tools"
+                  :key="tool.id"
+                  class="d-flex shrink px-4 text-center"
+                >
+                  <icon-tool :value="tool" />
+                </v-col>
+              </v-row>
+
+            </div>
+          </v-expand-transition>
+        </template>
+      </v-img>
+    </v-hover>
 
     <v-card-title primary-title>
       <v-row>
@@ -54,25 +80,6 @@
             {{ detail }}
           </p>
         </v-col>
-
-        <!-- TODO: Consider re-enabling. Feels like it adds to much clutter right now. -->
-        <!-- <v-col -->
-        <!--   cols="12" -->
-        <!--   class="pt-0" -->
-        <!-- > -->
-        <!--   <v-row -->
-        <!--     align="center" -->
-        <!--     justify="center" -->
-        <!--   > -->
-        <!--     <v-col -->
-        <!--       v-for="tool in job.tools" -->
-        <!--       :key="tool.id" -->
-        <!--       class="d-flex shrink px-4 text-center" -->
-        <!--     > -->
-        <!--       <icon-tool :value="tool" /> -->
-        <!--     </v-col> -->
-        <!--   </v-row> -->
-        <!-- </v-col> -->
       </v-row>
     </v-card-text>
   </section-card>
