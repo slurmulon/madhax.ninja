@@ -20,12 +20,12 @@
           :href="book.url"
           outlined
           rounded
-          elevation="2"
           height="100"
-          color="rgba(100,100,100,0.25)"
+          elevation="2"
+          color="rgba(100,100,100,0.1)"
           class="d-flex align-center justify-center text-center font-weight-light pa-3"
         >
-            {{ book.title }}
+          {{ book.title }}
         </v-sheet>
       </a>
     </v-col>
