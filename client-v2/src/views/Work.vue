@@ -1,28 +1,26 @@
 <template>
   <page>
-    <v-row>
-      <!-- TODO: Create SectionCardTitle to remove this duplication -->
-      <v-col
-        cols="12"
-        class="pb-0"
+    <!-- TODO: Create SectionCardTitle to remove this duplication -->
+    <v-col
+      cols="12"
+      class="pb-0"
+    >
+      <v-row
+        nowrap
+        align="center"
       >
-        <v-row
-          nowrap
-          align="center"
-        >
-          <v-col class="pb-1">
-            <h1 class="light-blue--text text--lighten-4">Career</h1>
-          </v-col>
-          <v-spacer />
-          <v-col class="text-right">
-            <icon-linked-in />
-          </v-col>
-        </v-row>
-      </v-col>
+        <v-col class="pb-1">
+          <h1 class="light-blue--text text--lighten-4">Career</h1>
+        </v-col>
+        <v-spacer />
+        <v-col class="text-right">
+          <icon-linked-in />
+        </v-col>
+      </v-row>
+    </v-col>
 
-      <jobs />
-      <projects />
-    </v-row>
+    <jobs />
+    <projects />
   </page>
 </template>
 

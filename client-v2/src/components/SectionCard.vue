@@ -3,7 +3,7 @@
     <v-col
       v-if="title"
       cols="12"
-      class="py-0"
+      class="pb-0"
     >
       <v-row
         nowrap
