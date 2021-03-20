@@ -27,7 +27,7 @@ const routes = [
     path: '/work',
     name: 'work',
     components: {
-      default: () => import(/* webpackChunkName: "contact" */ '../views/Work.vue'),
+      default: () => import(/* webpackChunkName: "work" */ '../views/Work.vue'),
       header: Navbar,
       footer: ContactButton
     }

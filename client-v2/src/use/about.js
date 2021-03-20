@@ -11,7 +11,6 @@ export const books = [
   { title: 'Team Geek', url: 'https://www.oreilly.com/library/view/team-geek/9781449329839/' },
   { title: 'Peopleware', url: 'https://www.goodreads.com/book/show/67825.Peopleware' },
   { title: 'Joel on Software', url: 'https://www.joelonsoftware.com/buy-the-books/' },
-  // { title: 'The Productive Programmer', url: 'https://www.oreilly.com/library/view/the-productive-programmer/9780596519780/' },
   { title: 'The Start Up J-Curve', url: 'http://www.howardlove.com/' },
   { title: 'Soft Skills', url: 'https://www.goodreads.com/book/show/23232941-soft-skills' },
   { title: 'Notes on the Synthesis of Form', url: 'https://www.hup.harvard.edu/catalog.php?isbn=9780674627512' }

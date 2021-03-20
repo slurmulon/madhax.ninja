@@ -6,7 +6,10 @@
 
     <template #default>
       <v-card-text>
-        <v-row wrap justify="start">
+        <v-row
+          wrap
+          justify="start"
+        >
           <v-col
             v-for="project in projects"
             :key="project.title"
