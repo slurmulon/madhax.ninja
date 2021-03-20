@@ -6,23 +6,20 @@
 
     <template #default>
       <v-card-text>
-        <v-row wrap>
+        <v-row wrap justify="start">
           <v-col
             v-for="project in projects"
             :key="project.title"
             v-if="project.active"
-            cols="12"
-            xl="6"
+            cols="6"
+            xl="4"
           >
             <v-row
               nowrap
               align="center"
               class="pa-2"
             >
-              <v-col
-                cols="3"
-                class="text-center pa-0"
-              >
+              <v-col class="shrink text-center">
                 <a
                   :href="project.url"
                   target="project"
@@ -42,7 +39,7 @@
                 </a>
               </v-col>
 
-              <v-col cols="9">
+              <v-col>
                 <v-row>
                   <v-col
                     cols="12"
