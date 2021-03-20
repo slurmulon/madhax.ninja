@@ -1,0 +1,52 @@
+@use "sass:list"
+@use "sass:map"
+
+@mixin bg-linear($name, $bg-from, $bg-to)
+  .bg-#{$name}
+    background: $bg-to
+    background: -webkit-linear-gradient(to top, $bg-from, $bg-to)
+    background: linear-gradient(to top, $bg-from, $bg-to)
+
+@mixin bg-diag($name, $bg-from, $bg-to)
+  .bg-#{$name}-diag
+    background: $bg-to
+    background: linear-gradient(315deg, $bg-from, $bg-to)
+    background: -moz-radial-gradient(315deg, $bg-from, $bg-to)
+    background: -webkit-linear-gradient(315deg, $bg-from, $bg-to)
+
+@mixin bg-radial($name, $bg-from, $bg-to)
+  .bg-#{$name}-radial
+    background: $bg-from
+    background: radial-gradient(to bottom right, $bg-from, $bg-to)
+    background: -moz-radial-gradient(top left, $bg-from, $bg-to)
+    background: -webkit-radial-gradient(top left, $bg-from, $bg-to)
+
+$theme-aura: ("name": "aura", "from": #5C268D, "to": #A97928)
+$theme-haze: ("name": "haze", "from": darken(#4389A2, 10%), "to": #5C258D)
+$theme-haze-flip: ("name": "haze-flip", "from": #5C258D, "to": darken(#4389A2, 10%))
+$theme-kye: (name: "kye", "from": #8360c3, "to": #459397)
+$theme-sun: ("name": "sun", "from": #9B4D31, "to": #5C268D)
+$theme-sunburst: ("name": "sunburst", "from": hsla(30, 78%, 47%, 1), "to": hsla(326, 52%, 44%, 1))
+$theme-burning-orange: ("name": "burning-orange", "from": #FF416C, "to": #FF4B2B)
+$theme-grapefruit: ("name": "grapefruit", "from": #904e95, "to": #e96443)
+$theme-grapefruit-flip: ("name": "grapefruit", "from": #e96443, "to": #904e95)
+$theme-dawn: ("name": "dawn", "from": #3B4371, "to": #F3904F)
+$theme-metapolis: ("name": "metapolis", "from": #f4791f, "to": #659999)
+$theme-anwar: ("name": "anwar", "from": #cbcaa5, "to": #334d50)
+$theme-bighead: ("name": "bighead", "from": #4b134f, "to": #c94b4b)
+
+$themes: ($theme-aura, $theme-haze, $theme-haze-flip, $theme-kye, $theme-sun, $theme-sunburst, $theme-burning-orange, $theme-grapefruit, $theme-grapefruit-flip, $theme-dawn, $theme-metapolis, $theme-anwar, $theme-bighead)
+
+@each $theme in $themes
+  $theme-name: map.get($theme, "name")
+  $theme-from: map.get($theme, "from")
+  $theme-to: map.get($theme, "to")
+  $theme-gradients: (($theme-to, $theme-from), ($theme-from, $theme-to))
+
+  @each $gradient in $theme-gradients
+    $gradient-from: list.nth($gradient, 1)
+    $gradient-to: list.nth($gradient, 2)
+
+    @include bg-linear($theme-name, $gradient-from, $gradient-to)
+    @include bg-diag($theme-name, $gradient-from, $gradient-to)
+    @include bg-radial($theme-name, $gradient-from, $gradient-to)

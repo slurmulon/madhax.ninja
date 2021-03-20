@@ -1,0 +1,11 @@
+.page-enter-active, .page-leave-active
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out
+  // transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1)
+
+.page-enter, .page-leave-to
+  transform: translate3d(0, 20px, 0)
+  opacity: 0
+
+.page-enter-to, .page-leave
+  transform: translate3d(0, 0, 0)
+  opacity: 1
