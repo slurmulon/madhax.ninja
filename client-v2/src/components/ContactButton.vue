@@ -1,6 +1,7 @@
 <template>
   <v-tooltip
     top
+    color="grey darken-3"
     open-delay="200"
   >
     <template #activator="{ on, attrs }">
