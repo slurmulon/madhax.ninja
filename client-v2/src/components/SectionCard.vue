@@ -11,7 +11,7 @@
 
     <v-col
       cols="12"
-      class="pt-0"
+      class="pt-0 pb-1"
     >
       <v-card
         :color="color"

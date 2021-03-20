@@ -2,7 +2,7 @@
   <section-card
     light
     color="rgba(255,255,255,0.8)"
-    class="job-card mb-4"
+    class="mb-3"
     v-bind="$attrs"
   >
     <v-hover v-slot="{ hover }">
@@ -112,9 +112,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-//.jobs-section .job-card
-//  .v-card
-//    background-color: rgba(255,255,255,0.15) !important
-</style>
