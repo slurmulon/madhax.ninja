@@ -3,13 +3,13 @@
     <v-col
       v-if="title"
       cols="12"
-      class="pb-0"
+      class="py-0"
     >
       <v-row
         nowrap
         align="center"
       >
-        <v-col>
+        <v-col class="pb-1">
           <h1 class="light-blue--text text--lighten-4">
             {{ title }}
           </h1>

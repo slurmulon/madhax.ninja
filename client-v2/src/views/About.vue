@@ -1,6 +1,6 @@
 <template>
   <page>
-    <v-row>
+    <v-row class="pt-3">
       <section-card title="Profile">
         <template #title-items>
           <icon-linked-in />
