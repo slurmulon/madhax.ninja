@@ -1,13 +1,13 @@
 <template>
   <v-col
     cols="12"
-    class="pb-0"
+    class="mt-3 pb-1"
   >
     <v-row
       nowrap
       align="center"
     >
-      <v-col class="pb-1">
+      <v-col>
         <h1 class="light-blue--text text--lighten-4">
           {{ text }}
         </h1>

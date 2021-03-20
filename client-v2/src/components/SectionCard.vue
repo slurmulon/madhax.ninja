@@ -9,7 +9,10 @@
       </template>
     </section-title>
 
-    <v-col cols="12">
+    <v-col
+      cols="12"
+      class="pt-0"
+    >
       <v-card
         :color="color"
         v-bind="$attrs"
