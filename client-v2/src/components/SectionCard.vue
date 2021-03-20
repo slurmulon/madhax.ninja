@@ -1,31 +1,15 @@
 <template>
   <v-row class="ma-0 pa-0">
-    <v-col
+    <section-title
       v-if="title"
-      cols="12"
-      class="pb-0"
+      :text="title"
     >
-      <v-row
-        nowrap
-        align="center"
-      >
-        <v-col class="pb-1">
-          <h1 class="light-blue--text text--lighten-4">
-            {{ title }}
-          </h1>
-        </v-col>
+      <template #title-items>
+        <slot name="title-items" />
+      </template>
+    </section-title>
 
-        <v-spacer />
-
-        <v-col class="text-right">
-          <slot name="title-items" />
-        </v-col>
-      </v-row>
-    </v-col>
-
-    <v-col
-      cols="12"
-    >
+    <v-col cols="12">
       <v-card
         :color="color"
         v-bind="$attrs"
@@ -38,7 +22,11 @@
 </template>
 
 <script>
+import SectionTitle from '@/components/SectionTitle'
+
 export default {
+  components: { SectionTitle },
+
   props: {
     title: String,
 
