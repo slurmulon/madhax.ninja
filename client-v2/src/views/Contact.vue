@@ -61,6 +61,7 @@
                 @click="clear"
                 text
                 block
+                outlined
                 color="grey lighten-2"
               >
                 <v-icon>mdi-delete</v-icon>
@@ -73,9 +74,9 @@
                 @click="submit"
                 type="submit"
                 color="light-blue lighten-4"
-                text
                 light
                 block
+                outlined
               >
                 <v-icon>send</v-icon>
               </v-btn>
