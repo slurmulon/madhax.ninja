@@ -1,4 +1,16 @@
-# client-v2
+# madhax.ninja
+> :sparkles: Portfolio website of Erik Vavro
+---
+
+:link: https://madhax.ninja
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/14ddc7c6-4e1f-4283-9dbb-6b571dcd3daa/deploy-status)](https://app.netlify.com/sites/mystifying-pasteur-ec8040/deploys)
+
+## Tooling
+
+ - Vue (2 + Composition API)
+ - Vuetify (2)
+ - SASS
 
 ## Project setup
 ```
