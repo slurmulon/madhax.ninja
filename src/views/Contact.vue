@@ -8,7 +8,7 @@
         dark
         @submit.prevent="submit"
       >
-        <v-card-text>
+        <v-card-text class="pb-0">
            <v-text-field
             v-model="name"
             :rules="rules.name"
@@ -58,7 +58,10 @@
             nowrap
             justify="end"
           >
-            <v-col cols="2">
+            <v-col
+              cols="3"
+              sm="2"
+            >
               <v-btn
                 @click="clear"
                 text
@@ -69,7 +72,10 @@
                 <v-icon>mdi-delete</v-icon>
               </v-btn>
             </v-col>
-            <v-col cols="2">
+            <v-col
+              cols="4"
+              sm="3"
+            >
               <v-btn
                 :disabled="!valid"
                 :loading="loading"
