@@ -4,15 +4,12 @@ const bodyParser = require('body-parser')
 const sanitize = require('sanitize-html')
 const nodemailer = require('nodemailer')
 
-console.log('running server function')
-
 const app = express()
 const router = express.Router()
 
 router.get('/', (req, res) => res.json(require('../../package.json')))
 
 router.post('/contact', (req, res, next) => {
-  console.log('sending email', req.body)
   const { from, email, reason, message } = req.body
 
   const transporter = nodemailer.createTransport({
