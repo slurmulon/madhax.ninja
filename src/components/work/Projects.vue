@@ -14,7 +14,8 @@
             v-for="project in projects"
             :key="project.title"
             v-if="project.active"
-            cols="6"
+            cols="12"
+            sm="6"
             xl="4"
           >
             <v-row
