@@ -1,15 +1,15 @@
 <template>
   <page>
     <section-card title="Contact">
-      <v-card-text>
-        <v-form
-          ref="form"
-          v-model="valid"
-          lazy-validation
-          dark
-          @submit.prevent="submit"
-        >
-          <v-text-field
+      <v-form
+        ref="form"
+        v-model="valid"
+        lazy-validation
+        dark
+        @submit.prevent="submit"
+      >
+        <v-card-text>
+           <v-text-field
             v-model="name"
             :rules="rules.name"
             :counter="100"
@@ -51,7 +51,9 @@
             tabindex="4"
             solo-inverted
           />
+        </v-card-text>
 
+        <v-card-actions class="pa-4 pt-0">
           <v-row
             nowrap
             justify="end"
@@ -82,8 +84,8 @@
               </v-btn>
             </v-col>
           </v-row>
-        </v-form>
-      </v-card-text>
+        </v-card-actions>
+      </v-form>
 
       <v-dialog
         v-model="sent"
