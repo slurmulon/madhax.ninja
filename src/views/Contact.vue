@@ -133,7 +133,7 @@
               Oops! Something went wrong...
             </div>
           </v-card-text>
-          </v-card>
+        </v-card>
       </v-dialog>
     </section-card>
   </page>

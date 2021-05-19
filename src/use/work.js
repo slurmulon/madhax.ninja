@@ -11,7 +11,7 @@ export const jobs = [
     details: [
       'Company’s first software engineering hire, architecting and leading the development of a VueJS 2.0 PWA that provides farmers with multispectral aerial imagery of agriculture fields. This helps farmers to identify problematic areas and obtain deep insight into the health and progress of their crops.',
       'Led the development and wrote the core components of a full-featured Mapbox GL library for VueJS. Supports next-level drawing features that are especially useful for farming, such as circles, cutouts and recursive grouping.',
-      'Introduced and guided several key development processes as the team grew. Improved communication between engineering, product and other stakeholders through the use of Behavior-Driven Development, Architecture Resource Diagrams, telemetry data, issue resolution archives and documentation.'
+      'Introduced and guided several key development processes as the team grew. Improved communication between engineering, product and other stakeholders through the use of Behavior-Driven Development, Architecture Decision Records, telemetry data, issue resolution archives and documentation.'
     ],
     tools: tools(['vue', 'vuetify', 'django', 'postgres', 'webpack', 'mapbox'])
   },
