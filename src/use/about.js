@@ -17,8 +17,8 @@ export const books = [
 ]
 
 export const interests = [
-  'Hypermedia', 'Web Semantics', 'Communication', 'Synchronization', 'Decentralization',
-  'Timers', 'Music', 'Animation', 'Visualizations', 'Maps', 'Education', 'Fitness'
+  'Hypermedia', 'Web Semantics', 'State Management', 'Visualizations', 'Design',
+  'Timers', 'Music', 'Animation', 'Magic: The Gathering', 'Maps', 'Education', 'Fitness'
 ]
 
 export const philosophies = [

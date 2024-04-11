@@ -13,8 +13,9 @@
     >
       <a
         :href="book.url"
+        :alt="book.title"
         target="_blank"
-        class="white--text text-decoration-none title-1"
+        class="white--text text-decoration-none title-1 "
       >
         <v-sheet
           :href="book.url"
@@ -23,7 +24,7 @@
           height="100"
           elevation="2"
           color="rgba(22,22,22,0.2)"
-          class="d-flex align-center justify-center text-center font-weight-light pa-3"
+          class="d-flex align-center justify-center text-center font-weight-regular pa-3"
         >
           {{ book.title }}
         </v-sheet>
@@ -35,10 +36,10 @@
 <script>
 import { books } from '@/use/about'
 
-import Placeholder from '@/components/Placeholder'
+/* import Placeholder from '@/components/Placeholder' */
 
 export default {
-  data: () => ({ books }),
-  components: { Placeholder }
+  data: () => ({ books })
+  /* components: { Placeholder } */
 }
 </script>

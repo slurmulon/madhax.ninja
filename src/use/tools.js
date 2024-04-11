@@ -3,8 +3,8 @@ export const all = [
   { id: 'html5', title: 'HTML5', url: 'https://www.w3.org/TR/html52/', icon: 'html5.png', level: 85, specialty: true },
   { id: 'css3', title: 'CSS3', url: 'http://css-tricks.com', icon: 'css3.png', level: 80, specialty: true },
   { id: 'svg', title: 'SVG', url: 'https://www.w3.org/Graphics/SVG/', icon: 'svg.png', level: 80, specialty: true },
-  { id: 'vue', title: 'Vue', url: 'https://vuejs.org', icon: 'vuejs.png', level: 90, specialty: true },
-  { id: 'vuetify', title: 'Vuetify', url: 'https://vuetifyjs.com', icon: 'vuetify.png', level: 85, specialty: true },
+  { id: 'vue', title: 'Vue (2/3)', url: 'https://vuejs.org', icon: 'vuejs.png', level: 90, specialty: true },
+  { id: 'vuetify', title: 'Vuetify (1/2)', url: 'https://vuetifyjs.com', icon: 'vuetify.png', level: 85, specialty: true },
   { id: 'angular', title: 'Angular (1.X)', url: 'https://angularjs.org', icon: 'angular.png', level: 85 },
   { id: 'semantic-ui', title: 'Semantic UI', url: 'https://semantic-ui.com', icon: 'semantic-ui.png', level: 45 },
   { id: 'elixir', title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png', level: 70, specialty: true },
@@ -27,7 +27,9 @@ export const all = [
   { id: 'leaflet', title: 'Leaflet', url: 'https://leafletjs.com', icon: 'leaflet.png', level: 70 },
   { id: 'vim', title: 'Vim', url: 'https://www.vim.org', icon: 'vim.png', level: 75, specialty: true },
   { id: 'git', title: 'Git', url: 'https://git-scm.com', icon: 'git.png', level: 90, specialty: true },
-  { id: 'nginx', title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 }
+  { id: 'nginx', title: 'Nginx', url: 'https://nginx.com', icon: 'nginx.png', level: 65 },
+  { id: 'jira', title: 'Jira', url: 'https://jira.com', icon: 'jira.png', level: 65 },
+  { id: 'jest', title: 'Jest', url: 'https://jira.com', icon: 'jest.png', level: 65 }
 ]
 
 export const specialties = all.filter(tool => tool.specialty)

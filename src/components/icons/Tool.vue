@@ -1,6 +1,7 @@
 <template>
   <a
     :href="tool.url"
+    :alt="tool.title"
     :class="classes"
     target="_blank"
   >

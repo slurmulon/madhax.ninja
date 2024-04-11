@@ -15,9 +15,7 @@
         align="center"
       >
         <v-col
-          cols="3"
-          sm="4"
-          lg="4"
+          style="flex: 0 0 64px"
           class="text-center"
         >
           <icon-tool
@@ -26,11 +24,9 @@
           />
         </v-col>
         <v-col
-          cols="8"
-          sm="8"
-          lg="8"
+          class="flex-grow-1"
         >
-          <span class="font-weight-light">{{ tool.title }}</span>
+          <div class="font-weight-regular mb-2">{{ tool.title }}</div>
           <v-progress-linear
             v-model="tool.level"
             color="cyan lighten-4"

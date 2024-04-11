@@ -2,6 +2,21 @@ import { each as tools } from '@/use/tools'
 
 export const jobs = [
   {
+    company: 'TCGplayer ',
+    url: 'https://tcgplayer.com',
+    logo: 'tcgplayer.png',
+    banner: 'job-tcgplayer.png',
+    title: 'Senior Front-end Engineer',
+    time: 'Dec. 2021 - Present',
+    details: [
+      'Helping build the most beloved marketplace of hobbyists and the collectible community using Vue 3.',
+      'Primarily focused on ensuring our marketplace front-end will elegantly scale for years to come.',
+      'Recently led a complicated and exhaustive migration from Vue 2 to Vue 3.'
+      // 'Helping develop and advance the usage of our internal Design Language System.'
+    ],
+    tools: tools(['vue', 'html5', 'css3', 'postgres', 'webpack', 'git'])
+  },
+  {
     company: 'Ceres Imaging',
     url: 'https://ceresimaging.net',
     logo: 'ceres.png',
@@ -37,7 +52,7 @@ export const jobs = [
     title: 'Senior Software Engineer',
     time: 'Summer 2013 - Summer 2015',
     details: [
-      'Lead the development of an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it went live.',
+      'Led the development of an AngularJS single page application (known as OurSungevity) that allowed potential customers to experiment with a variety of customizations to their solar system, especially their various financing options, and to monitor their system\'s energy performance after it went live.',
       'The application was fully internationalized and could be easily customized for partner companies to a large degree.',
       'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
     ],
@@ -64,7 +79,7 @@ export const projects = [
   },
   {
     title: 'gig',
-    emoji: '🔉',
+    emoji: '🔊',
     active: true,
     desc: 'Real-time bach engine for JS',
     url: 'https://github.com/slurmulon/gig',
@@ -74,7 +89,7 @@ export const projects = [
     title: 'flap',
     emoji: '🗿',
     active: false,
-    tools: ['js'],
+    // tools: ['js'],
     desc: 'Functional guard clauses in JS',
     url: 'https://github.com/slurmulon/flap',
     tools: tools(['js'])
@@ -86,6 +101,15 @@ export const projects = [
     desc: 'Pragmatic and flexible Webhook API for Elixir',
     url: 'https://github.com/camirmas/grapple',
     tools: tools(['elixir'])
+  },
+  {
+    title: 'json-where',
+    emoji: '🔍',
+    active: true,
+    // tools: ['js'],
+    desc: 'Transparent JSON query descriptors',
+    url: 'https://github.com/slurmulon/json-where',
+    tools: tools(['js'])
   },
   {
     title: 'tasty-commits',

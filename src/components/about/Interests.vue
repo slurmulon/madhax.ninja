@@ -9,7 +9,7 @@
       xl="2"
       class="text-center"
     >
-      <span class="white--text font-weight-light">{{ interest }}</span>
+      <span class="white--text font-weight-regular">{{ interest }}</span>
     </v-col>
   </v-row>
 </template>

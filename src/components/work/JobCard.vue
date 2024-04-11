@@ -63,18 +63,17 @@
           class="text-center pt-0"
         >
           <div class="font-weight-bold text-subtitle-1">{{ job.title }}<br/>
-          <span class="text-body-2 font-weight-thin">{{ job.time }}</span></div>
+          <span class="text-body-2 font-weight-light">{{ job.time }}</span></div>
         </v-col>
       </v-row>
     </v-card-title>
 
     <v-card-text>
       <v-row>
-        <v-col cols="12">
+        <v-col cols="12" class="job-details">
           <p
             v-for="detail in job.details"
             :key="detail"
-            class="font-weight-light"
             style="word-break: break-word"
           >
             {{ detail }}
@@ -90,7 +89,7 @@ import SectionCard from '@/components/SectionCard'
 import Placeholder from '@/components/Placeholder'
 
 import IconTool from '@/components/icons/Tool'
-import IconLinkedIn from '@/components/icons/LinkedIn'
+/* import IconLinkedIn from '@/components/icons/LinkedIn' */
 
 export default {
   props: {
@@ -107,8 +106,14 @@ export default {
   components: {
     SectionCard,
     Placeholder,
-    IconTool,
-    IconLinkedIn
+    IconTool
+    /* IconLinkedIn */
   }
 }
 </script>
+
+<style lang="sass" scoped>
+.job-details
+  > p:last-child
+    margin-bottom: 0
+</style>

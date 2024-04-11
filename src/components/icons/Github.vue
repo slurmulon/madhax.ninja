@@ -3,6 +3,7 @@
     icon
     light
     href="https://github.com/slurmulon"
+    alt="GitHub Profile"
     target="_blank"
   >
     <v-icon>

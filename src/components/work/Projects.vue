@@ -13,17 +13,19 @@
           <v-col
             v-for="project in projects"
             :key="project.title"
-            v-if="project.active"
             cols="12"
             sm="6"
             xl="4"
           >
             <v-row
               nowrap
-              align="center"
+              align="start"
               class="pa-2"
             >
-              <v-col class="shrink text-center">
+              <v-col
+                class="shrink text-center"
+                style="flex: 0 0 72px"
+              >
                 <a
                   :href="project.url"
                   target="project"
@@ -58,7 +60,7 @@
                     </a>
                   </v-col>
                   <v-col cols="12">
-                    <span class="caption font-weight-light white--text">{{ project.desc }}</span>
+                    <span class="caption font-weight-regular">{{ project.desc }}</span>
                   </v-col>
                 </v-row>
               </v-col>
@@ -77,7 +79,10 @@ import SectionCard from '@/components/SectionCard'
 import IconGithub from '@/components/icons/Github'
 
 export default {
-  data: () => ({ projects }),
+  data: () => ({
+    projects: projects.filter(({ active }) => active)
+  }),
+
   components: {
     SectionCard,
     IconGithub
