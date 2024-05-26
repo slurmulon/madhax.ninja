@@ -1,0 +1,111 @@
+@use './backgrounds'
+@use './transitions'
+
+@font-face
+  font-family: Lazer84
+  src: url('../fonts/Lazer84.ttf')
+
+html, body
+  width: 100%
+  height: 100vh
+  padding: 0
+  margin: 0
+
+  &::-webkit-scrollbar
+    width: 0 !important
+    display: none
+
+html
+  overflow: -moz-scrollbars-none
+  -ms-overflow-style: none
+
+// body, .v-application
+.v-application
+  background: transparent !important
+  height: 100%
+body
+  // position: relative
+  overflow-x: hidden
+  z-index: 100
+  font-family: 'Oxygen', sans-serif !important
+  // font-family: 'Varela Round', sans-serif
+  // LAST
+  // @extend .bg-sun-radial
+  // NEXT
+  @extend .bg-raisin-radial
+  // ALT-NEXT - GREAT
+  // @extend .bg-haze-flat-radial
+  // LAST/ORIG
+  // @extend .bg-haze-flip-radial
+  // @extend .bg-dawn-radial
+  // @extend .bg-aura-flat-radial
+  height: 100%
+
+  &::after
+    content: ""
+    opacity: 0.25
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/wheat.png") repeat
+    // opacity: 0.1
+    // FAV
+    background: url("https://www.toptal.com/designers/subtlepatterns/uploads/ep_naturalblack.png") repeat
+    transition: background 0.5s ease-in
+    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/curls.png") repeat
+    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/papyrus-dark.png") repeat
+    // BEST
+    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/vintage-wallpaper.png") repeat
+    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-dark.png") repeat
+    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/fancy-cushion.png") repeat
+
+
+.theme--light.v-application,
+.theme--dark.v-application
+  background: none !important
+
+// Fixes Vuetify bug using solo-inverted on v-textarea (uses white text)
+.theme--dark.v-input.v-textarea.v-input--is-focused textarea
+  color: black !important
+
+.v-toolbar-title__placeholder
+  overflow: visible
+
+// .section-card.v-card.v-theme--brandTheme .v-card-text
+//   position: relative
+//   // @extend .bg-haze
+
+//   &::after
+//     content: ""
+//     opacity: 0.25
+//     top: 0
+//     left: 0
+//     bottom: 0
+//     right: 0
+//     position: absolute
+//     // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/vintage-wallpaper.png")
+//     // filter: hue-rotate(225deg)
+//     // opacity: 0.1
+//     // FAV
+//     // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/ep_naturalblack.png") repeat
+
+
+h1, h2, h3, h4, h5, h6, .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6
+  padding: 0
+  margin: 0
+  font-family: 'Yesteryear', cursive !important
+  text-shadow: 1px 2px 2px #000 !important
+
+.shiny
+  font-family: 'Yesteryear', cursive
+  font-size: 1.75em !important
+  font-weight: bold
+  text-decoration: none
+  text-transform: none
+  transition: all 0.2s ease-in
+
+  .v-btn__content
+    text-shadow: 1px 1px 2px black !important

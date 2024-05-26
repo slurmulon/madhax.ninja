@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140">
+    <defs>
+        <pattern id="hlpic" patternUnits="userSpaceOnUse" width="4" height="4">
+            <path d="M 0,4 l 4,-4 M -1,1 l 2,-2
+M 3,5 l 2,-2" stroke-width="1" shape-rendering="auto" stroke="#303030" stroke-linecap="square"></path>
+        </pattern>
+    </defs>
+    <path d="M 0 0 L 0 140 L 140 140 L 140 0 Z" style="fill: url(&quot;#hlpic&quot;);"></path>
+</svg>
