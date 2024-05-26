@@ -21,6 +21,7 @@ declare module 'vue' {
     LinkedIn: typeof import('./components/icons/LinkedIn.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
+    NightSky: typeof import('./components/NightSky.vue')['default']
     Page: typeof import('./components/Page.vue')['default']
     Philosophy: typeof import('./components/about/Philosophy.vue')['default']
     Placeholder: typeof import('./components/Placeholder.vue')['default']

@@ -4,7 +4,7 @@
     justify="start"
   >
     <v-col
-      v-for="book in books"
+      v-for="(book, index) in books"
       :key="book.title"
       cols="6"
       sm="4"
@@ -22,6 +22,30 @@
         hover
         variant="outlined"
         color="primary"
+        v-motion
+        :initial="{
+          opacity: 0,
+          scale: 1,
+        }"
+        :visible="{
+          opacity: 1,
+          scale: 1,
+          transition: {
+            type: 'spring',
+            stiffness: '150',
+            delay: (index * 10)
+          },
+        }"
+        :hovered="{
+          scale: 1.075,
+          transition: {
+            type: 'spring',
+            stiffness: '100',
+            delay: 100,
+          },
+        }"
+        :duration="400"
+
         class="d-flex align-center justify-center text-center font-weight-regular pa-3"
       >
         <!-- color="hsla(270.77deg, 15.11%, 55%, 0.15)" -->

@@ -7,7 +7,8 @@
 
 html, body
   width: 100%
-  height: 100vh
+  // height: 100vh
+  height: 100%
   padding: 0
   margin: 0
 
@@ -18,21 +19,61 @@ html, body
 html
   overflow: -moz-scrollbars-none
   -ms-overflow-style: none
+  // height: 100%
 
 // body, .v-application
 .v-application
   background: transparent !important
+  // position: relative
   height: 100%
+
+// .v-layout
+//   position: relative
+//   overflow-x: hidden
+//   // height: 100%
+//   @extend .bg-raisin-radial
+//   background-attachment: fixed
+//   background-repeat: no-repeat
+//   z-index: 2
+
+//   &::after
+//     content: ""
+//     opacity: 0.25
+//     top: 0
+//     left: 0
+//     bottom: 0
+//     right: 0
+//     position: absolute
+//     z-index: 1
+//     // opacity: 0.1
+//     // FAV
+//     background: url("https://www.toptal.com/designers/subtlepatterns/uploads/ep_naturalblack.png") repeat
+
+//     background-attachment: fixed
+//     transition: background 0.5s ease-in
+//     // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/curls.png") repeat
+//     // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/papyrus-dark.png") repeat
+//     // BEST
+//     // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/vintage-wallpaper.png") repeat
+//     // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-dark.png") repeat
+//     // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/fancy-cushion.png") repeat
+
+
 body
   // position: relative
-  overflow-x: hidden
-  z-index: 100
+  // overflow-x: hidden
+  // z-index: 100
+  z-index: 1
   font-family: 'Oxygen', sans-serif !important
   // font-family: 'Varela Round', sans-serif
   // LAST
   // @extend .bg-sun-radial
   // NEXT
-  @extend .bg-raisin-radial
+  // @extend .bg-raisin-radial
+
+  // background-attachment: fixed
+  // background-repeat: no-repeat
+
   // ALT-NEXT - GREAT
   // @extend .bg-haze-flat-radial
   // LAST/ORIG
@@ -40,27 +81,6 @@ body
   // @extend .bg-dawn-radial
   // @extend .bg-aura-flat-radial
   height: 100%
-
-  &::after
-    content: ""
-    opacity: 0.25
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-    position: absolute
-    z-index: -1
-    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/wheat.png") repeat
-    // opacity: 0.1
-    // FAV
-    background: url("https://www.toptal.com/designers/subtlepatterns/uploads/ep_naturalblack.png") repeat
-    transition: background 0.5s ease-in
-    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/curls.png") repeat
-    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/papyrus-dark.png") repeat
-    // BEST
-    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/vintage-wallpaper.png") repeat
-    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-dark.png") repeat
-    // background: url("https://www.toptal.com/designers/subtlepatterns/uploads/fancy-cushion.png") repeat
 
 
 .theme--light.v-application,

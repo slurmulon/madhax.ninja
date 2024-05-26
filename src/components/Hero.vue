@@ -15,7 +15,25 @@
       <v-img src="../../public/img/trees-1.4000x2666.png" height="100vh" width="100vw" />
     </div> -->
 
-    <div class="landscape" style="position: absolute; bottom: -10px; left: 0; right: 0; opacity: 1.0">
+    <div
+      v-motion
+      :initial="{
+        y: 30,
+      }"
+      :enter="{
+        y: 0,
+        transition: {
+          type: 'spring',
+          stiffness: '70',
+          delay: 0,
+        },
+      }"
+      :delay="0"
+      :duration="1200"
+
+      class="landscape"
+      style="position: absolute; bottom: -10px; left: 0; right: 0; opacity: 1.0"
+    >
       <!-- <towers-svg height="100%" width="100%" style="fill: #212a30; stroke: #212a30;" /> -->
       <palm-trees-svg id="palm-trees" height="100%" width="100%" style="fill: #212a30;" />
     </div>
@@ -44,6 +62,22 @@
   <div
     class="text-h4 text-surface font-weight-thin"
     style="position: absolute; top: 64px; left: 0; right: 0; bottom: 0; display: flex; flex-flow: column wrap; align-items: center; justify-content: center; font-family: Oxygen, sans-serif !important"
+    v-motion
+    :initial="{
+      opacity: 0,
+      y: -100,
+    }"
+    :enter="{
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: '75',
+        delay: 300,
+      },
+    }"
+    :delay="600"
+    :duration="200"
   >
     <div class="text-h1 w-100 text-center d-block text-primary">
     <!-- <div class="text-h1 w-100 text-center d-block text-accent"> -->

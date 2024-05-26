@@ -2,6 +2,8 @@
   <v-layout>
     <!-- <router-view /> -->
 
+    <night-sky />
+
     <navbar />
 
     <router-view v-slot="{ Component, route }">
@@ -21,6 +23,7 @@
 <script lang="ts" setup>
 import Navbar from '@/components/Navbar'
 /* import Layout from '@/components/Layout' */
+import NightSky from '@/components/NightSky'
 </script>
 
 <style lang="sass">
