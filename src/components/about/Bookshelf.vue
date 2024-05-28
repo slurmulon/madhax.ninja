@@ -25,15 +25,20 @@
         v-motion
         :initial="{
           opacity: 0,
+          scale: 0.825,
+        }"
+        :leave="{
+          opacity: 1,
           scale: 1,
         }"
-        :visible="{
+        :visibleOnce="{
           opacity: 1,
           scale: 1,
           transition: {
             type: 'spring',
             stiffness: '150',
-            delay: (index * 10)
+            delay: (index * 10),
+            duration: 400,
           },
         }"
         :hovered="{
@@ -44,8 +49,6 @@
             delay: 100,
           },
         }"
-        :duration="400"
-
         class="d-flex align-center justify-center text-center font-weight-regular pa-3"
       >
         <!-- color="hsla(270.77deg, 15.11%, 55%, 0.15)" -->

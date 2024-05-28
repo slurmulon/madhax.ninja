@@ -30,37 +30,19 @@
       }"
       :delay="0"
       :duration="1200"
-
       class="landscape"
-      style="position: absolute; bottom: -10px; left: 0; right: 0; opacity: 1.0"
     >
-      <!-- <towers-svg height="100%" width="100%" style="fill: #212a30; stroke: #212a30;" /> -->
-      <palm-trees-svg id="palm-trees" height="100%" width="100%" style="fill: #212a30;" />
+      <!-- <palm-trees-svg id="palm-trees" height="100%" width="100%" style="fill: #212a30;" /> -->
+      <palm-trees-svg
+        height="100%"
+        width="100%"
+        class="palm-trees"
+      />
     </div>
-
-    <!-- <div class="desert" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; opacity: 0.5; filter: hue-rotate(165deg) contrast(150%) grayscale(20%)">
-      <v-img src="../../public/img/desert-1.2896x2060.jpg" width="100%" max-height="100%" cover />
-    </div> -->
-
-
-    <div class="sloth" style="position: absolute; left: -34px; top: -68px; transform: scaleX(-1); visibility: hidden">
-      <!-- <v-img src="../../public/img/sloth-2.svg" height="500" width="500" aspect-ratio="1 / 1" /> -->
-      <sloth-svg id="sloth-svg" height="65vh" width="65vh" style="fill: #212a30; stroke: #212a30; " />
-    </div>
-    <!-- <div class="sun" style="position: absolute; left: -68px; top: -34px;">
-      <v-img src="../../public/img/sun-face-1.svg" height="250" width="250" aspect-ratio="1 / 1" />
-    </div> -->
-    <!-- <div class="country" style="position: absolute; bottom: -25vh; left: 0; right: 0;">
-      <v-img src="../../public/img/country-1.1500x1000.png" width="1500" cover aspect-ratio="3 / 2"  style="margin: 0 auto" />
-    </div> -->
-    <!-- <div class="city" style="position: absolute; bottom: -20px; left: 0; right: 0;">
-      <city-svg height="100vh" width="100vw" style="fill: rgb(var(--v-theme-surface))" />
-    </div> -->
-
   </div>
 
   <div
-    class="text-h4 text-surface font-weight-thin"
+    class="text-surface font-weight-thin"
     style="position: absolute; top: 64px; left: 0; right: 0; bottom: 0; display: flex; flex-flow: column wrap; align-items: center; justify-content: center; font-family: Oxygen, sans-serif !important"
     v-motion
     :initial="{
@@ -76,8 +58,8 @@
         delay: 300,
       },
     }"
-    :delay="600"
-    :duration="200"
+    :delay="800"
+    :duration="100"
   >
     <div class="text-h1 w-100 text-center d-block text-primary">
     <!-- <div class="text-h1 w-100 text-center d-block text-accent"> -->
@@ -98,8 +80,9 @@
       <!-- Wrangling bits on the web -->
       <!-- Quality code with style -->
     </div>
-    <div class="pa-4 d-block">
+    <div class="d-block px-4 pt-4">
       <v-btn
+        to="/work"
         variant="outlined"
         color="white"
         class="mr-2"
@@ -120,7 +103,7 @@
 </template>
 
 <script setup>
-import gsap from 'gsap'
+/* import gsap from 'gsap' */
 
 import SlothSvg from '../../public/img/sloth-2.svg'
 import CitySvg from '../../public/img/city-1.svg'
@@ -144,26 +127,27 @@ onMounted(() => {
   /*   console.log('vivus playing?', v.getStatus()) */
   /* }, 2000) */
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "top top",
-      end: "bottom top",
-      scrub: true
-    }
-  })
+  /* const tl = gsap.timeline({ */
+  /*   scrollTrigger: { */
+  /*     trigger: "#hero", */
+  /*     start: "top top", */
+  /*     end: "bottom top", */
+  /*     scrub: true */
+  /*   } */
+  /* }) */
 
-  gsap.utils.toArray('.parallax').forEach(layer => {
-    const depth = layer.dataset.depth
-    const movement = -(layer.offsetHeight * depth)
+  /* gsap.utils.toArray('.parallax').forEach(layer => { */
+  /*   const depth = layer.dataset.depth */
+  /*   const movement = -(layer.offsetHeight * depth) */
 
-    tl.to(layer, { y: movement, ease: 'none' }, 0)
-  })
+  /*   tl.to(layer, { y: movement, ease: 'none' }, 0) */
+  /* }) */
 })
 </script>
 
 <style lang="sass" scoped>
 @use '../styles/backgrounds'
+@use "sass:color"
 
 /* $heroHeight: 800px */
 /* $heroHeight: calc(100vh / 2) */
@@ -174,11 +158,29 @@ $heroHeight: 100vh
 /* $heroHeight: 400px */
 
 #hero
-  @extend .bg-sunset-radial
+  /* @extend .bg-sunset-radial */
+  /* filter: blur(0px) */
+  background-repeat: no-repeat
+
+  /* background-color: #346a7e */
+  /* background-color: #4389A2 */
+  /* background-color: #c9c8a7 */
+
+  background-color: #77a3b3 // teal
+  /* background-color: #9e99c7 // purp */
+  /* background-color: #99c7b4 // mint */
+
+  animation-name: sky
+  animation-duration: 800ms
+  animation-iteration-count: 1
+  animation-timing-function: ease-in
+  animation-direction: normal
+
+  /* transform: translateZ(0) */
   /* @extend .bg-sunburst-radial */
   /* @extend .bg-haze-radial */
   /* @extend .bg-glow-radial */
-  /* @extend .bg-metapolis-radial */
+  /* @extend .bg-metapolis-radial // GREAT */
   /* @extend .bg-anwar-radial */
   /* @extend .bg-grapefruit-radial */
   /* @extend .bg-sun-radial */
@@ -186,7 +188,11 @@ $heroHeight: 100vh
   /* @extend .bg-aura-diag */
   /* @extend .bg-dawn-radial */
 
-  opacity: 0.2
+  /* opacity: 0.2 */
+  /* opacity: 0.1975 */
+  /* opacity: 0.1 */
+  opacity: 0.125
+  /* opacity: 0.4 */
   height: $heroHeight
   /* overflow: hidden */
   /* overflow-y: clip */
@@ -195,68 +201,43 @@ $heroHeight: 100vh
   /* max-width: 1920px */
   /* margin: 0 auto */
   width: 100vw
-  /* background-image: url('../../public/img/trees-2.1200x1200.png') */
   /* background-repeat: no-repeat */
   /* background-attachment: bottom center */
 
-.layer
-  background-position: bottom center
-  background-size: auto
-  background-repeat: no-repeat
-  width: 100%
-  height: $heroHeight
-  position: fixed
-  z-index: -1
+.landscape
+  position: absolute
+  bottom: -10px
+  left: 0
+  right: 0
+  opacity: 1.0
 
-#hero-mobile
-  display: none
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png") no-repeat center bottom / cover
-  height: 320px
+  & > .palm-trees
+    fill: hsl(204 7% 16% / 1)
+    /* fill: #212a30 */
 
-.first-section
-  padding: 50px 0 20px 0
+/* $color-clock-6: #4389a2 */
+/* $color-clock-12: #c9c8a7 */
+/* $color-clock-18: #77a3b3 */
 
-.text-header
-  font-size: 50px
-  text-align: center
+@keyframes sky
+  0%
+    background: transparent
+    /* background-color: #779db3 // mid-hue blue */
+    /* @extend .bg-kye-radial */
+    // bg-dawn
+    /* background: -moz-radial-gradient(top left, $bg-from, $bg-to) !important */
+    /* background: -webkit-radial-gradient(top left, $bg-from, $bg-to) !important */
+    /* background: radial-gradient(top left, color.scale(#3B4371, $saturation: -50%), #F3904F) */
 
-h1
-  line-height: 120%
-  margin-bottom: 30px
 
-p
-  color: #ede0d5
-  font-size: 18px
-  line-height: 150%
+  /* 25% */
+    /* background-color: #b39b77 // pale orange */
+    /* @extend .bg-sunset-radial */
 
-#hero, .layer
-  /* min-height: 800px */
-  min-height: $heroHeight
-
-.layer-bg
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg')
-
-.layer-1
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png')
-  background-position: left bottom
-
-.layer-2
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png')
-
-.layer-3
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png')
-  background-position: right bottom
-
-.layer-4
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png')
-
-.layer-overlay
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png')
-
-@media only screen and (max-width: 768px)
-  .layer-1
-    background-position: 26% bottom
-
-  .layer-3
-    background-position: 35% bottom
+  /* 50% */
+  100%
+    background: #77a3b3
+    // bg-sunset
+    /* background: radial-gradient(top left, darken(#4389A2, 10%), color.scale(#cbcaa5, $saturation: -10%)) */
+    /* background-color: #aa77b3 // purple */
 </style>

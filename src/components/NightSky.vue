@@ -1,13 +1,23 @@
 <template>
   <div
     class="background-cover"
+    v-motion
+    :initial="{
+      opacity: 0,
+    }"
+    :enter="{
+      opacity: 1,
+      transition: {
+        duration: 400,
+        ease: 'easeIn',
+      }
+    }"
   >
   </div>
 </template>
 
 <style lang="sass" scoped>
 @use '../styles/backgrounds'
-@use '../styles/transitions'
 
 .background-cover
   position: fixed
@@ -16,6 +26,7 @@
   bottom: 0
   left: 0
   z-index: 0
+  will-change: transform
 
   @extend .bg-raisin-radial
 
@@ -31,5 +42,5 @@
     background: url("https://www.toptal.com/designers/subtlepatterns/uploads/ep_naturalblack.png") repeat
 
     background-attachment: fixed
-    transition: background 0.5s ease-in
+    /* transition: background 0.5s ease-in */
 </style>

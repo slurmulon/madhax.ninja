@@ -33,7 +33,8 @@
         <template #placeholder>
           <placeholder
             filled
-            color="surface"
+            cover
+            color="black"
             opacity="1"
           />
         </template>
@@ -101,7 +102,10 @@
         >
           <div class="display-3">{{ job.company }}</div>
           <div class="font-weight-bold text-subtitle-1">{{ job.title }}<br/>
-          <span class="text-body-2 font-weight-light">{{ job.time }}</span></div>
+          <div>
+            <v-icon start size="small" color="grey-darken-2" aria-hidden="false">mdi-calendar</v-icon>
+            <span class="text-body-2">{{ job.time }}</span></div>
+          </div>
         </v-col>
       </v-row>
     </v-card-title>

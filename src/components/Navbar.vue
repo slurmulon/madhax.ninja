@@ -37,6 +37,29 @@ export default {
 }
 </script>
 
+<!--
+    v-motion
+    :initial="{
+      y: -128,
+      opacity: 0,
+    }"
+    :enter="{
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: 'circOut',
+        duration: 200,
+        delay: 0,
+      },
+    }"
+    :leave="{
+      y: 0,
+      opacity: 1,
+    }"
+    :duration="200"
+-->
+
+
 <style lang="sass" scoped>
 @use '../styles/backgrounds'
 

@@ -4,7 +4,28 @@
       <hero />
     </template>
 
-    <section-card title="Profile">
+    <div
+      v-motion
+      :initial="{
+        opacity: 0
+      }"
+      :enter="{
+        opacity: 1,
+        transition: {
+          type: 'keyframes',
+          duration: 200,
+          delay: 600,
+          ease: 'easeIn'
+        }
+      }"
+      :leave="{
+        opacity: 1
+      }"
+    >
+
+    <section-card
+      title="Profile"
+    >
       <template #title-items>
         <icon-linked-in class="mr-2" />
         <icon-github />
@@ -47,6 +68,7 @@
     </section-card>
 
     <!-- <contact-button /> -->
+    </div>
   </page>
 </template>
 

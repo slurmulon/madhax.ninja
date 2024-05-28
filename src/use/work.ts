@@ -1,13 +1,33 @@
-import { each as tools } from '@/use/tools'
+// import { each as tools } from '@/use/tools'
 
-export const jobs = [
+export type Job = {
+  company: string
+  url: string
+  logo: string
+  logoWidth: number
+  logoHeight: number
+  banner: string
+  title: string
+  time: string
+  details: string[]
+}
+
+export type Project = {
+  title: string
+  emoji: string
+  active: boolean
+  desc: string
+  url: string
+}
+
+export const jobs: Job[] = [
   {
     company: 'Alpha Jams',
     url: 'https://alphajams.com',
     logo: 'alphajams.png',
     logoWidth: 75,
     logoHeight: 75,
-    banner: 'job-alphajams.png',
+    banner: 'job-alphajams.filled.png',
     title: 'Co-founder / CTO / CEO',
     time: 'Sep. 2020 - Future',
     details: [
@@ -17,7 +37,7 @@ export const jobs = [
       'Conquered enormous technical challenges around programmable music, time synchronization, run-time performance, cross-browser compatibility, and infinitely loopable audio.',
       'Launched internationally January 1 2024 and profitable from day one (self-funded).',
     ],
-    tools: tools(['vue', 'html5', 'css3', 'gsap', 'elixir', 'phoenix', 'clojure', 'postgres', 'stripe', 'aws'])
+    // tools: tools(['vue', 'html5', 'css3', 'gsap', 'elixir', 'phoenix', 'clojure', 'postgres', 'stripe', 'aws'])
   },
 {
     company: 'TCGplayer',
@@ -35,7 +55,7 @@ export const jobs = [
       'Established contribution guidelines that helped increase and improve contributions from outside team members.',
       'Helped develop and advance the usage of our internal Design Language System, a Vue 3 framework that gives front-end developers a common ecosystem of components and features.',
     ],
-    tools: tools(['vue', 'html5', 'css3', 'postgres', 'webpack', 'git'])
+    // tools: tools(['vue', 'html5', 'css3', 'postgres', 'webpack', 'git'])
   },
   {
     company: 'Ceres Imaging',
@@ -50,7 +70,7 @@ export const jobs = [
       'Led the development and wrote the core components of a full-featured Mapbox GL library for VueJS. Supports next-level drawing features that are especially useful for farming, such as circles, cutouts and recursive grouping.',
       'Introduced and guided several key development processes as the team grew. Improved communication between engineering, product and other stakeholders through the use of Behavior-Driven Development, Architecture Decision Records, telemetry data, issue resolution archives and documentation.'
     ],
-    tools: tools(['vue', 'vuetify', 'django', 'postgres', 'webpack', 'mapbox'])
+    // tools: tools(['vue', 'vuetify', 'django', 'postgres', 'webpack', 'mapbox'])
   },
   {
     company: 'Sighten',
@@ -65,7 +85,7 @@ export const jobs = [
       'Levereged hypermedia and application-level semantics in order to achieve a high degree of flexibility and customization.',
       'Contributed to the RESTful API and its design, particularly around the incorporation of hypermedia.'
     ],
-    tools: tools(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'postgres'])
+    // tools: tools(['angular', 'semantic-ui', 'django', 'json-schema', 'webpack', 'postgres'])
   },
   {
     company: 'Sungevity',
@@ -80,18 +100,18 @@ export const jobs = [
       'The application was fully internationalized and could be easily customized for partner companies to a large degree.',
       'Regularly contributed to the the hypermedia-driven RESTful platform API and layed the groundwork for an aggregated/cross-partner financing service based on Akka and Drools.'
     ],
-    tools: tools(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'vagrant'])
+    // tools: tools(['angular', 'd3', 'scala', 'play', 'akka', 'siren', 'vagrant'])
   }
 ]
 
-export const projects = [
+export const projects: Project[] = [
   {
     title: 'bach',
     emoji: '🎼',
     active: true,
     desc: 'Semantic music notation',
     url: 'https://codebach.tech',
-    tools: tools(['clojure']) // ebnf
+    // tools: tools(['clojure']) // ebnf
   },
   {
     title: 'bach-editor',
@@ -99,7 +119,7 @@ export const projects = [
     active: true,
     desc: 'Web editor and player for bach',
     url: 'https://github.com/slurmulon/bach-editor',
-    tools: tools(['vue', 'vuetify'])
+    // tools: tools(['vue', 'vuetify'])
   },
   {
     title: 'gig',
@@ -107,7 +127,7 @@ export const projects = [
     active: true,
     desc: 'Real-time bach engine for JS',
     url: 'https://github.com/slurmulon/gig',
-    tools: tools(['vue', 'vuetify'])
+    // tools: tools(['vue', 'vuetify'])
   },
   {
     title: 'flap',
@@ -116,7 +136,7 @@ export const projects = [
     // tools: ['js'],
     desc: 'Functional guard clauses in JS',
     url: 'https://github.com/slurmulon/flap',
-    tools: tools(['js'])
+    // tools: tools(['js'])
   },
   {
     title: 'grapple',
@@ -124,7 +144,7 @@ export const projects = [
     active: true,
     desc: 'Pragmatic and flexible Webhook API for Elixir',
     url: 'https://github.com/camirmas/grapple',
-    tools: tools(['elixir'])
+    // tools: tools(['elixir'])
   },
   {
     title: 'json-where',
@@ -133,7 +153,7 @@ export const projects = [
     // tools: ['js'],
     desc: 'Transparent JSON query descriptors',
     url: 'https://github.com/slurmulon/json-where',
-    tools: tools(['js'])
+    // tools: tools(['js'])
   },
   {
     title: 'tasty-commits',
@@ -141,7 +161,7 @@ export const projects = [
     active: true,
     desc: 'Commit message convention for easily digestable history streams',
     url: 'https://github.com/slurmulon/tasty-commits',
-    tools: tools(['git'])
+    // tools: tools(['git'])
   },
   {
     title: 'generator-collector',
@@ -149,6 +169,6 @@ export const projects = [
     active: true,
     desc: 'Lazily collect and query generators in JS',
     url: 'https://slurmulon.github.io/generator-collector/',
-    tools: tools(['js'])
+    // tools: tools(['js'])
   },
 ]

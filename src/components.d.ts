@@ -25,11 +25,13 @@ declare module 'vue' {
     Page: typeof import('./components/Page.vue')['default']
     Philosophy: typeof import('./components/about/Philosophy.vue')['default']
     Placeholder: typeof import('./components/Placeholder.vue')['default']
+    ProjectCard: typeof import('./components/work/ProjectCard.vue')['default']
     Projects: typeof import('./components/work/Projects.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SectionCard: typeof import('./components/SectionCard.vue')['default']
     SectionTitle: typeof import('./components/SectionTitle.vue')['default']
+    SkillCard: typeof import('./components/work/SkillCard.vue')['default']
     Tool: typeof import('./components/icons/Tool.vue')['default']
     Tools: typeof import('./components/about/Tools.vue')['default']
   }

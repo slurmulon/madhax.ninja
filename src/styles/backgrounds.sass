@@ -18,7 +18,7 @@
 @mixin bg-radial($name, $bg-from, $bg-to)
   .bg-#{$name}-radial
     background: $bg-from
-    // background: radial-gradient(to bottom right, $bg-from, $bg-to)
+    // background: radial-gradient(to left, $bg-from, $bg-to) !important
     background: -moz-radial-gradient(top left, $bg-from, $bg-to) !important
     background: -webkit-radial-gradient(top left, $bg-from, $bg-to) !important
 
@@ -44,6 +44,7 @@ $theme-raisin-surface: ("name": "raisin-surface", "from": hsla(250,16%,42%,1), "
 $theme-glow: ("name": "glow", "from": color.scale(#342E37, $saturation: 7%), "to": color.scale(#e96443, $saturation: 0%))
 // $theme-sunset: ("name": "sunset", "from": color.scale(#cbcaa5, $saturation: -10%), "to": hsla(326, 52%, 44%, 1))
 $theme-sunset: ("name": "sunset", "from": darken(#4389A2, 10%), "to": color.scale(#cbcaa5, $saturation: -10%))
+// $theme-sunset: ("name": "sunset", "from": color.scale(#4389A2, $saturation: 50%), "to": color.scale(#cbcaa5, $saturation: 50%))
 
 $themes: ($theme-aura, $theme-aura-flat, $theme-haze, $theme-haze-flip, $theme-haze-flat, $theme-kye, $theme-sun, $theme-sunburst, $theme-burning-orange, $theme-grapefruit, $theme-grapefruit-flip, $theme-dawn, $theme-metapolis, $theme-anwar, $theme-bighead, $theme-bond, $theme-raisin, $theme-raisin-surface, $theme-glow, $theme-sunset)
 

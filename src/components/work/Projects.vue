@@ -17,7 +17,8 @@
             sm="6"
             xl="4"
           >
-            <v-row
+            <project-card :project="project" />
+            <!-- <v-row
               nowrap
               align="start"
               class="pa-2"
@@ -33,11 +34,6 @@
                   class="text-decoration-none"
                   rel="noopenner noreferrer"
                 >
-                  <!-- <v-img
-                    v-if="project.logo"
-                    :src="`../../../public/img/${project.logo}`"
-                    max-width="65"
-                  /> -->
                   <div
                     v-if="project.emoji"
                     class="text-h2 mt-4 text-secondary cell-shade"
@@ -67,7 +63,7 @@
                   </v-col>
                 </v-row>
               </v-col>
-            </v-row>
+            <!-- </v-row> -->
           </v-col>
         </v-row>
       </v-card-text>
@@ -79,6 +75,7 @@
 import { projects } from '@/use/work'
 
 import SectionCard from '@/components/SectionCard'
+import ProjectCard from '@/components/work/ProjectCard'
 import IconGithub from '@/components/icons/Github'
 
 const list = projects.filter(({ active }) => active)

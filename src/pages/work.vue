@@ -6,6 +6,16 @@
       </template>
     </section-title>
 
+    <!-- <v-row>
+      <v-col
+        v-for="i in 4"
+        :key="i"
+        cols="6"
+      >
+        <skill-card />
+      </v-col>
+    </v-row> -->
+
     <jobs />
     <projects />
   </page>
@@ -17,4 +27,5 @@ import Projects from '@/components/work/Projects'
 import Page from '@/components/Page'
 import SectionTitle from '@/components/SectionTitle'
 import IconLinkedIn from '@/components/icons/LinkedIn'
+import SkillCard from '@/components/work/SkillCard'
 </script>

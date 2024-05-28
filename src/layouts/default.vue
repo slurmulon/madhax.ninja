@@ -15,7 +15,6 @@
           />
         </transition>
       </router-view> -->
-
     </v-main>
 
     <AppFooter />
