@@ -57,43 +57,30 @@
           </v-card-text>
 
           <v-card-actions class="pa-4 pt-0">
-            <v-row
-              nowrap
-              justify="end"
+            <v-btn
+              @click="clear"
+              variant="outlined"
+              color="surface-variant"
+              size="large"
+              prepend-icon="mdi-delete"
+              :slim="false"
             >
-              <v-col
-                cols="3"
-                sm="2"
-              >
-                <v-btn
-                  @click="clear"
-                  text
-                  block
-                  variant="outlined"
-                  color="surface-variant"
-                >
-                  <v-icon>mdi-delete</v-icon>
-                </v-btn>
-              </v-col>
-              <v-col
-                cols="4"
-                sm="3"
-              >
-                <v-btn
-                  :disabled="!valid"
-                  :loading="loading"
-                  @click="submit"
-                  type="submit"
-                  color="primary"
-                  text
-                  light
-                  block
-                  variant="outlined"
-                >
-                  <v-icon>mdi-send</v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
+              Clear
+            </v-btn>
+            <v-spacer />
+            <v-btn
+              :disabled="!valid"
+              :loading="loading"
+              :slim="false"
+              @click="submit"
+              type="submit"
+              color="primary"
+              variant="outlined"
+              prepend-icon="mdi-send"
+              size="x-large"
+            >
+              Send
+            </v-btn>
           </v-card-actions>
         </v-form>
 
@@ -118,29 +105,33 @@
           </v-card>
         </v-dialog>
 
-        <v-dialog
+        <v-snackbar
           v-model="error"
+          lazy
+          color="error"
           width="300"
           @input="v => v || (error = false)"
           background-opacity="0.5"
         >
-          <v-card color="rgba(15,15,15,0.5)">
-            <v-card-text class="text-center py-3">
-              <v-icon 
-                color="error"
-                class="cell-shade"
-                style="font-size: 100px"
-              >
-                error_outline
-              </v-icon>
-              <div class="text-center block pt-2">
-                Oops! Something went wrong...
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        
+          <template #text>
+            <v-icon
+              color="white"
+              class="mr-2"
+              left
+            >
+              mdi-alert-circle-outline
+            </v-icon>
+            Oops! Something went wrong...
+          </template>
+          <template #actions>
+            <v-btn
+              icon="mdi-close"
+              color="white"
+              variant="text"
+              @click="error = false"
+            />
+          </template>
+        </v-snackbar>
       </section-card>
     </page>
 </template>
@@ -223,7 +214,9 @@ export default {
       if (this.$refs.form.validate()) {
         await send()
 
-        this.clear()
+        if (!this.error) {
+          this.clear()
+        }
       }
     },
 
@@ -233,13 +226,5 @@ export default {
       clear()
     }
   },
-
-  /* beforeRouteEnter (to, from, next) { */
-  /*   error.value = false */
-  /*   loading.value = false */
-
-  /*   /1* next(vm => vm.$vuetify.goTo(0)) *1/ */
-  /*   next() */
-  /* } */
 }
 </script>

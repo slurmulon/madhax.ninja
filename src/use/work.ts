@@ -142,7 +142,7 @@ export const projects: Project[] = [
     title: 'grapple',
     emoji: '🍏',
     active: true,
-    desc: 'Pragmatic and flexible Webhook API for Elixir',
+    desc: 'Webhook API for Elixir',
     url: 'https://github.com/camirmas/grapple',
     // tools: tools(['elixir'])
   },
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     title: 'generator-collector',
     emoji: '♻️',
     active: true,
-    desc: 'Lazily collect and query generators in JS',
+    desc: 'Lazily collect and query generators',
     url: 'https://slurmulon.github.io/generator-collector/',
     // tools: tools(['js'])
   },

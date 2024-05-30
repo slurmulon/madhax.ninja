@@ -4,27 +4,7 @@
       <hero />
     </template>
 
-    <!-- <div v-show="renderContent"> -->
-    <!-- <div
-      v-motion
-      :initial="{
-        opacity: 0
-      }"
-      :enter="{
-        opacity: 1,
-        transition: {
-          type: 'keyframes',
-          duration: 200,
-          delay: 600,
-          ease: 'easeIn'
-        }
-      }"
-      :leave="{
-        opacity: 0
-      }"
-    > -->
-
-    <article ref="content">
+    <div ref="content">
 
     <section-card title="Profile">
       <template #title-items>
@@ -37,9 +17,12 @@
           <p class="mb-4">Welcome! My name is Erik Vavro.</p>
           <p class="mb-4">I'm a software architect specializing in web and browser technology with over {{ yearsActive }} years of coding experience.</p>
           <p class="mb-4">I'm absolutely passionate about using everything the web has to offer to create elegant applications that are built to grow.</p>
-          <p>I believe in life-long learning, embracing quality from the beginning and taking a people-first approach to development.</p>
-          <!-- <span>If you're interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="underline">reach out</router-link>.</span>&nbsp;
-          <span>Also be sure to see my <router-link to="/work">past and current work</router-link>.</span> -->
+          <p class="mb-4">I believe in life-long learning, embracing quality from the beginning, and taking a people-first approach to development.</p>
+          <!-- <p>I especially love working on projects that improve people's lives by giving them new perspectives of the world and/or themselves.</p> -->
+          <p>
+            <span>If you're interested in collaboration or have an opportunity, please feel free to <router-link to="/contact" class="text-white">reach out</router-link>.</span>&nbsp;
+            <span>Also be sure to see my <router-link to="/work" class="text-white">past and current work</router-link>.</span>
+          </p>
         </v-card-text>
       </template>
     </section-card>
@@ -69,7 +52,7 @@
     </section-card>
 
     <!-- <contact-button /> -->
-    </article>
+    </div>
   </page>
 </template>
 
@@ -152,7 +135,7 @@ const motion = useMotion(content, {
       type: 'keyframes',
       stiffness: '75',
       duration: 200,
-      delay: 1000,
+      delay: 1200,
       ease: 'easeIn',
       onComplete: () => {
         console.log('enter complete')

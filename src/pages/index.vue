@@ -6,7 +6,7 @@
   //
 </script>
 
-<!-- <route lang="yaml">
+<route lang="yaml">
 redirect:
   name: about
-</route> -->
+</route>

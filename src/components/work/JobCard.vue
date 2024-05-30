@@ -4,23 +4,6 @@
     color="rgba(255,255,255,0.7)"
     class="job-card mt-4"
   >
-    <!-- color="rgba(255,255,255,0.7)" -->
-    <!-- color="rgba(91,83,94,0.65)" -->
-    <!-- color="rgba(91,83,94,0.4)" -->
-
-    <!-- <v-card-title primary-title class="">
-      <a :href="job.url">
-        <img
-          :src="`../../../public/img/${job.logo}`"
-          :height="48"
-        />
-
-        <span class="ml-3">{{ job.company }}</span>
-      </a>
-
-    </v-card-title>
-    <v-divider /> -->
-
     <v-hover v-slot="{ hover }">
       <v-img
         :src="`../../../public/img/${job.banner}`"
@@ -38,49 +21,25 @@
             opacity="1"
           />
         </template>
-
-        <!-- <template #default>
-          <v-expand-transition>
-            <div
-              v-if="hover"
-              class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal display-3 white--text"
-              style="height: 100%; background: rgba(50,50,50,0.8);"
-            >
-              <v-row
-                align="center"
-                justify="center"
-              >
-                <v-col
-                  v-for="tool in job.tools"
-                  :key="tool.id"
-                  class="d-flex shrink px-4 text-center"
-                >
-                  <icon-tool :value="tool" />
-                </v-col>
-              </v-row>
-
-            </div>
-          </v-expand-transition>
-        </template> -->
       </v-img>
     </v-hover>
 
     <v-card-title
       primary-title
-      class="position-relative text-surface rounded-t-lg"
-      style="margin-top: -8px; background: #ddd; "
+      class="position-relative text-surface rounded-t-lg mt-n8"
+      style="background: #ddd "
     >
-      <!-- class="position-relative rounded-t-lg bg-light-blue-lighten-5"
-      style="margin-top: -8px; background: #b5ccd5; " -->
-      <!-- class="position-relative rounded-t-lg bg-raisin-surface" -->
-      <!-- style="margin-top: -8px; background: hsla(250,6%,22%,1)" -->
-      <v-row align="center">
+      <v-row
+        align="center"
+        justify="center"
+      >
         <v-col
-          class="flex-shrink-1 flex-grow-0 order-0 text-left pb-3"
+          class="order-0 flex-shrink-1 flex-grow-0 text-center mt-2 mt-sm-0"
         >
           <a
             :href="job.url"
             :aria-label="`Visit ${job.company}`"
+            target="_blank"
             rel="noopener noreferrer"
           >
             <v-img
@@ -89,16 +48,13 @@
               :height="job.logoHeight ?? null"
               :width="job.logoWidth ?? 150"
             />
-
-            <!-- <img
-              :src="require(`../../../public/img/${job.logo}`)"
-              style="width: 150px"
-            > -->
           </a>
         </v-col>
 
+        <v-divider class="hidden-sm" />
+
         <v-col
-          class="order-first flex-grow-1 text-left pt-0 mt-3"
+          class="order-last order-sm-first flex-grow-1 text-left pt-0 mt-3"
         >
           <div class="display-3">{{ job.company }}</div>
           <div class="font-weight-bold text-subtitle-1">{{ job.title }}<br/>

@@ -29,8 +29,8 @@ const brandTheme: ThemeDefinition = {
     info: '#2196F3',
     success: '#4CAF50',
     warning: '#FB8C00',
-    error: colors.red.lighten1
-
+    error: colors.red.lighten1,
+    anchor: 'red',
   },
 }
 

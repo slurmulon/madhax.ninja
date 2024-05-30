@@ -43,7 +43,10 @@ const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
 const routes = [
   {
     path: '/',
-    redirect: '/about'
+    redirect: to => {
+      console.log('redirect???')
+      return 'about'
+    }
   },
   {
     path: '/about',

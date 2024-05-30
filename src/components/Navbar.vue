@@ -26,6 +26,14 @@
       >
         Work
       </v-btn>
+      <v-btn
+        text
+        to="/contact"
+        class="shiny d-none d-sm-flex"
+        color="secondary"
+      >
+        Contact
+      </v-btn>
     </v-toolbar-items>
   </v-app-bar>
 </template>

@@ -31,7 +31,7 @@
           opacity: 1,
           scale: 1,
         }"
-        :visibleOnce="{
+        :visible="{
           opacity: 1,
           scale: 1,
           transition: {

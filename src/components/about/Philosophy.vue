@@ -5,8 +5,8 @@
       :key="index"
       cols="12"
     >
-      <i class="white--text font-weight-light">&quot;{{ philosophy.quote }}&quot;</i>&nbsp;
-      <span class="grey--text text--lighten-2 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
+      <i class="text-body-1 font-weight-light">&quot;{{ philosophy.quote }}&quot;</i>&nbsp;
+      <span class="text-body-2 font-weight-thin">&mdash; {{ philosophy.credit }}</span>
     </v-col>
   </v-row>
 </template>

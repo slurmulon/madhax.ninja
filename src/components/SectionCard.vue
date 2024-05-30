@@ -1,30 +1,32 @@
 <template>
-  <v-row class="section-card__container ma-0 pa-0" >
-    <section-title
-      v-if="title"
-      :text="title"
-    >
-      <template #title-items>
-        <slot name="title-items" />
-      </template>
-    </section-title>
-
-    <v-col
-      cols="12"
-      class="pt-0 pb-1"
-    >
-      <v-card
-        :color="color"
-        rounded="lg"
-        variant="elevated"
-        elevation="3"
-        v-bind="$attrs"
-        class="section-card"
+  <section class="section-card d-flex flex-fill">
+    <v-row class="ma-0 pa-0" >
+      <section-title
+        v-if="title"
+        :text="title"
       >
-        <slot />
-      </v-card>
-    </v-col>
-  </v-row>
+        <template #title-items>
+          <slot name="title-items" />
+        </template>
+      </section-title>
+
+      <v-col
+        cols="12"
+        class="pt-0 pb-1"
+      >
+        <v-card
+          :color="color"
+          rounded="lg"
+          variant="elevated"
+          elevation="3"
+          v-bind="$attrs"
+          class="section-card--inner"
+        >
+          <slot />
+        </v-card>
+      </v-col>
+    </v-row>
+  </section>
 </template>
 
 <script setup>
@@ -64,7 +66,7 @@ defineProps({
 
 <style lang="sass">
 /* .section-card.v-card.theme--dark */
-.section-card.v-card.v-theme--brandTheme
+.section-card--inner.v-card.v-theme--brandTheme
   /* background-color: rgba(255,255,255,0.025) !important */
   // LAST SUBTLE
   /* background-color: rgba(255,255,255,0.05) !important */
