@@ -1,35 +1,7 @@
 <template>
   <div style="position: relative; width: 100vw; height: 100vh;">
   <div id="hero">
-    <!-- <div class="layer-bg layer parallax" data-depth="0.10"></div>
-    <div class="layer-1 layer parallax" data-depth="0.20"></div>
-    <div class="layer-2 layer parallax" data-depth="0.50"></div>
-    <div class="layer-3 layer parallax" data-depth="0.80"></div>
-    <div class="layer-overlay layer parallax" data-depth="0.85"></div>
-    <div class="layer-4 layer parallax" data-depth="1.00"></div> -->
-    <!-- <div class="trees" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;">
-      <v-img src="../../public/img/trees-2.1200x1200.png" width="1200" aspect-ratio="1 / 1"/>
-    </div> -->
-
-    <!-- <div class="trees" style="position: absolute; bottom: 0px; left: 0; right: 0; opacity: 0.5">
-      <v-img src="../../public/img/trees-1.4000x2666.png" height="100vh" width="100vw" />
-    </div> -->
-
     <div
-      v-motion
-      :initial="{
-        y: 30,
-      }"
-      :enter="{
-        y: 0,
-        transition: {
-          type: 'spring',
-          stiffness: '70',
-          delay: 0,
-        },
-      }"
-      :delay="0"
-      :duration="1200"
       class="landscape"
     >
       <!-- <palm-trees-svg id="palm-trees" height="100%" width="100%" style="fill: #212a30;" /> -->
@@ -42,24 +14,9 @@
   </div>
 
   <div
-    class="text-surface font-weight-thin"
-    style="position: absolute; top: 64px; left: 0; right: 0; bottom: 0; display: flex; flex-flow: column wrap; align-items: center; justify-content: center; font-family: Oxygen, sans-serif !important"
-    v-motion
-    :initial="{
-      opacity: 0,
-      y: -100,
-    }"
-    :enter="{
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: 'spring',
-        stiffness: '75',
-        delay: 300,
-      },
-    }"
-    :delay="800"
-    :duration="100"
+    ref="banner"
+    class="banner text-surface font-weight-thin"
+    style=""
   >
     <div class="text-h1 w-100 text-center d-block text-primary">
     <!-- <div class="text-h1 w-100 text-center d-block text-accent"> -->
@@ -83,6 +40,7 @@
     <div class="d-block px-4 pt-4">
       <v-btn
         to="/work"
+        :active="false"
         variant="outlined"
         color="white"
         class="mr-2"
@@ -90,6 +48,7 @@
         Portfolio
       </v-btn>
       <v-btn
+        to="/contact"
         variant="outlined"
         color="white"
       >
@@ -97,18 +56,76 @@
       </v-btn>
     </div>
   </div>
-
   </div>
-  <!-- <div style="postion: relative; display: block; width: 100%; height: 48px; background: linear-gradient(to bottom, #212a30, transparent); opacity: 0.35" /> -->
 </template>
 
-<script setup>
+<script setup lang="ts">
 /* import gsap from 'gsap' */
+import { useMotion } from '@vueuse/motion'
+import { whenever } from '@vueuse/core'
+import { useRoute } from 'vue-router'
 
-import SlothSvg from '../../public/img/sloth-2.svg'
-import CitySvg from '../../public/img/city-1.svg'
-import TowersSvg from '../../public/img/towers-1.svg'
 import PalmTreesSvg from '../../public/img/palm-trees-1.svg'
+
+const banner = ref<HTMLElement>()
+
+const route = useRoute()
+
+whenever(() => route.name === '/about', async () => {
+  motion.stop()
+
+  await motion.set('initial')
+  await motion.apply('enter')
+})
+
+const motion = useMotion(banner, {
+  initial: {
+    opacity: 0,
+    y: -100,
+  },
+  enter: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: '75',
+      delay: 300,
+      /* onComplete: () => { */
+      /*   console.log('enter complete') */
+      /* } */
+    },
+  },
+  delay: 800,
+  duration: 100
+})
+/* console.log('hi route', route, motion) */
+
+/* onUpdated(() => { */
+/*   console.log('hello') */
+/*   motion.apply('enter') */
+/* }) */
+
+/* onMounted(() => { */
+/*   console.log('hello') */
+/*   motion.apply('enter') */
+/* }) */
+
+// landscape motion
+      /* v-motion */
+      /* :initial="{ */
+      /*   y: 30, */
+      /* }" */
+      /* :enter="{ */
+      /*   y: 0, */
+      /*   transition: { */
+      /*     type: 'spring', */
+      /*     stiffness: '70', */
+      /*     delay: 0, */
+      /*   }, */
+      /* }" */
+      /* :delay="0" */
+      /* :duration="1200" */
+
 
 onMounted(() => {
   /* const v = new Vivus('palm-tr', ees', { */
@@ -204,15 +221,29 @@ $heroHeight: 100vh
   /* background-repeat: no-repeat */
   /* background-attachment: bottom center */
 
+.banner
+  position: absolute
+  top: var(--v-layout-top)
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  flex-flow: column wrap
+  align-items: center
+  justify-content: center
+  font-family: Oxygen, sans-serif !important
+
 .landscape
   position: absolute
   bottom: -10px
   left: 0
   right: 0
   opacity: 1.0
+  overflow: hidden
 
   & > .palm-trees
     fill: hsl(204 7% 16% / 1)
+    /* margin-bottom: -12px */
     /* fill: #212a30 */
 
 /* $color-clock-6: #4389a2 */

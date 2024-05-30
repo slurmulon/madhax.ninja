@@ -1,10 +1,11 @@
 <template>
-  <page>
+  <page offset v-once>
     <template #hero>
       <hero />
     </template>
 
-    <div
+    <!-- <div v-show="renderContent"> -->
+    <!-- <div
       v-motion
       :initial="{
         opacity: 0
@@ -19,13 +20,13 @@
         }
       }"
       :leave="{
-        opacity: 1
+        opacity: 0
       }"
-    >
+    > -->
 
-    <section-card
-      title="Profile"
-    >
+    <article ref="content">
+
+    <section-card title="Profile">
       <template #title-items>
         <icon-linked-in class="mr-2" />
         <icon-github />
@@ -68,11 +69,13 @@
     </section-card>
 
     <!-- <contact-button /> -->
-    </div>
+    </article>
   </page>
 </template>
 
-<script setup>
+<script setup lang="ts">
+/* import { onBeforeRouteUpdate } from 'vue-router/auto' */
+
 import Tools from '@/components/about/Tools'
 import Interests from '@/components/about/Interests'
 import Philosophy from '@/components/about/Philosophy'
@@ -84,6 +87,105 @@ import Hero from '@/components/Hero'
 import SectionCard from '@/components/SectionCard'
 import IconLinkedIn from '@/components/icons/LinkedIn'
 import IconGithub from '@/components/icons/Github'
+import { whenever, useWindowScroll, useWindowSize } from '@vueuse/core'
+
+/* const { y } = useWindowScroll() */
+/* const { height } = useWindowSize() */
+
+/* console.log('win height', height.value) */
+
+/* const renderContent = computed(() => y.value > 4) */
+/* const renderContent = ref(false) */
 
 const yearsActive = computed(() => new Date().getFullYear() - 2005)
+
+/* const reset = () => { */
+/*   renderContent.value = false */
+
+/*   setTimeout(() => { */
+/*     queueMicrotask(() => { */
+/*       renderContent.value = true */
+/*     }) */
+/*   }, 1500) */
+/* } */
+
+/* onMounted(reset) */
+/* onUpdated(reset) */
+
+/* whenever(() => y.value <= 0, () => { */
+/*   /1* console.log('DAS SCROLLED', y.value) *1/ */
+/*   queueMicrotask(() => { */
+/*     renderContent.value = false */
+/*   }) */
+/* }) */
+
+/* whenever(() => y.value > 1, () => { */
+/*   /1* console.log('DAS SCROLLED', y.value) *1/ */
+/*   queueMicrotask(() => { */
+/*     renderContent.value = true */
+/*   }) */
+/* }) */
+
+import { useMotion } from '@vueuse/motion'
+import { whenever } from '@vueuse/core'
+import { useRoute } from 'vue-router'
+
+const content = ref<HTMLElement>()
+
+const route = useRoute()
+
+whenever(() => route.name === '/about', async () => {
+  motion.stop()
+
+  await motion.set('initial')
+  await motion.apply('enter')
+})
+
+
+const motion = useMotion(content, {
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      type: 'keyframes',
+      stiffness: '75',
+      duration: 200,
+      delay: 1000,
+      ease: 'easeIn',
+      onComplete: () => {
+        console.log('enter complete')
+      }
+    },
+  },
+})
+
+      /* v-motion */
+      /* :initial="{ */
+      /*   opacity: 0 */
+      /* }" */
+      /* :enter="{ */
+      /*   opacity: 1, */
+      /*   transition: { */
+      /*     type: 'keyframes', */
+      /*     duration: 200, */
+      /*     delay: 0 * 600, */
+      /*     ease: 'easeIn' */
+      /*   } */
+      /* }" */
+      /* :leave="{ */
+      /*   opacity: 0 */
+      /* }" */
+
 </script>
+
+<!-- <route lang="json">
+{
+  "name": "about",
+  "path": "/about",
+  "meta": {
+    "isLayout": true,
+  }
+}
+</route> -->

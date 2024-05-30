@@ -41,6 +41,6 @@
     z-index: 1
     background: url("https://www.toptal.com/designers/subtlepatterns/uploads/ep_naturalblack.png") repeat
 
-    background-attachment: fixed
+    /* background-attachment: fixed */
     /* transition: background 0.5s ease-in */
 </style>

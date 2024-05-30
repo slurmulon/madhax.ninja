@@ -10,12 +10,18 @@
 $page-ease: cubic-bezier(0.22, 1, 0.36, 1)
 
 .page-enter-active, .page-leave-active
-  // overflow-x: hidden
+  overflow-x: hidden
+  max-width: 100vw
   // will-change: transform
+  // transform: translateZ(0)
+  // visibility: visible
+  // contain: style paint layout
+  // backface-visibility: hidden
   // transition: transform 0.5s ease-out, opacity 0.5s ease-out
   // easeInOutQuart
   // transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.5s cubic-bezier(0.76, 0, 0.24, 1)
-  transition: transform 0.8s $page-ease, opacity 0.8s $page-ease
+  // transition: transform 0.8s $page-ease, opacity 0.8s $page-ease//, clip-path 0.8s $page-ease //, visibility 0.8s $page-ease
+  transition: transform 0.6s $page-ease, opacity 0.6s $page-ease
   // transition: transform 0.6s $page-ease, opacity 0.6s $page-ease
   // transition-delay: 0.15s
   // transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1)
@@ -28,10 +34,12 @@ $page-ease: cubic-bezier(0.22, 1, 0.36, 1)
 .page-enter-from
   // transform: translate3d(0, 20px, 0) scale(1.1)
   transform: translate3d(0, -30px, 0) scale(1.125) // LAST
+  // clip-path: circle(100% at 0% 0%)
   // transform: translate3d(0, -1.5em, 0) scale(1.25)
   // transform: translate3d(0, 0, 1.5em) scale(1.25)
   transform-origin: top center
   opacity: 0
+  // visibility: visible
 
 .page-leave-to
   // transform: translate3d(0, -20px, 0) scale(1.1)
@@ -44,7 +52,12 @@ $page-ease: cubic-bezier(0.22, 1, 0.36, 1)
   transform-origin: top center
   // transform-origin: 0px 0px
   opacity: 0
+  // visibility: hidden
+  // clip-path: circle(0% at 0% 0%)
 
 .page-enter-to, .page-leave-from
   transform: translate3d(0, 0, 0)
   opacity: 1
+  // clip-path: circle(0% at 0% 0%)
+
+  // visibility: visible

@@ -1,23 +1,25 @@
 <template>
-  <v-layout>
-    <!-- <router-view /> -->
-
+  <v-app>
     <navbar />
 
     <night-sky />
 
-    <router-view v-slot="{ Component, route }">
-      <transition
-        name="page"
-        mode="out-in"
-      >
-        <component
-          :is="Component"
-          :key="route.path"
-        />
-      </transition>
-    </router-view>
-  </v-layout>
+    <v-main>
+      <router-view v-slot="{ Component, route }">
+        <transition
+          name="page"
+          mode="out-in"
+        > 
+          <keep-alive>
+            <component
+              :is="Component"
+              :key="route.path"
+            />
+          </keep-alive>
+        </transition>
+      </router-view>
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts" setup>

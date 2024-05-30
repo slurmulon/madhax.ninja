@@ -2,6 +2,7 @@
   <v-app-bar
     app
     class="header"
+    style="max-width: 100vw"
   >
     <v-toolbar-title>
       <logo />
@@ -29,12 +30,8 @@
   </v-app-bar>
 </template>
 
-<script>
+<script setup>
 import Logo from '@/components/Logo'
-
-export default {
-  components: { Logo }
-}
 </script>
 
 <!--

@@ -1,5 +1,5 @@
 <template>
-  <v-row class="section-card__container ma-0 pa-0">
+  <v-row class="section-card__container ma-0 pa-0" >
     <section-title
       v-if="title"
       :text="title"

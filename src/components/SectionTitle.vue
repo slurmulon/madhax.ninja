@@ -1,7 +1,7 @@
 <template>
   <v-col
     cols="12"
-    class="mt-3 pb-1"
+    class="mt-5 pb-1"
   >
     <v-row
       nowrap
