@@ -5,7 +5,6 @@
         ref="form"
         v-model="valid"
         lazy-validation
-        dark
         @submit.prevent="submit"
       >
         <v-card-text class="pb-0">
@@ -18,7 +17,7 @@
             :counter="100"
             :disabled="loading"
             label="Name"
-            tabindex="1"
+            tabindex="0"
             required
             class="mb-1"
           />
@@ -30,7 +29,7 @@
             :rules="inputs.rules.email"
             :disabled="loading"
             label="E-mail"
-            tabindex="2"
+            tabindex="0"
             required
             class="mb-1"
           />
@@ -43,7 +42,7 @@
             :rules="[v => !!v || 'Reason is required']"
             :disabled="loading"
             label="Reason"
-            tabindex="3"
+            tabindex="0"
             required
             class="mb-1"
           />
@@ -57,7 +56,7 @@
             name="message"
             label="Message"
             rows="7"
-            tabindex="4"
+            tabindex="0"
           />
         </v-card-text>
 
@@ -150,7 +149,8 @@ import SectionCard from '@/components/SectionCard'
 const form = ref<HTMLElement>()
 const valid = ref(false)
 const color = ref('primary')
-const bg = ref('rgba(0,0,0,0.25)')
+/* const bg = ref('rgba(0,0,0,0.25)') */
+const bg = ref('rgba(0,0,0,0.3)')
 const variant = ref('solo')
 
 const title = usePageTitle('Contact')

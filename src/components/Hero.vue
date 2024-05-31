@@ -89,10 +89,13 @@ const motion = useRouteMotion(banner, {
   height: 100lvh
 
 #hero
-  /* @extend .bg-sunset-radial */
+  @extend .bg-sunset-radial
   /* @extend .bg-horizon-radial */
   /* @extend .bg-ruby-radial */
-  background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #60b5f2) !important
+  /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #60b5f2) !important */
+  /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #57a6f7) !important */
+  /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #80beff) !important */
+
 
   /* background-color: #77a3b3 // teal */
   /* background-color: #9e99c7 // purp */

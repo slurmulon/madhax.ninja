@@ -62,8 +62,8 @@ body
   background: none !important
 
 // Fixes Vuetify bug using solo-inverted on v-textarea (uses white text)
-.theme--dark.v-input.v-textarea.v-input--is-focused textarea
-  color: black !important
+// .theme--dark.v-input.v-textarea.v-input--is-focused textarea
+//   color: black !important
 
 .v-toolbar-title__placeholder
   overflow: visible
@@ -84,3 +84,6 @@ h1, h2, h3, h4, h5, h6, .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-
 
   .v-btn__content
     text-shadow: 1px 1px 2px black !important
+
+@function hex-to-rgb($hex)
+  @return red($hex), green($hex), blue($hex)

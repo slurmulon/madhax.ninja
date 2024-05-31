@@ -1,5 +1,8 @@
 <template>
-  <v-container fluid class="position-relative fill-height w-100 mx-0" style="background: radial-gradient(ellipse at bottom, rgb(23 26 65 / 30%), transparent)">
+  <v-container
+    fluid
+    class="position-relative fill-height w-100 mx-0"
+    style="background: radial-gradient(ellipse at bottom, rgb(23 26 65 / 20%), transparent)">
     <v-empty-state
       headline="404"
       title="Page not found"

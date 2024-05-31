@@ -45,44 +45,14 @@ defineProps({
     default: () => 'rgba(255,255,255,0.065)'
     /* default: () => 'rgba(255,255,255,0.06)' */
     /* default: () => 'rgba(255,255,255,0.05)' */
+    /* default: () => 'rgba(150,150,150,0.1)' */
   },
 })
-
-/* export default { */
-/*   components: { SectionTitle }, */
-
-/*   props: { */
-/*     ...VCard.props, */
-
-/*     /1* title: String, *1/ */
-
-/*     /1* color: { *1/ */
-/*     /1*   type: String, *1/ */
-/*     /1*   required: false, *1/ */
-/*     /1*   default: () => 'transparent' *1/ */
-/*     /1* } *1/ */
-/*   } */
-/* } */
 </script>
 
-<style lang="sass">
-/* .section-card.v-card.theme--dark */
+<style lang="sass" scoped>
 .section-card--inner.v-card.v-theme--brandTheme
-  /* background-color: rgba(255,255,255,0.025) !important */
-  // LAST SUBTLE
-  /* background-color: rgba(255,255,255,0.05) !important */
   background-color: v-bind(color) !important
-  // NEXT SUBTLE
-  /* background-color: rgba(255,255,255,0.045) !important */
-  /* background-color: rgba(255,255,255,0.1) !important */
-
-  /* background-color: rgba(255,255,255,0.1) !important */
-  // background-color: rgba(255,255,255,0.15) !important
-  // background-color: rgba(255,255,255,0.18) !important
-  // background-color: rgba(100,100,100,0.1) !important
   // LAST
-  // background-color: rgba(150,150,150,0.1) !important
-  // background-color: rgba(185,185,185,0.1) !important
-  // background-color: rgba(200,200,200,0.1) !important
-  // box-shadow: 1px 1px 0px rgba(255,255,255,0.5) !important
+  /* background-color: rgba(150,150,150,0.1) !important */
 </style>
