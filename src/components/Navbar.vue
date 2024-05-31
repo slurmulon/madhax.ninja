@@ -12,7 +12,7 @@
     <v-toolbar-items>
       <v-btn
         text
-        to="/about"
+        to="/"
         class="shiny"
         color="secondary"
       >

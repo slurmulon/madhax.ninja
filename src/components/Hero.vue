@@ -55,24 +55,13 @@
 </template>
 
 <script setup lang="ts">
-import { useMotion } from '@vueuse/motion'
-import { whenever } from '@vueuse/core'
-import { useRoute } from 'vue-router'
+import { useRouteMotion } from '@/use/motions'
 
 import PalmTreesSvg from '../../public/img/palm-trees-1.svg'
 
 const banner = ref<HTMLElement>()
 
-const route = useRoute()
-
-whenever(() => route.name === '/about', async () => {
-  motion.stop()
-
-  await motion.set('initial')
-  await motion.apply('enter')
-})
-
-const motion = useMotion(banner, {
+const motion = useRouteMotion(banner, {
   initial: {
     opacity: 0,
     y: -100,
@@ -89,7 +78,6 @@ const motion = useMotion(banner, {
   delay: 800,
   duration: 100
 })
-
 </script>
 
 <style lang="sass" scoped>

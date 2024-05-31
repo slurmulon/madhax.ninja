@@ -12,30 +12,19 @@
   </page>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Jobs from '@/components/work/Jobs'
 import Projects from '@/components/work/Projects'
 import Page from '@/components/Page'
 import SectionTitle from '@/components/SectionTitle'
 import IconLinkedIn from '@/components/icons/LinkedIn'
-/* import SkillCard from '@/components/work/SkillCard' */
 
-/* import { definePage } from 'vue-router/auto' */
+import { usePageTitle } from '@/use/page'
 
-/* definePage({ */
-/*   alias: ['/work'], */
-/*   /1* meta: { *1/ */
-/*   /1*   requiresAuth: true, *1/ */
-/*   /1* }, *1/ */
-/* }) */
+const title = usePageTitle('Work Portfolio')
 </script>
 
-<!-- <route lang="json">
-{
-  "name": "work",
-  "path": "/work",
-  "meta": {
-    "isLayout": true,
-  }
-}
-</route> -->
+<route lang="yaml">
+name: work
+path: /work
+</route>
