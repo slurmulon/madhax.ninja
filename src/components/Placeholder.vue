@@ -3,7 +3,7 @@
     class="fill-height ma-0"
     align="center"
     justify="center"
-    :style="{ 'background': filled ? 'rgba(255,255,255,0.2)' : null }"
+    :style="{ 'background': filled ? 'rgba(55,66,66,0.25)' : null }"
   >
     <v-progress-circular
       indeterminate

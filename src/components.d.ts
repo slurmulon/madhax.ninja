@@ -11,6 +11,7 @@ declare module 'vue' {
     BackButton: typeof import('./components/BackButton.vue')['default']
     Bookshelf: typeof import('./components/about/Bookshelf.vue')['default']
     ContactButton: typeof import('./components/ContactButton.vue')['default']
+    EmojiThinking: typeof import('./components/icons/EmojiThinking.vue')['default']
     Github: typeof import('./components/icons/Github.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']

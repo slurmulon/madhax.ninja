@@ -92,8 +92,6 @@ router.beforeEach((to, from, next) => {
     }, 0)
   }
 
-  console.log('das to?', to)
-
   if (to.matched.length) {
     next()
   } else {

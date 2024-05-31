@@ -1,23 +1,24 @@
 <template>
   <section-card
-    light
     color="rgba(255,255,255,0.7)"
     class="job-card mt-4"
   >
     <v-hover v-slot="{ hover }">
       <v-img
         :src="`../../../public/img/${job.banner}`"
-        color="black"
-        gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
         cover
+        color="#111"
+        gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+        rounded="lg"
         height="250"
         alt=""
+        position="center 50%"
       >
         <template #placeholder>
           <placeholder
             filled
             cover
-            color="black"
+            color="primary"
             opacity="1"
           />
         </template>
@@ -27,7 +28,7 @@
     <v-card-title
       primary-title
       class="position-relative text-surface rounded-t-lg mt-n8"
-      style="background: #ddd "
+      style="background: #ddd"
     >
       <v-row
         align="center"
@@ -59,7 +60,13 @@
           <div class="display-3">{{ job.company }}</div>
           <div class="font-weight-bold text-subtitle-1">{{ job.title }}<br/>
           <div>
-            <v-icon start size="small" color="grey-darken-2" aria-hidden="false">mdi-calendar</v-icon>
+            <v-icon
+              size="small"
+              color="grey-darken-2"
+              aria-hidden="false"
+            >
+              mdi-calendar
+            </v-icon>
             <span class="text-body-2">{{ job.time }}</span></div>
           </div>
         </v-col>
@@ -88,9 +95,7 @@
 <script setup>
 import SectionCard from '@/components/SectionCard'
 import Placeholder from '@/components/Placeholder'
-
 import IconTool from '@/components/icons/Tool'
-/* import IconLinkedIn from '@/components/icons/LinkedIn' */
 
 defineOptions({
   inheritAttrs: true
@@ -102,28 +107,6 @@ defineProps({
     required: true,
   }
 })
-
-const expand = ref(false)
-
-/* export default { */
-/*   props: { */
-/*     job: { */
-/*       type: Object, */
-/*       required: true */
-/*     } */
-/*   }, */
-
-/*   data: () => ({ */
-/*     expand: false */
-/*   }), */
-
-/*   components: { */
-/*     SectionCard, */
-/*     Placeholder, */
-/*     IconTool */
-/*     /1* IconLinkedIn *1/ */
-/*   } */
-/* } */
 </script>
 
 <style lang="sass" scoped>

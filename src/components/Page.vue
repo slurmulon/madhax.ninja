@@ -18,8 +18,7 @@
       </v-col>
     </v-container>
 
-    <v-container>
-    <!-- <v-container> -->
+    <v-container class="fill-height">
       <v-row no-gutters>
         <v-col
           cols="12"
@@ -45,6 +44,12 @@ const hasSlot = (name) => {
 }
 
 defineProps({
+  fixed: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+
   offset: {
     type: Boolean,
     required: false,
@@ -52,3 +57,9 @@ defineProps({
   }
 })
 </script>
+
+<style lang="sass" scoped>
+.page.fixed
+  position: fixed
+
+</style>
