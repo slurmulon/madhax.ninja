@@ -4,6 +4,8 @@
 
     <night-sky />
 
+    <loading />
+
     <v-main>
       <router-view v-slot="{ Component, route }">
         <transition
@@ -25,6 +27,7 @@
 <script lang="ts" setup>
 import Navbar from '@/components/Navbar'
 /* import Layout from '@/components/Layout' */
+import Loading from '@/components/Loading'
 </script>
 
 <style lang="sass">

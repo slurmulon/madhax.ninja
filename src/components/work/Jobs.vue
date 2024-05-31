@@ -5,6 +5,7 @@
         :key="job.company"
         cols="12"
         xl="6"
+        class="job-card"
       >
         <job-card :job="job" />
       </v-col>

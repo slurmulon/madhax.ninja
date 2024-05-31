@@ -85,19 +85,12 @@ const motion = useRouteMotion(banner, {
 
 .hero__container
   position: relative
-  width: 100vw
-  height: 100vh
+  width: 100lvw
+  height: 100lvh
 
 #hero
   @extend .bg-sunset-radial
-  /* @extend .bg-metapolis-radial */
-  /* @extend .bg-dawn-radial */
-  /* filter: blur(0px) */
-  /* background-repeat: no-repeat */
-
-  /* background-color: #346a7e */
-  /* background-color: #4389A2 */
-  /* background-color: #c9c8a7 */
+  /* @extend .bg-ruby-radial */
 
   background-color: #77a3b3 // teal
   /* background-color: #9e99c7 // purp */
@@ -110,10 +103,10 @@ const motion = useRouteMotion(banner, {
   animation-direction: normal
   animation-fill-mode: forwards
 
-  opacity: 0.125
-  height: 100vh
   position: relative
-  width: 100vw
+  opacity: 0.125
+  height: 100lvh
+  width: 100lvw
 
 .banner
   position: absolute
@@ -127,9 +120,12 @@ const motion = useRouteMotion(banner, {
   justify-content: center
   font-family: Oxygen, sans-serif !important
 
+  // Center perfectly on mobile when HUD is included
+  @media only screen and (max-width: 480px)
+    margin-top: calc(calc(100lvh - 100svh) * -1)
+
 .landscape
   position: absolute
-  /* bottom: -10px */
   bottom: 0
   left: 0
   right: 0

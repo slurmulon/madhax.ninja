@@ -42,8 +42,9 @@ defineProps({
   color: { 
     type: String,
     required: false,
-    /* default: () => 'rgba(255,255,255,0.05)' */
     default: () => 'rgba(255,255,255,0.065)'
+    /* default: () => 'rgba(255,255,255,0.06)' */
+    /* default: () => 'rgba(255,255,255,0.05)' */
   },
 })
 

@@ -19,6 +19,7 @@ declare module 'vue' {
     Jobs: typeof import('./components/work/Jobs.vue')['default']
     Layout: typeof import('./components/Layout.vue')['default']
     LinkedIn: typeof import('./components/icons/LinkedIn.vue')['default']
+    Loading: typeof import('./components/Loading.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     NightSky: typeof import('./components/NightSky.vue')['default']
@@ -32,6 +33,7 @@ declare module 'vue' {
     SectionCard: typeof import('./components/SectionCard.vue')['default']
     SectionTitle: typeof import('./components/SectionTitle.vue')['default']
     SkillCard: typeof import('./components/work/SkillCard.vue')['default']
+    Sloth: typeof import('./components/Sloth.vue')['default']
     Tool: typeof import('./components/icons/Tool.vue')['default']
     Tools: typeof import('./components/about/Tools.vue')['default']
   }

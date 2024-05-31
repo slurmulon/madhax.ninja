@@ -25,7 +25,7 @@
           cols="12"
           md="8"
           offset-md="2"
-          class="pb-3 mb-3"
+          class="pb-3"
           style="z-index: 1"
         >
           <v-row>

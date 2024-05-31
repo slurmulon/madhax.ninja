@@ -8,6 +8,8 @@
 import { createRouter, createWebHistory, RouterScrollBehavior, isNavigationFailure, NavigationFailureType } from 'vue-router/auto'
 // import { setupLayouts } from 'virtual:generated-layouts'
 
+import { loading, load } from '@/use/page'
+
 type ScrollPositionNormalized = {
   behavior?: ScrollOptions['behavior']
   left: number
@@ -38,7 +40,16 @@ const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
   })
 }
 
+// TODO: NotFound/404 route!
 const routes = [
+  {
+    // path: '/:pathMatch(.*)*',
+    path: '/404',
+    name: 'not-found',
+    components: {
+      default: () => import(/* webpackChunkName: "not-found" */ '@/pages/404.vue'),
+    }
+  },
   {
     path: '/',
     name: 'about',
@@ -62,7 +73,7 @@ const routes = [
     components: {
       default: () => import(/* webpackChunkName: "contact" */ '@/pages/contact.vue'),
     }
-  }
+  },
 ]
 
 const router = createRouter({
@@ -70,6 +81,32 @@ const router = createRouter({
   routes,
   // extendRoutes: setupLayouts,
   scrollBehavior,
+})
+
+let timeout
+
+router.beforeEach((to, from, next) => {
+  if (!timeout) {
+    timeout = setTimeout(() => {
+      loading.value = true
+    }, 0)
+  }
+
+  console.log('das to?', to)
+
+  if (to.matched.length) {
+    next()
+  } else {
+    next({ name: 'not-found' })
+  }
+})
+
+router.afterEach(() => {
+  if (timeout) {
+    clearTimeout(timeout)
+  }
+
+  loading.value = false
 })
 
 export default router

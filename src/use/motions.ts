@@ -15,11 +15,13 @@ export function useRouteMotion<T extends string, V extends MotionVariants<T>>(
 
   const motion = useMotion(target, variants)
 
-  const play = async () => {
-    motion.stop()
+  const play = () => {
+    requestAnimationFrame(async () => {
+      motion.stop()
 
-    await motion.set('initial')
-    await motion.apply('enter')
+      await motion.set('initial')
+      await motion.apply('enter')
+    })
   }
 
   const clear = whenever(() => !!route.meta.reveal, play)

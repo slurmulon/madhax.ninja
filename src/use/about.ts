@@ -1,4 +1,9 @@
-export const books = [
+export type Book = {
+  title: string
+  url: string
+}
+
+export const books: Book[] = [
   { title: 'The Pragmatic Programmer', url: 'https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/' },
   { title: 'Restful Web APIs', url: 'https://www.oreilly.com/library/view/restful-web-apis/9781449359713/' },
   { title: 'High-Performance Browser Networking', url: 'https://hpbn.co' },
@@ -16,12 +21,19 @@ export const books = [
   { title: 'Notes on the Synthesis of Form', url: 'https://www.hup.harvard.edu/catalog.php?isbn=9780674627512' }
 ]
 
-export const interests = [
+export type Interest = string
+
+export const interests: Interest[] = [
   'Hypermedia', 'Web Semantics', 'State Management', 'Visualizations', 'Design',
   'Timers', 'Music', 'Performance', 'Animation', 'Testing', 'Education', 'Fitness'
 ]
 
-export const philosophies = [
+export type Philosophy = {
+  quote: string
+  credit: string
+}
+
+export const philosophies: Philosophy[] = [
   { quote: 'Humility, respect, trust.', credit: 'Team Geek' },
   { quote: 'Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away.', credit: 'Antoine de Saint-Exupéry' },
   { quote: 'Quality software takes the least amount of time to develop. If you have code that is simple as possible, tests that are complete and a design that fits just right, additions and changes happen in the fastest possible way because the impact is lowest.', credit: 'Cunningham & Cunningham' },
