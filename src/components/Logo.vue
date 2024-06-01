@@ -19,5 +19,5 @@
   text-shadow: 2px 2px 1px #000
   letter-spacing: 2px //5px
   margin-top: -5px
-  color: #96ffd8
+  color: rgb(var(--v-theme-primary))
 </style>

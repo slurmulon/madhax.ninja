@@ -25,8 +25,7 @@
 
     <v-card-title
       primary-title
-      class="position-relative text-surface rounded-t-lg mt-n8"
-      style="background: #ddd"
+      class="position-relative text-surface rounded-t-lg mt-n8 bg-grey-lighten-2"
     >
       <v-row
         align="center"
@@ -73,7 +72,7 @@
 
     <!-- <v-divider color="surface" opacity="1" thickness="1" /> -->
 
-    <v-card-text class="text-surface" style="outline: 1px solid black">
+    <v-card-text class="text-surface">
       <v-row>
         <v-col cols="12" class="job-details">
           <p
