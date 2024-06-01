@@ -8,7 +8,7 @@
 import { createRouter, createWebHistory, RouterScrollBehavior, isNavigationFailure, NavigationFailureType } from 'vue-router/auto'
 // import { setupLayouts } from 'virtual:generated-layouts'
 
-import { loading, load } from '@/use/page'
+import { loading } from '@/use/page'
 
 type ScrollPositionNormalized = {
   behavior?: ScrollOptions['behavior']

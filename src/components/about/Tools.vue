@@ -38,13 +38,13 @@
   </v-row>
 </template>
 
-<script>
+<script setup lang="ts">
 import { specialties as tools } from '@/use/tools'
 
 import IconTool from '@/components/icons/Tool'
 
-export default {
-  data: () => ({ tools }),
-  components: { IconTool }
-}
+/* export default { */
+/*   data: () => ({ tools }), */
+/*   components: { IconTool } */
+/* } */
 </script>

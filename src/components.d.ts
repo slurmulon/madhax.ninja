@@ -34,7 +34,7 @@ declare module 'vue' {
     SectionCard: typeof import('./components/SectionCard.vue')['default']
     SectionTitle: typeof import('./components/SectionTitle.vue')['default']
     SkillCard: typeof import('./components/work/SkillCard.vue')['default']
-    Sloth: typeof import('./components/Sloth.vue')['default']
+    Sloth: typeof import('./components/icons/Sloth.vue')['default']
     Tool: typeof import('./components/icons/Tool.vue')['default']
     Tools: typeof import('./components/about/Tools.vue')['default']
   }

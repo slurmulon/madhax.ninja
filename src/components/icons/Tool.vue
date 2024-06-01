@@ -8,7 +8,7 @@
     rel="noopener noreferrer"
   >
     <v-img
-      :src="`../../../public/img/${tool.icon}`"
+      :src="`/img/${tool.icon}`"
       :alt="tool.title"
       width="40"
       v-bind="$attrs"

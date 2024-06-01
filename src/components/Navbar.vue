@@ -71,12 +71,8 @@ import Logo from '@/components/Logo'
 .header
   // ORIG
   /* @extend .bg-sunburst-diag */
-  /* @extend .bg-grapefruit-diag */
   // NEXT
   @extend .bg-kye-diag
-  /* background: transparent !important */
-  // background-color: rgba(255,255,255, 0.2) !important // 0.3
-  // background-color: rgba(175,175,175, 0.5) !important // 0.3
 
   &::after
     content: ""
@@ -87,5 +83,5 @@ import Logo from '@/components/Logo'
     right: 0
     position: absolute
     z-index: -1
-    background: url('../../public/img/texture.svg') repeat
+    background: url('/img/texture.svg') repeat
 </style>

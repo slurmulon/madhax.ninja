@@ -27,8 +27,8 @@
   position: fixed
   top: 0
   left: 0
-  height: 100lvh
-  width: 100lvw
+  height: $height
+  width: $width
   z-index: 0
 
   @extend .bg-raisin-radial
@@ -45,11 +45,10 @@
     position: fixed
     top: 0
     left: 0
-    height: 100lvh
-    width: 100lvw
+    height: $height
+    width: $width
     z-index: 1
-    // TODO: Add to images folder
-    background-image: url('../../public/img/nightsky.webp')
+    background-image: url('/img/nightsky.webp')
     background-repeat: repeat
     /* background-size: contain */
     /* background-position: bottom */

@@ -1,4 +1,17 @@
-export const all = [
+export type Tool = {
+  id: string,
+  title: string,
+  url: string,
+  icon: string,
+  level: number,
+  specialty: boolean
+}
+
+export type ToolId = Tool["id"]
+
+export type ToolData = Tool | ToolId
+
+export const all: Tool[] = [
   { id: 'js', title: 'JavaScript', url: 'https://nodejs.org', icon: 'js.png', level: 95, specialty: true },
   { id: 'ts', title: 'TypeScript', url: 'https://www.typescriptlang.org', icon: 'typescript.png', level: 75, specialty: true },
   { id: 'html5', title: 'HTML5', url: 'https://www.w3.org/TR/html52/', icon: 'html5.png', level: 85, specialty: true },
@@ -14,13 +27,13 @@ export const all = [
   { id: 'elixir', title: 'Elixir', url: 'https://elixir-lang.org', icon: 'elixir.png', level: 70, specialty: true },
   { id: 'clojure', title: 'Clojure', url: 'https://clojure.org', icon: 'clojure.png', level: 40, specialty: true },
   { id: 'python', title: 'Python', url: 'https://python.org', icon: 'python.png', level: 65, specialty: true },
-  { id: 'scala', title: 'Scala', url: 'https://scala-lang.org', icon: 'scala.png', level: 55, width: 75 },
+  { id: 'scala', title: 'Scala', url: 'https://scala-lang.org', icon: 'scala.png', level: 55 },
   { id: 'phoenix', title: 'Phoenix', url: 'http://phoenixframework.org', icon: 'phoenix.png', level: 70, specialty: true },
   { id: 'django', title: 'Django', url: 'https://djangoproject.com', icon: 'django.png', level: 50, specialty: true },
   // TODO: Add Ecto
-  { id: 'play', title: 'Play!', url: 'https://playframework.com', icon: 'play.png', level: 65, width: 60 },
+  { id: 'play', title: 'Play!', url: 'https://playframework.com', icon: 'play.png', level: 65 },
   // TODO: Add Express
-  { id: 'akka', title: 'Akka', url: 'https://akka.io/', icon: 'akka.png', level: 50, width: 60 },
+  { id: 'akka', title: 'Akka', url: 'https://akka.io/', icon: 'akka.png', level: 50 },
   { id: 'postgres', title: 'PostgreSQL', url: 'https://postgresql.org', icon: 'postgresql.png', level: 75, specialty: true },
   { id: 'json-schema', title: 'JSON Schema', url: 'http://json-schema.org', icon: 'json-schema.png', level: 90, specialty: true },
   // { id: 'gsap', title: 'GSAP', url: 'https://greensock.com', icon: '', level: 65 },
@@ -40,13 +53,12 @@ export const all = [
   { id: 'stripe', title: 'Stripe', url: 'https://stripe.com', icon: 'stripe.png', level: 80, specialty: false },
   { id: 'docker', title: 'Docker', url: 'https://docker.com', icon: 'docker.png', level: 50, specialty: true },
   { id: 'aws', title: 'AWS', url: 'https://aws.amazon.com', icon: 'aws.png', level: 40, specialty: true },
-  // ffmpeg
 ]
 
-export const specialties = all.filter(tool => tool.specialty)
+export const specialties: Tool[] = all.filter(tool => tool.specialty)
 
-export const each = tools => all.filter(tool => tools.includes(tool.id))
+export const each: Tool[] = (tools: ToolId[]) => all.filter(tool => tools.includes(tool.id))
 
-export const resolve = value => typeof tool === 'string'
+export const resolve = (value: ToolData): Tool => typeof tool === 'string'
   ? all.find(tool => tool.id === value)
   : value

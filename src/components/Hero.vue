@@ -57,7 +57,7 @@
 <script setup lang="ts">
 import { useRouteMotion } from '@/use/motions'
 
-import PalmTreesSvg from '../../public/img/palm-trees-1.svg'
+import PalmTreesSvg from '/src/assets/palm-trees.svg?component'
 
 const banner = ref<HTMLElement>()
 
