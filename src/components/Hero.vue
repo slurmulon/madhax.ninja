@@ -18,18 +18,7 @@
         Software Architect
       </div>
       <div class="text-h4 text-white text-center d-block">
-        <!-- Code. Web. Music. -->
-        <!-- User Interfaces -->
-        <!-- Full-stack Web Applications -->
-        <!-- Quality Web Applications -->
-        <!-- Quality Is Everything -->
         Crafting happiness with code
-        <!-- Quality home-made code -->
-        <!-- Changing lives with code -->
-        <!-- Some assembly required -->
-        <!-- It's just a button -->
-        <!-- Wrangling bits on the web -->
-        <!-- Quality code with style -->
       </div>
       <div class="d-block px-4 pt-4">
         <v-btn
@@ -95,11 +84,6 @@ const motion = useRouteMotion(banner, {
   /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #60b5f2) !important */
   /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #57a6f7) !important */
   /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #80beff) !important */
-
-
-  /* background-color: #77a3b3 // teal */
-  /* background-color: #9e99c7 // purp */
-  /* background-color: #99c7b4 // mint */
 
   animation-name: sky
   animation-duration: 800ms
