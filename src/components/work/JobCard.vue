@@ -41,7 +41,7 @@
             rel="noopener noreferrer"
           >
             <v-img
-              :src="`../../../public/img/${job.logo}`"
+              :src="`/img/${job.logo}`"
               :alt="`${job.company} Logo`"
               :height="job.logoHeight ?? null"
               :width="job.logoWidth ?? 150"
