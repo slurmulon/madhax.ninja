@@ -3,27 +3,25 @@
     color="rgba(255,255,255,0.7)"
     class="job-card mt-4"
   >
-    <v-hover v-slot="{ hover }">
-      <v-img
-        :src="`../../../public/img/${job.banner}`"
-        cover
-        color="#111"
-        gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-        rounded="lg"
-        height="250"
-        alt=""
-        position="center 50%"
-      >
-        <template #placeholder>
-          <placeholder
-            filled
-            cover
-            color="primary"
-            opacity="1"
-          />
-        </template>
-      </v-img>
-    </v-hover>
+    <v-img
+      :src="`/img/${job.banner}`"
+      cover
+      color="#111"
+      gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+      rounded="lg"
+      height="250"
+      alt=""
+      position="center 50%"
+    >
+      <template #placeholder>
+        <placeholder
+          filled
+          cover
+          color="primary"
+          opacity="1"
+        />
+      </template>
+    </v-img>
 
     <v-card-title
       primary-title

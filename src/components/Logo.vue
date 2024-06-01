@@ -2,7 +2,7 @@
   <a
     @click.stop="$router.push('/')"
     href="/"
-    class="logo text-h4 text-decoration-none "
+    class="logo text-h4 text-decoration-none"
   >
     <div class="name d-none d-sm-flex">
       <span>Erik</span><span class="ml-3">V</span><span style="margin-left: -6px">avro</span>
@@ -13,7 +13,7 @@
   </a>
 </template>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .logo .name
   font-family: 'Lazer84' !important
   text-shadow: 2px 2px 1px #000

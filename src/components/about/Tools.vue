@@ -42,9 +42,4 @@
 import { specialties as tools } from '@/use/tools'
 
 import IconTool from '@/components/icons/Tool'
-
-/* export default { */
-/*   data: () => ({ tools }), */
-/*   components: { IconTool } */
-/* } */
 </script>
