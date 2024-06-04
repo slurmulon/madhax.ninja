@@ -76,7 +76,6 @@
             :disabled="!valid"
             :loading="loading"
             :slim="false"
-            @click="submit"
             type="submit"
             color="primary"
             variant="outlined"

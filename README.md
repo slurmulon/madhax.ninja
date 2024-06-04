@@ -35,6 +35,13 @@ npm run build
 npm run lint
 ```
 
+### Running Netlify API
+
+```
+npm install -g netlify-cli
+netlify dev
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 

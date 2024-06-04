@@ -14,7 +14,7 @@ router.post('/contact', (req, res, next) => {
 
   const transporter = nodemailer.createTransport({
     host: process.env.NODE_EMAIL_HOST,
-    secure: false,
+    secure: true,
     auth: {
       user: process.env.NODE_EMAIL_USER,
       pass: process.env.NODE_EMAIL_PASS
@@ -23,8 +23,9 @@ router.post('/contact', (req, res, next) => {
 
   const opts = {
     to: process.env.NODE_EMAIL_TO,
-    from: email,
-    subject: `madhax.ninja: Contact form [${reason}]`,
+    from: process.env.NODE_EMAIL_TO,
+    // from: email,
+    subject: `madhax.ninja: Contact form [${email}] [${reason}]`,
     html: sanitize(message)
   }
 

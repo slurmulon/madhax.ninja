@@ -1,0 +1,55 @@
+{
+  "version": "3",
+  "remote": {
+    "https://edge.netlify.com/": "ff84a16f192fdb43db8b9dff869889f555c05857d075044d2a7cfa54c283a0a0",
+    "https://edge.netlify.com/bootstrap/config.ts": "0aa0a225d978b89e0e62cbd853701605199e7a84095e55eeb70147faf1a24803",
+    "https://edge.netlify.com/bootstrap/context.ts": "8f99269eeeeccf9b852e6089cc648c962a0ea20b2198b8b38b38e3b2ce2b9143",
+    "https://edge.netlify.com/bootstrap/cookie.ts": "8b0baae708989ca183c6f3b4ab3d029e6abcbc2e43f93edeb0ff447b3bbc3a05",
+    "https://edge.netlify.com/bootstrap/edge_function.ts": "b8253e86aa83c67341f5cfedeba5049d77fbf84dcab7eceff7566b7728ae9b39",
+    "https://edge.netlify.com/bootstrap/globals.ts": "38f9e0be6c2c78206bf14d2387d41964d38bbe81644b3668e203c6f6473408a7"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@babel/types@^7.24.0",
+        "npm:@mdi/font@6.2.95",
+        "npm:@types/node@^20.11.25",
+        "npm:@vitejs/plugin-vue@^5.0.4",
+        "npm:@vue/eslint-config-typescript@^13.0.0",
+        "npm:@vueuse/core@^10.9.0",
+        "npm:@vueuse/motion@^2.1.0",
+        "npm:axios@^1.7.2",
+        "npm:body-parser@^1.20.2",
+        "npm:core-js@^3.34.0",
+        "npm:eslint-config-standard@^17.1.0",
+        "npm:eslint-plugin-import@^2.29.1",
+        "npm:eslint-plugin-n@^16.6.2",
+        "npm:eslint-plugin-node@^11.1.0",
+        "npm:eslint-plugin-promise@^6.1.1",
+        "npm:eslint-plugin-vue@^9.22.0",
+        "npm:eslint@^8.57.0",
+        "npm:express@^4.19.2",
+        "npm:gsap@^3.12.5",
+        "npm:nodemailer@^6.9.13",
+        "npm:pinia@^2.1.7",
+        "npm:roboto-fontface",
+        "npm:sanitize-html@^2.13.0",
+        "npm:sass@^1.71.1",
+        "npm:serverless-http@^3.2.0",
+        "npm:typescript@^5.4.2",
+        "npm:unplugin-auto-import@^0.17.5",
+        "npm:unplugin-fonts@^1.1.1",
+        "npm:unplugin-vue-components@^0.26.0",
+        "npm:unplugin-vue-router@^0.8.4",
+        "npm:vite-plugin-vue-layouts@^0.11.0",
+        "npm:vite-plugin-vuetify@^2.0.3",
+        "npm:vite-svg-loader@^5.1.0",
+        "npm:vite@^5.1.5",
+        "npm:vue-router@^4.3.0",
+        "npm:vue-tsc@^2.0.6",
+        "npm:vue@^3.4.21",
+        "npm:vuetify@^3.5.8"
+      ]
+    }
+  }
+}
