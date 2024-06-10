@@ -78,8 +78,8 @@ const motion = useRouteMotion(banner, {
   height: 100lvh
 
 #hero
-  @extend .bg-sunset-radial
-  /* @extend .bg-horizon-radial */
+  /* @extend .bg-sunset-radial */
+  @extend .bg-horizon-radial
   /* @extend .bg-ruby-radial */
   /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #60b5f2) !important */
   /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #57a6f7) !important */

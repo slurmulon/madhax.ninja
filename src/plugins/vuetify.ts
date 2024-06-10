@@ -27,6 +27,8 @@ const brandTheme: ThemeDefinition = {
     success: '#4CAF50',
     warning: '#FB8C00',
     error: colors.red.lighten1,
+    // EXPERIMENT - use light-hue instead of white for text (probably is a11y contrast violation, has to be 100 luminosity)
+    // 'on-surface': 'hsla(175, 85%, 100%, 1)',
   },
 }
 
