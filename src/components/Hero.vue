@@ -80,10 +80,24 @@ const motion = useRouteMotion(banner, {
 #hero
   /* @extend .bg-sunset-radial */
   /* @extend .bg-grapefruit-flip-radial */
-  @extend .bg-glow-radial
+  /* @extend .bg-glow-radial */
   /* @extend .bg-horizon-radial */
   /* @extend .bg-ruby-radial */
-  /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #60b5f2) !important */
+  /* @extend .bg-aura-radial */
+
+  /* background-color: #FBDA61 */
+  /* background-image: linear-gradient(315deg, #FBDA61 0%, #FF5ACD 100%) */
+  /* background-image: linear-gradient(315deg, #61fbcb 0%, #FF5ACD 100%) */
+  background-image: radial-gradient(circle at bottom center, #61fbcb 0%, #ed5aff 100%)
+
+
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%) */
+  /* background-image: linear-gradient( 135deg, #F6D242 10%, #FF52E5 100%) */
+  /* background: radial-gradient(circle at bottom center, #FFC837 15px, #FF8008) */
+
+  /* background-image: url(https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) */
+  /* background-size: cover */
+  /* background: -webkit-radial-gradient(ellipse at top, #b78ec7, #b7a370, #60b5f2),  -webkit-radial-gradient(ellipse at bottom, #b78ec7, #b7a370, #60b5f2)!important */
   /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #57a6f7) !important */
   /* background: -webkit-radial-gradient(top left, #b78ec7, #b7a370, #80beff) !important */
 
@@ -95,7 +109,8 @@ const motion = useRouteMotion(banner, {
   animation-fill-mode: forwards
 
   position: relative
-  opacity: 0.125
+  /* opacity: 0.125 */
+  opacity: 0.175
   height: 100lvh
   width: 100lvw
 
@@ -133,8 +148,10 @@ const motion = useRouteMotion(banner, {
 
 @keyframes sky
   0%
-    background: transparent
+    opacity: 0
+    /* background: transparent */
 
   100%
-    background: lighten(#77a3b3, 5%)
+    opacity: 0.175
+    /* background: lighten(#77a3b3, 5%) */
 </style>
