@@ -109,8 +109,8 @@ const motion = useRouteMotion(banner, {
   animation-fill-mode: forwards
 
   position: relative
-  opacity: 0.125
-  /* opacity: 0.15 */
+  /* opacity: 0.125 */
+  opacity: 0.15
   /* opacity: 0.175 */
   height: 100lvh
   width: 100lvw
@@ -153,7 +153,7 @@ const motion = useRouteMotion(banner, {
     /* background: transparent */
 
   100%
-    opacity: 0.125
-    /* opacity: 0.15 */
+    /* opacity: 0.125 */
+    opacity: 0.15
     /* background: lighten(#77a3b3, 5%) */
 </style>
