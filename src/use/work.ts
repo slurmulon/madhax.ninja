@@ -48,7 +48,7 @@ export const jobs: Job[] = [
     title: 'Senior Front-end Engineer',
     time: 'Dec. 2021 - Mar. 2023',
     details: [
-      'Contributed to the most beloved marketplace of hobbyists and the collectible community using Vue 3 and TypeScript.',
+      'Contributed to the most beloved marketplace of hobbyists and the collectable community using Vue 3 and TypeScript.',
       // 'Generally focused on ensuring the marketplace front-end could scale for years to come.',
       'Led a complete migration from Vue 2 to Vue 3 in 6 months without negatively impacting customers or other projects.',
       'Created a robust API state management engine using Vue composables and TypeScript.',
