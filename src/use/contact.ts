@@ -33,6 +33,7 @@ export async function send () {
     await axios.post(url, data)
   } catch (e) {
     error.value = true
+    console.error('Failed to send email', e)
   } finally {
     loading.value = false
 
