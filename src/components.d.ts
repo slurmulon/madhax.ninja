@@ -13,7 +13,6 @@ declare module 'vue' {
     ContactButton: typeof import('./components/ContactButton.vue')['default']
     EmojiThinking: typeof import('./components/icons/EmojiThinking.vue')['default']
     Github: typeof import('./components/icons/Github.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     Interests: typeof import('./components/about/Interests.vue')['default']
     JobCard: typeof import('./components/work/JobCard.vue')['default']
