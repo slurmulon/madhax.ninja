@@ -66,7 +66,7 @@ export const projects = [
     emoji: '🎼',
     active: true,
     desc: 'Semantic music notation',
-    url: 'https://github.com/slurmulon/bach',
+    url: 'https://codebach.tech',
     tools: tools(['clojure']) // ebnf
   },
   {
@@ -118,5 +118,13 @@ export const projects = [
     desc: 'Commit message convention for easily digestable history streams',
     url: 'https://github.com/slurmulon/tasty-commits',
     tools: tools(['git'])
+  },
+  {
+    title: 'generator-collector',
+    emoji: '♻️',
+    active: true,
+    desc: 'Lazily collect and query generators in JS',
+    url: 'https://slurmulon.github.io/generator-collector/',
+    tools: tools(['js'])
   }
 ]
