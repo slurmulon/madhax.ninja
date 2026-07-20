@@ -40,6 +40,8 @@ export async function send () {
     if (!error.value) {
       sent.value = true
 
+      console.log('Email sent successfully!', { sent: sent.value, error: error.value })
+
       clear()
     }
   }
