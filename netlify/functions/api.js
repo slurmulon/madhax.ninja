@@ -10,7 +10,7 @@ const router = express.Router()
 
 const transporter = nodemailer.createTransport({
   host: process.env.NODE_EMAIL_HOST,
-  port: process.env.NODE_EMAIL_PORT,
+  // port: process.env.NODE_EMAIL_PORT,
   secure: true,
   auth: {
     user: process.env.NODE_EMAIL_USER,
