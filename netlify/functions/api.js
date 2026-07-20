@@ -3,23 +3,29 @@ const serverless = require('serverless-http')
 const bodyParser = require('body-parser')
 const sanitize = require('sanitize-html')
 const nodemailer = require('nodemailer')
+const tls = require('tls')
 
 const app = express()
 const router = express.Router()
 
+const transporter = nodemailer.createTransport({
+  host: process.env.NODE_EMAIL_HOST,
+  port: process.env.NODE_EMAIL_PORT,
+  secure: true,
+  auth: {
+    user: process.env.NODE_EMAIL_USER,
+    pass: process.env.NODE_EMAIL_PASS
+  },
+  tls: {
+    checkServerIdentity: (_hostname, cert) =>
+      tls.checkServerIdentity(process.env.NODE_TLS_HOST_IDENTITY, cert)
+  }
+})
+
 router.get('/', (req, res) => res.json(require('../../package.json')))
 
-router.post('/contact', (req, res, next) => {
-  const { from, email, reason, message } = req.body
-
-  const transporter = nodemailer.createTransport({
-    host: process.env.NODE_EMAIL_HOST,
-    secure: false,
-    auth: {
-      user: process.env.NODE_EMAIL_USER,
-      pass: process.env.NODE_EMAIL_PASS
-    }
-  })
+router.post('/contact', async (req, res, next) => {
+  const { email, reason, message } = req.body
 
   const opts = {
     to: process.env.NODE_EMAIL_TO,
@@ -28,11 +34,20 @@ router.post('/contact', (req, res, next) => {
     html: sanitize(message)
   }
 
+  try {
+    await transporter.verify()
+  } catch (err) {
+    console.error('SMTP transport verification failed:', err)
+
+    return res.status(502).send()
+  }
+
   transporter.sendMail(opts, (err, info) => {
     if (err) {
+      console.error('Failed to send email:', err)
       next(err)
     } else {
-      res.status(204).send()
+      return res.status(204).send()
     }
   })
 })
