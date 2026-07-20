@@ -39,6 +39,13 @@ router.post('/contact', async (req, res, next) => {
     await transporter.verify()
   } catch (err) {
     console.error('SMTP transport verification failed:', err)
+    console.table({
+      email_to: process.env.NODE_EMAIL_TO,
+      email_user: process.env.NODE_EMAIL_USER,
+      host: process.env.NODE_EMAIL_HOST,
+      port: process.env.NODE_EMAIL_PORT,
+      tls_host: process.env.NODE_TLS_HOST_IDENTITY,
+    })
 
     return res.status(502).send()
   }
