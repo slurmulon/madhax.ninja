@@ -3,7 +3,7 @@ const serverless = require('serverless-http')
 const bodyParser = require('body-parser')
 const sanitize = require('sanitize-html')
 const nodemailer = require('nodemailer')
-const tls = require('tls')
+// const tls = require('tls')
 
 const app = express()
 const router = express.Router()
@@ -16,10 +16,10 @@ const transporter = nodemailer.createTransport({
     user: process.env.NODE_EMAIL_USER,
     pass: process.env.NODE_EMAIL_PASS
   },
-  tls: {
-    checkServerIdentity: (_hostname, cert) =>
-      tls.checkServerIdentity(process.env.NODE_TLS_HOST_IDENTITY, cert)
-  }
+  // tls: {
+  //   checkServerIdentity: (_hostname, cert) =>
+  //     tls.checkServerIdentity(process.env.NODE_TLS_HOST_IDENTITY, cert)
+  // }
 })
 
 router.get('/', (req, res) => res.json(require('../../package.json')))
