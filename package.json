@@ -41,6 +41,7 @@
     "sanitize-html": "^2.13.0",
     "sass": "^1.71.1",
     "serverless-http": "^3.2.0",
+    "tls": "^0.0.1",
     "typescript": "^5.4.2",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-fonts": "^1.1.1",
