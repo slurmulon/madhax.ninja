@@ -90,7 +90,6 @@
       <v-snackbar
         v-model="sent"
         color="success"
-        @input="v => v || (sent = false)"
       >
         <template #text>
           <v-icon

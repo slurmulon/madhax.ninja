@@ -1,5 +1,5 @@
-import { ref } from 'vue'
-import { refDebounced } from '@vueuse/core'
+import { ref, shallowRef } from 'vue'
+// import { refDebounced } from '@vueuse/core'
 import axios from 'axios'
 
 export type Message = {
@@ -14,9 +14,17 @@ export const email = ref<Maybe<string>>(null)
 export const reason = ref<Maybe<string>>(null)
 export const message = ref<Maybe<string>>(null)
 
-export const loading = refDebounced(ref(false), 200)
-export const error = refDebounced(ref(false), 200)
-export const sent = refDebounced(ref(false), 200)
+// export const rawLoading = shallowRef(false)
+// export const rawError = shallowRef(false)
+// export const rawSent = shallowRef(false)
+
+// export const loading = refDebounced(rawLoading, 200)
+// export const error = refDebounced(rawError, 200)
+// export const sent = refDebounced(rawSent, 200)
+
+export const loading = shallowRef(false)
+export const error = shallowRef(false)
+export const sent = shallowRef(false)
 
 export async function send () {
   const url = `${import.meta.env.VITE_API_BASE_URL}/contact`
@@ -33,6 +41,7 @@ export async function send () {
     await axios.post(url, data)
   } catch (e) {
     error.value = true
+
     console.error('Failed to send email', e)
   } finally {
     loading.value = false
@@ -40,7 +49,7 @@ export async function send () {
     if (!error.value) {
       sent.value = true
 
-      console.log('Email sent successfully!', { sent: sent.value, error: error.value })
+      console.log('Email sent successfully!')
 
       clear()
     }
