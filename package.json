@@ -40,6 +40,7 @@
     "sass": "^1.32.0",
     "sass-loader": "^10.0.0",
     "serverless-http": "^2.7.0",
+    "tls": "^0.0.1",
     "vue-cli-plugin-vuetify": "~2.2.2",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0"
